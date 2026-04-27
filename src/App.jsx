@@ -7,7 +7,6 @@ const RANGE_OPTIONS = [7, 30, 90];
 
 const CROP_META = {
   cabbage: {
-    emoji: '🥬',
     seasonTitle: '11월 ~ 2월',
     seasonBullets: [
       '겨울철 출하 물량이 안정적이라 가격 흐름이 비교적 완만합니다.',
@@ -17,7 +16,6 @@ const CROP_META = {
     tip: '배추는 김장철 수요와 기상 영향을 함께 보면 흐름 설명이 자연스럽습니다.',
   },
   radish: {
-    emoji: '🤍',
     seasonTitle: '10월 ~ 2월',
     seasonBullets: [
       '가을·겨울 무는 품질이 안정적이라 가격 비교 지표로 활용하기 좋습니다.',
@@ -27,7 +25,6 @@ const CROP_META = {
     tip: '배추와 함께 비교하면 생활물가 흐름을 보여주기 좋습니다.',
   },
   onion: {
-    emoji: '🧅',
     seasonTitle: '3월 ~ 6월',
     seasonBullets: [
       '햇양파 출하가 시작되면 가격이 비교적 안정되는 경우가 많습니다.',
@@ -37,7 +34,6 @@ const CROP_META = {
     tip: '양파는 저장 물량과 햇양파 출하 시기를 함께 보면 해석이 쉬워집니다.',
   },
   potato: {
-    emoji: '🥔',
     seasonTitle: '6월 ~ 9월',
     seasonBullets: [
       '여름 햇감자 출하가 본격화되면 가격이 안정되는 경우가 많습니다.',
@@ -47,7 +43,6 @@ const CROP_META = {
     tip: '감자는 저장 여부에 따라 가격 해석이 달라져 계절 설명과 잘 어울립니다.',
   },
   'green-onion': {
-    emoji: '🌿',
     seasonTitle: '4월 ~ 6월',
     seasonBullets: [
       '대파는 기온 변화에 민감해 일별 가격 변동이 비교적 빠른 편입니다.',
@@ -57,7 +52,6 @@ const CROP_META = {
     tip: '대파는 체감 물가와 연결해 설명하기 좋은 품목입니다.',
   },
   cucumber: {
-    emoji: '🥒',
     seasonTitle: '5월 ~ 8월',
     seasonBullets: [
       '봄부터 초여름까지는 출하량이 늘어나 가격이 비교적 안정적인 편입니다.',
@@ -139,6 +133,72 @@ const calculateStats = (series) => {
   };
 };
 
+
+function CropIcon({ id, className = '' }) {
+  const commonProps = {
+    viewBox: '0 0 48 48',
+    role: 'img',
+    focusable: 'false',
+    'aria-hidden': 'true',
+  };
+
+  const icons = {
+    cabbage: (
+      <svg {...commonProps}>
+        <circle cx="24" cy="25" r="17" fill="#d8f0b6" />
+        <path d="M24 8c7 6 8 15 0 32C16 23 17 14 24 8Z" fill="#75b843" />
+        <path d="M12 18c10 0 18 7 24 18C22 36 14 30 12 18Z" fill="#93cd5a" />
+        <path d="M36 18c-10 0-18 7-24 18 14 0 22-6 24-18Z" fill="#9fd66a" />
+        <path d="M24 10v28M14 20c7 3 12 8 16 15M34 20c-7 3-12 8-16 15" stroke="#2f8b43" strokeWidth="2" strokeLinecap="round" opacity=".75" />
+      </svg>
+    ),
+    radish: (
+      <svg {...commonProps}>
+        <path d="M24 13c8 3 13 9 13 17 0 8-6 14-13 14S11 38 11 30c0-8 5-14 13-17Z" fill="#f7f7fb" stroke="#d8d9e5" strokeWidth="2" />
+        <path d="M24 13c-5 7-5 20 0 31" stroke="#e6e6f2" strokeWidth="2" />
+        <path d="M21 13c-2-7 3-10 7-7M25 13c1-7 8-8 10-3M23 14c-5-5-2-10 3-11" stroke="#5dbd48" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    ),
+    onion: (
+      <svg {...commonProps}>
+        <path d="M24 9c9 7 15 15 15 25 0 8-6 13-15 13S9 42 9 34c0-10 6-18 15-25Z" fill="#d98a42" />
+        <path d="M18 11c-5 10-6 22-2 35M30 11c5 10 6 22 2 35M24 10c-2 12-2 24 0 36" stroke="#b66b34" strokeWidth="2" strokeLinecap="round" opacity=".6" />
+        <path d="M22 9c-1-4 1-6 4-7" stroke="#7c9b3b" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    ),
+    potato: (
+      <svg {...commonProps}>
+        <ellipse cx="24" cy="27" rx="16" ry="13" fill="#d9a16c" transform="rotate(-18 24 27)" />
+        <circle cx="18" cy="25" r="1.8" fill="#b77d50" />
+        <circle cx="27" cy="20" r="1.6" fill="#b77d50" />
+        <circle cx="31" cy="31" r="1.5" fill="#b77d50" />
+        <circle cx="22" cy="34" r="1.3" fill="#b77d50" />
+      </svg>
+    ),
+    'green-onion': (
+      <svg {...commonProps}>
+        <path d="M14 39c7-12 11-23 13-34" stroke="#78c957" strokeWidth="5" strokeLinecap="round" />
+        <path d="M22 40c4-13 9-24 18-34" stroke="#4cad45" strokeWidth="5" strokeLinecap="round" />
+        <path d="M29 38c-2-12-1-23 3-34" stroke="#96d96a" strokeWidth="5" strokeLinecap="round" />
+        <path d="M11 42c8-3 16-3 25 0" stroke="#f5f1d8" strokeWidth="8" strokeLinecap="round" />
+        <path d="M11 42c8-3 16-3 25 0" stroke="#d8cfa7" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    cucumber: (
+      <svg {...commonProps}>
+        <path d="M10 31c5-14 15-22 29-25 5 9 0 25-12 34-8 6-17 3-17-9Z" fill="#4caf54" />
+        <path d="M14 32c7-10 16-18 28-23" stroke="#77d06d" strokeWidth="3" strokeLinecap="round" opacity=".85" />
+        <circle cx="25" cy="21" r="1.4" fill="#e6ffd8" />
+        <circle cx="31" cy="16" r="1.2" fill="#e6ffd8" />
+        <circle cx="19" cy="29" r="1.1" fill="#e6ffd8" />
+      </svg>
+    ),
+  };
+
+  return <span className={`crop-icon crop-icon-${id} ${className}`}>{icons[id] || icons.cabbage}</span>;
+}
+
+
 function AppHeader({ generatedAt }) {
   return (
     <header className="app-header">
@@ -166,7 +226,6 @@ function FilterBar({ items, selectedId, onSelect, range, onRangeChange }) {
         <p className="filter-label">품목 선택</p>
         <div className="chip-row">
           {items.map((item) => {
-            const meta = CROP_META[item.id] || {};
             return (
               <button
                 type="button"
@@ -174,7 +233,7 @@ function FilterBar({ items, selectedId, onSelect, range, onRangeChange }) {
                 className={`chip-button ${selectedId === item.id ? 'active' : ''}`}
                 onClick={() => onSelect(item.id)}
               >
-                <span className="chip-emoji" aria-hidden="true">{meta.emoji || '●'}</span>
+                <CropIcon id={item.id} />
                 <span>{item.name}</span>
               </button>
             );
@@ -407,7 +466,7 @@ function SeasonCard({ itemId, itemName }) {
         <div className="season-badge">
           <small>제철 시기</small>
           <strong>{meta.seasonTitle}</strong>
-          <div className="season-emoji" aria-hidden="true">{meta.emoji}</div>
+          <CropIcon id={itemId} className="season-crop-icon" />
         </div>
         <ul className="season-points">
           {meta.seasonBullets.map((text) => (
@@ -456,7 +515,7 @@ function ComparisonSection({ items, selectedId }) {
           return (
             <article key={item.id} className={`compare-item ${selectedId === item.id ? 'active' : ''}`}>
               <div className="compare-head">
-                <span className="compare-emoji" aria-hidden="true">{CROP_META[item.id]?.emoji || '●'}</span>
+                <CropIcon id={item.id} className="compare-crop-icon" />
                 <div>
                   <strong>{item.name}</strong>
                   <span>{hasData ? formatWon(stats.latest) : '데이터 없음'}</span>
@@ -475,7 +534,7 @@ function ComparisonSection({ items, selectedId }) {
 function Footer() {
   return (
     <footer className="page-footer">
-      <p>데이터 출처: KAMIS 농산물유통정보 Open API</p>
+      <p>데이터 출처: KAMIS 농산물유통정보 Open API · 차트 기준: 날짜별 평균 가격</p>
       <p>본 화면은 개인 포트폴리오용 데모입니다.</p>
       <p>© 2026 Farm Price Note. 무단 복제 및 상업적 이용을 금합니다.</p>
     </footer>

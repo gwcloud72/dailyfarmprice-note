@@ -44,7 +44,7 @@ jobs:
           KAMIS_CERT_ID: ${{ secrets.KAMIS_CERT_ID }}
           KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED || 'true' }}
           KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
-          LOOKBACK_DAYS: "30"
+          LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE || 'retail' }}
 
       - name: Generate Gemini AI reports
@@ -53,7 +53,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED || 'true' }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
-          REPORT_RANGE_DAYS: "14"
+          REPORT_RANGE_DAYS: "30"
 
       - name: Validate static data
         run: npm run validate:data

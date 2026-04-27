@@ -6,7 +6,7 @@ const API_BASE = process.env.KAMIS_API_BASE || 'http://www.kamis.or.kr/service/p
 const CERT_KEY = process.env.KAMIS_CERT_KEY;
 const CERT_ID = process.env.KAMIS_CERT_ID;
 const FETCH_ENABLED = process.env.KAMIS_FETCH_ENABLED === 'true';
-const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS || 30);
+const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS || 90);
 const COUNTRY_CODE = process.env.KAMIS_COUNTRY_CODE || '1101';
 const DEFAULT_PRICE_TYPE = process.env.KAMIS_PRICE_TYPE || 'retail';
 
@@ -59,7 +59,12 @@ function getGeneratedAt() {
 }
 
 function normalizePrice(value) {
-  const number = Number(String(value ?? '').replaceAll(',', '').replaceAll('-', '').trim());
+  const raw = String(value ?? '').trim();
+
+  if (!raw || raw === '-' || raw === '0') return null;
+
+  const number = Number(raw.replaceAll(',', ''));
+
   if (!Number.isFinite(number) || number <= 0) return null;
   return number;
 }
@@ -67,19 +72,23 @@ function normalizePrice(value) {
 function normalizeDate(row) {
   const year = String(row.yyyy || row.year || '').trim();
   const raw = String(row.regday || row.date || row.day || '').trim();
+
   if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
   if (/^\d{4}\.\d{2}\.\d{2}$/.test(raw)) return raw.replaceAll('.', '-');
   if (/^\d{2}-\d{2}$/.test(raw) && year) return `${year}-${raw}`;
   if (/^\d{2}\/\d{2}$/.test(raw) && year) return `${year}-${raw.replace('/', '-')}`;
+
   return raw;
 }
 
 function rowsFromPayload(payload) {
   const candidates = [payload?.data?.item, payload?.data, payload?.items, payload?.item, payload?.result, payload?.price];
+
   for (const candidate of candidates) {
     if (Array.isArray(candidate)) return candidate;
     if (candidate && typeof candidate === 'object') return [candidate];
   }
+
   return [];
 }
 
@@ -107,7 +116,52 @@ function getKindCodeCandidates(product) {
 function getPayloadMessage(payload) {
   const condition = payload?.condition ? ` condition=${JSON.stringify(payload.condition)}` : '';
   const data = payload?.data && typeof payload.data !== 'object' ? ` data=${payload.data}` : '';
+
   return `${condition}${data}`;
+}
+
+function toDailySeries(rows) {
+  const grouped = new Map();
+
+  for (const row of rows) {
+    if (!grouped.has(row.date)) {
+      grouped.set(row.date, {
+        date: row.date,
+        prices: [],
+        marketNames: new Set(),
+        countyNames: new Set(),
+        itemNames: new Set(),
+        kindNames: new Set(),
+      });
+    }
+
+    const group = grouped.get(row.date);
+    group.prices.push(row.price);
+
+    if (row.marketName) group.marketNames.add(row.marketName);
+    if (row.countyName) group.countyNames.add(row.countyName);
+    if (row.itemName) group.itemNames.add(row.itemName);
+    if (row.kindName) group.kindNames.add(row.kindName);
+  }
+
+  return [...grouped.values()]
+    .map((group) => {
+      const sum = group.prices.reduce((total, price) => total + price, 0);
+      const average = Math.round(sum / group.prices.length);
+
+      return {
+        date: group.date,
+        price: average,
+        sampleCount: group.prices.length,
+        minPrice: Math.min(...group.prices),
+        maxPrice: Math.max(...group.prices),
+        marketNames: [...group.marketNames],
+        countyNames: [...group.countyNames],
+        itemNames: [...group.itemNames],
+        kindNames: [...group.kindNames],
+      };
+    })
+    .sort((a, b) => a.date.localeCompare(b.date));
 }
 
 async function fetchProductVariant(product, startDay, endDay, kindcode) {
@@ -133,13 +187,14 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
 
   const text = await response.text();
   let payload;
+
   try {
     payload = JSON.parse(text);
   } catch {
     throw new Error(`${product.name} JSON 파싱 실패`);
   }
 
-  const rows = rowsFromPayload(payload)
+  const rawRows = rowsFromPayload(payload)
     .map((row) => ({
       date: normalizeDate(row),
       price: normalizePrice(row.price),
@@ -148,23 +203,31 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
       itemName: row.itemname,
       kindName: row.kindname,
     }))
-    .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date) && row.price !== null && row.price > 0)
-    .sort((a, b) => a.date.localeCompare(b.date));
+    .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date) && row.price !== null && row.price > 0);
 
-  if (!rows.length) {
+  if (!rawRows.length) {
     throw new Error(`${product.name} 조회 결과가 비어 있습니다.${getPayloadMessage(payload)}`);
   }
 
-  const latestRow = rows.at(-1);
+  const dailyRows = toDailySeries(rawRows);
+
+  if (!dailyRows.length) {
+    throw new Error(`${product.name} 일별 집계 결과가 비어 있습니다.`);
+  }
+
+  const latestRow = dailyRows.at(-1);
+  const totalSamples = dailyRows.reduce((sum, row) => sum + row.sampleCount, 0);
+
+  console.log(`📊 ${product.name} 일별 집계 완료: 원본 ${rawRows.length}건 → 일별 ${dailyRows.length}건`);
 
   return {
     id: product.id,
     name: product.name,
     category: product.category || '농산물',
-    region: product.region || latestRow?.countyName || '서울',
+    region: product.region || latestRow?.countyNames?.[0] || '서울',
     market: product.market || (priceType === 'retail' ? '소매' : '도매'),
     unit: product.unit || '1kg',
-    kindName: latestRow?.kindName || product.kindName || '',
+    kindName: latestRow?.kindNames?.[0] || product.kindName || '',
     sourceMeta: {
       priceType,
       action,
@@ -173,8 +236,18 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
       kindcode,
       productrankcode: product.productrankcode ?? '',
       countrycode: product.countrycode ?? COUNTRY_CODE,
+      aggregation: 'daily-average',
+      rawSampleCount: rawRows.length,
+      dailySampleCount: dailyRows.length,
+      totalSamples,
     },
-    series: rows.map((row) => ({ date: row.date, price: row.price })),
+    series: dailyRows.map((row) => ({
+      date: row.date,
+      price: row.price,
+      sampleCount: row.sampleCount,
+      minPrice: row.minPrice,
+      maxPrice: row.maxPrice,
+    })),
   };
 }
 
@@ -204,6 +277,7 @@ async function writeData(data) {
 
 async function main() {
   const productConfigs = await loadProductConfigs();
+
   if (!FETCH_ENABLED || !CERT_KEY || !CERT_ID || productConfigs.length === 0) {
     const missing = [];
     if (!FETCH_ENABLED) missing.push('KAMIS_FETCH_ENABLED=true');
@@ -236,7 +310,10 @@ async function main() {
     status: errors.length ? 'partial' : 'live',
     source: 'KAMIS Open API',
     generatedAt: getGeneratedAt(),
-    notice: errors.length ? `일부 품목 수집 실패: ${errors.join(' / ')}` : 'KAMIS Open API 데이터를 GitHub Actions에서 수집해 정적 JSON으로 생성했습니다.',
+    aggregation: 'daily-average',
+    notice: errors.length
+      ? `일부 품목 수집 실패: ${errors.join(' / ')}`
+      : 'KAMIS Open API 데이터를 날짜별 평균 가격으로 집계해 정적 JSON으로 생성했습니다.',
     items,
   });
 }

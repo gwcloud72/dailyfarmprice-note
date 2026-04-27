@@ -9,7 +9,7 @@ const rootDir = path.resolve(__dirname, '..');
 const cropDataPath = path.join(rootDir, 'public', 'data', 'crop-prices.json');
 const aiReportPath = path.join(rootDir, 'public', 'data', 'ai-reports.json');
 
-const RANGE_OPTIONS = [7, 14, 30];
+const RANGE_OPTIONS = [7, 30, 90];
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const GEMINI_REPORT_ENABLED = String(process.env.GEMINI_REPORT_ENABLED || '').toLowerCase() === 'true';
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
@@ -28,7 +28,7 @@ function calculateStats(series) {
     };
   }
 
-  const prices = series.map((point) => Number(point.price)).filter((price) => !Number.isNaN(price));
+  const prices = series.map((point) => Number(point.price)).filter((price) => Number.isFinite(price) && price > 0);
   const latest = prices.at(-1) ?? null;
   const previous = prices.at(-2) ?? latest;
   const diff = latest !== null && previous !== null ? latest - previous : null;
