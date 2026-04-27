@@ -100,13 +100,13 @@ const getRecommendation = (trendWord, volatilityLevel) => {
     return '가격이 내려가는 흐름입니다. 최저가 근처인지, 평균보다 낮은 구간인지 확인하면 리포트 설명력이 좋아집니다.';
   }
 
-  return '큰 변동이 없는 보합 구간입니다. 포트폴리오 설명에서는 안정적인 가격 흐름으로 정리할 수 있습니다.';
+  return '큰 변동이 없는 보합 구간입니다. 안정적인 가격 흐름으로 정리할 수 있습니다.';
 };
 
 export function createCropReport({ item, series, stats, range }) {
   if (!item || !series.length) {
     return {
-      title: 'AI 선생님 리포트',
+      title: 'AI 리포트',
       headline: '분석할 데이터가 아직 부족합니다.',
       tone: 'flat',
       badges: [],
@@ -160,7 +160,7 @@ export function createCropReport({ item, series, stats, range }) {
     `[${item.name} 가격 리포트]`,
     ...summary.map((line, index) => `${index + 1}. ${line}`),
     `관찰 포인트: ${recommendation}`,
-    '※ 데모에서는 정적 JSON 데이터를 기반으로 자동 생성된 리포트입니다.',
+    '※ KAMIS 가격 데이터를 기반으로 자동 생성된 리포트입니다.',
   ].join('\n');
 
   return {

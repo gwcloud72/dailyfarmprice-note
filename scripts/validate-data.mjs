@@ -21,9 +21,18 @@ try {
     assert(Array.isArray(item.series), `${item.name} series 배열이 필요합니다.`);
     assert(item.series.length > 0, `${item.name} 가격 데이터가 비어 있습니다.`);
 
+    const seenDates = new Set();
+    let previousDate = '';
+
     for (const point of item.series) {
       assert(/^\d{4}-\d{2}-\d{2}$/.test(point.date), `${item.name} 날짜 형식이 올바르지 않습니다: ${point.date}`);
+      assert(!seenDates.has(point.date), `${item.name} 중복 날짜가 있습니다: ${point.date}`);
+      assert(point.date >= previousDate, `${item.name} 날짜가 오름차순이 아닙니다: ${point.date}`);
       assert(Number.isFinite(Number(point.price)), `${item.name} 가격 값이 숫자가 아닙니다: ${point.price}`);
+      assert(Number(point.price) > 0, `${item.name} 가격 값은 0보다 커야 합니다: ${point.price}`);
+
+      seenDates.add(point.date);
+      previousDate = point.date;
     }
   }
 

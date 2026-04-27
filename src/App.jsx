@@ -1,7 +1,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { fetchAiReports, fetchCropPrices } from './services/cropPriceApi.js';
-import { formatDate, formatPercent, formatSignedWon, formatWon } from './utils/formatters.js';
+import { formatDate, formatFullDate, formatPercent, formatSignedWon, formatWon } from './utils/formatters.js';
 
 const RANGE_OPTIONS = [7, 30, 90];
 
@@ -213,7 +213,7 @@ function AppHeader({ generatedAt }) {
       </div>
       <div className="update-pill">
         <span className="clock-icon" aria-hidden="true">◷</span>
-        데이터 갱신: {formatUpdatedAt(generatedAt)}
+        최근 업데이트: {formatUpdatedAt(generatedAt)}
       </div>
     </header>
   );
@@ -260,11 +260,24 @@ function FilterBar({ items, selectedId, onSelect, range, onRangeChange }) {
   );
 }
 
+
+function getNiceStep(value) {
+  if (!Number.isFinite(value) || value <= 0) return 1;
+  const exponent = Math.floor(Math.log10(value));
+  const fraction = value / 10 ** exponent;
+
+  if (fraction <= 1) return 1 * 10 ** exponent;
+  if (fraction <= 2) return 2 * 10 ** exponent;
+  if (fraction <= 5) return 5 * 10 ** exponent;
+  return 10 * 10 ** exponent;
+}
+
 function LineChart({ series, latestPrice }) {
+  const [hoveredPoint, setHoveredPoint] = useState(null);
   const cleaned = series.filter((point) => getValidPrice(point.price) !== null);
-  const width = 860;
-  const height = 310;
-  const padding = { top: 20, right: 72, bottom: 42, left: 58 };
+  const width = 920;
+  const height = 390;
+  const padding = { top: 34, right: 92, bottom: 56, left: 72 };
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
 
@@ -273,11 +286,13 @@ function LineChart({ series, latestPrice }) {
   }
 
   const prices = cleaned.map((point) => Number(point.price));
+  const averagePrice = Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length);
   const min = Math.min(...prices);
   const max = Math.max(...prices);
   const gap = Math.max(max - min, 1);
-  const paddedMin = Math.max(0, min - gap * 0.15);
-  const paddedMax = max + gap * 0.15;
+  const step = getNiceStep(gap / 4);
+  const paddedMin = Math.max(0, Math.floor((min - gap * 0.12) / step) * step);
+  const paddedMax = Math.ceil((max + gap * 0.14) / step) * step;
   const yRange = Math.max(paddedMax - paddedMin, 1);
 
   const xForIndex = (index) => padding.left + (cleaned.length === 1 ? chartWidth / 2 : (index / (cleaned.length - 1)) * chartWidth);
@@ -287,51 +302,81 @@ function LineChart({ series, latestPrice }) {
     ...point,
     x: xForIndex(index),
     y: yForPrice(Number(point.price)),
+    index,
   }));
 
   const path = points.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
   const areaPath = `${path} L ${points.at(-1).x.toFixed(2)} ${height - padding.bottom} L ${points[0].x.toFixed(2)} ${height - padding.bottom} Z`;
-  const yTicks = [0, 0.25, 0.5, 0.75, 1].map((ratio) => {
-    const value = Math.round(paddedMin + yRange * ratio);
-    return { value, y: yForPrice(value) };
-  }).reverse();
 
-  const tickIndexes = cleaned.length <= 6
-    ? cleaned.map((_, index) => index)
-    : [...new Set([0, Math.floor((cleaned.length - 1) * 0.2), Math.floor((cleaned.length - 1) * 0.45), Math.floor((cleaned.length - 1) * 0.7), cleaned.length - 1])];
+  const tickValues = [];
+  for (let tick = paddedMin; tick <= paddedMax + step / 2; tick += step) {
+    tickValues.push(tick);
+  }
+  const yTicks = tickValues.slice(-6).map((value) => ({ value, y: yForPrice(value) })).reverse();
 
+  const tickCount = cleaned.length <= 10 ? cleaned.length : cleaned.length <= 35 ? 6 : 7;
+  const tickIndexes = [...new Set(
+    Array.from({ length: tickCount }, (_, index) => Math.round(index * (cleaned.length - 1) / Math.max(tickCount - 1, 1)))
+  )];
+
+  const dotEvery = cleaned.length > 45 ? Math.ceil(cleaned.length / 26) : 1;
   const lastPoint = points.at(-1);
+  const activePoint = hoveredPoint;
+  const averageY = yForPrice(averagePrice);
+  const tooltipX = activePoint ? Math.max(88, Math.min(activePoint.x, width - 98)) : 0;
+  const tooltipY = activePoint ? Math.max(12, activePoint.y - 72) : 0;
 
   return (
-    <div className="chart-box">
+    <div className="chart-box" onMouseLeave={() => setHoveredPoint(null)}>
       <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="농산물 가격 추이 그래프">
         <defs>
           <linearGradient id="priceAreaGradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stopColor="#2f8b43" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#2f8b43" stopOpacity="0.03" />
+            <stop offset="0%" stopColor="#2f8b43" stopOpacity="0.17" />
+            <stop offset="100%" stopColor="#2f8b43" stopOpacity="0.025" />
           </linearGradient>
         </defs>
 
         {yTicks.map((tick) => (
           <g key={tick.value} className="grid-row">
             <line x1={padding.left} x2={width - padding.right} y1={tick.y} y2={tick.y} />
-            <text x={padding.left - 10} y={tick.y + 4} textAnchor="end">{tick.value.toLocaleString('ko-KR')}</text>
+            <text x={padding.left - 12} y={tick.y + 4} textAnchor="end">{tick.value.toLocaleString('ko-KR')}</text>
           </g>
         ))}
+
+        <line className="average-line" x1={padding.left} x2={width - padding.right} y1={averageY} y2={averageY} />
+        <g className="average-label">
+          <rect x={width - padding.right + 10} y={averageY - 13} width="50" height="24" rx="8" />
+          <text x={width - padding.right + 35} y={averageY + 4} textAnchor="middle">평균</text>
+        </g>
+
+        {activePoint ? (
+          <line className="hover-guide" x1={activePoint.x} x2={activePoint.x} y1={padding.top} y2={height - padding.bottom} />
+        ) : null}
 
         <path d={areaPath} className="line-area" />
         <path d={path} className="line-path" />
 
-        {points.map((point) => (
-          <g key={`${point.date}-${point.price}`} className="line-point">
-            <circle cx={point.x} cy={point.y} r="3.5" />
-          </g>
-        ))}
+        {points.map((point, index) => {
+          const isLast = index === points.length - 1;
+          const isActive = activePoint && point.date === activePoint.date && point.price === activePoint.price;
+          const showDot = cleaned.length <= 45 || index % dotEvery === 0 || isLast || isActive;
+
+          return (
+            <g
+              key={`${point.date}-${point.price}-${index}`}
+              className={`line-point ${isActive ? 'active' : ''} ${showDot ? 'visible' : 'hidden-dot'}`}
+              onMouseEnter={() => setHoveredPoint(point)}
+            >
+              {showDot ? <circle cx={point.x} cy={point.y} r={isActive ? '5.5' : isLast ? '4.8' : '3.2'} /> : null}
+              <circle className="line-hit" cx={point.x} cy={point.y} r="16" />
+            </g>
+          );
+        })}
 
         {tickIndexes.map((index) => {
           const point = points[index];
           return (
-            <text key={`${point.date}-label`} className="x-tick" x={point.x} y={height - 12} textAnchor="middle">
+            <text key={`${point.date}-label`} className="x-tick" x={point.x} y={height - 16} textAnchor="middle">
               {formatDate(point.date)}
             </text>
           );
@@ -339,8 +384,16 @@ function LineChart({ series, latestPrice }) {
 
         {lastPoint ? (
           <g className="value-tag">
-            <rect x={lastPoint.x + 12} y={lastPoint.y - 18} width="78" height="30" rx="9" />
-            <text x={lastPoint.x + 51} y={lastPoint.y + 1} textAnchor="middle">{latestPrice ? latestPrice.toLocaleString('ko-KR') : '-'}</text>
+            <rect x={Math.min(lastPoint.x + 14, width - 86)} y={lastPoint.y - 18} width="76" height="32" rx="10" />
+            <text x={Math.min(lastPoint.x + 52, width - 48)} y={lastPoint.y + 2} textAnchor="middle">{latestPrice ? latestPrice.toLocaleString('ko-KR') : '-'}</text>
+          </g>
+        ) : null}
+
+        {activePoint ? (
+          <g className="chart-tooltip-group">
+            <rect x={tooltipX - 78} y={tooltipY} width="156" height="54" rx="13" />
+            <text x={tooltipX} y={tooltipY + 22} textAnchor="middle">{formatFullDate(activePoint.date)}</text>
+            <text x={tooltipX} y={tooltipY + 40} textAnchor="middle">{formatWon(activePoint.price)}</text>
           </g>
         ) : null}
       </svg>
@@ -431,8 +484,29 @@ function buildAiBullets(itemName, stats, range) {
   ];
 }
 
-function AiReportCard({ itemName, stats, range }) {
-  const bullets = buildAiBullets(itemName, stats, range);
+function createReportBullets({ itemName, stats, range, report }) {
+  if (report?.summary?.length) {
+    const titles = ['핵심 요약', '가격 흐름', '평균 비교', '관찰 포인트'];
+    const summary = report.summary.slice(0, 4).map((line, index) => ({
+      title: titles[index] || '요약',
+      text: String(line),
+    }));
+
+    if (report.recommendation && summary.length < 5) {
+      summary.push({ title: '단기 체크', text: report.recommendation });
+    }
+
+    return summary;
+  }
+
+  return buildAiBullets(itemName, stats, range);
+}
+
+function AiReportCard({ itemName, stats, range, report, source }) {
+  const bullets = createReportBullets({ itemName, stats, range, report });
+  const sourceLabel = source === 'Gemini API'
+    ? 'AI 리포트는 Gemini API 분석 결과를 바탕으로 생성됩니다.'
+    : 'AI 리포트는 가격 데이터 분석 결과를 바탕으로 생성됩니다.';
 
   return (
     <aside className="side-card ai-card">
@@ -442,13 +516,13 @@ function AiReportCard({ itemName, stats, range }) {
       </div>
       <ul className="report-list compact">
         {bullets.map((bullet) => (
-          <li key={bullet.title}>
+          <li key={`${bullet.title}-${bullet.text}`}>
             <strong>{bullet.title}</strong>
             <p>{bullet.text}</p>
           </li>
         ))}
       </ul>
-      <div className="side-note">AI 리포트는 가격 데이터 분석 결과를 바탕으로 생성됩니다.</div>
+      <div className="side-note">{sourceLabel}</div>
     </aside>
   );
 }
@@ -556,7 +630,7 @@ function EmptyState({ message }) {
 
 function App() {
   const [data, setData] = useState(null);
-  const [, setAiReports] = useState(null);
+  const [aiReports, setAiReports] = useState(null);
   const [error, setError] = useState(null);
   const [selectedId, setSelectedId] = useState('cucumber');
   const [range, setRange] = useState(30);
@@ -591,6 +665,27 @@ function App() {
     return series.slice(-range);
   }, [selectedItem, range]);
   const stats = useMemo(() => calculateStats(visibleSeries), [visibleSeries]);
+  const selectedAiReport = selectedItem?.id ? aiReports?.reports?.[selectedItem.id]?.[String(range)] : null;
+
+  const downloadPriceData = () => {
+    if (!selectedItem || !visibleSeries.length) return;
+
+    const rows = [
+      ['품목', '날짜', '가격', '단위'],
+      ...visibleSeries.map((point) => [selectedItem.name, point.date, point.price, selectedItem.unit || '']),
+    ];
+    const csv = `\ufeff${rows.map((row) => row.map((value) => `"${String(value ?? '').replaceAll('\"', '\"\"')}"`).join(',')).join('\n')}`;
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+
+    anchor.href = url;
+    anchor.download = `farm-price-${selectedItem.id}-${range}days.csv`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  };
 
   if (error) {
     return <EmptyState message={error} />;
@@ -627,18 +722,22 @@ function App() {
       <section className="content-grid">
         <section className="chart-card">
           <div className="chart-head">
-            <div>
-              <h2>{selectedItem?.name} 가격 추이</h2>
-              <p>단위: {selectedItem?.unit || '-'}</p>
+            <div className="chart-title-wrap">
+              <div className="chart-title-line">
+                <CropIcon id={selectedItem?.id} className="chart-title-icon" />
+                <h2>{selectedItem?.name} 가격 추이</h2>
+              </div>
+              <p>단위: {selectedItem?.unit || '-'} · 날짜별 평균 가격</p>
+              <span className="chart-guide">그래프 점에 마우스를 올리면 날짜와 가격을 확인할 수 있습니다.</span>
             </div>
-            <button type="button" className="outline-button">차트 다운로드</button>
+            <button type="button" className="outline-button" onClick={downloadPriceData}>데이터 다운로드</button>
           </div>
           <LineChart series={visibleSeries} latestPrice={stats.latest} />
           <SummaryCards stats={stats} range={range} />
         </section>
 
         <div className="side-panel">
-          <AiReportCard itemName={selectedItem?.name} stats={stats} range={range} />
+          <AiReportCard itemName={selectedItem?.name} stats={stats} range={range} report={selectedAiReport} source={aiReports?.source} />
           <SeasonCard itemId={selectedItem?.id} itemName={selectedItem?.name} />
         </div>
       </section>

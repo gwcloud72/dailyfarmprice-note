@@ -164,8 +164,8 @@ async function callGemini(cropData, localReports) {
     reportNote: 'GitHub Actions에서 Gemini API로 생성한 리포트입니다.',
     reports: {
       cabbage: {
-        14: {
-          title: '배추 AI 가격 리포트',
+        30: {
+          title: '배추 AI 리포트',
           headline: '한 문장 핵심 분석',
           tone: 'up | down | flat',
           badges: [{ label: '흐름', value: '완만한 상승세', tone: 'up | down | flat' }],
@@ -179,12 +179,12 @@ async function callGemini(cropData, localReports) {
   };
 
   const prompt = `
-너는 농산물 가격 데이터를 쉽게 설명하는 "AI 선생님"이다.
+너는 농산물 가격 데이터를 쉽게 설명하는 AI 리포트 작성자다.
 아래 JSON 통계를 보고 한국어 리포트를 만들어라.
 주의사항:
 - 실제 구매를 강요하지 말고, 참고용 가격 흐름 분석으로만 말한다.
 - 과장 표현을 피하고, 포트폴리오 서비스에 어울리게 친절하고 깔끔하게 작성한다.
-- reports 객체에는 모든 item id와 range(7, 14, 30)를 반드시 포함한다.
+- reports 객체에는 모든 item id와 range(7, 30, 90)를 반드시 포함한다.
 - tone은 up, down, flat 중 하나만 쓴다.
 - 응답은 설명 없이 JSON 객체만 반환한다.
 
