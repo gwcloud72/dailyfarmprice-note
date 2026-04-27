@@ -60,7 +60,8 @@ function getGeneratedAt() {
 
 function normalizePrice(value) {
   const number = Number(String(value ?? '').replaceAll(',', '').replaceAll('-', '').trim());
-  return Number.isFinite(number) ? number : null;
+  if (!Number.isFinite(number) || number <= 0) return null;
+  return number;
 }
 
 function normalizeDate(row) {
@@ -147,7 +148,7 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
       itemName: row.itemname,
       kindName: row.kindname,
     }))
-    .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date) && row.price !== null)
+    .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date) && row.price !== null && row.price > 0)
     .sort((a, b) => a.date.localeCompare(b.date));
 
   if (!rows.length) {
