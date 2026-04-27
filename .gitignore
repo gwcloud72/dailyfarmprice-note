@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# GitHub Actions가 생성하는 실데이터 JSON은 커밋하지 않습니다.
+public/data/*.json
+!public/data/.gitkeep

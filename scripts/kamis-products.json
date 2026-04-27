@@ -1,0 +1,126 @@
+[
+  {
+    "id": "cabbage",
+    "name": "배추",
+    "category": "채소류",
+    "region": "서울",
+    "market": "소매",
+    "unit": "1포기",
+    "itemcategorycode": "200",
+    "itemcode": "211",
+    "kindcode": "",
+    "kindcodes": [
+      "",
+      "00",
+      "01",
+      "02",
+      "03",
+      "06"
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  },
+  {
+    "id": "radish",
+    "name": "무",
+    "category": "채소류",
+    "region": "서울",
+    "market": "소매",
+    "unit": "1개",
+    "itemcategorycode": "200",
+    "itemcode": "231",
+    "kindcode": "",
+    "kindcodes": [
+      "",
+      "00",
+      "01",
+      "02",
+      "03",
+      "06"
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  },
+  {
+    "id": "onion",
+    "name": "양파",
+    "category": "채소류",
+    "region": "서울",
+    "market": "소매",
+    "unit": "1kg",
+    "itemcategorycode": "200",
+    "itemcode": "245",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  },
+  {
+    "id": "potato",
+    "name": "감자",
+    "category": "식량작물",
+    "region": "서울",
+    "market": "소매",
+    "unit": "100g",
+    "itemcategorycode": "100",
+    "itemcode": "152",
+    "kindcode": "01",
+    "kindcodes": [
+      "01",
+      "00",
+      ""
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  },
+  {
+    "id": "green-onion",
+    "name": "대파",
+    "category": "채소류",
+    "region": "서울",
+    "market": "소매",
+    "unit": "1kg",
+    "itemcategorycode": "200",
+    "itemcode": "246",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  },
+  {
+    "id": "cucumber",
+    "name": "오이",
+    "category": "채소류",
+    "region": "서울",
+    "market": "소매",
+    "unit": "10개",
+    "itemcategorycode": "200",
+    "itemcode": "223",
+    "kindcode": "02",
+    "kindcodes": [
+      "02",
+      "03",
+      ""
+    ],
+    "productrankcode": "04",
+    "countrycode": "1101",
+    "convertKgYn": "N",
+    "priceType": "retail"
+  }
+]

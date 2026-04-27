@@ -1,0 +1,74 @@
+name: Deploy Farm Price Note
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    # 매일 07:10 KST 실행. cron은 UTC 기준입니다.
+    - cron: "10 22 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Generate crop price data
+        run: npm run update:data
+        env:
+          KAMIS_CERT_KEY: ${{ secrets.KAMIS_CERT_KEY }}
+          KAMIS_CERT_ID: ${{ secrets.KAMIS_CERT_ID }}
+          KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED || 'true' }}
+          KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
+          LOOKBACK_DAYS: "30"
+          KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE || 'retail' }}
+
+      - name: Generate Gemini AI reports
+        run: npm run update:ai-report
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED || 'true' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          REPORT_RANGE_DAYS: "14"
+
+      - name: Validate static data
+        run: npm run validate:data
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
