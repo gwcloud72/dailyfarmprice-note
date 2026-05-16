@@ -23,7 +23,7 @@ export async function fetchCropPrices() {
 }
 
 /**
- * Gemini AI 리포트도 브라우저에서 Gemini API를 직접 호출하지 않습니다.
+ * Gemini 요약도 브라우저에서 Gemini API를 직접 호출하지 않습니다.
  * GitHub Actions가 생성한 public/data/ai-reports.json만 AJAX로 읽습니다.
  * 파일이 없거나 읽기 실패 시 화면은 데이터 기반 기본 리포트로 대체됩니다.
  */

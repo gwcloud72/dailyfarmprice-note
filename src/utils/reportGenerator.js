@@ -106,7 +106,7 @@ const getRecommendation = (trendWord, volatilityLevel) => {
 export function createCropReport({ item, series, stats, range }) {
   if (!item || !series.length) {
     return {
-      title: 'AI 리포트',
+      title: '가격 변동 요약',
       headline: '분석할 데이터가 아직 부족합니다.',
       tone: 'flat',
       badges: [],
@@ -164,7 +164,7 @@ export function createCropReport({ item, series, stats, range }) {
   ].join('\n');
 
   return {
-    title: `${item.name} AI 가격 리포트`,
+    title: `${item.name} 가격 변동 요약`,
     headline,
     tone: trendTone,
     badges,

@@ -1,751 +1,488 @@
-
 import { useEffect, useMemo, useState } from 'react';
-import { fetchAiReports, fetchCropPrices } from './services/cropPriceApi.js';
-import { formatDate, formatFullDate, formatPercent, formatSignedWon, formatWon } from './utils/formatters.js';
 
-const RANGE_OPTIONS = [7, 30, 90];
+const DATA_URL = `${import.meta.env.BASE_URL}data/crop-prices.json`;
+const REPORT_URL = `${import.meta.env.BASE_URL}data/ai-reports.json`;
 
-const CROP_META = {
-  cabbage: {
-    seasonTitle: '11월 ~ 2월',
-    seasonBullets: [
-      '겨울철 출하 물량이 안정적이라 가격 흐름이 비교적 완만합니다.',
-      '김장철 수요가 커지면 단기 상승이 나타날 수 있습니다.',
-      '한파나 기상 악화가 생기면 산지 출하량이 줄어 변동 폭이 커질 수 있습니다.',
-    ],
-    tip: '배추는 김장철 수요와 기상 영향을 함께 보면 흐름 설명이 자연스럽습니다.',
-  },
-  radish: {
-    seasonTitle: '10월 ~ 2월',
-    seasonBullets: [
-      '가을·겨울 무는 품질이 안정적이라 가격 비교 지표로 활용하기 좋습니다.',
-      '배추와 함께 움직이는 경우가 많아 장바구니 물가 설명에 적합합니다.',
-      '산지 물량이 줄어들면 단기 상승 폭이 커질 수 있습니다.',
-    ],
-    tip: '배추와 함께 비교하면 생활물가 흐름을 보여주기 좋습니다.',
-  },
-  onion: {
-    seasonTitle: '3월 ~ 6월',
-    seasonBullets: [
-      '햇양파 출하가 시작되면 가격이 비교적 안정되는 경우가 많습니다.',
-      '저장 양파 물량이 줄어드는 시기에는 가격 민감도가 높아질 수 있습니다.',
-      '봄철 출하량 증가 여부에 따라 보합 또는 약세 흐름이 나타납니다.',
-    ],
-    tip: '양파는 저장 물량과 햇양파 출하 시기를 함께 보면 해석이 쉬워집니다.',
-  },
-  potato: {
-    seasonTitle: '6월 ~ 9월',
-    seasonBullets: [
-      '여름 햇감자 출하가 본격화되면 가격이 안정되는 경우가 많습니다.',
-      '장마와 고온은 품질과 출하량에 영향을 줘 변동을 만들 수 있습니다.',
-      '저장 감자 비중이 높아지는 시기에는 공급 상황에 따라 가격 차이가 커질 수 있습니다.',
-    ],
-    tip: '감자는 저장 여부에 따라 가격 해석이 달라져 계절 설명과 잘 어울립니다.',
-  },
-  'green-onion': {
-    seasonTitle: '4월 ~ 6월',
-    seasonBullets: [
-      '대파는 기온 변화에 민감해 일별 가격 변동이 비교적 빠른 편입니다.',
-      '봄철 출하가 늘어나면 안정세를 보이기도 합니다.',
-      '이상 기온이나 산지 피해가 생기면 단기 급등 사례가 나타날 수 있습니다.',
-    ],
-    tip: '대파는 체감 물가와 연결해 설명하기 좋은 품목입니다.',
-  },
-  cucumber: {
-    seasonTitle: '5월 ~ 8월',
-    seasonBullets: [
-      '봄부터 초여름까지는 출하량이 늘어나 가격이 비교적 안정적인 편입니다.',
-      '장마철에는 일조량 부족과 생육 영향으로 단기 변동이 발생할 수 있습니다.',
-      '여름 후반에는 산지 물량 변화에 따라 등락 폭이 커질 수 있습니다.',
-    ],
-    tip: '오이는 장마철 기상 변수와 함께 보면 가격 해석이 더 자연스럽습니다.',
-  },
-};
-
-const getTrendClass = (value) => {
-  if (value > 0) return 'up';
-  if (value < 0) return 'down';
-  return 'flat';
-};
-
-const getTrendLabel = (value) => {
-  if (value > 0) return '상승세';
-  if (value < 0) return '하락세';
-  return '보합세';
-};
-
-const getValidPrice = (value) => {
+const toNumber = (value) => {
+  if (value === null || value === undefined || value === '') return null;
   const number = Number(value);
-  if (!Number.isFinite(number) || number <= 0) return null;
-  return number;
+  return Number.isFinite(number) ? number : null;
+};
+const formatNumber = (value) => {
+  const number = toNumber(value);
+  return number === null ? '-' : number.toLocaleString('ko-KR');
+};
+const formatWon = (value) => toNumber(value) === null ? '-' : `${formatNumber(value)}원`;
+const toPercent = (value) => {
+  const number = toNumber(value);
+  return number === null ? '-' : `${number > 0 ? '+' : ''}${number.toFixed(2)}%`;
 };
 
-const formatUpdatedAt = (value) => {
+function formatDate(value) {
   if (!value) return '-';
+  const date = new Date(`${value}T00:00:00+09:00`);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
 
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return value;
-
-  return new Intl.DateTimeFormat('ko-KR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  }).format(date).replace(/\./g, '.').replace(/\s+/g, ' ').trim();
-};
-
-const calculateStats = (series) => {
-  const validPrices = series
-    .map((point) => ({ ...point, price: getValidPrice(point.price) }))
-    .filter((point) => point.price !== null);
-
-  if (!validPrices.length) {
-    return {
-      latest: null,
-      previous: null,
-      diff: null,
-      rate: null,
-      average: null,
-      min: null,
-      max: null,
-      latestDate: null,
-    };
+async function fetchJson(url, fallback = null) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return fallback;
+    return response.json();
+  } catch {
+    return fallback;
   }
+}
 
-  const prices = validPrices.map((point) => point.price);
-  const latest = prices.at(-1) ?? null;
-  const previous = prices.at(-2) ?? latest;
-  const diff = latest !== null && previous !== null ? latest - previous : null;
-  const rate = previous ? (diff / previous) * 100 : null;
-  const average = prices.length ? Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length) : null;
+function normalizeItems(items = []) {
+  return items.map((item, index) => ({
+    id: item.id || `crop-${index}`,
+    name: item.name || '-',
+    category: item.category || '-',
+    regionCode: item.regionCode || item.countrycode || item.sourceMeta?.countrycode || item.region || 'ALL',
+    region: item.region || item.regionName || '전국',
+    market: item.market || '소매',
+    unit: item.unit || '1kg',
+    series: Array.isArray(item.series) ? item.series : [],
+  }));
+}
 
+function getStats(item) {
+  const points = (item?.series ?? [])
+    .map((point) => ({ ...point, price: Number(point.price) }))
+    .filter((point) => Number.isFinite(point.price) && point.price > 0);
+  const latest = points.at(-1) ?? null;
+  const previous = points.at(-2) ?? latest;
+  const diff = latest && previous ? latest.price - previous.price : null;
+  const rate = Number.isFinite(diff) && previous?.price ? (diff / previous.price) * 100 : null;
+  const prices = points.map((point) => point.price);
   return {
     latest,
     previous,
     diff,
     rate,
-    average,
+    average: prices.length ? Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length) : null,
     min: prices.length ? Math.min(...prices) : null,
     max: prices.length ? Math.max(...prices) : null,
-    latestDate: validPrices.at(-1)?.date ?? null,
   };
-};
-
-
-function CropIcon({ id, className = '' }) {
-  const commonProps = {
-    viewBox: '0 0 48 48',
-    role: 'img',
-    focusable: 'false',
-    'aria-hidden': 'true',
-  };
-
-  const icons = {
-    cabbage: (
-      <svg {...commonProps}>
-        <circle cx="24" cy="25" r="17" fill="#d8f0b6" />
-        <path d="M24 8c7 6 8 15 0 32C16 23 17 14 24 8Z" fill="#75b843" />
-        <path d="M12 18c10 0 18 7 24 18C22 36 14 30 12 18Z" fill="#93cd5a" />
-        <path d="M36 18c-10 0-18 7-24 18 14 0 22-6 24-18Z" fill="#9fd66a" />
-        <path d="M24 10v28M14 20c7 3 12 8 16 15M34 20c-7 3-12 8-16 15" stroke="#2f8b43" strokeWidth="2" strokeLinecap="round" opacity=".75" />
-      </svg>
-    ),
-    radish: (
-      <svg {...commonProps}>
-        <path d="M24 13c8 3 13 9 13 17 0 8-6 14-13 14S11 38 11 30c0-8 5-14 13-17Z" fill="#f7f7fb" stroke="#d8d9e5" strokeWidth="2" />
-        <path d="M24 13c-5 7-5 20 0 31" stroke="#e6e6f2" strokeWidth="2" />
-        <path d="M21 13c-2-7 3-10 7-7M25 13c1-7 8-8 10-3M23 14c-5-5-2-10 3-11" stroke="#5dbd48" strokeWidth="3" strokeLinecap="round" />
-      </svg>
-    ),
-    onion: (
-      <svg {...commonProps}>
-        <path d="M24 9c9 7 15 15 15 25 0 8-6 13-15 13S9 42 9 34c0-10 6-18 15-25Z" fill="#d98a42" />
-        <path d="M18 11c-5 10-6 22-2 35M30 11c5 10 6 22 2 35M24 10c-2 12-2 24 0 36" stroke="#b66b34" strokeWidth="2" strokeLinecap="round" opacity=".6" />
-        <path d="M22 9c-1-4 1-6 4-7" stroke="#7c9b3b" strokeWidth="3" strokeLinecap="round" />
-      </svg>
-    ),
-    potato: (
-      <svg {...commonProps}>
-        <ellipse cx="24" cy="27" rx="16" ry="13" fill="#d9a16c" transform="rotate(-18 24 27)" />
-        <circle cx="18" cy="25" r="1.8" fill="#b77d50" />
-        <circle cx="27" cy="20" r="1.6" fill="#b77d50" />
-        <circle cx="31" cy="31" r="1.5" fill="#b77d50" />
-        <circle cx="22" cy="34" r="1.3" fill="#b77d50" />
-      </svg>
-    ),
-    'green-onion': (
-      <svg {...commonProps}>
-        <path d="M14 39c7-12 11-23 13-34" stroke="#78c957" strokeWidth="5" strokeLinecap="round" />
-        <path d="M22 40c4-13 9-24 18-34" stroke="#4cad45" strokeWidth="5" strokeLinecap="round" />
-        <path d="M29 38c-2-12-1-23 3-34" stroke="#96d96a" strokeWidth="5" strokeLinecap="round" />
-        <path d="M11 42c8-3 16-3 25 0" stroke="#f5f1d8" strokeWidth="8" strokeLinecap="round" />
-        <path d="M11 42c8-3 16-3 25 0" stroke="#d8cfa7" strokeWidth="2" strokeLinecap="round" />
-      </svg>
-    ),
-    cucumber: (
-      <svg {...commonProps}>
-        <path d="M10 31c5-14 15-22 29-25 5 9 0 25-12 34-8 6-17 3-17-9Z" fill="#4caf54" />
-        <path d="M14 32c7-10 16-18 28-23" stroke="#77d06d" strokeWidth="3" strokeLinecap="round" opacity=".85" />
-        <circle cx="25" cy="21" r="1.4" fill="#e6ffd8" />
-        <circle cx="31" cy="16" r="1.2" fill="#e6ffd8" />
-        <circle cx="19" cy="29" r="1.1" fill="#e6ffd8" />
-      </svg>
-    ),
-  };
-
-  return <span className={`crop-icon crop-icon-${id} ${className}`}>{icons[id] || icons.cabbage}</span>;
 }
 
+function uniqueOptions(values) {
+  return [...new Set(values.filter(Boolean))];
+}
 
-function AppHeader({ generatedAt }) {
+function getCropEmoji(name) {
+  const text = String(name ?? '');
+  if (text.includes('배추')) return '🥬';
+  if (text.includes('무')) return '🥬';
+  if (text.includes('양파')) return '🧅';
+  if (text.includes('대파') || text.includes('파')) return '🌿';
+  if (text.includes('감자')) return '🥔';
+  if (text.includes('사과')) return '🍎';
+  if (text.includes('오이')) return '🥒';
+  if (text.includes('토마토')) return '🍅';
+  return '🌱';
+}
+
+function MiniSparkline({ points, stroke = '#15803d' }) {
+  const values = points.map((point) => toNumber(point.value)).filter(Number.isFinite).slice(-12);
+  if (values.length < 2) return null;
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+  const d = values.map((value, index) => {
+    const x = (index / Math.max(values.length - 1, 1)) * 92;
+    const y = 44 - ((value - min) / range) * 32;
+    return `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+  }).join(' ');
+  return <svg className="hidden h-12 w-24 md:block" viewBox="0 0 96 48" aria-hidden="true"><path d={d} fill="none" stroke={stroke} strokeWidth="3" strokeLinecap="round" /></svg>;
+}
+
+function FilterSelect({ label, icon, value, onChange, options }) {
   return (
-    <header className="app-header">
-      <div className="brand">
-        <div className="brand-mark" aria-hidden="true">
-          <span className="leaf" />
-        </div>
-        <div>
-          <h1>팜프라이스 노트</h1>
-          <p>농산물 가격 추이와 계절 정보를 한눈에 확인하세요</p>
-        </div>
-      </div>
-      <div className="update-pill">
-        <span className="clock-icon" aria-hidden="true">◷</span>
-        최근 업데이트: {formatUpdatedAt(generatedAt)}
-      </div>
-    </header>
+    <label className="flex min-w-0 items-center gap-3 px-4 py-4 md:border-r md:border-slate-200 last:border-r-0">
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-slate-100 text-xl text-slate-500">{icon}</span>
+      <span className="min-w-0 flex-1">
+        <span className="mb-1 block text-sm font-extrabold text-slate-700">{label}</span>
+        <select className="min-h-11 w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100" value={value} onChange={(event) => onChange(event.target.value)}>{options.map((option) => <option key={option} value={option}>{option}</option>)}</select>
+      </span>
+    </label>
   );
 }
 
-function FilterBar({ items, selectedId, onSelect, range, onRangeChange }) {
-  return (
-    <section className="filter-card">
-      <div className="filter-group">
-        <p className="filter-label">품목 선택</p>
-        <div className="chip-row">
-          {items.map((item) => {
-            return (
-              <button
-                type="button"
-                key={item.id}
-                className={`chip-button ${selectedId === item.id ? 'active' : ''}`}
-                onClick={() => onSelect(item.id)}
-              >
-                <CropIcon id={item.id} />
-                <span>{item.name}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
+function LineChart({ points, stroke = '#15803d' }) {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const chartPoints = points
+    .filter((point) => toNumber(point.value) !== null)
+    .sort((a, b) => String(a.date || a.label).localeCompare(String(b.date || b.label)))
+    .slice(-45);
+  const width = 680;
+  const height = 230;
+  const padding = { top: 30, right: 30, bottom: 34, left: 58 };
+  const values = chartPoints.map((point) => toNumber(point.value));
+  const minValue = values.length ? Math.min(...values) : 0;
+  const maxValue = values.length ? Math.max(...values) : 1;
+  const rawRange = maxValue - minValue;
+  const paddingValue = Math.max(rawRange * 0.14, maxValue * 0.015, 1);
+  const adjustedMin = minValue - paddingValue;
+  const adjustedMax = maxValue + paddingValue;
+  const adjustedRange = Math.max(1, adjustedMax - adjustedMin);
+  const getX = (index) => chartPoints.length <= 1 ? width / 2 : padding.left + ((width - padding.left - padding.right) * index) / (chartPoints.length - 1);
+  const getY = (value) => padding.top + ((adjustedMax - Number(value)) / adjustedRange) * (height - padding.top - padding.bottom);
+  const plotted = chartPoints.map((point, index) => ({ ...point, x: getX(index), y: getY(point.value), value: toNumber(point.value) }));
+  const path = plotted.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
+  const activePoint = activeIndex !== null ? plotted[activeIndex] : plotted.at(-1);
 
-      <div className="filter-group period-group">
-        <p className="filter-label">기간 선택</p>
-        <div className="period-buttons">
-          {RANGE_OPTIONS.map((option) => (
-            <button
-              key={option}
-              type="button"
-              className={range === option ? 'active' : ''}
-              onClick={() => onRangeChange(option)}
-            >
-              {option}일
-            </button>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-function getNiceStep(value) {
-  if (!Number.isFinite(value) || value <= 0) return 1;
-  const exponent = Math.floor(Math.log10(value));
-  const fraction = value / 10 ** exponent;
-
-  if (fraction <= 1) return 1 * 10 ** exponent;
-  if (fraction <= 2) return 2 * 10 ** exponent;
-  if (fraction <= 5) return 5 * 10 ** exponent;
-  return 10 * 10 ** exponent;
-}
-
-function LineChart({ series, latestPrice }) {
-  const [hoveredPoint, setHoveredPoint] = useState(null);
-  const cleaned = series.filter((point) => getValidPrice(point.price) !== null);
-  const width = 920;
-  const height = 390;
-  const padding = { top: 34, right: 92, bottom: 56, left: 72 };
-  const chartWidth = width - padding.left - padding.right;
-  const chartHeight = height - padding.top - padding.bottom;
-
-  if (!cleaned.length) {
-    return <div className="chart-empty">표시할 가격 데이터가 없습니다.</div>;
+  function activateFromEvent(event) {
+    if (!plotted.length) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const ratio = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
+    setActiveIndex(Math.round(ratio * (plotted.length - 1)));
   }
 
-  const prices = cleaned.map((point) => Number(point.price));
-  const averagePrice = Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length);
-  const min = Math.min(...prices);
-  const max = Math.max(...prices);
-  const gap = Math.max(max - min, 1);
-  const step = getNiceStep(gap / 4);
-  const paddedMin = Math.max(0, Math.floor((min - gap * 0.12) / step) * step);
-  const paddedMax = Math.ceil((max + gap * 0.14) / step) * step;
-  const yRange = Math.max(paddedMax - paddedMin, 1);
-
-  const xForIndex = (index) => padding.left + (cleaned.length === 1 ? chartWidth / 2 : (index / (cleaned.length - 1)) * chartWidth);
-  const yForPrice = (price) => padding.top + chartHeight - ((price - paddedMin) / yRange) * chartHeight;
-
-  const points = cleaned.map((point, index) => ({
-    ...point,
-    x: xForIndex(index),
-    y: yForPrice(Number(point.price)),
-    index,
-  }));
-
-  const path = points.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
-  const areaPath = `${path} L ${points.at(-1).x.toFixed(2)} ${height - padding.bottom} L ${points[0].x.toFixed(2)} ${height - padding.bottom} Z`;
-
-  const tickValues = [];
-  for (let tick = paddedMin; tick <= paddedMax + step / 2; tick += step) {
-    tickValues.push(tick);
-  }
-  const yTicks = tickValues.slice(-6).map((value) => ({ value, y: yForPrice(value) })).reverse();
-
-  const tickCount = cleaned.length <= 10 ? cleaned.length : cleaned.length <= 35 ? 6 : 7;
-  const tickIndexes = [...new Set(
-    Array.from({ length: tickCount }, (_, index) => Math.round(index * (cleaned.length - 1) / Math.max(tickCount - 1, 1)))
-  )];
-
-  const dotEvery = cleaned.length > 45 ? Math.ceil(cleaned.length / 26) : 1;
-  const lastPoint = points.at(-1);
-  const activePoint = hoveredPoint;
-  const averageY = yForPrice(averagePrice);
-  const tooltipX = activePoint ? Math.max(88, Math.min(activePoint.x, width - 98)) : 0;
-  const tooltipY = activePoint ? Math.max(12, activePoint.y - 72) : 0;
+  if (!plotted.length) return <div className="grid h-56 place-items-center rounded-xl bg-slate-50 px-4 text-center text-sm font-bold text-slate-500">데이터 갱신 후 표시됩니다.</div>;
 
   return (
-    <div className="chart-box" onMouseLeave={() => setHoveredPoint(null)}>
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="농산물 가격 추이 그래프">
-        <defs>
-          <linearGradient id="priceAreaGradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stopColor="#2f8b43" stopOpacity="0.17" />
-            <stop offset="100%" stopColor="#2f8b43" stopOpacity="0.025" />
-          </linearGradient>
-        </defs>
-
-        {yTicks.map((tick) => (
-          <g key={tick.value} className="grid-row">
-            <line x1={padding.left} x2={width - padding.right} y1={tick.y} y2={tick.y} />
-            <text x={padding.left - 12} y={tick.y + 4} textAnchor="end">{tick.value.toLocaleString('ko-KR')}</text>
-          </g>
+    <div>
+      <div className="mb-3 flex justify-end">
+        {activePoint ? <div className="rounded-xl bg-slate-900 px-3 py-2 text-right text-xs font-extrabold leading-5 text-white shadow-lg"><div>{activePoint.label}</div><div>{formatWon(activePoint.value)}</div></div> : null}
+      </div>
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="h-56 w-full overflow-visible"
+        role="img"
+        aria-label="가격 추이 그래프"
+        onMouseMove={activateFromEvent}
+        onMouseLeave={() => setActiveIndex(null)}
+        onClick={activateFromEvent}
+      >
+        {[0, 1, 2, 3].map((line) => {
+          const y = padding.top + ((height - padding.top - padding.bottom) * line) / 3;
+          return <line key={line} x1={padding.left} x2={width - padding.right} y1={y} y2={y} stroke="#e2e8f0" strokeDasharray="4 5" />;
+        })}
+        <path d={path} fill="none" stroke={stroke} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        {plotted.map((point, index) => (
+          <circle key={`${point.label}-${index}`} cx={point.x} cy={point.y} r={activeIndex === index ? 7 : 5} fill="#fff" stroke={stroke} strokeWidth="3" />
         ))}
+        {activePoint ? <line x1={activePoint.x} x2={activePoint.x} y1={padding.top} y2={height - padding.bottom} stroke="#94a3b8" strokeDasharray="4 4" /> : null}
+        {plotted.map((point, index) => (
+          index % Math.max(1, Math.ceil(plotted.length / 5)) === 0 ? <text key={`label-${point.label}-${index}`} x={point.x} y={height - 8} textAnchor="middle" className="fill-slate-500 text-[11px] font-bold">{String(point.label).slice(5)}</text> : null
+        ))}
+      </svg>
+    </div>
+  );
+}
 
-        <line className="average-line" x1={padding.left} x2={width - padding.right} y1={averageY} y2={averageY} />
-        <g className="average-label">
-          <rect x={width - padding.right + 10} y={averageY - 13} width="50" height="24" rx="8" />
-          <text x={width - padding.right + 35} y={averageY + 4} textAnchor="middle">평균</text>
-        </g>
+function BarChart({ bars }) {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const chartBars = bars.filter((bar) => toNumber(bar.value) !== null).slice(0, 10);
+  const maxValue = Math.max(1, ...chartBars.map((bar) => toNumber(bar.value) ?? 0));
+  const activeBar = activeIndex !== null ? chartBars[activeIndex] : chartBars[0];
+  if (!chartBars.length) return <div className="grid h-56 place-items-center rounded-xl bg-slate-50 px-4 text-center text-sm font-bold text-slate-500">데이터 갱신 후 표시됩니다.</div>;
 
-        {activePoint ? (
-          <line className="hover-guide" x1={activePoint.x} x2={activePoint.x} y1={padding.top} y2={height - padding.bottom} />
-        ) : null}
-
-        <path d={areaPath} className="line-area" />
-        <path d={path} className="line-path" />
-
-        {points.map((point, index) => {
-          const isLast = index === points.length - 1;
-          const isActive = activePoint && point.date === activePoint.date && point.price === activePoint.price;
-          const showDot = cleaned.length <= 45 || index % dotEvery === 0 || isLast || isActive;
-
+  return (
+    <div>
+      <div className="mb-3 flex justify-end">
+        {activeBar ? <div className="rounded-xl bg-slate-900 px-3 py-2 text-right text-xs font-extrabold leading-5 text-white shadow-lg"><div>{activeBar.label}</div><div>{formatWon(activeBar.value)}</div></div> : null}
+      </div>
+      <div className="flex h-56 items-end gap-3 border-b border-slate-200 px-2 pb-8 pt-6">
+        {chartBars.map((bar, index) => {
+          const height = Math.max(18, ((toNumber(bar.value) ?? 0) / maxValue) * 155);
           return (
-            <g
-              key={`${point.date}-${point.price}-${index}`}
-              className={`line-point ${isActive ? 'active' : ''} ${showDot ? 'visible' : 'hidden-dot'}`}
-              onMouseEnter={() => setHoveredPoint(point)}
+            <button
+              key={`${bar.label}-${index}`}
+              type="button"
+              className="group relative flex min-w-0 flex-1 flex-col items-center gap-2"
+              aria-label={`${bar.label} ${formatWon(bar.value)}`}
+              onMouseEnter={() => setActiveIndex(index)}
+              onFocus={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(index)}
             >
-              {showDot ? <circle cx={point.x} cy={point.y} r={isActive ? '5.5' : isLast ? '4.8' : '3.2'} /> : null}
-              <circle className="line-hit" cx={point.x} cy={point.y} r="16" />
+              <span className="text-xs font-extrabold text-slate-700">{formatNumber(bar.value)}</span>
+              <span className="w-full max-w-14 rounded-t-lg bg-emerald-600 transition group-hover:opacity-80" style={{ height, opacity: index === activeIndex ? 1 : 0.62 }} />
+              <span className="absolute -bottom-7 max-w-20 truncate text-xs font-bold text-slate-600">{bar.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function RegionMapMini({ bars, selectedRegion }) {
+  const visible = bars.filter((bar) => toNumber(bar.value) !== null).slice(0, 6);
+  const pins = [
+    { x: 42, y: 34 }, { x: 54, y: 45 }, { x: 66, y: 60 },
+    { x: 48, y: 70 }, { x: 34, y: 58 }, { x: 58, y: 76 },
+  ];
+
+  return (
+    <div className="relative min-h-56 rounded-xl bg-slate-50 p-3">
+      <svg className="h-56 w-full" viewBox="0 0 120 100" role="img" aria-label="지역별 비교 지도 요약">
+        <path d="M46 12 60 18 70 12 78 23 72 35 82 45 76 58 85 71 73 83 59 78 47 88 36 77 25 70 31 55 21 45 32 34 30 21Z" fill="#ecfdf5" stroke="#cbd5e1" strokeWidth="1.5" />
+        <path d="M47 18 56 27 50 38 36 36 32 27Z" fill="#bbf7d0" opacity="0.9" />
+        <path d="M57 42 70 47 67 59 54 58Z" fill="#bbf7d0" opacity="0.9" />
+        <path d="M39 55 50 64 43 76 32 69Z" fill="#bbf7d0" opacity="0.9" />
+        {visible.map((bar, index) => {
+          const pin = pins[index] ?? pins[0];
+          const active = bar.label === selectedRegion || selectedRegion.includes(bar.label);
+          return (
+            <g key={`${bar.label}-${index}`}>
+              <circle cx={pin.x} cy={pin.y} r={active ? 4.5 : 3.4} fill={active ? '#047857' : '#16a34a'} opacity="0.92" />
+              <circle cx={pin.x} cy={pin.y} r={active ? 8 : 6} fill="none" stroke="#10b981" strokeOpacity="0.22" strokeWidth="2" />
             </g>
           );
         })}
-
-        {tickIndexes.map((index) => {
-          const point = points[index];
-          return (
-            <text key={`${point.date}-label`} className="x-tick" x={point.x} y={height - 16} textAnchor="middle">
-              {formatDate(point.date)}
-            </text>
-          );
-        })}
-
-        {lastPoint ? (
-          <g className="value-tag">
-            <rect x={Math.min(lastPoint.x + 14, width - 86)} y={lastPoint.y - 18} width="76" height="32" rx="10" />
-            <text x={Math.min(lastPoint.x + 52, width - 48)} y={lastPoint.y + 2} textAnchor="middle">{latestPrice ? latestPrice.toLocaleString('ko-KR') : '-'}</text>
-          </g>
-        ) : null}
-
-        {activePoint ? (
-          <g className="chart-tooltip-group">
-            <rect x={tooltipX - 78} y={tooltipY} width="156" height="54" rx="13" />
-            <text x={tooltipX} y={tooltipY + 22} textAnchor="middle">{formatFullDate(activePoint.date)}</text>
-            <text x={tooltipX} y={tooltipY + 40} textAnchor="middle">{formatWon(activePoint.price)}</text>
-          </g>
-        ) : null}
       </svg>
     </div>
   );
 }
 
-function SummaryCards({ stats, range }) {
-  const diffClass = getTrendClass(stats.diff);
+function MetricCard({ icon, label, value, unit, accent = 'green', detail, sparkline }) {
+  const palette = accent === 'red' ? 'bg-red-100 text-red-600' : 'bg-emerald-100 text-emerald-700';
+  const valueColor = accent === 'red' ? 'text-red-600' : 'text-emerald-700';
+  return (
+    <article className="flex min-h-32 items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="flex min-w-0 items-center gap-4">
+        <div className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-2xl font-black ${palette}`}>{icon}</div>
+        <div className="min-w-0">
+          <p className="break-keep text-sm font-extrabold text-slate-700">{label}</p>
+          <p><strong className={`text-4xl font-black tabular-nums tracking-tight ${valueColor}`}>{value}</strong>{unit && <span className="ml-1 text-sm font-bold text-slate-500">{unit}</span>}</p>
+          {detail ? <p className="mt-2 text-xs font-bold text-slate-500">{detail}</p> : null}
+        </div>
+      </div>
+      {sparkline ? <MiniSparkline points={sparkline} stroke={accent === 'red' ? '#dc2626' : '#15803d'} /> : null}
+    </article>
+  );
+}
+
+function DataCell({ label, children, className = '', align = 'center' }) {
+  const desktopAlign = align === 'right' ? 'md:text-right' : align === 'left' ? 'md:text-left' : 'md:text-center';
+  return (
+    <td data-label={label} className={`flex items-start justify-between gap-4 border-b border-slate-100 px-1 py-2 text-right font-semibold text-slate-700 last:border-b-0 md:table-cell md:px-4 md:py-3 ${desktopAlign} ${className}`}>
+      <span className="shrink-0 font-extrabold text-slate-500 md:hidden">{label}</span>
+      <span className="min-w-0">{children}</span>
+    </td>
+  );
+}
+
+function EmptyCell({ colSpan, children }) {
+  return (
+    <td colSpan={colSpan} className="block rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-3 py-10 text-center font-semibold text-slate-500 md:table-cell md:border-0 md:bg-transparent">
+      {children}
+    </td>
+  );
+}
+
+
+export default function App() {
+  const [payload, setPayload] = useState(null);
+  const [reports, setReports] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState('전국');
+  const [selectedMarket, setSelectedMarket] = useState('전체');
+  const [selectedItemName, setSelectedItemName] = useState('전체 품목');
+
+  useEffect(() => {
+    Promise.all([fetchJson(DATA_URL, { items: [] }), fetchJson(REPORT_URL, null)]).then(([cropPayload, reportPayload]) => {
+      setPayload(cropPayload);
+      setReports(reportPayload);
+    });
+  }, []);
+
+  const items = useMemo(() => normalizeItems(payload?.items ?? []), [payload]);
+  const regionOptions = useMemo(() => ['전국', ...uniqueOptions(items.map((item) => item.region)).filter((region) => region !== '전국')], [items]);
+  const marketOptions = useMemo(() => ['전체', ...uniqueOptions(items.map((item) => item.market))], [items]);
+  const itemOptions = useMemo(() => ['전체 품목', ...uniqueOptions(items.map((item) => item.name))], [items]);
+  const filteredItems = items.filter((item) => {
+    const matchesRegion = selectedRegion === '전국' || item.region === selectedRegion;
+    const matchesMarket = selectedMarket === '전체' || item.market === selectedMarket;
+    const matchesItem = selectedItemName === '전체 품목' || item.name === selectedItemName;
+    return matchesRegion && matchesMarket && matchesItem;
+  });
+
+  const selectedItem = filteredItems[0] || items[0];
+  const selectedStats = getStats(selectedItem);
+  const nationalAverage = (() => {
+    const prices = items.map((item) => getStats(item).latest?.price).filter(Number.isFinite);
+    return prices.length ? Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length) : null;
+  })();
+  const regionAverage = (() => {
+    const prices = filteredItems.map((item) => getStats(item).latest?.price).filter(Number.isFinite);
+    return prices.length ? Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length) : null;
+  })();
+  const latestDate = selectedItem?.series?.at(-1)?.date || payload?.generatedAt;
+  const trendPoints = (selectedItem?.series ?? []).map((point) => ({ label: formatDate(point.date), date: point.date, value: Number(point.price) }));
+  const regionBars = regionOptions
+    .filter((region) => region !== '전국')
+    .map((region) => {
+      const regionItems = items.filter((item) => item.region === region && (selectedItemName === '전체 품목' || item.name === selectedItemName));
+      const prices = regionItems.map((item) => getStats(item).latest?.price).filter(Number.isFinite);
+      const average = prices.length ? Math.round(prices.reduce((sum, price) => sum + price, 0) / prices.length) : null;
+      return { label: region, value: average };
+    })
+    .filter((bar) => Number.isFinite(bar.value));
+  const summaryLines = (() => {
+    if (!items.length || !selectedItem) return ['GitHub Actions 데이터 갱신 후 가격 요약이 표시됩니다.'];
+    const report = reports?.reports?.[selectedItem?.id]?.['30'];
+    if (Array.isArray(report?.summary) && report.summary.length) return report.summary.slice(0, 3);
+    const diff = selectedStats.diff;
+    const direction = diff > 0 ? '상승' : diff < 0 ? '하락' : '보합';
+    return [
+      `${selectedItem.name} 현재가는 ${formatWon(selectedStats.latest?.price)}입니다.`,
+      `전일 대비 ${toNumber(diff) !== null ? `${Math.abs(diff).toLocaleString('ko-KR')}원 ${direction}` : '변동 정보가 준비되지 않았습니다.'}`,
+      `${selectedRegion} 기준으로 지역별 가격 비교와 추이를 함께 확인할 수 있습니다.`,
+    ];
+  })();
 
   return (
-    <div className="summary-row">
-      <article className="metric-card tone-green">
-        <span className="metric-icon">₩</span>
-        <div>
-          <small>현재 가격</small>
-          <strong>{formatWon(stats.latest)}</strong>
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <header className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-5 px-5 py-6 md:flex-row md:items-end md:justify-between md:px-8">
+          <div className="flex items-center gap-3">
+            <div className="grid h-12 w-12 place-items-center text-emerald-700" aria-hidden="true">
+              <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 3.6C13.9 3.9 7.2 7.1 4.7 12.2 2.5 16.6 4.5 20.6 8.6 21.5c4.9 1.1 9.5-2.8 10.9-8.3.8-3.1.7-6.2.9-9.6ZM8.2 18.7c1.4-4.4 4.5-8.1 9.3-11.2-3.4 3.6-5.7 7.2-6.9 11.2H8.2Z" /></svg>
+            </div>
+            <div>
+              <h1 className="break-keep text-4xl font-black tracking-tight text-emerald-900">농산물 가격정보</h1>
+              <p className="mt-1 text-base font-bold text-slate-500">전국·지역별 생활 농산물 시세</p>
+            </div>
+          </div>
+          <nav className="flex max-w-full gap-5 overflow-x-auto whitespace-nowrap text-sm font-black text-slate-700 md:gap-9" aria-label="주요 메뉴">
+          <a className="shrink-0 border-b-4 border-current pb-3 text-emerald-700 transition hover:text-slate-950" href="#top">홈</a>
+          <a className="shrink-0 border-b-4 border-transparent pb-3 transition hover:text-slate-950" href="#national">전국 시세</a>
+          <a className="shrink-0 border-b-4 border-transparent pb-3 transition hover:text-slate-950" href="#regions">지역별 비교</a>
+          <a className="shrink-0 border-b-4 border-transparent pb-3 transition hover:text-slate-950" href="#trend">가격 추이</a>
+        </nav>
         </div>
-      </article>
-      <article className="metric-card tone-blue">
-        <span className="metric-icon">↓</span>
-        <div>
-          <small>전일 대비</small>
-          <strong className={diffClass}>{formatSignedWon(stats.diff)}</strong>
-          <em className={diffClass}>{formatPercent(stats.rate)}</em>
-        </div>
-      </article>
-      <article className="metric-card tone-yellow">
-        <span className="metric-icon">▮</span>
-        <div>
-          <small>최근 {range}일 평균</small>
-          <strong>{formatWon(stats.average)}</strong>
-        </div>
-      </article>
-      <article className="metric-card tone-rose">
-        <span className="metric-icon">↑</span>
-        <div>
-          <small>최고가({range}일)</small>
-          <strong>{formatWon(stats.max)}</strong>
-        </div>
-      </article>
-      <article className="metric-card tone-mint">
-        <span className="metric-icon">↘</span>
-        <div>
-          <small>최저가({range}일)</small>
-          <strong>{formatWon(stats.min)}</strong>
-        </div>
-      </article>
+      </header>
+
+      <main id="top" className="mx-auto max-w-[1440px] space-y-5 px-5 py-5 md:px-8">
+        <section className="grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm md:grid-cols-4">
+          <FilterSelect label="지역" icon="📍" value={selectedRegion} onChange={setSelectedRegion} options={regionOptions} />
+          <FilterSelect label="시장 유형" icon="🏪" value={selectedMarket} onChange={setSelectedMarket} options={marketOptions} />
+          <FilterSelect label="품목" icon="🌱" value={selectedItemName} onChange={setSelectedItemName} options={itemOptions} />
+          <div className="flex min-w-0 items-center gap-3 px-4 py-4"><span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-slate-100 text-xl text-slate-500">📅</span><span className="min-w-0 flex-1"><span className="mb-1 block text-sm font-extrabold text-slate-700">기준일</span><span className="flex min-h-11 w-full items-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700">{formatDate(latestDate)}</span></span></div>
+        </section>
+
+        <section className="grid gap-4 md:grid-cols-3">
+          <MetricCard icon="₩" label="전국 평균가" value={formatNumber(nationalAverage)} unit="원" detail="전국 품목 평균" sparkline={trendPoints} />
+          <MetricCard icon="📍" label={`선택 지역 평균가 (${selectedRegion})`} value={formatNumber(regionAverage)} unit="원" detail={selectedMarket} sparkline={trendPoints} />
+          <MetricCard icon={toNumber(selectedStats.diff) === null ? '–' : selectedStats.diff > 0 ? '▲' : selectedStats.diff < 0 ? '▼' : '–'} label="전일 대비" value={toNumber(selectedStats.diff) === null ? '-' : `${selectedStats.diff > 0 ? '+' : ''}${formatNumber(selectedStats.diff)}`} unit="원" accent={selectedStats.diff > 0 ? 'red' : 'green'} detail={toPercent(selectedStats.rate)} sparkline={trendPoints} />
+        </section>
+
+        <section className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]" id="national">
+          <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5">
+            <h2 className="mb-4 text-lg font-extrabold text-slate-900">전국 주요 품목 시세</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-separate border-spacing-y-3 text-sm md:border-collapse md:border-spacing-y-0">
+                <thead className="hidden md:table-header-group">
+                  <tr>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700 text-left">품목</th>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">단위</th>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">지역</th>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">가격</th>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">전일 대비</th>
+                    <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">등락률</th>
+                  </tr>
+                </thead>
+                <tbody className="md:divide-y md:divide-slate-100">
+                  {filteredItems.slice(0, 8).map((item) => {
+                    const stats = getStats(item);
+                    return (
+                      <tr key={`${item.id}-${item.region}`} className="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm md:table-row md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+                        <DataCell label="품목" align="left" className="font-extrabold text-slate-950"><span className="inline-flex items-center gap-3"><span className="grid h-8 w-8 place-items-center rounded-full bg-emerald-50 text-lg">{getCropEmoji(item.name)}</span>{item.name}</span></DataCell>
+                        <DataCell label="단위">{item.unit}</DataCell>
+                        <DataCell label="지역">{item.region}</DataCell>
+                        <DataCell label="가격" className="font-extrabold tabular-nums text-emerald-700">{formatWon(stats.latest?.price)}</DataCell>
+                        <DataCell label="전일 대비" className={stats.diff > 0 ? 'text-red-600' : stats.diff < 0 ? 'text-emerald-700' : 'text-slate-600'}>
+                          {toNumber(stats.diff) === null ? '-' : `${stats.diff > 0 ? '▲ ' : stats.diff < 0 ? '▼ ' : ''}${formatNumber(Math.abs(stats.diff))}원`}
+                        </DataCell>
+                        <DataCell label="등락률" className={stats.rate > 0 ? 'text-red-600' : 'text-emerald-700'}>{toPercent(stats.rate)}</DataCell>
+                      </tr>
+                    );
+                  })}
+                  {!filteredItems.length && <tr><EmptyCell colSpan="6">데이터 갱신 후 표시됩니다.</EmptyCell></tr>}
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5" id="regions">
+            <h2 className="mb-4 text-lg font-extrabold text-slate-900">지역별 비교</h2>
+            <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+              <RegionMapMini bars={regionBars} selectedRegion={selectedRegion} />
+              <div className="overflow-x-auto">
+                <table className="w-full border-separate border-spacing-y-3 text-sm md:border-collapse md:border-spacing-y-0">
+                  <thead className="hidden md:table-header-group">
+                    <tr>
+                      <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">지역</th>
+                      <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">평균가</th>
+                    </tr>
+                  </thead>
+                  <tbody className="md:divide-y md:divide-slate-100">
+                    {regionBars.slice(0, 8).map((bar) => (
+                      <tr key={bar.label} className="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm md:table-row md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+                        <DataCell label="지역">{bar.label}</DataCell>
+                        <DataCell label="평균가" className="font-extrabold tabular-nums text-emerald-700">{formatWon(bar.value)}</DataCell>
+                      </tr>
+                    ))}
+                    {!regionBars.length && <tr><EmptyCell colSpan="2">데이터 갱신 후 표시됩니다.</EmptyCell></tr>}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section className="grid gap-4 xl:grid-cols-2" id="trend">
+          <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5"><h2 className="mb-3 text-lg font-extrabold text-slate-900">가격 추이</h2><LineChart points={trendPoints} /></article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5"><h2 className="mb-3 text-lg font-extrabold text-slate-900">지역별 가격 비교</h2><BarChart bars={regionBars} /></article>
+        </section>
+
+        <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5">
+          <h2 className="mb-4 text-lg font-extrabold text-slate-900">선택 지역 상세 ({selectedRegion})</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-separate border-spacing-y-3 text-sm md:border-collapse md:border-spacing-y-0">
+              <thead className="hidden md:table-header-group">
+                <tr>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700 text-left">품목</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">단위</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">지역</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">시장</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">평균가</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">최저가</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">최고가</th>
+                  <th className="border-y border-slate-200 bg-slate-50 px-4 py-3 font-extrabold text-slate-700">기준일</th>
+                </tr>
+              </thead>
+              <tbody className="md:divide-y md:divide-slate-100">
+                {filteredItems.slice(0, 8).map((item) => {
+                  const prices = item.series.map((point) => Number(point.price)).filter(Number.isFinite);
+                  const stats = getStats(item);
+                  return (
+                    <tr key={`detail-${item.id}-${item.region}`} className="block rounded-2xl border border-slate-200 bg-white p-3 shadow-sm md:table-row md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+                      <DataCell label="품목" align="left" className="font-extrabold text-slate-950"><span className="inline-flex items-center gap-3"><span className="grid h-8 w-8 place-items-center rounded-full bg-emerald-50 text-lg">{getCropEmoji(item.name)}</span>{item.name}</span></DataCell>
+                      <DataCell label="단위">{item.unit}</DataCell>
+                      <DataCell label="지역">{item.region}</DataCell>
+                      <DataCell label="시장">{item.market}</DataCell>
+                      <DataCell label="평균가">{formatWon(stats.average)}</DataCell>
+                      <DataCell label="최저가">{formatWon(prices.length ? Math.min(...prices) : null)}</DataCell>
+                      <DataCell label="최고가">{formatWon(prices.length ? Math.max(...prices) : null)}</DataCell>
+                      <DataCell label="기준일">{formatDate(stats.latest?.date)}</DataCell>
+                    </tr>
+                  );
+                })}
+                {!filteredItems.length && <tr><EmptyCell colSpan="8">데이터 갱신 후 표시됩니다.</EmptyCell></tr>}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><h2 className="mb-3 text-lg font-extrabold text-emerald-700">가격 변동 요약</h2><ul className="list-disc space-y-1 pl-5 text-sm font-semibold text-slate-700">{summaryLines.map((line) => <li key={line}>{line}</li>)}</ul></section>
+      </main>
+
+      <footer className="px-6 pb-8 pt-2 text-center text-sm font-semibold text-slate-500">개인적 학습 목적으로 제작된 정적 데이터 사이트</footer>
     </div>
   );
 }
-
-function buildAiBullets(itemName, stats, range) {
-  const diffFromAverage = stats.latest !== null && stats.average !== null ? stats.latest - stats.average : null;
-  const avgRate = stats.average ? ((diffFromAverage / stats.average) * 100) : null;
-  const trend = getTrendLabel(stats.diff);
-  const recommendation = stats.diff === null
-    ? '데이터가 충분하지 않아 추세 해석이 어렵습니다.'
-    : Math.abs(stats.rate ?? 0) >= 5
-      ? '변동 폭이 큰 구간이므로 며칠간의 추가 흐름을 함께 확인하는 편이 좋습니다.'
-      : trend === '상승세'
-        ? '완만한 상승 흐름으로 해석할 수 있습니다.'
-        : trend === '하락세'
-          ? '단기 조정 흐름으로 볼 수 있습니다.'
-          : '큰 변동 없는 보합권 흐름입니다.';
-
-  return [
-    {
-      title: `최근 ${range}일 흐름`,
-      text: `${itemName}는 최근 ${range}일 기준 ${trend}입니다. 현재가는 ${formatWon(stats.latest)}입니다.`,
-    },
-    {
-      title: '전일 비교',
-      text: `전일 대비 ${formatSignedWon(stats.diff)} (${formatPercent(stats.rate)}) 변동했습니다.`,
-    },
-    {
-      title: '평균 비교',
-      text: `최근 ${range}일 평균 ${formatWon(stats.average)} 대비 ${formatSignedWon(diffFromAverage)} (${formatPercent(avgRate)}) 수준입니다.`,
-    },
-    {
-      title: '구간 정보',
-      text: `최고가 ${formatWon(stats.max)}, 최저가 ${formatWon(stats.min)} 구간이 확인됩니다.`,
-    },
-    {
-      title: '단기 체크',
-      text: recommendation,
-    },
-  ];
-}
-
-function createReportBullets({ itemName, stats, range, report }) {
-  if (report?.summary?.length) {
-    const titles = ['핵심 요약', '가격 흐름', '평균 비교', '관찰 포인트'];
-    const summary = report.summary.slice(0, 4).map((line, index) => ({
-      title: titles[index] || '요약',
-      text: String(line),
-    }));
-
-    if (report.recommendation && summary.length < 5) {
-      summary.push({ title: '단기 체크', text: report.recommendation });
-    }
-
-    return summary;
-  }
-
-  return buildAiBullets(itemName, stats, range);
-}
-
-function AiReportCard({ itemName, stats, range, report, source }) {
-  const bullets = createReportBullets({ itemName, stats, range, report });
-  const sourceLabel = source === 'Gemini API'
-    ? 'AI 리포트는 Gemini API 분석 결과를 바탕으로 생성됩니다.'
-    : 'AI 리포트는 가격 데이터 분석 결과를 바탕으로 생성됩니다.';
-
-  return (
-    <aside className="side-card ai-card">
-      <div className="side-title">
-        <h2>AI 리포트</h2>
-        <span className="sparkle">✦</span>
-      </div>
-      <ul className="report-list compact">
-        {bullets.map((bullet) => (
-          <li key={`${bullet.title}-${bullet.text}`}>
-            <strong>{bullet.title}</strong>
-            <p>{bullet.text}</p>
-          </li>
-        ))}
-      </ul>
-      <div className="side-note">{sourceLabel}</div>
-    </aside>
-  );
-}
-
-function SeasonCard({ itemId, itemName }) {
-  const meta = CROP_META[itemId] || CROP_META.cucumber;
-
-  return (
-    <aside className="side-card season-card">
-      <div className="side-title">
-        <h2>계절 정보</h2>
-        <span className="sparkle">🌱</span>
-      </div>
-      <div className="season-layout">
-        <div className="season-badge">
-          <small>제철 시기</small>
-          <strong>{meta.seasonTitle}</strong>
-          <CropIcon id={itemId} className="season-crop-icon" />
-        </div>
-        <ul className="season-points">
-          {meta.seasonBullets.map((text) => (
-            <li key={text}>{text}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="side-note">{itemName} 참고: {meta.tip}</div>
-    </aside>
-  );
-}
-
-function MiniSparkline({ series, positive }) {
-  const cleaned = (series || []).filter((point) => getValidPrice(point.price) !== null);
-  if (!cleaned.length) return <div className="mini-empty">데이터 없음</div>;
-
-  const width = 120;
-  const height = 34;
-  const pad = 3;
-  const values = cleaned.map((point) => Number(point.price));
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const range = Math.max(max - min, 1);
-  const points = values.map((value, index) => {
-    const x = pad + (index / Math.max(values.length - 1, 1)) * (width - pad * 2);
-    const y = height - pad - ((value - min) / range) * (height - pad * 2);
-    return `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
-  }).join(' ');
-
-  return (
-    <svg className={`mini-sparkline ${positive ? 'up' : 'down'}`} viewBox={`0 0 ${width} ${height}`} aria-hidden="true">
-      <path d={points} />
-    </svg>
-  );
-}
-
-function ComparisonSection({ items, selectedId }) {
-  return (
-    <section className="compare-card">
-      <h2>다른 품목 가격 현황</h2>
-      <div className="compare-grid">
-        {items.map((item) => {
-          const stats = calculateStats(item.series || []);
-          const trendClass = getTrendClass(stats.diff);
-          const hasData = stats.latest !== null;
-          return (
-            <article key={item.id} className={`compare-item ${selectedId === item.id ? 'active' : ''}`}>
-              <div className="compare-head">
-                <CropIcon id={item.id} className="compare-crop-icon" />
-                <div>
-                  <strong>{item.name}</strong>
-                  <span>{hasData ? formatWon(stats.latest) : '데이터 없음'}</span>
-                </div>
-                <b className={hasData ? trendClass : 'flat'}>{hasData ? formatPercent(stats.rate) : '-'}</b>
-              </div>
-              <MiniSparkline series={(item.series || []).slice(-14)} positive={(stats.diff ?? 0) >= 0} />
-            </article>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="page-footer">
-      <p>데이터 출처: KAMIS 농산물유통정보 Open API · 차트 기준: 날짜별 평균 가격</p>
-      <p>본 화면은 개인 포트폴리오용 데모입니다.</p>
-      <p>© 2026 Farm Price Note. 무단 복제 및 상업적 이용을 금합니다.</p>
-    </footer>
-  );
-}
-
-function EmptyState({ message }) {
-  return (
-    <main className="app-shell">
-      <AppHeader generatedAt={null} />
-      <section className="empty-state-card">
-        <h2>데이터를 불러오지 못했습니다.</h2>
-        <p>{message}</p>
-      </section>
-      <Footer />
-    </main>
-  );
-}
-
-function App() {
-  const [data, setData] = useState(null);
-  const [aiReports, setAiReports] = useState(null);
-  const [error, setError] = useState(null);
-  const [selectedId, setSelectedId] = useState('cucumber');
-  const [range, setRange] = useState(30);
-
-  useEffect(() => {
-    let ignore = false;
-
-    const loadData = async () => {
-      try {
-        const [json, aiJson] = await Promise.all([fetchCropPrices(), fetchAiReports()]);
-        if (!ignore) {
-          setData(json);
-          setAiReports(aiJson);
-          const hasCucumber = json.items?.some((item) => item.id === 'cucumber');
-          setSelectedId(hasCucumber ? 'cucumber' : json.items?.[0]?.id ?? 'cucumber');
-        }
-      } catch (fetchError) {
-        if (!ignore) setError(fetchError.message);
-      }
-    };
-
-    loadData();
-    return () => {
-      ignore = true;
-    };
-  }, []);
-
-  const items = data?.items || [];
-  const selectedItem = items.find((item) => item.id === selectedId) || items[0];
-  const visibleSeries = useMemo(() => {
-    const series = selectedItem?.series || [];
-    return series.slice(-range);
-  }, [selectedItem, range]);
-  const stats = useMemo(() => calculateStats(visibleSeries), [visibleSeries]);
-  const selectedAiReport = selectedItem?.id ? aiReports?.reports?.[selectedItem.id]?.[String(range)] : null;
-
-  const downloadPriceData = () => {
-    if (!selectedItem || !visibleSeries.length) return;
-
-    const rows = [
-      ['품목', '날짜', '가격', '단위'],
-      ...visibleSeries.map((point) => [selectedItem.name, point.date, point.price, selectedItem.unit || '']),
-    ];
-    const csv = `\ufeff${rows.map((row) => row.map((value) => `"${String(value ?? '').replaceAll('\"', '\"\"')}"`).join(',')).join('\n')}`;
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a');
-
-    anchor.href = url;
-    anchor.download = `farm-price-${selectedItem.id}-${range}days.csv`;
-    document.body.appendChild(anchor);
-    anchor.click();
-    anchor.remove();
-    URL.revokeObjectURL(url);
-  };
-
-  if (error) {
-    return <EmptyState message={error} />;
-  }
-
-  if (!data) {
-    return (
-      <main className="app-shell">
-        <AppHeader generatedAt={null} />
-        <section className="loading-card simple-loading">
-          <span className="loader" />
-          <p>농산물 가격 데이터를 불러오는 중입니다.</p>
-        </section>
-        <Footer />
-      </main>
-    );
-  }
-
-  if (!items.length) {
-    return <EmptyState message="표시할 농산물 데이터가 없습니다." />;
-  }
-
-  return (
-    <main className="app-shell dashboard-page">
-      <AppHeader generatedAt={data.generatedAt} />
-      <FilterBar
-        items={items}
-        selectedId={selectedItem?.id}
-        onSelect={setSelectedId}
-        range={range}
-        onRangeChange={setRange}
-      />
-
-      <section className="content-grid">
-        <section className="chart-card">
-          <div className="chart-head">
-            <div className="chart-title-wrap">
-              <div className="chart-title-line">
-                <CropIcon id={selectedItem?.id} className="chart-title-icon" />
-                <h2>{selectedItem?.name} 가격 추이</h2>
-              </div>
-              <p>단위: {selectedItem?.unit || '-'} · 날짜별 평균 가격</p>
-              <span className="chart-guide">그래프 점에 마우스를 올리면 날짜와 가격을 확인할 수 있습니다.</span>
-            </div>
-            <button type="button" className="outline-button" onClick={downloadPriceData}>데이터 다운로드</button>
-          </div>
-          <LineChart series={visibleSeries} latestPrice={stats.latest} />
-          <SummaryCards stats={stats} range={range} />
-        </section>
-
-        <div className="side-panel">
-          <AiReportCard itemName={selectedItem?.name} stats={stats} range={range} report={selectedAiReport} source={aiReports?.source} />
-          <SeasonCard itemId={selectedItem?.id} itemName={selectedItem?.name} />
-        </div>
-      </section>
-
-      <ComparisonSection items={items} selectedId={selectedItem?.id} />
-      <Footer />
-    </main>
-  );
-}
-
-export default App;
