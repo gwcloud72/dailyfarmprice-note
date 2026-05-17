@@ -38,6 +38,19 @@ function formatDate(value) {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
+function formatShortDate(value) {
+  const text = String(value ?? '').slice(0, 10);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return `${text.slice(5, 7)}.${text.slice(8, 10)}`;
+  return text || '-';
+}
+
+function getTickIndexes(length, maxTicks = 5) {
+  if (length <= 0) return [];
+  if (length <= maxTicks) return Array.from({ length }, (_, index) => index);
+  const last = length - 1;
+  return Array.from(new Set(Array.from({ length: maxTicks }, (_, index) => Math.round((last * index) / (maxTicks - 1)))));
+}
+
 function normalizeText(value, fallback = '-') {
   const text = String(value ?? '').replace(/\s+/g, ' ').trim();
   return text || fallback;
@@ -101,6 +114,86 @@ function getItemRouteId(item, index) {
 
 function findItemByRouteId(items, detail) {
   return items.find((item, index) => getItemRouteId(item, index) === detail);
+}
+
+function average(values) {
+  const numbers = values.map(toNumber).filter(Number.isFinite);
+  return numbers.length ? Math.round(numbers.reduce((sum, value) => sum + value, 0) / numbers.length) : null;
+}
+
+function latestPrice(item) {
+  return getStats(item).latestPrice;
+}
+
+function latestDiff(item) {
+  return getStats(item).diff;
+}
+
+function sortByRegion(items, regionOrder = []) {
+  const order = new Map(regionOrder.map((region, index) => [region, index]));
+  return [...items].sort((a, b) => {
+    const aOrder = order.has(a.region) ? order.get(a.region) : 999;
+    const bOrder = order.has(b.region) ? order.get(b.region) : 999;
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    return `${a.name}-${a.region}`.localeCompare(`${b.name}-${b.region}`, 'ko');
+  });
+}
+
+function getVisibleItems(items, region, itemName) {
+  if (itemName === '전체') {
+    if (region === '전국') {
+      const national = items.filter((item) => item.region === '전국');
+      if (national.length) return national;
+      const firstByName = new Map();
+      items.forEach((item) => {
+        if (!firstByName.has(item.name)) firstByName.set(item.name, item);
+      });
+      return Array.from(firstByName.values());
+    }
+    return items.filter((item) => item.region === region);
+  }
+  const matched = items.filter((item) => item.name === itemName);
+  if (region === '전국') return sortByRegion(matched, ['전국']);
+  return matched.filter((item) => item.region === region);
+}
+
+function pickTrendItem(items, region, itemName) {
+  if (itemName === '전체') return null;
+  const matched = items.filter((item) => item.name === itemName);
+  if (region !== '전국') return matched.find((item) => item.region === region) ?? matched.find((item) => item.region === '전국') ?? matched[0] ?? null;
+  return matched.find((item) => item.region === '전국') ?? matched[0] ?? null;
+}
+
+function buildAverageSeries(items) {
+  const bucket = new Map();
+  items.forEach((item) => {
+    (Array.isArray(item.series) ? item.series : []).forEach((point) => {
+      const price = toNumber(point.price ?? point.value);
+      if (!point.date || price === null) return;
+      if (!bucket.has(point.date)) bucket.set(point.date, []);
+      bucket.get(point.date).push(price);
+    });
+  });
+  return Array.from(bucket.entries())
+    .map(([date, prices]) => ({ date, price: average(prices) }))
+    .filter((point) => point.price !== null)
+    .sort((a, b) => String(a.date).localeCompare(String(b.date)))
+    .slice(-45);
+}
+
+function buildRegionBars(items, itemName) {
+  const regionalItems = items.filter((item) => item.region && item.region !== '전국' && (itemName === '전체' || item.name === itemName));
+  const grouped = new Map();
+  regionalItems.forEach((item) => {
+    const price = latestPrice(item);
+    if (price === null) return;
+    if (!grouped.has(item.region)) grouped.set(item.region, []);
+    grouped.get(item.region).push(price);
+  });
+  return Array.from(grouped.entries())
+    .map(([label, prices]) => ({ label, value: average(prices) }))
+    .filter((bar) => bar.value !== null)
+    .sort((a, b) => b.value - a.value);
 }
 
 function normalizePoints(points) {
@@ -186,12 +279,14 @@ function EmptyPanel({ title, description, value, meta }) {
   );
 }
 
-function LineChart({ points }) {
+
+
+function LineChart({ points, title = '가격 추이', scope = '' }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const { chartPoints, min, max } = normalizePoints(points);
-  const width = 680;
-  const height = 220;
-  const padding = { top: 18, right: 24, bottom: 30, left: 34 };
+  const width = 920;
+  const height = 390;
+  const padding = { top: 34, right: 34, bottom: 52, left: 78 };
   if (!chartPoints.length) return <EmptyPanel title="가격 추이 데이터가 없습니다" description="데이터 갱신 후 그래프가 표시됩니다." />;
   if (chartPoints.length === 1) return <EmptyPanel title="최근 수집값" value={formatWon(chartPoints[0].value)} meta={chartPoints[0].label} description="추이선은 2건 이상 수집된 뒤 표시합니다." />;
   const range = Math.max(max - min, 1);
@@ -199,18 +294,40 @@ function LineChart({ points }) {
   const getY = (value) => padding.top + (1 - ((value - min) / range)) * (height - padding.top - padding.bottom);
   const plotted = chartPoints.map((point, index) => ({ ...point, x: getX(index), y: getY(point.value) }));
   const path = plotted.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
+  const baseline = height - padding.bottom;
+  const areaPath = `${path} L ${plotted.at(-1).x.toFixed(2)} ${baseline} L ${plotted[0].x.toFixed(2)} ${baseline} Z`;
   const active = activeIndex !== null ? plotted[activeIndex] : plotted.at(-1);
-  function activate(event) { const rect = event.currentTarget.getBoundingClientRect(); const ratio = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width)); setActiveIndex(Math.round(ratio * (plotted.length - 1))); }
+  const first = plotted[0];
+  const last = plotted.at(-1);
+  const diff = last.value - first.value;
+  const yTicks = [0, 1, 2, 3].map((tick) => min + ((max - min) * (3 - tick)) / 3);
+  const xTicks = [0, Math.floor((plotted.length - 1) / 3), Math.floor(((plotted.length - 1) * 2) / 3), plotted.length - 1]
+    .filter((value, index, array) => value >= 0 && array.indexOf(value) === index);
+  function activate(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const ratio = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
+    setActiveIndex(Math.round(ratio * (plotted.length - 1)));
+  }
   return (
     <div>
-      <div className="mb-3 flex items-center justify-between text-xs font-semibold text-slate-500"><span>{String(plotted[0].label)}</span><span className="text-slate-950">{active.label} · {formatWon(active.value)}</span></div>
-      <svg viewBox={`0 0 ${width} ${height}`} className="h-56 w-full bg-white" onMouseMove={activate} onMouseLeave={() => setActiveIndex(null)} onClick={activate} role="img" aria-label="농산물 가격 추이">
-        {[0, 1, 2].map((line) => { const y = padding.top + ((height - padding.top - padding.bottom) * line) / 2; return <line key={line} x1={padding.left} x2={width - padding.right} y1={y} y2={y} stroke="#e5e7eb" />; })}
-        <path d={path} fill="none" stroke="#166534" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1={active.x} x2={active.x} y1={padding.top} y2={height - padding.bottom} stroke="#94a3b8" strokeDasharray="3 4" />
-        <circle cx={active.x} cy={active.y} r="5" fill="#fff" stroke="#166534" strokeWidth="3" />
-        <text x={padding.left} y={height - 8} className="fill-slate-500 text-[11px] font-bold">{String(plotted[0].label).slice(5)}</text>
-        <text x={width - padding.right - 60} y={height - 8} className="fill-slate-500 text-[11px] font-bold">{String(plotted.at(-1).label).slice(5)}</text>
+      <div className="mb-5 grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
+        <div><p className="text-base font-black text-slate-950">{title}</p><p className="mt-1 text-xs font-semibold text-slate-500">{scope ? `${scope} · ` : ''}{String(first.label)} ~ {String(last.label)} · {plotted.length}개 날짜</p></div>
+        <div className="grid gap-2 sm:grid-cols-2 md:min-w-[310px]">
+          <div className="border border-slate-200 bg-slate-50 px-3 py-2"><p className="text-xs font-bold text-slate-500">선택 일자</p><p className="mt-1 text-sm font-black tabular-nums text-slate-950">{active.label} · {formatWon(active.value)}</p></div>
+          <div className="border border-slate-200 bg-slate-50 px-3 py-2"><p className="text-xs font-bold text-slate-500">기간 변화</p><p className={`mt-1 text-sm font-black tabular-nums ${diff > 0 ? 'text-red-600' : diff < 0 ? 'text-emerald-700' : 'text-slate-950'}`}>{formatSignedWon(diff)}</p></div>
+        </div>
+      </div>
+      <svg viewBox={`0 0 ${width} ${height}`} className="h-[24rem] w-full bg-white" onMouseMove={activate} onMouseLeave={() => setActiveIndex(null)} onClick={activate} role="img" aria-label="농산물 가격 추이">
+        <rect x={padding.left} y={padding.top} width={width - padding.left - padding.right} height={height - padding.top - padding.bottom} fill="#fff" />
+        {yTicks.map((value, index) => {
+          const y = padding.top + ((height - padding.top - padding.bottom) * index) / 3;
+          return <g key={index}><line x1={padding.left} x2={width - padding.right} y1={y} y2={y} stroke="#e2e8f0" /><text x={padding.left - 14} y={y + 4} textAnchor="end" className="fill-slate-500 text-[12px] font-bold">{formatNumber(value)}</text></g>;
+        })}
+        <path d={areaPath} fill="#166534" opacity="0.07" />
+        <path d={path} fill="none" stroke="#166534" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1={active.x} x2={active.x} y1={padding.top} y2={baseline} stroke="#64748b" strokeDasharray="4 5" />
+        <circle cx={active.x} cy={active.y} r="7" fill="#fff" stroke="#166534" strokeWidth="3" />
+        {xTicks.map((index) => <text key={index} x={plotted[index].x} y={height - 14} textAnchor={index === 0 ? 'start' : index === plotted.length - 1 ? 'end' : 'middle'} className="fill-slate-500 text-[12px] font-bold">{String(plotted[index].label).slice(5)}</text>)}
       </svg>
     </div>
   );
@@ -223,7 +340,23 @@ function HorizontalBars({ bars }) {
   const values = chartBars.map((bar) => toNumber(bar.value)).filter(Number.isFinite);
   const min = Math.min(...values);
   const max = Math.max(...values);
-  return <div className="space-y-3">{chartBars.map((bar) => { const value = toNumber(bar.value) ?? 0; const width = Math.max(10, ((value - min) / Math.max(max - min, 1)) * 75 + 15); return <div key={bar.label} className="grid grid-cols-[72px_1fr_86px] items-center gap-3 text-sm"><span className="truncate font-bold text-slate-700">{bar.label}</span><span className="h-2 bg-slate-100"><span className="block h-2 bg-slate-800" style={{ width: `${width}%` }} /></span><span className="text-right font-black tabular-nums text-slate-950">{formatWon(value)}</span></div>; })}</div>;
+  const range = Math.max(max - min, 1);
+  return (
+    <div className="space-y-4">
+      {chartBars.map((bar) => {
+        const value = toNumber(bar.value) ?? 0;
+        const width = max === min ? 100 : Math.max(18, ((value - min) / range) * 76 + 18);
+        return (
+          <div key={bar.label} className="grid grid-cols-[minmax(74px,112px)_1fr_minmax(86px,104px)] items-center gap-3 text-sm">
+            <span className="truncate font-black text-slate-800">{bar.label}</span>
+            <span className="h-6 border border-slate-200 bg-slate-50"><span className="block h-full bg-slate-800" style={{ width: `${width}%` }} /></span>
+            <span className="text-right font-black tabular-nums text-slate-950">{formatWon(value)}</span>
+          </div>
+        );
+      })}
+      <p className="text-xs font-semibold text-slate-500">최저 {formatWon(min)} · 최고 {formatWon(max)}</p>
+    </div>
+  );
 }
 
 function CropTable({ items }) {
@@ -283,18 +416,27 @@ export default function App() {
   const items = Array.isArray(data?.items) ? data.items : [];
   const regions = useMemo(() => ['전국', ...Array.from(new Set(items.map((item) => item.region).filter(Boolean).filter((name) => name !== '전국')))], [items]);
   const itemNames = useMemo(() => ['전체', ...Array.from(new Set(items.map((item) => item.name).filter(Boolean)))], [items]);
-  const visibleItems = items.filter((item) => (region === '전국' || item.region === region) && (itemName === '전체' || item.name === itemName));
+  const visibleItems = useMemo(() => getVisibleItems(items, region, itemName), [items, region, itemName]);
   const nationalItems = items.filter((item) => item.region === '전국');
-  const selectedItem = visibleItems[0] ?? items[0] ?? null;
+  const trendItem = pickTrendItem(items, region, itemName);
+  const trendPoints = itemName === '전체' ? buildAverageSeries(visibleItems) : (trendItem?.series ?? []);
+  const selectedItem = trendItem ?? visibleItems[0] ?? items[0] ?? null;
   const selectedStats = selectedItem ? getStats(selectedItem) : {};
-  const regionalForItem = selectedItem ? items.filter((item) => item.name === selectedItem.name && item.region !== '전국') : [];
-  const regionAverage = visibleItems.length ? Math.round(visibleItems.map((item) => getStats(item).latestPrice).filter(Number.isFinite).reduce((sum, value) => sum + value, 0) / Math.max(visibleItems.map((item) => getStats(item).latestPrice).filter(Number.isFinite).length, 1)) : null;
-  const nationalAverage = nationalItems.length ? Math.round(nationalItems.map((item) => getStats(item).latestPrice).filter(Number.isFinite).reduce((sum, value) => sum + value, 0) / Math.max(nationalItems.map((item) => getStats(item).latestPrice).filter(Number.isFinite).length, 1)) : null;
+  const regionBars = buildRegionBars(items, itemName);
+  const trendScope = itemName === '전체' ? `${region} · 전체 품목 평균` : `${region} · ${itemName}`;
+  const regionAverage = average(visibleItems.map(latestPrice));
+  const nationalAverage = average(nationalItems.map(latestPrice));
+  const averageDiff = average(visibleItems.map(latestDiff));
+  const uniqueItemCount = new Set(visibleItems.map((item) => item.name).filter(Boolean)).size;
   const detailItem = route.page === 'item' && route.detail ? findItemByRouteId(items, route.detail) : null;
   if (route.page === 'item' && route.detail) return <CropDetail item={detailItem} allItems={items} reports={reports} updatedAt={data?.generatedAt} />;
 
-  const report = selectedItem ? reports?.reports?.[selectedItem.id]?.['30'] : null;
-  const summaryLines = Array.isArray(report?.summary) && report.summary.length ? report.summary : [
+  const report = itemName !== '전체' && selectedItem ? reports?.reports?.[selectedItem.id]?.['30'] : null;
+  const summaryLines = Array.isArray(report?.summary) && report.summary.length ? report.summary : itemName === '전체' ? [
+    `${region} 기준 ${uniqueItemCount || 0}개 품목의 시세를 표시합니다.`,
+    nationalAverage !== null ? `전국 수집 품목 평균은 ${formatWon(nationalAverage)}입니다.` : '전국 평균 데이터가 생성되면 표시됩니다.',
+    averageDiff !== null ? `현재 필터의 평균 전일 대비는 ${formatSignedWon(averageDiff)}입니다.` : '전일 대비 데이터가 생성되면 표시됩니다.',
+  ] : [
     selectedItem ? `${selectedItem.name} ${selectedItem.region} 기준 현재가는 ${formatWon(selectedStats.latestPrice)}입니다.` : 'KAMIS 데이터가 생성되면 가격 요약이 표시됩니다.',
     selectedStats.diff !== undefined ? `전일 대비는 ${formatSignedWon(selectedStats.diff)}입니다.` : '전일 대비 데이터가 생성되면 표시됩니다.',
     '전국과 지역별 가격을 함께 확인할 수 있습니다.',
@@ -304,12 +446,21 @@ export default function App() {
     <Shell>
       <PageHeader updatedAt={data?.generatedAt} />
       <FilterBar region={region} itemName={itemName} regions={regions.length ? regions : ['전국']} itemNames={itemNames.length ? itemNames : ['전체']} setRegion={setRegion} setItemName={setItemName} />
-      <InfoStrip items={[{ label: '전국 평균가', value: formatWon(nationalAverage), unit: '', detail: '전국 수집 품목 평균' }, { label: `${region} 평균가`, value: formatWon(regionAverage), unit: '', detail: '현재 필터 기준' }, { label: '전일 대비', value: formatSignedWon(selectedStats.diff), unit: '', detail: selectedItem ? `${selectedItem.name} 기준` : '선택 품목 기준' }]} />
-      <section className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
-        <Panel title="농산물 시세표" description="품목명을 누르면 가격 추이와 지역별 가격을 확인할 수 있습니다."><CropTable items={visibleItems} /></Panel>
-        <div className="space-y-5"><Panel title="가격 추이" description="선택 품목의 최근 가격 흐름입니다."><LineChart points={selectedItem?.series ?? []} /></Panel><Panel title="요약" description="수집된 가격 기준의 짧은 정리입니다."><SummaryList lines={summaryLines} /></Panel></div>
+      <InfoStrip items={itemName === '전체' ? [
+        { label: '전국 평균가', value: formatWon(nationalAverage), unit: '', detail: '전국 품목 평균' },
+        { label: '표시 품목', value: `${uniqueItemCount || 0}개`, unit: '', detail: region === '전국' ? '전국 기준' : `${region} 기준` },
+        { label: '평균 전일 대비', value: formatSignedWon(averageDiff), unit: '', detail: '현재 필터 품목 평균' },
+      ] : [
+        { label: '전국 평균가', value: formatWon(nationalItems.find((item) => item.name === itemName) ? latestPrice(nationalItems.find((item) => item.name === itemName)) : nationalAverage), unit: '', detail: `${itemName} 기준` },
+        { label: `${region} 현재가`, value: formatWon(regionAverage), unit: '', detail: '현재 필터 기준' },
+        { label: '전일 대비', value: formatSignedWon(selectedStats.diff), unit: '', detail: selectedItem ? `${selectedItem.name} 기준` : '선택 품목 기준' },
+      ]} />
+      <Panel title={itemName === '전체' ? '농산물 시세표' : `${itemName} 지역별 시세표`} description={itemName === '전체' ? '전체 품목 선택 시 여러 품목의 현재 시세를 표시합니다.' : '전국과 지역별 현재가를 함께 확인할 수 있습니다.'}><CropTable items={visibleItems} /></Panel>
+      <section className="grid gap-5 lg:grid-cols-2">
+        <Panel title="일자별 가격 추이" description="현재 선택한 지역과 품목 조건의 날짜별 가격 흐름입니다."><LineChart points={trendPoints} title="일자별 가격 추이" scope={trendScope} /></Panel>
+        <Panel title={itemName === '전체' ? '지역별 평균가 비교' : `${itemName} 지역별 가격 비교`} description={itemName === '전체' ? '전국을 제외한 수집 지역의 전체 품목 평균가를 비교합니다.' : '선택 품목의 지역별 현재가를 비교합니다.'}><HorizontalBars bars={regionBars} /></Panel>
       </section>
-      <Panel title="지역별 가격 비교" description="선택 품목의 지역별 현재가를 비교합니다."><HorizontalBars bars={regionalForItem.map((item) => ({ label: item.region, value: getStats(item).latestPrice }))} /></Panel>
+      <Panel title="요약" description="수집된 가격 기준의 짧은 정리입니다."><SummaryList lines={summaryLines} /></Panel>
       <footer className="border border-slate-200 bg-white px-5 py-4 text-center text-xs font-semibold text-slate-500">개인적 학습 목적으로 제작된 정적 데이터 사이트입니다.</footer>
     </Shell>
   );
