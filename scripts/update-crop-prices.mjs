@@ -9,6 +9,108 @@ const FETCH_ENABLED = process.env.KAMIS_FETCH_ENABLED === 'true';
 const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS || 90);
 const COUNTRY_CODE = process.env.KAMIS_COUNTRY_CODE || '1101';
 const DEFAULT_PRICE_TYPE = process.env.KAMIS_PRICE_TYPE || 'retail';
+const DEFAULT_REGION_CONFIGS = [
+  {
+    code: "",
+    name: "전국"
+  },
+  {
+    code: "1101",
+    name: "서울"
+  },
+  {
+    code: "2100",
+    name: "부산"
+  },
+  {
+    code: "2200",
+    name: "대구"
+  },
+  {
+    code: "2300",
+    name: "인천"
+  },
+  {
+    code: "2401",
+    name: "광주"
+  },
+  {
+    code: "2501",
+    name: "대전"
+  },
+  {
+    code: "2601",
+    name: "울산"
+  },
+  {
+    code: "2701",
+    name: "세종"
+  },
+  {
+    code: "3111",
+    name: "수원"
+  },
+  {
+    code: "3112",
+    name: "성남"
+  },
+  {
+    code: "3113",
+    name: "의정부"
+  },
+  {
+    code: "3138",
+    name: "고양"
+  },
+  {
+    code: "3145",
+    name: "용인"
+  },
+  {
+    code: "3211",
+    name: "춘천"
+  },
+  {
+    code: "3214",
+    name: "강릉"
+  },
+  {
+    code: "3311",
+    name: "청주"
+  },
+  {
+    code: "3411",
+    name: "천안"
+  },
+  {
+    code: "3511",
+    name: "전주"
+  },
+  {
+    code: "3613",
+    name: "순천"
+  },
+  {
+    code: "3711",
+    name: "포항"
+  },
+  {
+    code: "3714",
+    name: "안동"
+  },
+  {
+    code: "3814",
+    name: "창원"
+  },
+  {
+    code: "3818",
+    name: "김해"
+  },
+  {
+    code: "3911",
+    name: "제주"
+  }
+];
 
 const ACTION_BY_PRICE_TYPE = {
   retail: 'periodRetailProductList',
@@ -39,6 +141,56 @@ function parseProducts(value) {
     console.warn(`KAMIS 상품 설정 파싱 실패: ${error.message}`);
     return [];
   }
+}
+
+function normalizeRegionConfig(region) {
+  if (typeof region === 'string') {
+    const [code = '', name = ''] = region.split(':');
+    return { code: code.trim(), name: (name || code || '전국').trim() };
+  }
+
+  if (region && typeof region === 'object') {
+    return {
+      code: String(region.code ?? region.countrycode ?? '').trim(),
+      name: String(region.name ?? region.region ?? region.label ?? '').trim(),
+    };
+  }
+
+  return { code: '', name: '전국' };
+}
+
+function parseRegionConfigs(value) {
+  if (!value) return [];
+
+  try {
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed)) {
+      return parsed.map(normalizeRegionConfig).filter((region) => region.name);
+    }
+  } catch {
+    // 쉼표 구분 문자열 형식을 이어서 처리합니다. 예: "1101:서울,2100:부산"
+  }
+
+  return String(value)
+    .split(',')
+    .map((part) => normalizeRegionConfig(part))
+    .filter((region) => region.name);
+}
+
+function getRegionConfigs(product) {
+  const fromProduct = Array.isArray(product.regions)
+    ? product.regions.map(normalizeRegionConfig).filter((region) => region.name)
+    : [];
+  if (fromProduct.length) return fromProduct;
+
+  const fromEnv = parseRegionConfigs(process.env.KAMIS_REGION_CODES);
+  if (fromEnv.length) return fromEnv;
+
+  if (product.countrycode || product.region) {
+    return [{ code: String(product.countrycode ?? COUNTRY_CODE).trim(), name: product.region || '서울' }];
+  }
+
+  return DEFAULT_REGION_CONFIGS;
 }
 
 function toKstDate(date = new Date()) {
@@ -164,7 +316,7 @@ function toDailySeries(rows) {
     .sort((a, b) => a.date.localeCompare(b.date));
 }
 
-async function fetchProductVariant(product, startDay, endDay, kindcode) {
+async function fetchProductVariant(product, startDay, endDay, kindcode, regionConfig) {
   const priceType = getPriceType(product);
   const action = getAction(product);
   const url = new URL(API_BASE);
@@ -175,7 +327,9 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
   url.searchParams.set('p_returntype', 'json');
   url.searchParams.set('p_startday', startDay);
   url.searchParams.set('p_endday', endDay);
-  url.searchParams.set('p_countrycode', product.countrycode ?? COUNTRY_CODE);
+  if (regionConfig?.code) {
+    url.searchParams.set('p_countrycode', regionConfig.code);
+  }
   url.searchParams.set('p_itemcategorycode', product.itemcategorycode);
   url.searchParams.set('p_itemcode', product.itemcode);
   url.searchParams.set('p_kindcode', kindcode);
@@ -221,10 +375,12 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
   console.log(`📊 ${product.name} 일별 집계 완료: 원본 ${rawRows.length}건 → 일별 ${dailyRows.length}건`);
 
   return {
-    id: product.id,
+    id: `${product.id}-${regionConfig?.code || 'all'}`,
+    baseId: product.id,
     name: product.name,
     category: product.category || '농산물',
-    region: product.region || latestRow?.countyNames?.[0] || '서울',
+    region: regionConfig?.name || product.region || latestRow?.countyNames?.[0] || '전국',
+    regionCode: regionConfig?.code || 'ALL',
     market: product.market || (priceType === 'retail' ? '소매' : '도매'),
     unit: product.unit || '1kg',
     kindName: latestRow?.kindNames?.[0] || product.kindName || '',
@@ -235,7 +391,8 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
       itemcode: product.itemcode,
       kindcode,
       productrankcode: product.productrankcode ?? '',
-      countrycode: product.countrycode ?? COUNTRY_CODE,
+      countrycode: regionConfig?.code || '',
+      regionName: regionConfig?.name || '전국',
       aggregation: 'daily-average',
       rawSampleCount: rawRows.length,
       dailySampleCount: dailyRows.length,
@@ -251,15 +408,15 @@ async function fetchProductVariant(product, startDay, endDay, kindcode) {
   };
 }
 
-async function fetchProduct(product, startDay, endDay) {
+async function fetchProduct(product, startDay, endDay, regionConfig) {
   const kindcodes = getKindCodeCandidates(product);
   const errors = [];
 
   for (const kindcode of kindcodes) {
     try {
-      const result = await fetchProductVariant(product, startDay, endDay, kindcode);
+      const result = await fetchProductVariant(product, startDay, endDay, kindcode, regionConfig);
       const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=empty';
-      console.log(`✅ ${product.name} 데이터 수집 완료 (${label})`);
+      console.log(`✅ ${product.name} / ${regionConfig?.name || '전국'} 데이터 수집 완료 (${label})`);
       return result;
     } catch (error) {
       const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=empty';
@@ -267,7 +424,7 @@ async function fetchProduct(product, startDay, endDay) {
     }
   }
 
-  throw new Error(`${product.name} 모든 품종 코드 조회 실패: ${errors.join(' / ')}`);
+  throw new Error(`${product.name} / ${regionConfig?.name || '전국'} 모든 품종 코드 조회 실패: ${errors.join(' / ')}`);
 }
 
 async function writeData(data) {
@@ -294,11 +451,15 @@ async function main() {
   const items = [];
 
   for (const product of productConfigs) {
-    try {
-      items.push(await fetchProduct(product, startDay, today));
-    } catch (error) {
-      errors.push(error.message);
-      console.warn(`⚠️ ${error.message}`);
+    const regionConfigs = getRegionConfigs(product);
+
+    for (const regionConfig of regionConfigs) {
+      try {
+        items.push(await fetchProduct(product, startDay, today, regionConfig));
+      } catch (error) {
+        errors.push(error.message);
+        console.warn(`⚠️ ${error.message}`);
+      }
     }
   }
 
@@ -313,7 +474,7 @@ async function main() {
     aggregation: 'daily-average',
     notice: errors.length
       ? `일부 품목 수집 실패: ${errors.join(' / ')}`
-      : 'KAMIS Open API 데이터를 날짜별 평균 가격으로 집계해 정적 JSON으로 생성했습니다.',
+      : 'KAMIS Open API 데이터를 전국·지역별 날짜 평균 가격으로 집계해 정적 JSON으로 생성했습니다.',
     items,
   });
 }

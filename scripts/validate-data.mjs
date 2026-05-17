@@ -16,6 +16,11 @@ try {
   assert(Array.isArray(data.items), 'items 배열이 필요합니다.');
   assert(data.items.length > 0, '최소 1개 이상의 KAMIS 실데이터 품목이 필요합니다.');
 
+  const regionNames = new Set(data.items.map((item) => item.region).filter(Boolean));
+  const regionalNames = [...regionNames].filter((region) => region !== '전국');
+  assert(regionNames.has('전국'), '전국 기준 데이터가 필요합니다. p_countrycode를 비운 전체지역 수집 결과를 확인하세요.');
+  assert(regionalNames.length >= 5, `전국 비교 화면을 위해 전국 외 최소 5개 이상 지역 데이터가 필요합니다. 현재 지역: ${[...regionNames].join(', ') || '없음'}`);
+
   for (const item of data.items) {
     assert(item.id && item.name, '품목 id/name 값이 필요합니다.');
     assert(Array.isArray(item.series), `${item.name} series 배열이 필요합니다.`);
