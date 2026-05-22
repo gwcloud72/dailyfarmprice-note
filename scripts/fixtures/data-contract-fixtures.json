@@ -1,0 +1,81 @@
+{
+  "normal": {
+    "prices": {
+      "generatedAt": "2026-05-21T09:00:00+09:00",
+      "items": [
+        {
+          "id": "cabbage-seoul",
+          "name": "배추",
+          "region": "서울",
+          "unit": "1kg",
+          "series": [
+            {
+              "date": "2026-05-19",
+              "price": 1200
+            },
+            {
+              "date": "2026-05-20",
+              "price": 1240
+            },
+            {
+              "date": "2026-05-21",
+              "price": 1280
+            }
+          ]
+        }
+      ]
+    },
+    "reports": {
+      "reports": {
+        "배추": {
+          "7": {
+            "summary": [
+              "배추 가격은 전일 대비 소폭 상승했습니다."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "edge": {
+    "prices": {
+      "generatedAt": null,
+      "items": [
+        {
+          "id": "long-name",
+          "name": "아주 긴 품목명 테스트용 농산물 데이터",
+          "region": "아주 긴 지역명 테스트",
+          "unit": "1kg",
+          "series": [
+            {
+              "date": "2026-05-20",
+              "price": ""
+            },
+            {
+              "date": "2026-05-21",
+              "price": "1350"
+            }
+          ]
+        },
+        {
+          "id": "empty-series",
+          "name": "무",
+          "region": "전국",
+          "series": []
+        }
+      ]
+    },
+    "reports": {
+      "reports": {}
+    }
+  },
+  "empty": {
+    "prices": {
+      "generatedAt": null,
+      "items": []
+    },
+    "reports": {
+      "reports": {}
+    }
+  }
+}
