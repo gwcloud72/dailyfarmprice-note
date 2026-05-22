@@ -34,6 +34,7 @@ jobs:
           node-version: "20"
           cache: npm
           cache-dependency-path: package-lock.json
+          registry-url: https://registry.npmjs.org
 
       - name: Node/npm version
         run: |
@@ -42,6 +43,9 @@ jobs:
 
       - name: Install dependencies
         shell: bash
+        env:
+          NODE_ENV: development
+          NPM_CONFIG_PRODUCTION: "false"
         run: |
           set -euo pipefail
           npm config set registry https://registry.npmjs.org/
@@ -52,10 +56,17 @@ jobs:
           npm config set fetch-retry-mintimeout 20000
           npm config set fetch-retry-maxtimeout 120000
           npm config set fetch-timeout 600000
+          # GitHub Actions/저장소 설정에서 production/omit=dev가 잡혀 있어도 빌드 도구(vite)가 설치되도록 방어합니다.
+          unset NODE_ENV || true
+          npm config delete production || true
+          npm config delete omit || true
 
           for attempt in 1 2 3; do
             echo "npm ci 실행 시도 ${attempt}/3"
-            if npm ci --no-audit --no-fund --prefer-online; then
+            if npm ci --include=dev --include=optional --no-audit --no-fund --prefer-online --registry=https://registry.npmjs.org/; then
+              npm ls --depth=0
+              test -x ./node_modules/.bin/vite
+              ./node_modules/.bin/vite --version
               echo "의존성 설치 완료"
               exit 0
             fi
@@ -70,7 +81,20 @@ jobs:
           exit 1
 
       - name: Generate crop price data
-        run: npm run update:data
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${KAMIS_FETCH_ENABLED:-true}" = "false" ]; then
+            echo "KAMIS_FETCH_ENABLED=false 이므로 농산물 데이터 수집을 건너뜁니다."
+            exit 0
+          fi
+
+          if [ -z "${KAMIS_CERT_KEY:-}" ] || [ -z "${KAMIS_CERT_ID:-}" ]; then
+            echo "KAMIS 인증 정보가 없어 데이터 수집을 건너뜁니다. 앱은 수집 대기 상태로 빌드됩니다."
+            exit 0
+          fi
+
+          npm run update:data
         env:
           KAMIS_CERT_KEY: ${{ secrets.KAMIS_CERT_KEY }}
           KAMIS_CERT_ID: ${{ secrets.KAMIS_CERT_ID }}
@@ -80,7 +104,18 @@ jobs:
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE || 'retail' }}
 
       - name: Generate Gemini AI reports
-        run: npm run update:ai-report
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f public/data/crop-prices.json ]; then
+            echo "crop-prices.json이 없어 AI 리포트 생성을 건너뜁니다."
+            exit 0
+          fi
+          node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('public/data/crop-prices.json','utf8')); process.exit(Array.isArray(data.items)&&data.items.length>0 ? 0 : 1)" || {
+            echo "실데이터 품목이 없어 AI 리포트 생성을 건너뜁니다."
+            exit 0
+          }
+          npm run update:ai-report
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED || 'true' }}
@@ -88,10 +123,12 @@ jobs:
           REPORT_RANGE_DAYS: "30"
 
       - name: Validate static data
-        run: npm run validate:data
+        run: npm run data:check
 
       - name: Build React app
-        run: npm run build
+        run: |
+          ./node_modules/.bin/vite --version
+          npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
