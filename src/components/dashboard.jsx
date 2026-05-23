@@ -57,8 +57,9 @@ export default function FarmDashboard() {
   const favoriteRows = filteredRows.filter((row) => favorites.has(row.id));
   const activeRows = tab === 'favorites' ? favoriteRows : filteredRows;
   const chartSeries = useMemo(() => {
-    const values = tab === 'report' ? dashboard.trendValues : dashboard.featuredTrendValues;
-    const labels = tab === 'report' ? dashboard.trendLabels : dashboard.featuredTrendLabels;
+    const useMarketTrend = tab === 'report' || tab === 'regions';
+    const values = useMarketTrend ? dashboard.trendValues : dashboard.featuredTrendValues;
+    const labels = useMarketTrend ? dashboard.trendLabels : dashboard.featuredTrendLabels;
     return sliceSeries(values, labels, filters.period);
   }, [dashboard.featuredTrendLabels, dashboard.featuredTrendValues, dashboard.trendLabels, dashboard.trendValues, filters.period, tab]);
   const reset = () => setFilters(DEFAULT_FILTERS);
@@ -68,8 +69,9 @@ export default function FarmDashboard() {
   };
   const setFilter = (key, value) => setFilters((current) => ({ ...current, [key]: value }));
   const canReset = useMemo(() => hasActiveFilters(filters), [filters]);
+  const toolbarResultCount = tab === 'regions' ? filteredRegions.length : activeRows.length;
   const commonToolbar = (
-    <Toolbar filters={filters} setFilter={setFilter} itemOptions={itemOptions} regionOptions={regionOptions} resultCount={activeRows.length} reset={reset} canReset={canReset} dataSourceLabel={dashboard.isLive ? '실데이터' : '수집 대기'} />
+    <Toolbar filters={filters} setFilter={setFilter} itemOptions={itemOptions} regionOptions={regionOptions} resultCount={toolbarResultCount} reset={reset} canReset={canReset} dataSourceLabel={dashboard.isLive ? '실데이터' : '수집 대기'} />
   );
 
   const renderContent = () => {

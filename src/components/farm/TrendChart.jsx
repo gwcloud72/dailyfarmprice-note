@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { formatNumber } from '../../lib/format.js';
 
 function EmptyTrend({ title, unit, period, onReset }) {
@@ -32,17 +32,16 @@ function EmptyTrend({ title, unit, period, onReset }) {
   );
 }
 
-export default function TrendChart({ values, labels, title = '가격 그래프', unit = '원/kg', period = '최근 7일', featured = false, onReset }) {
+export default function TrendChart({ values = [], labels = [], title = '가격 그래프', unit = '원/kg', period = '최근 7일', featured = false, onReset }) {
   const [activeIndex, setActiveIndex] = useState(null);
-  if (!values.length) return <EmptyTrend title={title} unit={unit} period={period} onReset={onReset} />;
-
   const safeLabels = labels.length ? labels : values.map((_, index) => `지점 ${index + 1}`);
+  const axisLabels = new Set([0, Math.floor((safeLabels.length - 1) / 2), safeLabels.length - 1]);
+  if (!values.length) return <EmptyTrend title={title} unit={unit} period={period} onReset={onReset} />;
   const min = Math.min(...values);
   const max = Math.max(...values);
   const range = Math.max(max - min, 1);
   const latest = values.at(-1) || 0;
   const average = Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
-  const axisLabels = useMemo(() => new Set([0, Math.floor((safeLabels.length - 1) / 2), safeLabels.length - 1]), [safeLabels.length]);
   const pointData = values.map((value, index) => {
     const step = values.length > 1 ? 330 / (values.length - 1) : 0;
     const x = Math.round(42 + index * step);

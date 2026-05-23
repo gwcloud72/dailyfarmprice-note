@@ -93,21 +93,45 @@ jobs:
         run: |
           set -euo pipefail
 
-          require_crop_data() {
+          ensure_crop_data() {
             node --input-type=module <<'NODE'
-          import { existsSync, readFileSync } from 'node:fs';
+          import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
           const file = 'public/data/crop-prices.json';
-          if (!existsSync(file)) {
-            console.error('crop-prices.json이 없습니다. KAMIS 수집 성공 또는 기존 운영 데이터가 필요합니다.');
-            process.exit(1);
+
+          function writeEmpty(reason) {
+            mkdirSync('public/data', { recursive: true });
+            const payload = {
+              status: 'empty',
+              source: 'KAMIS Open API',
+              generatedAt: new Date().toISOString(),
+              aggregation: 'daily-average',
+              notice: reason,
+              items: [],
+            };
+            writeFileSync(file, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+            console.log(`KAMIS 데이터 없음: ${reason} empty state 배포를 계속합니다.`);
           }
-          const payload = JSON.parse(readFileSync(file, 'utf8'));
+
+          if (!existsSync(file)) {
+            writeEmpty('crop-prices.json이 없어 수집 대기 화면으로 배포합니다.');
+            process.exit(0);
+          }
+
+          let payload;
+          try {
+            payload = JSON.parse(readFileSync(file, 'utf8'));
+          } catch (error) {
+            writeEmpty(`crop-prices.json 파싱 실패(${error.message})로 수집 대기 화면으로 배포합니다.`);
+            process.exit(0);
+          }
+
           const items = Array.isArray(payload.items) ? payload.items : [];
           const points = items.reduce((sum, item) => sum + (Array.isArray(item.series) ? item.series.length : 0), 0);
           if (!items.length || !points) {
-            console.error('crop-prices.json에 표시할 농산물 가격 데이터가 없습니다. 빈 데이터 배포를 중단합니다.');
-            process.exit(1);
+            writeEmpty(payload.notice || '표시할 농산물 가격 데이터가 아직 없습니다.');
+            process.exit(0);
           }
+
           console.log(`KAMIS 데이터 확인: ${items.length}개 품목, ${points}개 가격 포인트`);
           NODE
           }
@@ -121,24 +145,24 @@ jobs:
           }
 
           if [ "${KAMIS_FETCH_ENABLED:-true}" = "false" ]; then
-            echo "KAMIS_FETCH_ENABLED=false 입니다. 기존 운영 데이터 유효성을 확인합니다."
-            require_crop_data
+            echo "KAMIS_FETCH_ENABLED=false 입니다. 홈페이지 배포용 데이터를 확인합니다."
+            ensure_crop_data
             exit 0
           fi
 
           if [ -z "${KAMIS_CERT_ID:-}" ] || [ -z "${KAMIS_CERT_KEY:-}" ]; then
-            echo "KAMIS 인증 정보가 없습니다. 기존 운영 데이터 유효성을 확인합니다."
-            require_crop_data
+            echo "KAMIS 인증 정보가 없습니다. 홈페이지 배포용 데이터를 확인합니다."
+            ensure_crop_data
             exit 0
           fi
 
           export KAMIS_FETCH_ENABLED=true
           if npm run update:data; then
-            require_crop_data
+            ensure_crop_data
           else
-            echo "KAMIS 데이터 수집 실패. 기존 데이터를 복구합니다."
+            echo "KAMIS 데이터 수집 실패. 기존 데이터 또는 empty state로 복구합니다."
             restore_data
-            require_crop_data
+            ensure_crop_data
           fi
 
       - name: Generate crop AI report

@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 
 const DATA_PATH = new URL('../public/data/crop-prices.json', import.meta.url);
-const ALLOWED_STATUS = new Set(['live', 'partial']);
+const ALLOWED_STATUS = new Set(['live', 'partial', 'empty']);
 
 const assert = (condition, message) => {
   if (!condition) throw new Error(message);
@@ -11,10 +11,15 @@ try {
   const raw = await fs.readFile(DATA_PATH, 'utf8');
   const data = JSON.parse(raw);
 
-  assert(ALLOWED_STATUS.has(data.status), `status는 live 또는 partial이어야 합니다. 현재값: ${data.status}`);
+  assert(ALLOWED_STATUS.has(data.status), `status는 live, partial 또는 empty여야 합니다. 현재값: ${data.status}`);
   assert(data.source === 'KAMIS Open API', 'source는 KAMIS Open API여야 합니다.');
   assert(Array.isArray(data.items), 'items 배열이 필요합니다.');
-  assert(data.items.length > 0, '최소 1개 이상의 KAMIS 실데이터 품목이 필요합니다.');
+
+  if (data.items.length === 0) {
+    assert(data.status === 'empty', 'items가 비어 있으면 status는 empty여야 합니다.');
+    console.log('✅ 표시할 KAMIS 데이터가 없어 empty state 배포로 검증을 통과합니다.');
+    process.exit(0);
+  }
 
   const regionNames = new Set(data.items.map((item) => item.region).filter(Boolean));
   const regionalNames = [...regionNames].filter((region) => region !== '전국');
@@ -44,6 +49,6 @@ try {
   console.log(`✅ KAMIS 실데이터 검증 완료: ${data.items.length}개 품목`);
 } catch (error) {
   console.error(`❌ 데이터 검증 실패: ${error.message}`);
-  console.error('샘플 데이터 대체는 사용하지 않습니다. KAMIS Secret/Variables와 품목 코드를 확인해주세요.');
+  console.error('KAMIS Secret/Variables와 품목 코드를 확인해주세요. 데이터가 없어도 홈 화면은 empty state로 배포할 수 있습니다.');
   process.exit(1);
 }

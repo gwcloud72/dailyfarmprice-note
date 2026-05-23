@@ -234,11 +234,40 @@ ${JSON.stringify(promptData, null, 2)}
   };
 }
 
+async function writeReport(output) {
+  const tempPath = `${aiReportPath}.tmp`;
+  await fs.writeFile(tempPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
+
+  const parsed = JSON.parse(await fs.readFile(tempPath, 'utf8'));
+  const reports = parsed?.reports;
+  const isEmptyReport = parsed?.status === 'empty';
+  if (!reports || typeof reports !== 'object') {
+    await fs.rm(tempPath, { force: true });
+    throw new Error('검증 실패: ai-reports.json.tmp에 reports 객체가 없습니다.');
+  }
+  if (!isEmptyReport && !Object.keys(reports).length) {
+    await fs.rm(tempPath, { force: true });
+    throw new Error('검증 실패: ai-reports.json.tmp에 리포트 데이터가 없습니다.');
+  }
+
+  await fs.rename(tempPath, aiReportPath);
+}
+
 async function main() {
   const cropData = JSON.parse(await fs.readFile(cropDataPath, 'utf8'));
   if (!Array.isArray(cropData.items) || cropData.items.length === 0) {
-    throw new Error('KAMIS 실데이터가 없어 AI 리포트를 생성할 수 없습니다.');
+    await writeReport({
+      status: 'empty',
+      source: 'No crop data',
+      model: 'none',
+      generatedAt,
+      reportNote: '농산물 가격 데이터가 아직 없어 AI 리포트는 대기 상태입니다.',
+      reports: {},
+    });
+    console.log(`AI 리포트 empty JSON 생성 완료: ${aiReportPath}`);
+    return;
   }
+
   const localReports = createLocalReports(cropData);
 
   let output = {
@@ -265,16 +294,7 @@ async function main() {
     console.log('GEMINI_REPORT_ENABLED 또는 GEMINI_API_KEY가 없어 KAMIS 실데이터 기반 로컬 규칙 리포트를 생성합니다.');
   }
 
-  const tempPath = `${aiReportPath}.tmp`;
-  await fs.writeFile(tempPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
-
-  const parsed = JSON.parse(await fs.readFile(tempPath, 'utf8'));
-  if (!parsed?.reports || typeof parsed.reports !== 'object' || !Object.keys(parsed.reports).length) {
-    await fs.rm(tempPath, { force: true });
-    throw new Error('검증 실패: ai-reports.json.tmp에 리포트 데이터가 없습니다.');
-  }
-
-  await fs.rename(tempPath, aiReportPath);
+  await writeReport(output);
   console.log(`AI 리포트 JSON 생성 완료: ${aiReportPath}`);
 }
 

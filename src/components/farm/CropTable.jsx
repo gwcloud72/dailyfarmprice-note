@@ -62,8 +62,8 @@ export default function CropTable({ rows, title = '품목 시세', favorites, re
     <section className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5" aria-labelledby="crop-table-title">
       <h2 id="crop-table-title" className="mb-3 text-[16px] font-black text-slate-950 md:mb-4 md:text-lg">{title} <span className="text-sm font-bold text-slate-400">(전국 평균)</span></h2>
       {!rows.length ? <EmptyState message={emptyMessage} onReset={emptyHandler} actionLabel={label} /> : <>
-        <div className="hidden overflow-hidden rounded-xl border border-slate-200 md:block">
-          <table className="w-full table-fixed border-collapse text-sm">
+        <div className="hidden overflow-x-auto rounded-xl border border-slate-200 md:block">
+          <table className="min-w-[780px] w-full table-fixed border-collapse text-sm">
             <caption className="sr-only">전국 평균 농산물 품목별 가격표</caption>
             <thead className="bg-slate-50 text-xs font-extrabold text-slate-500">
               <tr><th className="w-[18%] px-3 py-2 text-left">품목</th><th className="w-[19%] px-3 py-2 text-right">평균 가격</th><th className="w-[15%] px-3 py-2 text-right">전일 대비</th><th className="w-[22%] px-3 py-2 text-left">가격 범위</th><th className="w-[18%] px-3 py-2 text-left">대표 지역</th><th className="w-[8%] px-3 py-2 text-center">관심</th></tr>
