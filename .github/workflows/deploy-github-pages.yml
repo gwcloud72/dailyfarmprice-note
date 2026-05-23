@@ -34,11 +34,6 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      - name: Node/npm version
-        run: |
-          node --version
-          npm --version
-
       - name: Install dependencies
         shell: bash
         run: |
@@ -47,8 +42,8 @@ jobs:
           unset NPM_CONFIG_PRODUCTION || true
           unset NPM_CONFIG_OMIT || true
 
-          if grep -qE 'applied-caas|internal\.api\.openai' package-lock.json; then
-            echo "package-lock.json에 내부 registry 주소가 남아 있습니다. npm public registry 기준 lockfile로 갱신해야 합니다."
+          if grep -qE 'applied-caas|internal\.api\.openai|localhost|file:' package-lock.json; then
+            echo "package-lock.json에 배포 환경에서 접근할 수 없는 registry/file 경로가 있습니다."
             exit 1
           fi
 
@@ -73,15 +68,20 @@ jobs:
             sleep 5
           done
 
-          if [ ! -x ./node_modules/.bin/vite ]; then
-            echo "vite 실행 파일이 없어 devDependencies를 다시 설치합니다."
-            npm install --include=dev --include=optional --no-audit --no-fund --prefer-online --registry=https://registry.npmjs.org/
-          fi
-
           test -x ./node_modules/.bin/vite
           ./node_modules/.bin/vite --version
 
-      - name: Generate crop price data
+      - name: Backup current data
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/farm-data-backup"
+          mkdir -p "$RUNNER_TEMP/farm-data-backup"
+          if [ -d public/data ]; then
+            cp -R public/data "$RUNNER_TEMP/farm-data-backup/data"
+          fi
+
+      - name: Generate KAMIS crop data
         shell: bash
         env:
           KAMIS_CERT_KEY: ${{ secrets.KAMIS_CERT_KEY }}
@@ -92,17 +92,56 @@ jobs:
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
         run: |
           set -euo pipefail
-          if [ "${KAMIS_FETCH_ENABLED:-true}" = "false" ]; then
-            echo "KAMIS_FETCH_ENABLED=false 이므로 데이터 수집을 건너뜁니다."
-            exit 0
-          fi
-          if [ -z "${KAMIS_CERT_ID:-}" ] || [ -z "${KAMIS_CERT_KEY:-}" ]; then
-            echo "KAMIS 인증 정보가 없어 데이터 수집을 건너뜁니다. 기존 데이터 또는 empty state로 빌드합니다."
-            exit 0
-          fi
-          npm run update:data || echo "::warning::KAMIS 데이터 수집 실패. 기존 데이터 또는 empty state로 빌드합니다."
 
-      - name: Generate Gemini AI reports
+          require_crop_data() {
+            node --input-type=module <<'NODE'
+          import { existsSync, readFileSync } from 'node:fs';
+          const file = 'public/data/crop-prices.json';
+          if (!existsSync(file)) {
+            console.error('crop-prices.json이 없습니다. KAMIS 수집 성공 또는 기존 운영 데이터가 필요합니다.');
+            process.exit(1);
+          }
+          const payload = JSON.parse(readFileSync(file, 'utf8'));
+          const items = Array.isArray(payload.items) ? payload.items : [];
+          const points = items.reduce((sum, item) => sum + (Array.isArray(item.series) ? item.series.length : 0), 0);
+          if (!items.length || !points) {
+            console.error('crop-prices.json에 표시할 농산물 가격 데이터가 없습니다. 빈 데이터 배포를 중단합니다.');
+            process.exit(1);
+          }
+          console.log(`KAMIS 데이터 확인: ${items.length}개 품목, ${points}개 가격 포인트`);
+          NODE
+          }
+
+          restore_data() {
+            if [ -d "$RUNNER_TEMP/farm-data-backup/data" ]; then
+              rm -rf public/data
+              mkdir -p public
+              cp -R "$RUNNER_TEMP/farm-data-backup/data" public/data
+            fi
+          }
+
+          if [ "${KAMIS_FETCH_ENABLED:-true}" = "false" ]; then
+            echo "KAMIS_FETCH_ENABLED=false 입니다. 기존 운영 데이터 유효성을 확인합니다."
+            require_crop_data
+            exit 0
+          fi
+
+          if [ -z "${KAMIS_CERT_ID:-}" ] || [ -z "${KAMIS_CERT_KEY:-}" ]; then
+            echo "KAMIS 인증 정보가 없습니다. 기존 운영 데이터 유효성을 확인합니다."
+            require_crop_data
+            exit 0
+          fi
+
+          export KAMIS_FETCH_ENABLED=true
+          if npm run update:data; then
+            require_crop_data
+          else
+            echo "KAMIS 데이터 수집 실패. 기존 데이터를 복구합니다."
+            restore_data
+            require_crop_data
+          fi
+
+      - name: Generate crop AI report
         shell: bash
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -111,25 +150,40 @@ jobs:
           REPORT_RANGE_DAYS: "30"
         run: |
           set -euo pipefail
-          if [ "${GEMINI_REPORT_ENABLED:-true}" = "false" ]; then
-            echo "GEMINI_REPORT_ENABLED=false 이므로 AI 리포트 생성을 건너뜁니다."
-            exit 0
+          mkdir -p "$RUNNER_TEMP/farm-report-backup"
+          if [ -f public/data/ai-reports.json ]; then
+            cp public/data/ai-reports.json "$RUNNER_TEMP/farm-report-backup/ai-reports.json"
           fi
-          if [ -z "${GEMINI_API_KEY:-}" ]; then
-            echo "GEMINI_API_KEY가 없어 AI 리포트 생성을 건너뜁니다."
-            exit 0
+
+          if npm run update:ai-report; then
+            test -f public/data/ai-reports.json
+          else
+            echo "농산물 리포트 생성 실패. 기존 리포트를 복구합니다."
+            if [ -f "$RUNNER_TEMP/farm-report-backup/ai-reports.json" ]; then
+              cp "$RUNNER_TEMP/farm-report-backup/ai-reports.json" public/data/ai-reports.json
+            else
+              exit 1
+            fi
           fi
-          if [ ! -f public/data/crop-prices.json ]; then
-            echo "crop-prices.json이 없어 AI 리포트 생성을 건너뜁니다."
-            exit 0
-          fi
-          npm run update:ai-report || echo "::warning::AI 리포트 생성 실패. 기존 리포트 또는 empty state로 빌드합니다."
+
+      - name: Log generated data
+        shell: bash
+        run: |
+          set -euo pipefail
+          ls -la public/data
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+          const prices = JSON.parse(readFileSync('public/data/crop-prices.json', 'utf8'));
+          const reports = JSON.parse(readFileSync('public/data/ai-reports.json', 'utf8'));
+          console.log(`crop-prices: status=${prices.status}, items=${prices.items?.length ?? 0}`);
+          console.log(`ai-reports: status=${reports.status}, source=${reports.source}`);
+          NODE
 
       - name: Validate static data
-        run: npm run validate:data || echo "::warning::정적 데이터 검증 실패 또는 데이터 없음. empty state로 계속 빌드합니다."
+        run: npm run validate:data
 
       - name: Run QA checks
-        run: npm run qa:check || echo "::warning::QA 검사 경고가 있습니다. 배포 빌드는 계속 진행합니다."
+        run: npm run qa:check
 
       - name: Build React app
         run: npm run build

@@ -428,8 +428,25 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
 }
 
 async function writeData(data) {
-  await fs.mkdir(new URL('../public/data/', import.meta.url), { recursive: true });
-  await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+  const dataDir = new URL('../public/data/', import.meta.url);
+  const tempPath = new URL('../public/data/crop-prices.json.tmp', import.meta.url);
+  await fs.mkdir(dataDir, { recursive: true });
+  await fs.writeFile(tempPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+
+  const raw = await fs.readFile(tempPath, 'utf8');
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed.items) || parsed.items.length === 0) {
+    await fs.rm(tempPath, { force: true });
+    throw new Error('검증 실패: crop-prices.json.tmp에 품목 데이터가 없습니다.');
+  }
+
+  const pointCount = parsed.items.reduce((sum, item) => sum + (Array.isArray(item.series) ? item.series.length : 0), 0);
+  if (pointCount === 0) {
+    await fs.rm(tempPath, { force: true });
+    throw new Error('검증 실패: crop-prices.json.tmp에 가격 포인트가 없습니다.');
+  }
+
+  await fs.rename(tempPath, DATA_PATH);
 }
 
 async function main() {

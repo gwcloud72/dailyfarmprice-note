@@ -265,7 +265,16 @@ async function main() {
     console.log('GEMINI_REPORT_ENABLED 또는 GEMINI_API_KEY가 없어 KAMIS 실데이터 기반 로컬 규칙 리포트를 생성합니다.');
   }
 
-  await fs.writeFile(aiReportPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
+  const tempPath = `${aiReportPath}.tmp`;
+  await fs.writeFile(tempPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
+
+  const parsed = JSON.parse(await fs.readFile(tempPath, 'utf8'));
+  if (!parsed?.reports || typeof parsed.reports !== 'object' || !Object.keys(parsed.reports).length) {
+    await fs.rm(tempPath, { force: true });
+    throw new Error('검증 실패: ai-reports.json.tmp에 리포트 데이터가 없습니다.');
+  }
+
+  await fs.rename(tempPath, aiReportPath);
   console.log(`AI 리포트 JSON 생성 완료: ${aiReportPath}`);
 }
 

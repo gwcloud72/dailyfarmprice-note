@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import FarmDashboard from './components/dashboard.jsx';
-import FarmShowcase from './showcase/ShowcasePage.jsx';
+
+const FarmShowcase = lazy(() => import('./showcase/ShowcasePage.jsx'));
 
 function getIsShowcase() {
   if (typeof window === 'undefined') return false;
@@ -17,5 +18,13 @@ export default function App() {
     return () => window.removeEventListener('hashchange', updateRoute);
   }, []);
 
-  return isShowcase ? <FarmShowcase /> : <FarmDashboard />;
+  if (isShowcase) {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-slate-50" aria-label="쇼케이스 화면을 불러오는 중" />}>
+        <FarmShowcase />
+      </Suspense>
+    );
+  }
+
+  return <FarmDashboard />;
 }

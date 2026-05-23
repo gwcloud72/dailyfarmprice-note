@@ -140,9 +140,9 @@ export default function FarmDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f2e8] px-4 py-4 text-slate-950 md:px-0 md:py-8">
+    <div className="min-h-screen bg-[#f5f2e8] px-4 py-4 text-slate-950 md:px-6 md:py-8 lg:px-8">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-slate-950 focus:px-4 focus:py-2 focus:text-white">본문 바로가기</a>
-      <div className="mx-auto max-w-[1120px] overflow-hidden rounded-[24px] bg-white shadow-2xl shadow-stone-900/15 ring-1 ring-stone-200 md:rounded-[26px]">
+      <div className="mx-auto max-w-[1440px] overflow-hidden rounded-[24px] bg-white shadow-xl shadow-stone-900/15 ring-1 ring-stone-200 md:rounded-[26px]">
         <Header tab={tab} setTab={setTab} updatedAt={dashboard.updatedAt} />
         <main id="main-content" className="space-y-3 px-4 pt-4 pb-[140px] md:space-y-4 md:p-6">
           {commonToolbar}
