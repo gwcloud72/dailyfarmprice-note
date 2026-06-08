@@ -3,7 +3,7 @@
     "id": "cabbage",
     "name": "배추",
     "category": "채소류",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "1포기",
     "itemcategorycode": "200",
@@ -18,7 +18,7 @@
       "06"
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -60,63 +60,63 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
@@ -128,7 +128,7 @@
     "id": "radish",
     "name": "무",
     "category": "채소류",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "1개",
     "itemcategorycode": "200",
@@ -143,7 +143,7 @@
       "06"
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -185,63 +185,63 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
@@ -253,7 +253,7 @@
     "id": "onion",
     "name": "양파",
     "category": "채소류",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "1kg",
     "itemcategorycode": "200",
@@ -264,7 +264,7 @@
       ""
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -306,63 +306,63 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
@@ -374,7 +374,7 @@
     "id": "potato",
     "name": "감자",
     "category": "식량작물",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "100g",
     "itemcategorycode": "100",
@@ -386,7 +386,7 @@
       ""
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -428,63 +428,63 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
@@ -496,7 +496,7 @@
     "id": "green-onion",
     "name": "대파",
     "category": "채소류",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "1kg",
     "itemcategorycode": "200",
@@ -507,7 +507,7 @@
       ""
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -549,63 +549,63 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
@@ -617,7 +617,7 @@
     "id": "cucumber",
     "name": "오이",
     "category": "채소류",
-    "region": "서울",
+    "region": "전국",
     "market": "소매",
     "unit": "10개",
     "itemcategorycode": "200",
@@ -629,7 +629,7 @@
       ""
     ],
     "productrankcode": "04",
-    "countrycode": "1101",
+    "countrycode": "",
     "convertKgYn": "N",
     "priceType": "retail",
     "regions": [
@@ -671,68 +671,1528 @@
       },
       {
         "code": "3111",
-        "name": "수원"
+        "name": "경기"
       },
       {
         "code": "3112",
-        "name": "성남"
+        "name": "경기"
       },
       {
         "code": "3113",
-        "name": "의정부"
+        "name": "경기"
       },
       {
         "code": "3138",
-        "name": "고양"
+        "name": "경기"
       },
       {
         "code": "3145",
-        "name": "용인"
+        "name": "경기"
       },
       {
         "code": "3211",
-        "name": "춘천"
+        "name": "강원"
       },
       {
         "code": "3214",
-        "name": "강릉"
+        "name": "강원"
       },
       {
         "code": "3311",
-        "name": "청주"
+        "name": "충북"
       },
       {
         "code": "3411",
-        "name": "천안"
+        "name": "충남"
       },
       {
         "code": "3511",
-        "name": "전주"
+        "name": "전북"
       },
       {
         "code": "3613",
-        "name": "순천"
+        "name": "전남"
       },
       {
         "code": "3711",
-        "name": "포항"
+        "name": "경북"
       },
       {
         "code": "3714",
-        "name": "안동"
+        "name": "경북"
       },
       {
         "code": "3814",
-        "name": "창원"
+        "name": "경남"
       },
       {
         "code": "3818",
-        "name": "김해"
+        "name": "경남"
       },
       {
         "code": "3911",
         "name": "제주"
       }
     ]
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "apple",
+    "name": "사과",
+    "category": "과일류",
+    "unit": "10개",
+    "itemcategorycode": "400",
+    "itemcode": "411",
+    "kindcode": "05",
+    "kindcodes": [
+      "05",
+      "06",
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "pear",
+    "name": "배",
+    "category": "과일류",
+    "unit": "10개",
+    "itemcategorycode": "400",
+    "itemcode": "412",
+    "kindcode": "01",
+    "kindcodes": [
+      "01",
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "garlic",
+    "name": "마늘",
+    "category": "채소류",
+    "unit": "1kg",
+    "itemcategorycode": "200",
+    "itemcode": "244",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "sweet-potato",
+    "name": "고구마",
+    "category": "식량작물",
+    "unit": "100g",
+    "itemcategorycode": "100",
+    "itemcode": "151",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      "01",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "carrot",
+    "name": "당근",
+    "category": "채소류",
+    "unit": "1kg",
+    "itemcategorycode": "200",
+    "itemcode": "232",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "tomato",
+    "name": "토마토",
+    "category": "채소류",
+    "unit": "1kg",
+    "itemcategorycode": "200",
+    "itemcode": "225",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      "01",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "round-cabbage",
+    "name": "양배추",
+    "category": "채소류",
+    "unit": "1포기",
+    "itemcategorycode": "200",
+    "itemcode": "212",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "spinach",
+    "name": "시금치",
+    "category": "채소류",
+    "unit": "100g",
+    "itemcategorycode": "200",
+    "itemcode": "213",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "lettuce",
+    "name": "상추",
+    "category": "채소류",
+    "unit": "100g",
+    "itemcategorycode": "200",
+    "itemcode": "214",
+    "kindcode": "01",
+    "kindcodes": [
+      "01",
+      "02",
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "zucchini",
+    "name": "호박",
+    "category": "채소류",
+    "unit": "1개",
+    "itemcategorycode": "200",
+    "itemcode": "224",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      "01",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "green-pepper",
+    "name": "풋고추",
+    "category": "채소류",
+    "unit": "100g",
+    "itemcategorycode": "200",
+    "itemcode": "242",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
+  },
+  {
+    "region": "전국",
+    "market": "소매",
+    "countrycode": "",
+    "convertKgYn": "N",
+    "priceType": "retail",
+    "regions": [
+      {
+        "code": "",
+        "name": "전국"
+      },
+      {
+        "code": "1101",
+        "name": "서울"
+      },
+      {
+        "code": "2100",
+        "name": "부산"
+      },
+      {
+        "code": "2200",
+        "name": "대구"
+      },
+      {
+        "code": "2300",
+        "name": "인천"
+      },
+      {
+        "code": "2401",
+        "name": "광주"
+      },
+      {
+        "code": "2501",
+        "name": "대전"
+      },
+      {
+        "code": "2601",
+        "name": "울산"
+      },
+      {
+        "code": "2701",
+        "name": "세종"
+      },
+      {
+        "code": "3111",
+        "name": "경기"
+      },
+      {
+        "code": "3112",
+        "name": "경기"
+      },
+      {
+        "code": "3113",
+        "name": "경기"
+      },
+      {
+        "code": "3138",
+        "name": "경기"
+      },
+      {
+        "code": "3145",
+        "name": "경기"
+      },
+      {
+        "code": "3211",
+        "name": "강원"
+      },
+      {
+        "code": "3214",
+        "name": "강원"
+      },
+      {
+        "code": "3311",
+        "name": "충북"
+      },
+      {
+        "code": "3411",
+        "name": "충남"
+      },
+      {
+        "code": "3511",
+        "name": "전북"
+      },
+      {
+        "code": "3613",
+        "name": "전남"
+      },
+      {
+        "code": "3711",
+        "name": "경북"
+      },
+      {
+        "code": "3714",
+        "name": "경북"
+      },
+      {
+        "code": "3814",
+        "name": "경남"
+      },
+      {
+        "code": "3818",
+        "name": "경남"
+      },
+      {
+        "code": "3911",
+        "name": "제주"
+      }
+    ],
+    "id": "tangerine",
+    "name": "감귤",
+    "category": "과일류",
+    "unit": "10개",
+    "itemcategorycode": "400",
+    "itemcode": "415",
+    "kindcode": "00",
+    "kindcodes": [
+      "00",
+      ""
+    ],
+    "productrankcode": "04"
   }
 ]

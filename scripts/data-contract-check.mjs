@@ -6,6 +6,40 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 
+const MAX_DATA_AGE_DAYS = Number(process.env.KAMIS_MAX_DATA_AGE_DAYS || 7);
+const REQUIRED_ADMIN_REGIONS = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종', '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'];
+
+function parseDate(value) {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function latestSeriesDate(payload) {
+  let latest = null;
+  for (const item of Array.isArray(payload?.items) ? payload.items : []) {
+    for (const point of Array.isArray(item?.series) ? item.series : []) {
+      const date = parseDate(point?.date);
+      if (date && (!latest || date > latest)) latest = date;
+    }
+  }
+  return latest;
+}
+
+function validateFreshCropPublicData(payload, label) {
+  const items = Array.isArray(payload?.items) ? payload.items : [];
+  if (!items.length) return;
+  const latest = latestSeriesDate(payload);
+  if (!latest) {
+    errors.push(`${label}: 기준일이 없어 운영 데이터로 표시할 수 없습니다.`);
+    return;
+  }
+  const days = Math.floor((Date.now() - latest.getTime()) / 86400000);
+  if (days > MAX_DATA_AGE_DAYS) {
+    errors.push(`${label}: 최신 기준일 ${latest.toISOString().slice(0, 10)}이 ${days}일 전 데이터입니다. ${MAX_DATA_AGE_DAYS}일 초과 데이터는 배포 금지입니다.`);
+  }
+}
+
+
 function readJsonIfExists(filePath, { optional = false } = {}) {
   if (!fs.existsSync(filePath)) {
     if (!optional) errors.push(`${path.relative(root, filePath)}: 파일이 없습니다.`);
@@ -47,6 +81,12 @@ function validateCropPrices(payload, label) {
     return;
   }
   const items = Array.isArray(payload.items) ? payload.items : [];
+  if (items.length && label === 'public/data/crop-prices.json') {
+    const regionNames = new Set(items.map((item) => item?.region).filter(Boolean));
+    const missingAdminRegions = REQUIRED_ADMIN_REGIONS.filter((region) => !regionNames.has(region));
+    if (!regionNames.has('전국')) errors.push(`${label}: 전국 기준 데이터가 필요합니다.`);
+    if (missingAdminRegions.length) errors.push(`${label}: 전국 17개 광역자치단체 누락: ${missingAdminRegions.join(', ')}`);
+  }
   items.forEach((item, index) => {
     if (!isObject(item)) {
       errors.push(`${label}.items[${index}]: 객체여야 합니다.`);
@@ -94,7 +134,10 @@ function validateFixtureBundle(payload, label) {
 }
 
 const cropData = readJsonIfExists(path.join(root, 'public/data/crop-prices.json'), { optional: true });
-if (cropData) validateCropPrices(cropData, 'public/data/crop-prices.json');
+if (cropData) {
+  validateCropPrices(cropData, 'public/data/crop-prices.json');
+  validateFreshCropPublicData(cropData, 'public/data/crop-prices.json');
+}
 const reportData = readJsonIfExists(path.join(root, 'public/data/ai-reports.json'), { optional: true });
 if (reportData) validateAiReports(reportData, 'public/data/ai-reports.json');
 const fixtures = readJsonIfExists(path.join(root, 'scripts/fixtures/data-contract-fixtures.json'));

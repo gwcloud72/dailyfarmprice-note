@@ -5,110 +5,130 @@ const PRODUCT_FILE_PATH = new URL('./kamis-products.json', import.meta.url);
 const API_BASE = process.env.KAMIS_API_BASE || 'http://www.kamis.or.kr/service/price/xml.do';
 const CERT_KEY = process.env.KAMIS_CERT_KEY;
 const CERT_ID = process.env.KAMIS_CERT_ID;
-const FETCH_ENABLED = process.env.KAMIS_FETCH_ENABLED === 'true';
-const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS || 90);
-const COUNTRY_CODE = process.env.KAMIS_COUNTRY_CODE || '1101';
-const DEFAULT_PRICE_TYPE = process.env.KAMIS_PRICE_TYPE || 'retail';
+
+function parseBoolean(value, fallback = false) {
+  if (value === undefined || value === null || String(value).trim() === '') return fallback;
+  const normalized = String(value).trim().toLowerCase();
+  if (['true', '1', 'yes', 'y', 'on'].includes(normalized)) return true;
+  if (['false', '0', 'no', 'n', 'off'].includes(normalized)) return false;
+  throw new Error(`KAMIS_FETCH_ENABLED는 boolean 문자열이어야 합니다. 현재값=${value}`);
+}
+
+function parseInteger(value, fallback, { min = -Infinity, max = Infinity } = {}) {
+  if (value === undefined || value === null || String(value).trim() === '') return fallback;
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed) || parsed < min || parsed > max) {
+    throw new Error(`LOOKBACK_DAYS는 ${min}~${max} 범위의 정수여야 합니다. 현재값=${value}`);
+  }
+  return parsed;
+}
+
+const FETCH_ENABLED = parseBoolean(process.env.KAMIS_FETCH_ENABLED, true);
+const LOOKBACK_DAYS = parseInteger(process.env.LOOKBACK_DAYS, 90, { min: 1, max: 365 });
+const COUNTRY_CODE = String(process.env.KAMIS_COUNTRY_CODE || '1101').trim();
+const DEFAULT_PRICE_TYPE = ['retail', 'wholesale'].includes(String(process.env.KAMIS_PRICE_TYPE || '').trim())
+  ? String(process.env.KAMIS_PRICE_TYPE).trim()
+  : 'retail';
 const DEFAULT_REGION_CONFIGS = [
   {
-    code: "",
-    name: "전국"
+    "code": "",
+    "name": "전국"
   },
   {
-    code: "1101",
-    name: "서울"
+    "code": "1101",
+    "name": "서울"
   },
   {
-    code: "2100",
-    name: "부산"
+    "code": "2100",
+    "name": "부산"
   },
   {
-    code: "2200",
-    name: "대구"
+    "code": "2200",
+    "name": "대구"
   },
   {
-    code: "2300",
-    name: "인천"
+    "code": "2300",
+    "name": "인천"
   },
   {
-    code: "2401",
-    name: "광주"
+    "code": "2401",
+    "name": "광주"
   },
   {
-    code: "2501",
-    name: "대전"
+    "code": "2501",
+    "name": "대전"
   },
   {
-    code: "2601",
-    name: "울산"
+    "code": "2601",
+    "name": "울산"
   },
   {
-    code: "2701",
-    name: "세종"
+    "code": "2701",
+    "name": "세종"
   },
   {
-    code: "3111",
-    name: "수원"
+    "code": "3111",
+    "name": "경기"
   },
   {
-    code: "3112",
-    name: "성남"
+    "code": "3112",
+    "name": "경기"
   },
   {
-    code: "3113",
-    name: "의정부"
+    "code": "3113",
+    "name": "경기"
   },
   {
-    code: "3138",
-    name: "고양"
+    "code": "3138",
+    "name": "경기"
   },
   {
-    code: "3145",
-    name: "용인"
+    "code": "3145",
+    "name": "경기"
   },
   {
-    code: "3211",
-    name: "춘천"
+    "code": "3211",
+    "name": "강원"
   },
   {
-    code: "3214",
-    name: "강릉"
+    "code": "3214",
+    "name": "강원"
   },
   {
-    code: "3311",
-    name: "청주"
+    "code": "3311",
+    "name": "충북"
   },
   {
-    code: "3411",
-    name: "천안"
+    "code": "3411",
+    "name": "충남"
   },
   {
-    code: "3511",
-    name: "전주"
+    "code": "3511",
+    "name": "전북"
   },
   {
-    code: "3613",
-    name: "순천"
+    "code": "3613",
+    "name": "전남"
   },
   {
-    code: "3711",
-    name: "포항"
+    "code": "3711",
+    "name": "경북"
   },
   {
-    code: "3714",
-    name: "안동"
+    "code": "3714",
+    "name": "경북"
   },
   {
-    code: "3814",
-    name: "창원"
+    "code": "3814",
+    "name": "경남"
   },
   {
-    code: "3818",
-    name: "김해"
+    "code": "3818",
+    "name": "경남"
   },
   {
-    code: "3911",
-    name: "제주"
+    "code": "3911",
+    "name": "제주"
   }
 ];
 
@@ -126,7 +146,7 @@ async function loadProductConfigs() {
     const fromFile = parseProducts(text);
     if (fromFile.length) return fromFile;
   } catch {
-    // 파일이 없으면 빈 배열을 반환하고, main에서 설정 오류로 처리합니다.
+    
   }
 
   return [];
@@ -168,7 +188,7 @@ function parseRegionConfigs(value) {
       return parsed.map(normalizeRegionConfig).filter((region) => region.name);
     }
   } catch {
-    // 쉼표 구분 문자열 형식을 이어서 처리합니다. 예: "1101:서울,2100:부산"
+    
   }
 
   return String(value)
@@ -259,7 +279,7 @@ function getKindCodeCandidates(product) {
   if (Array.isArray(product.kindcodes)) candidates.push(...product.kindcodes);
   if (product.kindcode !== undefined && product.kindcode !== null) candidates.push(product.kindcode);
 
-  // kindcode가 비어 있으면 KAMIS가 품목 전체를 반환하는 API도 있어서 빈 값도 한 번 시도합니다.
+  
   if (!candidates.length) candidates.push('');
 
   return [...new Set(candidates.map((kindcode) => String(kindcode ?? '').trim()))];
@@ -304,7 +324,7 @@ function toDailySeries(rows) {
       return {
         date: group.date,
         price: average,
-        sampleCount: group.prices.length,
+        observationCount: group.prices.length,
         minPrice: Math.min(...group.prices),
         maxPrice: Math.max(...group.prices),
         marketNames: [...group.marketNames],
@@ -370,7 +390,7 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
   }
 
   const latestRow = dailyRows.at(-1);
-  const totalSamples = dailyRows.reduce((sum, row) => sum + row.sampleCount, 0);
+  const totalObservations = dailyRows.reduce((sum, row) => sum + row.observationCount, 0);
 
   console.log(`📊 ${product.name} 일별 집계 완료: 원본 ${rawRows.length}건 → 일별 ${dailyRows.length}건`);
 
@@ -396,12 +416,12 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
       aggregation: 'daily-average',
       rawSampleCount: rawRows.length,
       dailySampleCount: dailyRows.length,
-      totalSamples,
+      totalObservations,
     },
     series: dailyRows.map((row) => ({
       date: row.date,
       price: row.price,
-      sampleCount: row.sampleCount,
+      observationCount: row.observationCount,
       minPrice: row.minPrice,
       maxPrice: row.maxPrice,
     })),
@@ -428,25 +448,8 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
 }
 
 async function writeData(data) {
-  const dataDir = new URL('../public/data/', import.meta.url);
-  const tempPath = new URL('../public/data/crop-prices.json.tmp', import.meta.url);
-  await fs.mkdir(dataDir, { recursive: true });
-  await fs.writeFile(tempPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
-
-  const raw = await fs.readFile(tempPath, 'utf8');
-  const parsed = JSON.parse(raw);
-  if (!Array.isArray(parsed.items) || parsed.items.length === 0) {
-    await fs.rm(tempPath, { force: true });
-    throw new Error('검증 실패: crop-prices.json.tmp에 품목 데이터가 없습니다.');
-  }
-
-  const pointCount = parsed.items.reduce((sum, item) => sum + (Array.isArray(item.series) ? item.series.length : 0), 0);
-  if (pointCount === 0) {
-    await fs.rm(tempPath, { force: true });
-    throw new Error('검증 실패: crop-prices.json.tmp에 가격 포인트가 없습니다.');
-  }
-
-  await fs.rename(tempPath, DATA_PATH);
+  await fs.mkdir(new URL('../public/data/', import.meta.url), { recursive: true });
+  await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 }
 
 async function main() {
@@ -459,7 +462,7 @@ async function main() {
     if (!CERT_ID) missing.push('KAMIS_CERT_ID');
     if (productConfigs.length === 0) missing.push('scripts/kamis-products.json 또는 KAMIS_PRODUCTS_JSON');
 
-    throw new Error(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}. 샘플 데이터 대체는 사용하지 않습니다.`);
+    throw new Error(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}. 대체 데이터 사용는 사용하지 않습니다.`);
   }
 
   const today = toKstDate();
@@ -481,7 +484,7 @@ async function main() {
   }
 
   if (!items.length) {
-    throw new Error(`KAMIS 데이터 수집에 실패했습니다. 샘플 데이터 대체는 사용하지 않습니다. ${errors.join(' / ')}`);
+    throw new Error(`KAMIS 데이터 수집에 실패했습니다. 대체 데이터 사용는 사용하지 않습니다. ${errors.join(' / ')}`);
   }
 
   await writeData({

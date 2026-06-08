@@ -3,8 +3,16 @@ import { createServer } from 'vite';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-const tabs = ["home", "items", "regions", "report", "favorites"];
+const tabs = ["home", "items", "regions", "reports", "favorites", "guide"];
 const errors = [];
+const expectedText = {
+  "home": "실데이터 준비 전 홈 상태입니다",
+  "items": "품목 탭은 열려 있습니다",
+  "regions": "지역 비교 탭은 열려 있습니다",
+  "reports": "리포트 탭은 열려 있습니다",
+  "favorites": "관심 품목 탭은 열려 있습니다",
+  "guide": "연동 방식과 배포 상태를 확인합니다"
+};
 
 const storage = {
   getItem() { return null; },
@@ -31,6 +39,7 @@ try {
       if (!html.includes('id="main-content"')) errors.push(`${tab}: main-content 렌더링 누락`);
       if (!html.includes('href="#main-content"')) errors.push(`${tab}: 본문 바로가기 렌더링 누락`);
       if (html.includes('undefined') || html.includes('NaN')) errors.push(`${tab}: undefined 또는 NaN 출력 확인`);
+      if (expectedText[tab] && !html.includes(expectedText[tab])) errors.push(`${tab}: 전용 화면 문구 누락 - ${expectedText[tab]}`);
     } catch (error) {
       errors.push(`${tab}: SSR 렌더링 실패 - ${error.message}`);
     }

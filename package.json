@@ -17,7 +17,12 @@
     "data:check": "node scripts/data-contract-check.mjs",
     "qa:check": "npm run quality:check && npm run data:check && npm run interaction:check && npm run render:check",
     "interaction:check": "node scripts/interaction-check.mjs",
-    "render:check": "node scripts/render-check.mjs"
+    "render:check": "node scripts/render-check.mjs",
+    "actions:check": "node scripts/github-actions-contract-check.mjs",
+    "verify:deps": "node -e \"const fs=require('fs'); for (const p of ['node_modules/.bin/vite','node_modules/@vitejs/plugin-react']) { if (!fs.existsSync(p)) { console.error('missing '+p); process.exit(1); } } console.log('vite dependency ready')\"",
+    "deploy:check": "npm run verify:deps && npm run actions:check && npm run data:check && npm run validate:data && npm run quality:check && npm run runtime-ui:check && npm run interaction:check && npm run render:check && npm run build",
+    "ci:check": "npm run deploy:check",
+    "runtime-ui:check": "node scripts/runtime-ui-contract-check.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -29,5 +34,9 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^5.4.21"
+  },
+  "engines": {
+    "node": ">=20 <23",
+    "npm": ">=10"
   }
 }
