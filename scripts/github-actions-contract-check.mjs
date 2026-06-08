@@ -44,6 +44,7 @@ function optionalJsonArray(name) {
 }
 
 optionalBoolean('KAMIS_FETCH_ENABLED');
+optionalBoolean('KAMIS_SKIP_EMPTY_PRODUCTS');
 optionalBoolean('GEMINI_REPORT_ENABLED');
 optionalInteger('LOOKBACK_DAYS', { min: 1, max: 365 });
 optionalInteger('REPORT_RANGE_DAYS', { min: 1, max: 365 });

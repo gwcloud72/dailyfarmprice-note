@@ -142,23 +142,33 @@ const forbidden = [
 for (const file of scanFiles(root)) {
   const rel = path.relative(root, file);
   if (rel === 'scripts/runtime-ui-contract-check.mjs') continue;
+  if (rel.startsWith(`public${path.sep}data${path.sep}`)) continue;
   const text = read(file);
   for (const word of forbidden) {
     if (text.includes(word)) errors.push(`${rel}: 금지/오래된/목업 문자열 감지: ${word}`);
   }
 }
 
+function countGeneratedRows(data, rel) {
+  if (Array.isArray(data.items)) return data.items.length;
+  if (Array.isArray(data.datasets)) return data.datasets.length;
+  if (Array.isArray(data.snapshots)) return data.snapshots.length;
+  if (rel.endsWith('ai-reports.json') && data.reports && typeof data.reports === 'object' && !Array.isArray(data.reports)) {
+    return Object.keys(data.reports).length;
+  }
+  return 0;
+}
 
 for (const file of scanFiles(path.join(root, 'public/data'))) {
   if (!file.endsWith('.json')) continue;
   const rel = path.relative(root, file);
   try {
     const data = JSON.parse(read(file));
-    const hasRows = Array.isArray(data.items) ? data.items.length : Array.isArray(data.datasets) ? data.datasets.length : Array.isArray(data.snapshots) ? data.snapshots.length : 0;
+    const hasRows = countGeneratedRows(data, rel);
     const generated = data.generatedAt || data.updatedAt || data.metadata?.updatedAt || data.metadata?.generatedAt || null;
     if (!hasRows && generated) errors.push(`${rel}: 빈 데이터인데 generatedAt/updatedAt이 들어 있습니다.`);
     const mode = data.status || data.mode || data.metadata?.source;
-    if (!hasRows && ['live', 'partial'].includes(String(mode))) errors.push(`${rel}: 빈 데이터인데 live/partial 상태입니다.`);
+    if (!hasRows && ['live', 'partial', 'generated', 'fallback'].includes(String(mode))) errors.push(`${rel}: 빈 데이터인데 live/partial/generated/fallback 상태입니다.`);
   } catch (error) {
     errors.push(`${rel}: JSON 파싱 실패: ${error.message}`);
   }

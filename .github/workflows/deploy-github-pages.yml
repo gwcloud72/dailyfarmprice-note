@@ -93,6 +93,7 @@ jobs:
           KAMIS_CERT_ID: ${{ secrets.KAMIS_CERT_ID }}
           KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED }}
           KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
+          KAMIS_SKIP_EMPTY_PRODUCTS: ${{ vars.KAMIS_SKIP_EMPTY_PRODUCTS }}
           LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -107,6 +108,7 @@ jobs:
           KAMIS_CERT_ID: ${{ secrets.KAMIS_CERT_ID }}
           KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED }}
           KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
+          KAMIS_SKIP_EMPTY_PRODUCTS: ${{ vars.KAMIS_SKIP_EMPTY_PRODUCTS }}
           LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
         run: |
@@ -142,7 +144,7 @@ jobs:
             echo "crop-prices.json이 없어 AI 리포트 생성을 건너뜁니다."
             exit 0
           fi
-          npm run update:ai-report || echo "::warning::AI 리포트 생성 실패. 기존 리포트 또는 empty state로 빌드합니다."
+          npm run update:ai-report
 
       - name: Run deployment checks
         run: npm run deploy:check

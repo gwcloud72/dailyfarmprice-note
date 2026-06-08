@@ -24,6 +24,7 @@ function parseInteger(value, fallback, { min = -Infinity, max = Infinity } = {})
 }
 
 const FETCH_ENABLED = parseBoolean(process.env.KAMIS_FETCH_ENABLED, true);
+const SKIP_EMPTY_PRODUCTS = parseBoolean(process.env.KAMIS_SKIP_EMPTY_PRODUCTS, true);
 const LOOKBACK_DAYS = parseInteger(process.env.LOOKBACK_DAYS, 90, { min: 1, max: 365 });
 const COUNTRY_CODE = String(process.env.KAMIS_COUNTRY_CODE || '1101').trim();
 const DEFAULT_PRICE_TYPE = ['retail', 'wholesale'].includes(String(process.env.KAMIS_PRICE_TYPE || '').trim())
@@ -447,6 +448,19 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
   throw new Error(`${product.name} / ${regionConfig?.name || '전국'} 모든 품종 코드 조회 실패: ${errors.join(' / ')}`);
 }
 
+function isEmptyKamisResult(error) {
+  const message = String(error?.message || '');
+  return message.includes('조회 결과가 비어 있습니다') && !message.includes('fetch failed') && !message.includes('API 응답 실패');
+}
+
+function summarizeFailures(productName, failures) {
+  if (!failures.length) return null;
+  const regions = [...new Set(failures.map((failure) => failure.region).filter(Boolean))];
+  const preview = regions.slice(0, 5).join(', ');
+  const suffix = regions.length > 5 ? ` 외 ${regions.length - 5}개` : '';
+  return `${productName}: ${failures.length}개 지역 수집 실패(${preview}${suffix})`;
+}
+
 async function writeData(data) {
   await fs.mkdir(new URL('../public/data/', import.meta.url), { recursive: true });
   await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
@@ -470,30 +484,59 @@ async function main() {
   const errors = [];
   const items = [];
 
+  const skippedProducts = [];
+
   for (const product of productConfigs) {
     const regionConfigs = getRegionConfigs(product);
+    const nationalRegion = regionConfigs.find((region) => !region.code) || null;
+    const regionalConfigs = nationalRegion
+      ? regionConfigs.filter((region) => region !== nationalRegion)
+      : regionConfigs;
+    const productFailures = [];
 
-    for (const regionConfig of regionConfigs) {
+    if (nationalRegion) {
+      try {
+        items.push(await fetchProduct(product, startDay, today, nationalRegion));
+      } catch (error) {
+        if (SKIP_EMPTY_PRODUCTS && isEmptyKamisResult(error)) {
+          skippedProducts.push(`${product.name}: 전국 조회 결과 없음`);
+          console.warn(`⚠️ ${product.name}: 전국 데이터가 없어 지역별 수집을 생략합니다.`);
+          continue;
+        }
+        productFailures.push({ region: nationalRegion.name || '전국', message: error.message });
+      }
+    }
+
+    for (const regionConfig of regionalConfigs) {
       try {
         items.push(await fetchProduct(product, startDay, today, regionConfig));
       } catch (error) {
-        errors.push(error.message);
-        console.warn(`⚠️ ${error.message}`);
+        productFailures.push({ region: regionConfig?.name || '전국', message: error.message });
       }
+    }
+
+    const summary = summarizeFailures(product.name, productFailures);
+    if (summary) {
+      errors.push(summary);
+      console.warn(`⚠️ ${summary}`);
     }
   }
 
   if (!items.length) {
-    throw new Error(`KAMIS 데이터 수집에 실패했습니다. 대체 데이터 사용는 사용하지 않습니다. ${errors.join(' / ')}`);
+    throw new Error(`KAMIS 데이터 수집에 실패했습니다. 대체 데이터 사용는 사용하지 않습니다. ${[...errors, ...skippedProducts].join(' / ')}`);
   }
 
+  const notices = [];
+  if (errors.length) notices.push(`일부 지역 수집 실패: ${errors.join(' / ')}`);
+  if (skippedProducts.length) notices.push(`응답 없는 품목 제외: ${skippedProducts.join(' / ')}`);
+
   await writeData({
-    status: errors.length ? 'partial' : 'live',
+    status: errors.length || skippedProducts.length ? 'partial' : 'live',
     source: 'KAMIS Open API',
     generatedAt: getGeneratedAt(),
     aggregation: 'daily-average',
-    notice: errors.length
-      ? `일부 품목 수집 실패: ${errors.join(' / ')}`
+    notice: notices.length
+      ? notices.join(' · ')
       : 'KAMIS Open API 데이터를 전국·지역별 날짜 평균 가격으로 집계해 정적 JSON으로 생성했습니다.',
     items,
   });
