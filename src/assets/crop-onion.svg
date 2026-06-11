@@ -1,3 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="양파">
-<defs><linearGradient id="o" x1="22" x2="76" y1="18" y2="84"><stop stop-color="#fff1c4"/><stop offset="1" stop-color="#d08a24"/></linearGradient></defs>
-<path d="M47 15c5 7 10 12 17 17 10 8 17 18 17 30 0 18-15 28-33 28S15 80 15 62c0-12 7-22 17-30 6-5 11-10 15-17z" fill="url(#o)" stroke="#c47719" stroke-width="3"/><path d="M48 16c-6 16-8 32-8 69M48 16c9 17 12 35 9 68M30 37c10 12 14 28 12 47M66 37c-9 13-13 29-11 47" fill="none" stroke="#fff5d5" stroke-width="3" opacity=".65"/><path d="M42 17c4-5 10-6 16-3" fill="none" stroke="#7e4d1a" stroke-width="4" stroke-linecap="round"/></svg>
+<defs><linearGradient id="on" x1="24" y1="28" x2="72" y2="84"><stop stop-color="#f6dca6"/><stop offset="1" stop-color="#c98a3f"/></linearGradient></defs>
+<path d="M48 30c-7-8-14-10-14-10 2 8 6 10 6 10-10 4-16 16-16 30 0 16 11 26 24 26s24-10 24-26c0-14-6-26-16-30 0 0 4-2 6-10 0 0-7 2-14 10Z" fill="url(#on)"/>
+<path d="M40 34c-4 12-5 30-2 50m20-50c4 12 5 30 2 50M48 32v54" fill="none" stroke="#a86f2e" stroke-width="2" opacity=".5"/>
+</svg>

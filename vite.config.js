@@ -1,12 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || '';
-const isUserOrOrgPage = repoName.endsWith('.github.io');
-const defaultBase = process.env.GITHUB_ACTIONS && repoName && !isUserOrOrgPage ? `/${repoName}/` : '/';
-const base = process.env.VITE_BASE_PATH || './';
-
 export default defineConfig({
   plugins: [react()],
-  base,
+  base: process.env.VITE_BASE_PATH || './',
+  build: {
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          charts: ['recharts'],
+          icons: ['lucide-react'],
+        },
+      },
+    },
+  },
 });

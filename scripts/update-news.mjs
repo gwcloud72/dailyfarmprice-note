@@ -1,0 +1,166 @@
+#!/usr/bin/env node
+import { createHash } from 'node:crypto';
+import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+
+const root = process.cwd();
+const endpoint = 'https://openapi.naver.com/v1/search/news.json';
+const clientId = String(process.env.NEWS_CLIENT_ID || '').trim();
+const clientSecret = String(process.env.NEWS_CLIENT_SECRET || '').trim();
+const enabled = String(process.env.NEWS_FETCH_ENABLED || 'true').toLowerCase() !== 'false';
+const display = Math.min(Math.max(Number(process.env.NEWS_DISPLAY || 10), 1), 100);
+const maxItems = Math.min(Math.max(Number(process.env.NEWS_MAX_ITEMS || 16), 1), 100);
+const pauseMs = Math.max(Number(process.env.NEWS_REQUEST_PAUSE_MS || 250), 0);
+const vendor = 'Na' + 'ver';
+const target = "farm";
+
+const config = {
+  "output": "public/data/market-news.json",
+  "queries": [
+    "농산물 가격 배추 무 양파 도매시장",
+    "KAMIS 농산물 시세 가격",
+    "가락시장 농산물 도매가격",
+    "농산물 수급 가격 상승 하락"
+  ],
+  "exclude": [
+    "맛집",
+    "레시피",
+    "요리",
+    "축제",
+    "광고",
+    "쇼핑",
+    "특가",
+    "쿠폰"
+  ],
+  "keywordMap": {
+    "배추": [
+      "배추"
+    ],
+    "무": [
+      " 무 ",
+      "무 가격"
+    ],
+    "양파": [
+      "양파"
+    ],
+    "감자": [
+      "감자"
+    ],
+    "대파": [
+      "대파"
+    ],
+    "시장": [
+      "가락시장",
+      "도매시장",
+      "KAMIS"
+    ],
+    "수급": [
+      "수급",
+      "상승",
+      "하락"
+    ]
+  },
+  "defaultKeyword": "시장"
+};
+
+function pending(notice) {
+  return { metadata: { source: 'pending', target, updatedAt: null, notice, queryCount: config.queries.length }, items: [] };
+}
+function clean(value) {
+  return String(value || '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+function hashId(value) { return createHash('sha256').update(String(value)).digest('hex').slice(0, 16); }
+function parsePublished(value) {
+  const date = value ? new Date(value) : null;
+  return date && !Number.isNaN(date.getTime()) ? date.toISOString() : null;
+}
+function hostOf(value) {
+  try { return new URL(String(value || '')).hostname.replace(/^www\./, ''); }
+  catch { return '뉴스'; }
+}
+function hasExcludedWord(item) {
+  const text = `${item.title} ${item.description}`.toLowerCase();
+  return config.exclude.some((word) => text.includes(word.toLowerCase()));
+}
+function classify(item, query) {
+  const text = `${item.title} ${item.description} ${query}`;
+  for (const [label, words] of Object.entries(config.keywordMap)) {
+    if (words.some((word) => text.includes(word))) return label;
+  }
+  return config.defaultKeyword;
+}
+async function fetchQuery(query) {
+  const url = new URL(endpoint);
+  url.searchParams.set('query', query);
+  url.searchParams.set('display', String(display));
+  url.searchParams.set('start', '1');
+  url.searchParams.set('sort', 'date');
+  const response = await fetch(url, {
+    headers: {
+      [`X-${vendor}-Client-Id`]: clientId,
+      [`X-${vendor}-Client-Secret`]: clientSecret,
+    },
+  });
+  if (!response.ok) throw new Error(`news search failed ${response.status}`);
+  const payload = await response.json();
+  return (Array.isArray(payload.items) ? payload.items : [])
+    .map((item) => {
+      const title = clean(item.title);
+      const summary = clean(item.description);
+      const originallink = String(item.originallink || '').trim();
+      const link = String(item.link || originallink || '').trim();
+      return {
+        id: hashId(link || originallink || title),
+        title,
+        summary,
+        source: hostOf(originallink || link),
+        publishedAt: parsePublished(item.pubDate),
+        link,
+        originallink,
+        keyword: classify({ title, description: summary }, query),
+      };
+    })
+    .filter((item) => item.title && !hasExcludedWord({ title: item.title, description: item.summary }));
+}
+async function main() {
+  const outputPath = path.join(root, config.output);
+  await mkdir(path.dirname(outputPath), { recursive: true });
+  if (!enabled) {
+    await writeFile(outputPath, JSON.stringify(pending('뉴스 수집이 비활성화되어 있습니다.'), null, 2) + '\n');
+    return;
+  }
+  if (!clientId || !clientSecret) {
+    await writeFile(outputPath, JSON.stringify(pending('뉴스 검색 키가 설정되면 최신 동향을 표시합니다.'), null, 2) + '\n');
+    return;
+  }
+  const rows = [];
+  for (const query of config.queries) {
+    try { rows.push(...await fetchQuery(query)); }
+    catch (error) { console.warn(`${query}: ${error.message}`); }
+    if (pauseMs) await new Promise((resolve) => setTimeout(resolve, pauseMs));
+  }
+  const deduped = [...new Map(rows.map((item) => [item.originallink || item.link || item.title, item])).values()]
+    .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))
+    .slice(0, maxItems);
+  const payload = {
+    metadata: {
+      source: 'naver-search-news',
+      target,
+      updatedAt: deduped.length ? new Date().toISOString() : null,
+      queryCount: config.queries.length,
+      itemCount: deduped.length,
+    },
+    items: deduped,
+  };
+  await writeFile(outputPath, JSON.stringify(payload, null, 2) + '\n');
+  console.log(`${target} news data written: ${deduped.length} item(s), ${config.queries.length} queries`);
+}
+main().catch((error) => { console.error(error); process.exit(1); });

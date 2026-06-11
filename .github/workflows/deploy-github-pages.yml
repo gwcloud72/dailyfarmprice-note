@@ -51,7 +51,7 @@ jobs:
           unset NPM_CONFIG_PRODUCTION || true
           unset NPM_CONFIG_OMIT || true
 
-          if grep -qE 'localhost|file:' package-lock.json; then
+          if grep -qE 'localhost|file:|internal[.]api|applied[-]caas' package-lock.json; then
             echo "package-lock.json에 내부 registry 주소가 남아 있습니다. npm public registry 기준 lockfile로 갱신해야 합니다."
             exit 1
           fi
@@ -94,11 +94,17 @@ jobs:
           KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED }}
           KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
           KAMIS_SKIP_EMPTY_PRODUCTS: ${{ vars.KAMIS_SKIP_EMPTY_PRODUCTS }}
+          KAMIS_REQUIRE_FULL_REGION_COVERAGE: ${{ vars.KAMIS_REQUIRE_FULL_REGION_COVERAGE }}
           LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          NEWS_CLIENT_ID: ${{ secrets.NEWS_CLIENT_ID }}
+          NEWS_CLIENT_SECRET: ${{ secrets.NEWS_CLIENT_SECRET }}
+          NEWS_FETCH_ENABLED: ${{ vars.NEWS_FETCH_ENABLED }}
+          NEWS_DISPLAY: ${{ vars.NEWS_DISPLAY }}
+          NEWS_MAX_ITEMS: ${{ vars.NEWS_MAX_ITEMS }}
         run: npm run actions:check
 
       - name: Generate crop price data
@@ -109,6 +115,7 @@ jobs:
           KAMIS_FETCH_ENABLED: ${{ vars.KAMIS_FETCH_ENABLED }}
           KAMIS_PRODUCTS_JSON: ${{ vars.KAMIS_PRODUCTS_JSON }}
           KAMIS_SKIP_EMPTY_PRODUCTS: ${{ vars.KAMIS_SKIP_EMPTY_PRODUCTS }}
+          KAMIS_REQUIRE_FULL_REGION_COVERAGE: ${{ vars.KAMIS_REQUIRE_FULL_REGION_COVERAGE }}
           LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
         run: |
@@ -123,7 +130,7 @@ jobs:
           fi
           npm run update:data
 
-      - name: Generate Gemini AI reports
+      - name: Generate Gemini summary reports
         shell: bash
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -133,18 +140,31 @@ jobs:
         run: |
           set -euo pipefail
           if [ "${GEMINI_REPORT_ENABLED:-true}" = "false" ]; then
-            echo "GEMINI_REPORT_ENABLED=false 이므로 AI 리포트 생성을 건너뜁니다."
+            echo "GEMINI_REPORT_ENABLED=false 이므로 요약 리포트 생성을 건너뜁니다."
             exit 0
           fi
           if [ -z "${GEMINI_API_KEY:-}" ]; then
-            echo "GEMINI_API_KEY가 없어 AI 리포트 생성을 건너뜁니다."
+            echo "GEMINI_API_KEY가 없어 요약 리포트 생성을 건너뜁니다."
             exit 0
           fi
           if [ ! -f public/data/crop-prices.json ]; then
-            echo "crop-prices.json이 없어 AI 리포트 생성을 건너뜁니다."
+            echo "crop-prices.json이 없어 요약 리포트 생성을 건너뜁니다."
             exit 0
           fi
           npm run update:ai-report
+
+
+      - name: Generate market news
+        shell: bash
+        env:
+          NEWS_CLIENT_ID: ${{ secrets.NEWS_CLIENT_ID }}
+          NEWS_CLIENT_SECRET: ${{ secrets.NEWS_CLIENT_SECRET }}
+          NEWS_FETCH_ENABLED: ${{ vars.NEWS_FETCH_ENABLED }}
+          NEWS_DISPLAY: ${{ vars.NEWS_DISPLAY }}
+          NEWS_MAX_ITEMS: ${{ vars.NEWS_MAX_ITEMS }}
+        run: |
+          set -euo pipefail
+          npm run update:news || echo "시장 동향 수집을 건너뜁니다."
 
       - name: Run deployment checks
         run: npm run deploy:check
@@ -153,13 +173,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- public/data/crop-prices.json public/data/ai-reports.json; then
+          if git diff --quiet -- public/data/crop-prices.json public/data/ai-reports.json public/data/market-news.json; then
             echo "반영할 데이터 변경이 없습니다."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/crop-prices.json public/data/ai-reports.json
+          git add public/data/crop-prices.json public/data/ai-reports.json public/data/market-news.json
           git commit -m "농산물 가격 데이터 자동 갱신 [skip ci]"
           git push origin main
 
@@ -172,7 +192,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "dist"
 
