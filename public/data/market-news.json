@@ -2,7 +2,7 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-12T11:59:00.923Z",
+    "updatedAt": "2026-06-12T23:51:24.093Z",
     "queryCount": 4,
     "itemCount": 16
   },
@@ -118,16 +118,6 @@
       "keyword": "양파"
     },
     {
-      "id": "91f27ac39a4a5250",
-      "title": "농협, 최대 882억원 투입 양파 가격회복 총력",
-      "summary": "그러나 지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로, 전년 동기(812원) 대비 30% 하락해 농가의... 증정 ▲농산물 직거래장터 연계 판매 활성화 ▲군 납품 물량 확대 등을 통해 국산 양파 소비 확대에 나선다....",
-      "source": "wonyesanup.co.kr",
-      "publishedAt": "2026-06-10T01:38:00.000Z",
-      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
-      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
-      "keyword": "양파"
-    },
-    {
       "id": "7e127bad8a2aabe5",
       "title": "품목농협, 고품질 농산물 유통 새로운 표준 세운다",
       "summary": "플랫폼에 가격 결정권을 종속당하는 기존의 유통 한계를 탈피하고, 산지가 주도하는 스마트 물류 인프라를 완성해 농업 생태계의 체질 개선을 선도하기 위한 포석이다. 농산물 온라인도매시장 1호 거래 체결 장면....",
@@ -136,6 +126,16 @@
       "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
       "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
       "keyword": "시장"
+    },
+    {
+      "id": "91f27ac39a4a5250",
+      "title": "농협, 최대 882억원 투입 양파 가격회복 총력",
+      "summary": "그러나 지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로, 전년 동기(812원) 대비 30% 하락해 농가의... 증정 ▲농산물 직거래장터 연계 판매 활성화 ▲군 납품 물량 확대 등을 통해 국산 양파 소비 확대에 나선다....",
+      "source": "wonyesanup.co.kr",
+      "publishedAt": "2026-06-10T01:38:00.000Z",
+      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
+      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
+      "keyword": "양파"
     },
     {
       "id": "027b936edcd2730b",
