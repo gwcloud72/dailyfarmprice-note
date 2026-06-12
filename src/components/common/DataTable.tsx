@@ -7,8 +7,8 @@ export interface DataTableProps {
   columns: TableColumn[];
   rows: TableRow[];
   loading?: boolean;
-  emptyTitle?: string;
-  emptyDescription?: string;
+  fallbackTitle?: string;
+  fallbackDescription?: string;
   footer?: ReactNode;
 }
 
@@ -28,7 +28,7 @@ function TableSkeleton({ columns }: { columns: TableColumn[] }) {
   );
 }
 
-export function DataTable({ caption, columns, rows, loading = false, emptyTitle = '표시할 항목이 없습니다', emptyDescription = '필터를 조정하거나 다른 화면을 확인하세요.', footer }: DataTableProps) {
+export function DataTable({ caption, columns, rows, loading = false, fallbackTitle = '조건에 맞는 항목을 확인하세요', fallbackDescription = '필터를 조정하거나 다른 화면을 확인하세요.', footer }: DataTableProps) {
   return (
     <div className="overflow-hidden rounded-lg border border-ink-200 bg-white shadow-card">
       <div className="overflow-x-auto">
@@ -60,7 +60,7 @@ export function DataTable({ caption, columns, rows, loading = false, emptyTitle 
           )}
         </table>
       </div>
-      {!loading && rows.length === 0 ? <div className="p-ds-3"><EmptyState title={emptyTitle} description={emptyDescription} compact /></div> : null}
+      {!loading && rows.length === 0 ? <div className="p-ds-3"><EmptyState title={fallbackTitle} description={fallbackDescription} compact /></div> : null}
       {footer ? <div className="border-t border-ink-100 px-ds-3 py-ds-2">{footer}</div> : null}
     </div>
   );

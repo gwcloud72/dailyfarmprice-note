@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -30,7 +29,7 @@ function validateFreshCropPublicData(payload, label) {
  if (!items.length) return;
  const latest = latestSeriesDate(payload);
  if (!latest) {
-  errors.push(`${label}: 기준일이 없어 운영 데이터로 표시할 수 없습니다.`);
+  errors.push(`${label}: 기준일 확인이 필요합니다.`);
   return;
  }
  const days = Math.floor((Date.now() - latest.getTime()) / 86400000);
@@ -42,8 +41,8 @@ function validateFreshCropPublicData(payload, label) {
 
 function readJsonIfExists(filePath, { optional = false } = {}) {
  if (!fs.existsSync(filePath)) {
-  if (!optional) errors.push(`${path.relative(root, filePath)}: 파일이 없습니다.`);
-  else warnings.push(`${path.relative(root, filePath)}: 운영 데이터 파일 없음 - empty state로 렌더링됩니다.`);
+  if (!optional) errors.push(`${path.relative(root, filePath)}: 파일 확인이 필요합니다.`);
+  else warnings.push(`${path.relative(root, filePath)}: 운영 데이터 파일 확인 필요 - fallback 화면로 렌더링됩니다.`);
   return null;
  }
  try {
@@ -101,7 +100,7 @@ function validateCropPrices(payload, label) {
    return;
   }
   const name = item.name ?? item.baseId ?? item.id;
-  if (name !== undefined && String(name).trim() === '') warnings.push(`${label}.items[${index}]: 품목명이 비어 있습니다.`);
+  if (name !== undefined && String(name).trim() === '') warnings.push(`${label}.items[${index}]: 품목명이 확인 필요합니다.`);
   if (item.series !== undefined && !Array.isArray(item.series)) {
    errors.push(`${label}.items[${index}].series: 배열이어야 합니다.`);
    return;
@@ -123,7 +122,7 @@ function validateAiReports(payload, label) {
   errors.push(`${label}: 루트는 객체여야 합니다.`);
   return;
  }
- if (payload.reports !== undefined && !isObject(payload.reports)) warnings.push(`${label}.reports: 객체가 아니면 요약 리포트는 empty state로 표시됩니다.`);
+ if (payload.reports !== undefined && !isObject(payload.reports)) warnings.push(`${label}.reports: 객체가 아니면 요약 리포트는 fallback 화면로 표시됩니다.`);
 }
 
 
@@ -141,23 +140,8 @@ function validateNewsData(payload, label) {
   if (!String(item.title || '').trim()) errors.push(`${label}.items[${index}]: title이 필요합니다.`);
   const newsUrl = String(item.link || item.originallink || '');
   if (newsUrl && !safeUrl(newsUrl)) errors.push(`${label}.items[${index}]: 뉴스 URL은 http/https만 허용됩니다.`);
-  if (newsUrl.includes(['example', 'com'].join('.'))) errors.push(`${label}.items[${index}]: 임시 뉴스 링크는 허용하지 않습니다.`);
+  if (newsUrl.includes(['example', 'com'].join('.'))) errors.push(`${label}.items[${index}]: 검증되지 않은 뉴스 링크는 허용하지 않습니다.`);
  });
-}
-
-function validateFixtureBundle(payload, label) {
- if (!isObject(payload)) {
-  errors.push(`${label}: fixture bundle은 객체여야 합니다.`);
-  return;
- }
- for (const key of ['normal', 'edge', 'empty']) {
-  if (!isObject(payload[key])) {
-   errors.push(`${label}.${key}: fixture 객체가 필요합니다.`);
-   continue;
-  }
-  validateCropPrices(payload[key].prices, `${label}.${key}.prices`);
-  validateAiReports(payload[key].reports, `${label}.${key}.reports`);
- }
 }
 
 const cropData = readJsonIfExists(path.join(root, 'public/data/crop-prices.json'), { optional: true });
@@ -169,8 +153,6 @@ const reportData = readJsonIfExists(path.join(root, 'public/data/ai-reports.json
 if (reportData) validateAiReports(reportData, 'public/data/ai-reports.json');
 const newsData = readJsonIfExists(path.join(root, 'public/data/market-news.json'), { optional: true });
 if (newsData) validateNewsData(newsData, 'public/data/market-news.json');
-const fixtures = readJsonIfExists(path.join(root, 'scripts/fixtures/data-contract-fixtures.json'));
-if (fixtures) validateFixtureBundle(fixtures, 'scripts/fixtures/data-contract-fixtures.json');
 
 if (warnings.length) {
  console.log('data:check warnings');

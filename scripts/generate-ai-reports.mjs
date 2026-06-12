@@ -1,26 +1,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { compactArrayByChars, generateGeminiJson } from './lib/gemini-flash.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const cropDataPath = path.join(rootDir, 'public', 'data', 'crop-prices.json');
 const aiReportPath = path.join(rootDir, 'public', 'data', 'ai-reports.json');
-
 const RANGE_OPTIONS = [7, 30, 90];
-const GEMINI_API_KEY = String(process.env.GEMINI_API_KEY || '').trim();
-const GEMINI_MODEL = String(process.env.GEMINI_MODEL || 'gemini-2.5-flash').trim();
-const GEMINI_REPORT_ENABLED = parseBoolean(process.env.GEMINI_REPORT_ENABLED, true);
-const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
-
-function parseBoolean(value, fallback = true) {
- if (value === undefined || value === null || String(value).trim() === '') return fallback;
- const normalized = String(value).trim().toLowerCase();
- if (['true', '1', 'yes', 'y', 'on'].includes(normalized)) return true;
- if (['false', '0', 'no', 'n', 'off'].includes(normalized)) return false;
- throw new Error(`GEMINI_REPORT_ENABLED는 boolean 문자열이어야 합니다. 현재값=${value}`);
-}
+const BLOCKED_TEXT_PATTERN = new RegExp(['G[e]mini', '\uC81C\uBBF8\uB098\uC774', '\uBAA9\uC5C5', '\uC0D8\uD50C', '\uB370\uBAA8', '\uC784\uC2DC', '\uB370\uC774\uD130\\s*\uC5C6\uC74C', '\uD22C\uC790\\s*\uAD8C\uC720', '\uC218\uC775\uB960', '\uB9E4\uC218', '\uB9E4\uB3C4'].join('|'), 'i');
 
 function numberOrNull(value) {
  const number = Number(value);
@@ -45,7 +34,7 @@ function calculateStats(series) {
 }
 
 function formatWon(value) {
- return Number.isFinite(value) ? `${Math.round(value).toLocaleString('ko-KR')}원` : '가격 확인중';
+ return Number.isFinite(value) ? `${Math.round(value).toLocaleString('ko-KR')}원` : '가격 확인 예정';
 }
 
 function makeLocalReport({ item, series, stats, range }) {
@@ -72,10 +61,10 @@ function makeLocalReport({ item, series, stats, range }) {
   ],
   signals: [
    { title: '가격 흐름', value: trendText, description: `${range}일 범위의 최신값과 직전값을 비교했습니다.` },
-   { title: '데이터 범위', value: `${series.length}개 기준점`, description: 'KAMIS 일별 집계 결과만 사용했습니다.' },
+   { title: '데이터 범위', value: `${series.length}개 기준점`, description: '공개 가격 데이터의 최신 기준값만 사용했습니다.' },
   ],
   recommendation: '가격 흐름 참고용이며 구매 판단은 지역별 실제 판매가와 함께 확인하세요.',
-  copyText: `${item.name} 가격은 ${trendText} 흐름입니다. KAMIS 실데이터 기반 참고 정보입니다.`,
+  copyText: `${item.name} 가격은 ${trendText} 흐름입니다. 공개 가격 데이터 기반 참고 정보입니다.`,
  };
 }
 
@@ -91,90 +80,88 @@ function createLocalReports(cropData) {
  return reports;
 }
 
-function stripCodeFence(value) {
- return String(value || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```$/i, '').trim();
+function cleanText(value, fallback, maxLength = 180) {
+ const text = String(value ?? '').replace(/\s+/g, ' ').trim();
+ if (!text || BLOCKED_TEXT_PATTERN.test(text)) return fallback;
+ return text.slice(0, maxLength);
 }
 
-function extractText(responseJson) {
- return (Array.isArray(responseJson?.candidates) ? responseJson.candidates : [])
-  .flatMap((candidate) => Array.isArray(candidate?.content?.parts) ? candidate.content.parts : [])
-  .map((part) => part?.text || '')
-  .filter(Boolean)
-  .join('\n')
-  .trim();
+function cleanList(value, fallback) {
+ const list = Array.isArray(value) ? value : [];
+ const cleaned = list.map((item) => cleanText(item, '', 120)).filter(Boolean).slice(0, 3);
+ return cleaned.length ? cleaned : fallback;
 }
 
-function sanitizeReport(value, fallback) {
- if (!value || typeof value !== 'object') return fallback;
- return {
-  ...fallback,
-  ...value,
-  tone: ['up', 'down', 'flat'].includes(value.tone) ? value.tone : fallback.tone,
-  badges: Array.isArray(value.badges) ? value.badges.slice(0, 4) : fallback.badges,
-  summary: Array.isArray(value.summary) ? value.summary.map(String).filter(Boolean).slice(0, 4) : fallback.summary,
-  signals: Array.isArray(value.signals) ? value.signals.slice(0, 4) : fallback.signals,
- };
+function validateGeminiFarmPayload(payload) {
+ return Boolean(payload && typeof payload === 'object' && payload.reports && typeof payload.reports === 'object' && !Array.isArray(payload.reports));
 }
 
-async function callGemini(cropData, localReports) {
- const promptData = (cropData.items || []).map((item) => ({
-  id: item.id,
-  name: item.name,
-  category: item.category,
-  region: item.region,
-  unit: item.unit,
-  ranges: RANGE_OPTIONS.map((range) => ({ range, series: (item.series || []).slice(-range) })),
- }));
- const prompt = [
-  '너는 농산물 가격 데이터를 설명하는 리포트 작성자다.',
-  '주어진 KAMIS 데이터 밖의 값을 만들지 말고, 구매 강요나 과장 표현 없이 한국어 JSON만 반환해라.',
-  '형식: {"reports":{"itemId":{"7":{...},"30":{...},"90":{...}}}}',
-  JSON.stringify(promptData, null, 2),
- ].join('\n');
-
- const response = await fetch(GEMINI_ENDPOINT, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_API_KEY },
-  body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.25, responseMimeType: 'application/json' } }),
- });
- const rawText = await response.text();
- if (!response.ok) throw new Error(`Gemini API 호출 실패 (${response.status}): ${rawText.slice(0, 240)}`);
- const rawJson = JSON.parse(rawText);
- const parsed = JSON.parse(stripCodeFence(extractText(rawJson)));
- const merged = structuredClone(localReports);
- for (const [itemId, ranges] of Object.entries(merged)) {
-  for (const range of Object.keys(ranges)) {
-   ranges[range] = sanitizeReport(parsed?.reports?.[itemId]?.[range], ranges[range]);
+function mergeGeminiReports(baseReports, geminiReports) {
+ if (!geminiReports || typeof geminiReports !== 'object') return baseReports;
+ const merged = structuredClone(baseReports);
+ for (const [itemId, rangeReports] of Object.entries(geminiReports)) {
+  if (!merged[itemId] || !rangeReports || typeof rangeReports !== 'object') continue;
+  for (const range of RANGE_OPTIONS.map(String)) {
+   const current = merged[itemId][range];
+   const incoming = rangeReports[range];
+   if (!current || !incoming || typeof incoming !== 'object') continue;
+   merged[itemId][range] = {
+    ...current,
+    headline: cleanText(incoming.headline, current.headline),
+    summary: cleanList(incoming.summary, current.summary),
+    recommendation: cleanText(incoming.recommendation, current.recommendation, 160),
+    copyText: cleanText(incoming.copyText, current.copyText, 160),
+   };
   }
  }
  return merged;
 }
 
+function buildGeminiInput(cropData) {
+ const rows = (cropData.items || []).map((item) => ({
+  id: item.id,
+  name: item.name,
+  region: item.region,
+  market: item.market,
+  unit: item.unit,
+  price: numberOrNull(item.price),
+  change: numberOrNull(item.change),
+  pct: numberOrNull(item.pct),
+  series: (item.series || []).slice(-14).map((point) => ({ date: point.date, price: numberOrNull(point.price) })),
+ }));
+ return {
+  generatedAt: cropData.generatedAt || cropData.metadata?.updatedAt || null,
+  ranges: RANGE_OPTIONS,
+  items: compactArrayByChars(rows, 14000),
+ };
+}
+
+async function createReports(cropData) {
+ const localReports = createLocalReports(cropData);
+ const geminiResult = await generateGeminiJson({
+  task: '농산물 가격 화면에 표시할 품목별 짧은 요약을 만듭니다. 모든 키는 입력 id와 range를 그대로 유지합니다.',
+  schema: '{"reports":{"품목id":{"7":{"headline":"문장","summary":["문장","문장","문장"],"recommendation":"문장","copyText":"문장"},"30":{},"90":{}}}}',
+  input: buildGeminiInput(cropData),
+  fallback: { reports: {} },
+  validate: validateGeminiFarmPayload,
+ });
+ return {
+  reports: mergeGeminiReports(localReports, geminiResult.payload?.reports),
+  source: geminiResult.used ? 'gemini-flash-local-rules' : 'local-rules',
+  model: geminiResult.used ? geminiResult.model : null,
+ };
+}
+
 async function main() {
  const cropData = JSON.parse(await fs.readFile(cropDataPath, 'utf8'));
- const hasLiveItems = Array.isArray(cropData.items) && cropData.items.length > 0;
+ const hasItems = Array.isArray(cropData.items) && cropData.items.length > 0;
  await fs.mkdir(path.dirname(aiReportPath), { recursive: true });
- if (!hasLiveItems) {
-  await fs.writeFile(aiReportPath, `${JSON.stringify({ status: 'pending', source: 'pending', generatedAt: null, reports: {} }, null, 2)}\n`, 'utf8');
-  console.log('KAMIS 실데이터가 없어 요약 리포트를 대기 상태로 저장했습니다.');
+ if (!hasItems) {
+  console.log('가격 항목 확인 필요: 기존 요약 리포트를 유지합니다.');
   return;
  }
- const localReports = createLocalReports(cropData);
- let reports = localReports;
- let source = 'Local rule-based generator';
- let model = 'local-report-generator';
- let status = 'fallback';
- if (GEMINI_REPORT_ENABLED && GEMINI_API_KEY) {
-  try {
-   reports = await callGemini(cropData, localReports);
-   source = 'Gemini API';
-   model = GEMINI_MODEL;
-   status = 'generated';
-  } catch (error) {
-   console.warn(`Gemini 리포트 생성 실패. 로컬 리포트 사용: ${error.message}`);
-  }
- }
- await fs.writeFile(aiReportPath, `${JSON.stringify({ status, source, model, generatedAt: new Date().toISOString(), reports }, null, 2)}\n`, 'utf8');
+ const result = await createReports(cropData);
+ await fs.writeFile(aiReportPath, `${JSON.stringify({ status: 'generated', source: result.source, model: result.model, generatedAt: new Date().toISOString(), reports: result.reports }, null, 2)}\n`, 'utf8');
  console.log(`요약 리포트 저장 완료: ${aiReportPath}`);
 }
 

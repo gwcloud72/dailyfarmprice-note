@@ -4,7 +4,7 @@ import { HorizontalBarChart } from '../../components/charts/HorizontalBarChart';
 import { AlertCard, DownloadStep, FavoriteItem, ItemCard } from '../../components/feature/farm';
 import { BottomWidgetPanel, Button, Card, DataTable, EmptyState, FilterChips, MiniTrend, PriceBadge, RankBadge, SearchField, SectionHeader, StatsStrip } from '../../components/common/ui';
 import type { FarmData } from '../../data/normalize';
-import { ADMIN_REGION_NAMES } from '../../data/sample';
+import { ADMIN_REGION_NAMES } from '../../data/model';
 
 interface PageProps { data: FarmData; onTabChange: (tab: string) => void; onAction: (text: string) => void; }
 
@@ -13,7 +13,7 @@ function Shell({ title, children, data, onAction, compact = false }: { title: st
 }
 
 function FormatCard({ icon: Icon, title, desc, rows, onClick }: { icon: typeof FileText; title: string; desc: string; rows: string; onClick: () => void }) {
-  return <Card padding="normal"><div className="flex items-start justify-between gap-ds-2"><div><h3 className="font-bold text-ink-900">{title}</h3><p className="mt-ds-0.5 text-sm text-ink-500">{desc}</p><strong className="mt-ds-2 block text-xl font-extrabold text-primary-600 tabular">{rows}</strong></div><span className="rounded-lg bg-primary-50 p-2 text-primary-600"><Icon size={18} /></span></div><Button variant="secondary" onClick={onClick} className="mt-ds-2 w-full">받기</Button></Card>;
+  return <Card padding="normal"><div className="flex items-start justify-between gap-ds-2"><div><h3 className="font-bold text-ink-900">{title}</h3><p className="mt-ds-0.5 text-sm text-ink-500">{desc}</p><strong className="mt-ds-2 block text-xl font-extrabold text-primary-600 tabular">{rows}</strong></div><span className="rounded-lg bg-primary-50 p-2 text-primary-600"><Icon size={18} /></span></div><Button variant="secondary" onClick={onClick} className="mt-ds-2 w-full">다운로드</Button></Card>;
 }
 
 export function ItemsPage({ data, onAction }: PageProps) {
@@ -24,10 +24,10 @@ export function ItemsPage({ data, onAction }: PageProps) {
   return <Shell title="품목별 가격 정보" data={data} onAction={onAction}>
     <div className="grid gap-ds-2 lg:grid-cols-search-action"><SearchField value={query} onChange={setQuery} placeholder="품목·시장·지역 검색" /><FilterChips items={['전체', 'up', 'down', 'flat']} active={filter} onChange={setFilter} /></div>
     <StatsStrip stats={[{ label: '검색 결과', value: `${rows.length}개`, sub: '필터 기준' }, { label: '상승', value: `${rows.filter((crop) => crop.direction === 'up').length}개`, sub: '전일 대비' }, { label: '하락', value: `${rows.filter((crop) => crop.direction === 'down').length}개`, sub: '전일 대비' }, { label: '보합', value: `${rows.filter((crop) => crop.direction === 'flat').length}개`, sub: '변동 없음' }]} compact />
-    <div className="grid grid-cols-1 gap-ds-2 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">{rows.slice(0, 8).map((crop) => <ItemCard key={crop.id} crop={crop} selected={crop.id === selected.id} onSelect={() => onAction(`${crop.name} 선택`)} />)}</div>
+    <div className="grid grid-cols-1 gap-ds-2 md:grid-cols-2 xl:grid-cols-3">{rows.slice(0, 8).map((crop) => <ItemCard key={crop.id} crop={crop} selected={crop.id === selected.id} onSelect={() => onAction(`${crop.name} 선택`)} />)}</div>
     <div className="grid gap-ds-2 xl:grid-cols-main-360">
       <DataTable caption="품목별 시세 상세 표" columns={[{ key: 'rank', label: '순위' }, { key: 'name', label: '품목' }, { key: 'market', label: '시장' }, { key: 'price', label: '가격', align: 'right' }, { key: 'change', label: '변동' }, { key: 'trend', label: '흐름' }]} rows={rows.slice(0, 12).map((crop, index) => ({ id: crop.id, cells: { rank: <RankBadge value={index + 1} />, name: <b>{crop.name}</b>, market: `${crop.market} · ${crop.region}`, price: <span className="font-bold tabular">{crop.price.toLocaleString()}원</span>, change: <PriceBadge direction={crop.direction} text={`${crop.change > 0 ? '+' : ''}${crop.change.toLocaleString()}원`} />, trend: <MiniTrend values={crop.series} direction={crop.direction} /> } }))} />
-      <Card padding="normal"><SectionHeader title="7일 가격 흐름" action="통계" onAction={() => onAction('통계 보기')} /><MiniTrend values={selected.series} direction={selected.direction} /><div className="mt-ds-3 grid gap-ds-1">{rows.slice(0, 4).map((crop) => <div key={crop.id} className="flex items-center justify-between rounded-md bg-ink-50 px-ds-2 py-ds-1"><span className="text-sm font-semibold text-ink-900">{crop.name}</span><PriceBadge direction={crop.direction} text={`${crop.changePct > 0 ? '+' : ''}${crop.changePct}%`} /></div>)}</div></Card>
+      <Card padding="normal"><SectionHeader title="가격 흐름" action="통계" onAction={() => onAction('통계 보기')} /><MiniTrend values={selected.series} direction={selected.direction} /><div className="mt-ds-3 grid gap-ds-1">{rows.slice(0, 4).map((crop) => <div key={crop.id} className="flex items-center justify-between rounded-md bg-ink-50 px-ds-2 py-ds-1"><span className="text-sm font-semibold text-ink-900">{crop.name}</span><PriceBadge direction={crop.direction} text={`${crop.changePct > 0 ? '+' : ''}${crop.changePct}%`} /></div>)}</div></Card>
     </div>
   </Shell>;
 }
@@ -80,20 +80,20 @@ export function MarketNewsPage({ data, onAction }: PageProps) {
         </article>;
       })}</div>
       <Card padding="normal"><SectionHeader title="키워드 흐름" action="가격 리포트" onAction={() => onAction('가격 리포트')} /><div className="space-y-2">{keywords.filter((item) => item !== '전체').slice(0, 5).map((item) => <div key={item} className="flex items-center justify-between rounded-md bg-ink-50 px-ds-2 py-ds-1"><span className="text-sm font-semibold text-ink-900">{item}</span><span className="text-caption text-ink-500">{data.marketNews.filter((news) => news.keyword === item).length}건</span></div>)}</div></Card>
-    </div> : <EmptyState title="표시할 시장 동향이 없습니다" description="가격표와 지역 비교를 먼저 확인하세요." icon={Newspaper} />}
+    </div> : <EmptyState title="시장 동향 항목 확인 필요" description="가격표와 지역 비교 화면을 확인하세요." icon={Newspaper} />}
   </Shell>;
 }
 
-export function AlertsPage({ data, onAction }: PageProps) { const [active, setActive] = useState<string[]>(['cabbage', 'potato', 'apple']); return <Shell title="알림 서비스" data={data} onAction={onAction}><div className="grid grid-cols-1 gap-ds-2 lg:grid-cols-3 2xl:grid-cols-4">{data.crops.slice(0, 10).map((crop) => <AlertCard key={crop.id} crop={crop} active={active.includes(crop.id)} onToggle={() => setActive((list) => list.includes(crop.id) ? list.filter((id) => id !== crop.id) : [...list, crop.id])} />)}</div></Shell>; }
+export function AlertsPage({ data, onAction }: PageProps) { const [active, setActive] = useState<string[]>([]); return <Shell title="알림 서비스" data={data} onAction={onAction}><div className="grid grid-cols-1 gap-ds-2 lg:grid-cols-3">{data.crops.slice(0, 10).map((crop) => <AlertCard key={crop.id} crop={crop} active={active.includes(crop.id)} onToggle={() => setActive((list) => list.includes(crop.id) ? list.filter((id) => id !== crop.id) : [...list, crop.id])} />)}</div></Shell>; }
 
 export function DownloadPage({ data, onAction }: PageProps) {
   const previewRows = data.crops.slice(0, 8);
-  return <Shell title="데이터 받기" data={data} onAction={onAction}>
-    <div className="grid gap-ds-2 md:grid-cols-2 xl:grid-cols-4">
-      <FormatCard icon={FileText} title="CSV" desc="품목·지역 데이터" rows={`${previewRows.length * 18}행`} onClick={() => onAction('CSV 받기')} />
-      <FormatCard icon={FileSpreadsheet} title="XLSX" desc="시장 비교용 표" rows="128행" onClick={() => onAction('XLSX 받기')} />
-      <FormatCard icon={Database} title="원천 데이터" desc="연동용 구조" rows="10품목" onClick={() => onAction('원천 데이터 받기')} />
-      <FormatCard icon={RefreshCw} title="리포트" desc="변동률 요약" rows="12쪽" onClick={() => onAction('리포트 받기')} />
+  return <Shell title="데이터 다운로드" data={data} onAction={onAction}>
+    <div className="grid gap-ds-2 md:grid-cols-2 xl:grid-cols-3">
+      <FormatCard icon={FileText} title="CSV" desc="품목·지역 데이터" rows={`${previewRows.length}행`} onClick={() => onAction('CSV 다운로드')} />
+      <FormatCard icon={FileSpreadsheet} title="XLSX" desc="시장 비교용 표" rows={`${data.regions.length}행`} onClick={() => onAction('XLSX 다운로드')} />
+      <FormatCard icon={Database} title="원천 데이터" desc="연동용 구조" rows={`${data.crops.length}품목`} onClick={() => onAction('원천 데이터 다운로드')} />
+      <FormatCard icon={RefreshCw} title="리포트" desc="변동률 요약" rows={`${data.reportBars.length}개`} onClick={() => onAction('리포트 다운로드')} />
     </div>
     <div className="grid gap-ds-2 xl:grid-cols-main-360">
       <DataTable caption="데이터 미리보기" columns={[{ key: 'name', label: '품목' }, { key: 'market', label: '시장' }, { key: 'region', label: '지역' }, { key: 'price', label: '가격', align: 'right' }, { key: 'change', label: '변동' }]} rows={previewRows.map((crop) => ({ id: `preview-${crop.id}`, cells: { name: <b>{crop.name}</b>, market: crop.market, region: crop.region, price: <span className="tabular">{crop.price.toLocaleString()}원</span>, change: <PriceBadge direction={crop.direction} text={`${crop.change > 0 ? '+' : ''}${crop.change.toLocaleString()}원`} /> } }))} />
@@ -106,7 +106,7 @@ export function FavoritesPage({ data, onAction }: PageProps) { return <Shell tit
 
 export function GuidePage({ data, onAction }: PageProps) { return <Shell title="이용 안내" data={data} onAction={onAction} compact>
   <div className="grid gap-ds-2 xl:grid-cols-main-360">
-    <DataTable caption="데이터 기준 표" columns={[{ key: 'name', label: '구분' }, { key: 'value', label: '기준' }, { key: 'note', label: '확인' }]} rows={[{ id: 'source', cells: { name: '가격', value: '도매 평균', note: '품목별' } }, { id: 'region', cells: { name: '지역', value: `${data.regions.length}개`, note: '시도' } }, { id: 'crop', cells: { name: '품목', value: `${data.crops.length}개`, note: '대표값' } }, { id: 'series', cells: { name: '추이', value: '최근 7일', note: '품목별' } }, { id: 'change', cells: { name: '변동', value: '전일 대비', note: '상승·하락' } }, { id: 'unit', cells: { name: '단위', value: '원/규격', note: '카드 표시' } }]} />
+    <DataTable caption="데이터 기준 표" columns={[{ key: 'name', label: '구분' }, { key: 'value', label: '기준' }, { key: 'note', label: '확인' }]} rows={[{ id: 'source', cells: { name: '가격', value: '도매 평균', note: '품목별' } }, { id: 'region', cells: { name: '지역', value: `${data.regions.length}개`, note: '시도' } }, { id: 'crop', cells: { name: '품목', value: `${data.crops.length}개`, note: '대표값' } }, { id: 'series', cells: { name: '추이', value: `${Math.max(0, ...data.crops.map((crop) => crop.series.length))}개 기준`, note: '품목별' } }, { id: 'change', cells: { name: '변동', value: '전일 대비', note: '상승·하락' } }, { id: 'unit', cells: { name: '단위', value: '원/규격', note: '카드 표시' } }]} />
     <div className="space-y-ds-2"><Card padding="normal"><h3 className="font-bold">갱신 기준</h3><p className="mt-ds-1 text-sm text-ink-500">가격, 지역, 변동률을 순서대로 확인합니다.</p></Card><Card padding="normal"><h3 className="font-bold">색상 기준</h3><p className="mt-ds-1 text-sm text-ink-500">상승은 빨강, 하락은 파랑입니다.</p></Card><Card padding="normal"><h3 className="font-bold">빠른 이동</h3><Button variant="secondary" onClick={() => onAction('품목별 시세')} className="mt-ds-2 w-full">품목 보기</Button></Card></div>
   </div>
 </Shell>; }

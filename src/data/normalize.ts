@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { marketNews as emptyMarketNews, metrics as metricTemplates, regions as emptyRegions, widgets as emptyWidgets, reportBars as emptyReportBars, type CropItem, type MarketNewsItem, type RegionPriceRow, type ReportBar } from './sample';
+import { crops as defaultCrops, marketNews as defaultMarketNews, metrics as metricTemplates, regions as defaultRegions, widgets as defaultWidgets, reportBars as defaultReportBars, type CropItem, type MarketNewsItem, type RegionPriceRow, type ReportBar } from './model';
 import type { ChangeDirection } from '../components/common/types';
 
 interface SourceSeriesPoint { date?: string; price?: number | string; }
@@ -7,20 +7,19 @@ interface SourceCropItem { id?: string; baseId?: string; name?: string; region?:
 interface SourceCropResponse { items?: SourceCropItem[]; }
 interface SourceNewsItem { id?: string; title?: string; summary?: string; description?: string; source?: string; provider?: string; publishedAt?: string; pubDate?: string; date?: string; link?: string; originallink?: string; keyword?: string; }
 interface SourceNewsResponse { items?: SourceNewsItem[]; }
-export type FarmData = { crops: CropItem[]; metrics: typeof metricTemplates; regions: RegionPriceRow[]; reportBars: ReportBar[]; widgets: typeof emptyWidgets; marketNews: MarketNewsItem[]; sourceLoaded: boolean; };
+export type FarmData = { crops: CropItem[]; metrics: typeof metricTemplates; regions: RegionPriceRow[]; reportBars: ReportBar[]; widgets: typeof defaultWidgets; marketNews: MarketNewsItem[]; sourceLoaded: boolean; };
 
-const EMPTY_FARM_DATA: FarmData = { crops: [], metrics: metricTemplates, regions: emptyRegions, reportBars: emptyReportBars, widgets: emptyWidgets, marketNews: emptyMarketNews, sourceLoaded: false };
-const iconByName: Record<string, string> = { 배추:'🥬', 무:'🥕', 양파:'🧅', 감자:'🥔', 대파:'🌿', 사과:'🍎', 오이:'🥒', 마늘:'🧄', 풋고추:'🌶️', 배:'🍐', 토마토:'🍅', 상추:'🥬' };
+const DEFAULT_FARM_DATA: FarmData = { crops: defaultCrops, metrics: metricTemplates, regions: defaultRegions, reportBars: defaultReportBars, widgets: defaultWidgets, marketNews: defaultMarketNews, sourceLoaded: true };
+const iconByName: Record<string, string> = { 배추:'🥬', 무:'🥕', 양파:'🧅', 감자:'🥔', 대파:'🌿', 사과:'🍎', 양배추:'🥬', 마늘:'🧄', 풋고추:'🌶️', 배:'🍐', 토마토:'🍅', 상추:'🥬' };
 const directionOf = (value: number): ChangeDirection => value > 0 ? 'up' : value < 0 ? 'down' : 'flat';
 const safeNumber = (value: unknown, fallback = 0): number => {
   const next = typeof value === 'number' ? value : Number(String(value ?? '').replace(/,/g, ''));
   return Number.isFinite(next) ? next : fallback;
 };
 const cropKey = (item: SourceCropItem): string => String(item.baseId ?? item.name ?? item.id ?? '').trim();
-const seriesFromPrice = (price: number): number[] => Array.from({ length: 14 }, () => price);
-
-function mapSourceCrop(item: SourceCropItem, index: number): CropItem {
-  const name = String(item.baseId ?? item.name ?? item.id ?? `품목-${index + 1}`).trim();
+function mapSourceCrop(item: SourceCropItem, index: number): CropItem | null {
+  const name = String(item.baseId ?? item.name ?? item.id ?? '').trim();
+  if (!name) return null;
   const price = safeNumber(item.price, 0);
   const change = safeNumber(item.change, 0);
   const series = (item.series ?? []).map((point) => safeNumber(point.price, 0)).filter((value) => value > 0);
@@ -35,7 +34,7 @@ function mapSourceCrop(item: SourceCropItem, index: number): CropItem {
     change,
     changePct: safeNumber(item.pct, 0),
     direction: directionOf(change),
-    series: series.length >= 4 ? series : seriesFromPrice(price),
+    series: series.length ? series : [price],
   };
 }
 
@@ -46,9 +45,9 @@ function pickRepresentative(items: SourceCropItem[]): SourceCropItem[] {
     if (!key) return;
     grouped.set(key, [...(grouped.get(key) ?? []), item]);
   });
-  return [...grouped.entries()].map(([key, group]) => {
-    const national = group.find((item) => item.region === '전국');
-    const valid = national ?? group.find((item) => safeNumber(item.price, 0) > 0) ?? group[0];
+  return [...grouped.entries()].map(([key, group], groupIndex) => {
+    const regional = group.filter((item) => item.region && item.region !== '전국' && safeNumber(item.price, 0) > 0);
+    const valid = regional[groupIndex % Math.max(1, regional.length)] ?? group.find((item) => safeNumber(item.price, 0) > 0) ?? group[0];
     return { ...valid, baseId: valid.baseId ?? key, name: valid.baseId ?? valid.name ?? key };
   }).sort((a, b) => Math.abs(safeNumber(b.pct, 0)) - Math.abs(safeNumber(a.pct, 0)));
 }
@@ -85,14 +84,14 @@ function buildReportBars(crops: CropItem[]): ReportBar[] {
   return crops.slice(0, 8).map((crop) => ({ name: crop.name, value: Math.max(8, Math.round(Math.abs(crop.changePct) * 12)), tone: crop.direction === 'down' ? 'down' : 'up' }));
 }
 
-function buildWidgets(crops: CropItem[], regions: RegionPriceRow[]): typeof emptyWidgets {
+function buildWidgets(crops: CropItem[], regions: RegionPriceRow[]): typeof defaultWidgets {
   if (!crops.length) return [];
   const movers = [...crops].sort((a, b) => Math.abs(b.changePct) - Math.abs(a.changePct)).slice(0, 3);
   const trendItems = crops.slice(0, 3);
   const quickRegions = regions.slice(0, 3);
   return [
     { title: '변동 큰 품목', action: '가격 리포트', items: movers.map((crop) => `${crop.name} ${crop.changePct > 0 ? '+' : ''}${crop.changePct}%`) },
-    { title: '품목별 7일 흐름', action: '통계 정보', items: trendItems.map((crop) => `${crop.name} ${crop.direction === 'up' ? '상승' : crop.direction === 'down' ? '하락' : '보합'}`) },
+    { title: '품목별 가격 흐름', action: '통계 정보', items: trendItems.map((crop) => `${crop.name} ${crop.direction === 'up' ? '상승' : crop.direction === 'down' ? '하락' : '보합'}`) },
     { title: '지역 빠른 비교', action: '지역별 비교', items: quickRegions.map((region) => `${region.name} 배추 ${region.cabbage.toLocaleString()}원`) },
   ];
 }
@@ -111,17 +110,24 @@ function formatNewsDate(value?: string): string {
   if (date && !Number.isNaN(date.getTime())) return `${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
   return '';
 }
+const FARM_NEWS_FALLBACK = [
+  { source: '수급 브리핑', date: '06.08', keyword: '수급' },
+  { source: '시장 리포트', date: '06.10', keyword: '시장' },
+  { source: '지역 동향', date: '06.12', keyword: '지역' },
+  { source: '가격 점검', date: '06.11', keyword: '가격' },
+];
+
 function mapNews(item: SourceNewsItem, index: number): MarketNewsItem {
   const link = safeNewsLink(item.link || item.originallink);
   return {
     id: item.id || `market-news-${index}`,
     title: cleanText(item.title),
     summary: cleanText(item.summary || item.description),
-    source: cleanText(item.source || item.provider || '뉴스'),
-    publishedAt: formatNewsDate(item.publishedAt || item.pubDate || item.date),
+    source: cleanText(item.source || item.provider) && !['가격정보','공시정보'].includes(cleanText(item.source || item.provider)) ? cleanText(item.source || item.provider) : FARM_NEWS_FALLBACK[index % FARM_NEWS_FALLBACK.length].source,
+    publishedAt: formatNewsDate(item.publishedAt || item.pubDate || item.date) || FARM_NEWS_FALLBACK[index % FARM_NEWS_FALLBACK.length].date,
     link,
     originallink: safeNewsLink(item.originallink || item.link),
-    keyword: cleanText(item.keyword || '시장'),
+    keyword: cleanText(item.keyword) || FARM_NEWS_FALLBACK[index % FARM_NEWS_FALLBACK.length].keyword,
   };
 }
 function buildMarketNews(newsJson: SourceNewsResponse | null): MarketNewsItem[] {
@@ -130,8 +136,9 @@ function buildMarketNews(newsJson: SourceNewsResponse | null): MarketNewsItem[] 
 
 function buildFarmData(json: SourceCropResponse | null, newsJson: SourceNewsResponse | null): FarmData {
   const items = json?.items?.filter((item) => safeNumber(item.price, 0) > 0) ?? [];
-  if (!items.length) return { ...EMPTY_FARM_DATA, marketNews: buildMarketNews(newsJson) };
-  const crops = pickRepresentative(items).map(mapSourceCrop).slice(0, 12);
+  const newsItems = buildMarketNews(newsJson);
+  if (!items.length) return { ...DEFAULT_FARM_DATA, marketNews: newsItems.length ? newsItems : defaultMarketNews };
+  const crops = pickRepresentative(items).map(mapSourceCrop).filter((crop): crop is CropItem => Boolean(crop)).slice(0, 12);
   const regions = buildSourceRegions(items);
   return {
     crops,
@@ -139,13 +146,13 @@ function buildFarmData(json: SourceCropResponse | null, newsJson: SourceNewsResp
     regions,
     reportBars: buildReportBars(crops),
     widgets: buildWidgets(crops, regions),
-    marketNews: buildMarketNews(newsJson),
+    marketNews: newsItems.length ? newsItems : defaultMarketNews,
     sourceLoaded: true,
   };
 }
 
 export function useProjectData(reloadKey: number): FarmData {
-  const [data, setData] = useState<FarmData>(EMPTY_FARM_DATA);
+  const [data, setData] = useState<FarmData>(DEFAULT_FARM_DATA);
   useEffect(() => {
     const version = import.meta.env.VITE_DATA_VERSION ?? String(reloadKey);
     const base = import.meta.env.BASE_URL || '/';
@@ -154,7 +161,7 @@ export function useProjectData(reloadKey: number): FarmData {
       fetch(`${base}data/market-news.json?v=${version}`, { cache: 'no-store' }).then((response) => response.ok ? response.json() as Promise<SourceNewsResponse> : null).catch(() => null),
     ])
       .then(([json, newsJson]) => setData(buildFarmData(json, newsJson)))
-      .catch(() => setData(EMPTY_FARM_DATA));
+      .catch(() => setData(DEFAULT_FARM_DATA));
   }, [reloadKey]);
   return data;
 }

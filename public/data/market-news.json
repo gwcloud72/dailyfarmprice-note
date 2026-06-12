@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source": "public-market-news-baseline",
+    "updatedAt": "2026-06-12T09:00:00+09:00",
+    "itemCount": 5
+  },
+  "items": [
+    {
+      "id": "market-1",
+      "title": "배추·무 도매가, 최근 경매 기준 변동 확인",
+      "summary": "가락시장 최근 경매 기준으로 엽채류와 저장 채소 가격을 함께 확인합니다.",
+      "source": "수급 브리핑",
+      "publishedAt": "2026-06-08T09:00:00+09:00",
+      "link": "",
+      "originallink": "",
+      "keyword": "수급"
+    },
+    {
+      "id": "market-2",
+      "title": "양파·대파, 단위별 가격 차이 확인 필요",
+      "summary": "1kg·단·상자 단위가 품목별로 달라 비교 시 기준단위를 먼저 확인해야 합니다.",
+      "source": "시장 리포트",
+      "publishedAt": "2026-06-09T09:00:00+09:00",
+      "link": "",
+      "originallink": "",
+      "keyword": "시장"
+    },
+    {
+      "id": "market-3",
+      "title": "과일류는 상자 단위 경락가 중심으로 비교",
+      "summary": "사과와 배는 상자 단위 경락가를 기준으로 최근 흐름을 확인하는 방식이 적합합니다.",
+      "source": "지역 동향",
+      "publishedAt": "2026-06-10T09:00:00+09:00",
+      "link": "",
+      "originallink": "",
+      "keyword": "지역"
+    },
+    {
+      "id": "market-4",
+      "title": "풋고추·상추, 단기 가격 변동성 유의",
+      "summary": "생육과 반입량 영향을 받는 품목은 단기 변동폭이 커질 수 있어 최근 흐름을 함께 봅니다.",
+      "source": "가격 점검",
+      "publishedAt": "2026-06-11T09:00:00+09:00",
+      "link": "",
+      "originallink": "",
+      "keyword": "가격"
+    },
+    {
+      "id": "market-5",
+      "title": "공개 가격 기준선, API 수집 시 자동 갱신",
+      "summary": "배포 후 KAMIS 인증값이 적용되면 공개 기준선 대신 수집 데이터가 화면에 반영됩니다.",
+      "source": "데이터 안내",
+      "publishedAt": "2026-06-12T09:00:00+09:00",
+      "link": "",
+      "originallink": "",
+      "keyword": "데이터"
+    }
+  ]
+}

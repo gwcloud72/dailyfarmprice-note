@@ -1,9 +1,9 @@
 import { Bell, Star } from 'lucide-react';
 import { Card, PriceBadge, Button, MiniTrend } from '../common/ui';
-import type { CropItem } from '../../data/sample';
+import type { CropItem } from '../../data/model';
 
 export function ItemCard({ crop, selected = false, onSelect }: { crop: CropItem; selected?: boolean; onSelect: () => void }) {
-  return <button type="button" onClick={onSelect} aria-pressed={selected} className={`rounded-md border bg-white p-4 text-left shadow-card transition hover:shadow-lift ${selected ? 'border-primary-500 bg-primary-50 outline outline-2 outline-primary-500' : 'border-ink-200'}`}><div className="flex items-start justify-between"><span className="text-price-xl leading-none">{crop.icon}</span><span className="text-xs text-ink-500">{crop.spec}</span></div><div className="mt-4"><h3 className="text-sm font-semibold text-ink-900">{crop.name}</h3><p className="mt-1 text-xs text-ink-500">{crop.market} · {crop.region}</p><strong className="mt-3 block text-price-md font-bold text-ink-900 tabular">{crop.price.toLocaleString()}원</strong><PriceBadge direction={crop.direction} text={`${crop.change > 0 ? '+' : ''}${crop.change.toLocaleString()}원 (${crop.changePct > 0 ? '+' : ''}${crop.changePct}%)`} /></div></button>;
+  return <button type="button" onClick={onSelect} aria-pressed={selected} className={`rounded-md border bg-white p-4 text-left shadow-card transition hover:shadow-lift ${selected ? 'border-primary-500 bg-primary-50 outline outline-2 outline-primary-500' : 'border-ink-200'}`}><div className="flex items-start justify-between"><span className="text-price-xl leading-none">{crop.icon}</span><span className="text-xs text-ink-500">{crop.spec}</span></div><div className="mt-4"><h3 className="truncate text-sm font-semibold text-ink-900">{crop.name}</h3><p className="mt-1 truncate text-xs text-ink-500">{crop.market} · {crop.region}</p><strong className="mt-2 block text-price-md font-bold text-ink-900 tabular">{crop.price.toLocaleString()}원</strong><div className="mt-ds-1.5"><PriceBadge direction={crop.direction} text={`${crop.change > 0 ? '+' : ''}${crop.change.toLocaleString()}원 (${crop.changePct > 0 ? '+' : ''}${crop.changePct}%)`} /></div></div></button>;
 }
 
 export function AlertCard({ crop, active, onToggle }: { crop: CropItem; active: boolean; onToggle: () => void }) {

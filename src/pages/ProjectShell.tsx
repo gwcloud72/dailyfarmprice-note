@@ -21,7 +21,7 @@ export function ProjectShell() {
   const [tab, setTab] = useState<string>(() => readHashTab());
   const [reloadKey, setReloadKey] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
-  const [liveText, setLiveText] = useState('06.10. 오전 12:30');
+  const [liveText, setLiveText] = useState('최신 정보 표시 중');
   const data = useProjectData(reloadKey);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export function ProjectShell() {
 
   return (
     <AppLayout kind="sidebar" appName="농산물 가격정보" source="KAMIS 업데이트" tab={tab} navItems={NAV_ITEMS} onTabChange={updateTab} onRefresh={handleRefresh} refreshing={refreshing} liveText={liveText}>
-      {dataReady ? <Panel data={data} onTabChange={updateTab} onAction={setLiveText} /> : <div className="mx-auto max-w-shell"><EmptyState title="농산물 가격 데이터" description="가격 수집이 완료되면 품목별 시세와 지역 비교가 표시됩니다." actionLabel="새로 고침" onAction={handleRefresh} /></div>}
+      {dataReady ? <Panel data={data} onTabChange={updateTab} onAction={setLiveText} /> : <div className="mx-auto max-w-shell"><EmptyState title="농산물 가격 데이터" description="최신 가격 정보 확인 후 품목별 시세와 지역 비교가 표시됩니다." actionLabel="새로 고침" onAction={handleRefresh} /></div>}
     </AppLayout>
   );
 }

@@ -27,6 +27,8 @@ export interface HeroBannerProps {
   dense?: boolean;
   metricActionLabel?: string;
   onMetricAction?: () => void;
+  brandMarkSrc?: string;
+  brandMarkAlt?: string;
 }
 
 const heroClasses: Record<HeroKind, string> = {
@@ -36,7 +38,7 @@ const heroClasses: Record<HeroKind, string> = {
   solid: 'bg-hero-solid min-h-hero-sub',
 };
 
-export function HeroBanner({ kind, badge, title, subtitle, chips = [], metric, onPrimary, onSecondary, primaryLabel, secondaryLabel, dense = false, metricActionLabel = '바로 확인', onMetricAction }: HeroBannerProps) {
+export function HeroBanner({ kind, badge, title, subtitle, chips = [], metric, onPrimary, onSecondary, primaryLabel, secondaryLabel, dense = false, metricActionLabel = '바로 확인', onMetricAction, brandMarkSrc, brandMarkAlt }: HeroBannerProps) {
   return (
     <section className={`relative overflow-hidden rounded-lg ${dense ? 'p-ds-3' : 'p-ds-4'} text-white shadow-card ${heroClasses[kind]}`}>
       <div className="absolute -right-ds-10 -top-ds-10 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
@@ -50,11 +52,23 @@ export function HeroBanner({ kind, badge, title, subtitle, chips = [], metric, o
         </div>
         {metric ? (
           <div className="rounded-lg bg-white p-ds-3 text-ink-900 shadow-card-hover">
-            <div className="flex items-center justify-between gap-ds-2"><p className="text-caption font-medium text-ink-500">{metric.label}</p><span className="rounded-full bg-ink-100 px-ds-1 py-ds-0.5 text-micro text-ink-500">{metric.sub}</span></div>
+            <div className="flex items-start justify-between gap-ds-2">
+              <div className="min-w-0">
+                <p className="text-caption font-medium text-ink-500">{metric.label}</p>
+                <span className="mt-ds-0.5 inline-flex rounded-full bg-ink-100 px-ds-1 py-ds-0.5 text-micro text-ink-500">{metric.sub}</span>
+              </div>
+              {brandMarkSrc ? <img src={brandMarkSrc} alt={brandMarkAlt ?? ''} loading="eager" decoding="async" className="h-9 max-w-[124px] shrink-0 object-contain" /> : null}
+            </div>
             <strong className={`mt-ds-2 block text-price-xl tabular ${kind === 'liter' ? 'text-primary-500' : 'text-ink-900'}`}>{metric.price}</strong>
-            <div className="mt-ds-2 flex items-center justify-between gap-ds-1"><p className="text-body-1 font-semibold text-ink-700">{metric.title}</p>{metric.change ? <PriceBadge direction={metric.direction ?? 'flat'} text={metric.change} /> : null}</div>
+            <div className="mt-ds-2 flex items-center justify-between gap-ds-1"><p className="truncate text-body-1 font-semibold text-ink-700">{metric.title}</p>{metric.change ? <PriceBadge direction={metric.direction ?? 'flat'} text={metric.change} /> : null}</div>
             {metric.helper ? <p className="mt-ds-1 text-caption text-ink-500">{metric.helper}</p> : null}
             <Button variant="primary" onClick={onMetricAction ?? onSecondary} className="mt-ds-3 w-full" rightIcon={<ExternalLink className="h-4 w-4" strokeWidth={1.8} />}>{metricActionLabel}</Button>
+          </div>
+        ) : brandMarkSrc ? (
+          <div className="hidden min-h-[132px] items-center justify-center rounded-lg bg-white/10 p-ds-3 ring-1 ring-white/15 lg:flex">
+            <div className="flex h-20 w-full max-w-[260px] items-center justify-center rounded-lg bg-white px-ds-3 shadow-card">
+              <img src={brandMarkSrc} alt={brandMarkAlt ?? ''} loading="eager" decoding="async" className="max-h-12 max-w-[200px] object-contain" />
+            </div>
           </div>
         ) : null}
       </div>

@@ -1,5 +1,3 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
 :root {
   --color-primary-700: #0B6941;
   --color-primary-600: #0D7A4E;
@@ -91,7 +89,6 @@
 .live-dot { animation: densityPulse 2s ease infinite; }
 .refresh-spin svg { animation: densitySpin 0.5s linear; }
 
-/* Round 6 Stage 3 page-level utilities: map geometry and company colors without arbitrary Tailwind values. */
 .map-surface { background-image: radial-gradient(circle at 30% 20%, rgba(13,122,78,.18), transparent 24%), radial-gradient(circle at 70% 65%, rgba(25,113,194,.14), transparent 26%); }
 .map-road-a { left: -8%; top: 34%; width: 118%; height: 12px; transform: rotate(-12deg); }
 .map-road-b { left: 12%; top: -10%; height: 125%; width: 12px; transform: rotate(18deg); }

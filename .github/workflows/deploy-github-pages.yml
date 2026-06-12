@@ -97,14 +97,17 @@ jobs:
           KAMIS_REQUIRE_FULL_REGION_COVERAGE: ${{ vars.KAMIS_REQUIRE_FULL_REGION_COVERAGE }}
           LOOKBACK_DAYS: "90"
           KAMIS_PRICE_TYPE: ${{ vars.KAMIS_PRICE_TYPE }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           NEWS_CLIENT_ID: ${{ secrets.NEWS_CLIENT_ID }}
           NEWS_CLIENT_SECRET: ${{ secrets.NEWS_CLIENT_SECRET }}
           NEWS_FETCH_ENABLED: ${{ vars.NEWS_FETCH_ENABLED }}
           NEWS_DISPLAY: ${{ vars.NEWS_DISPLAY }}
           NEWS_MAX_ITEMS: ${{ vars.NEWS_MAX_ITEMS }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_REPORTS_ENABLED: ${{ vars.GEMINI_REPORTS_ENABLED }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_REQUEST_PAUSE_MS: ${{ vars.GEMINI_REQUEST_PAUSE_MS }}
+          GEMINI_MAX_INPUT_CHARS: ${{ vars.GEMINI_MAX_INPUT_CHARS }}
+          GEMINI_MAX_RETRIES: ${{ vars.GEMINI_MAX_RETRIES }}
         run: npm run actions:check
 
       - name: Generate crop price data
@@ -125,34 +128,23 @@ jobs:
             exit 0
           fi
           if [ -z "${KAMIS_CERT_ID:-}" ] || [ -z "${KAMIS_CERT_KEY:-}" ]; then
-            echo "KAMIS 인증 정보가 없어 데이터 수집을 건너뜁니다. 기존 데이터 또는 empty state로 빌드합니다."
+            echo "KAMIS 인증 정보가 설정되지 않아 데이터 수집을 건너뜁니다. 기존 데이터 또는 fallback 화면로 빌드합니다."
             exit 0
           fi
           npm run update:data
 
-      - name: Generate Gemini summary reports
+      - name: Generate summary reports
         shell: bash
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_REPORT_ENABLED: ${{ vars.GEMINI_REPORT_ENABLED }}
+          GEMINI_REPORTS_ENABLED: ${{ vars.GEMINI_REPORTS_ENABLED }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-          REPORT_RANGE_DAYS: "30"
+          GEMINI_REQUEST_PAUSE_MS: ${{ vars.GEMINI_REQUEST_PAUSE_MS }}
+          GEMINI_MAX_INPUT_CHARS: ${{ vars.GEMINI_MAX_INPUT_CHARS }}
+          GEMINI_MAX_RETRIES: ${{ vars.GEMINI_MAX_RETRIES }}
         run: |
           set -euo pipefail
-          if [ "${GEMINI_REPORT_ENABLED:-true}" = "false" ]; then
-            echo "GEMINI_REPORT_ENABLED=false 이므로 요약 리포트 생성을 건너뜁니다."
-            exit 0
-          fi
-          if [ -z "${GEMINI_API_KEY:-}" ]; then
-            echo "GEMINI_API_KEY가 없어 요약 리포트 생성을 건너뜁니다."
-            exit 0
-          fi
-          if [ ! -f public/data/crop-prices.json ]; then
-            echo "crop-prices.json이 없어 요약 리포트 생성을 건너뜁니다."
-            exit 0
-          fi
-          npm run update:ai-report
-
+          npm run update:ai-report || echo "요약 리포트 갱신을 건너뜁니다."
 
       - name: Generate market news
         shell: bash
@@ -174,7 +166,7 @@ jobs:
         run: |
           set -euo pipefail
           if git diff --quiet -- public/data/crop-prices.json public/data/ai-reports.json public/data/market-news.json; then
-            echo "반영할 데이터 변경이 없습니다."
+            echo "반영할 데이터 변경을 확인했습니다."
             exit 0
           fi
           git config user.name "github-actions[bot]"

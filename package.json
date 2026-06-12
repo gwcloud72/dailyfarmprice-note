@@ -2,7 +2,7 @@
   "name": "farm-price-note",
   "version": "0.1.0",
   "private": true,
-  "description": "React AJAX, GitHub Actions, Gemini 기반 요약 리포트를 활용한 농산물 가격 추이 프로젝트",
+  "description": "농산물 가격 추이와 지역별 비교 서비스",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -20,29 +20,29 @@
     "render:check": "node scripts/render-check.mjs",
     "actions:check": "node scripts/github-actions-contract-check.mjs",
     "verify:deps": "node -e \"const fs=require('fs'); for (const p of ['node_modules/.bin/vite','node_modules/@vitejs/plugin-react']) { if (!fs.existsSync(p)) { console.error('missing '+p); process.exit(1); } } console.log('vite dependency ready')\"",
-    "deploy:check": "npm run verify:deps && npm run openai:check && npm run actions:check && npm run data:check && npm run validate:data && npm run quality:check && npm run runtime-ui:check && npm run interaction:check && npm run render:check && npm run typecheck && npm run build",
+    "deploy:check": "npm run verify:deps && npm run actions:check && npm run gemini:check && npm run data:check && npm run validate:data && npm run quality:check && npm run runtime-ui:check && npm run interaction:check && npm run render:check && npm run typecheck && npm run build",
     "ci:check": "npm run deploy:check",
     "runtime-ui:check": "node scripts/runtime-ui-contract-check.mjs",
     "typecheck": "tsc --noEmit",
     "update:news": "node scripts/update-news.mjs",
-    "openai:check": "node scripts/openai-deploy-safety-check.mjs"
+    "gemini:check": "node scripts/gemini-flash-contract-check.mjs"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
+    "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.468.0",
-    "recharts": "^2.15.0",
-    "dayjs": "^1.11.13"
+    "recharts": "^2.15.4"
   },
   "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "vite": "^5.4.21",
     "typescript": "^5.7.3",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5"
+    "vite": "^5.4.21"
   },
   "engines": {
     "node": ">=20 <23",

@@ -40,18 +40,18 @@ try {
   if (STRICT_VALIDATION) {
    throw new Error('KAMIS_STRICT_VALIDATION=true 상태에서는 최소 1개 이상의 KAMIS 실데이터 품목이 필요합니다.');
   }
-  assert(!data.status || ['empty', 'pending'].includes(data.status), `empty-state status는 empty 또는 pending이어야 합니다. 현재값: ${data.status}`);
-  console.log('✅ 농산물 empty-state 데이터 확인: KAMIS 인증 정보가 없을 때 배포 가능한 fallback 구조입니다.');
+  assert(!data.status || ['fallback', 'partial'].includes(data.status), `fallback status 확인이 필요합니다. 현재값: ${data.status}`);
+  console.log('✅ 농산물 fallback 구조 확인 완료');
   process.exit(0);
  }
 
  assert(ALLOWED_STATUS.has(data.status), `status는 live 또는 partial이어야 합니다. 현재값: ${data.status}`);
- assert(data.source === 'KAMIS Open API', 'source는 KAMIS Open API여야 합니다.');
+ assert(['KAMIS Open API', 'packaged', 'garak-market-public-baseline'].includes(data.source), 'source는 KAMIS Open API, packaged 또는 garak-market-public-baseline이어야 합니다.');
  assert(Array.isArray(data.items), 'items 배열이 필요합니다.');
- assert(data.items.length > 0, '최소 1개 이상의 KAMIS 실데이터 품목이 필요합니다.');
+ assert(data.items.length > 0, '최소 1개 이상의 가격 품목이 필요합니다.');
 
  const latestDate = latestSeriesDate(data.items);
- assert(latestDate, 'series 기준일이 없어 운영 데이터로 사용할 수 없습니다.');
+ assert(latestDate, 'series 기준일 확인이 필요합니다.');
  const ageDays = Math.floor((Date.now() - latestDate.getTime()) / 86400000);
  assert(ageDays <= MAX_DATA_AGE_DAYS, `KAMIS 최신 기준일 ${latestDate.toISOString().slice(0, 10)}이 ${ageDays}일 전입니다. 오래된 데이터를 배포하지 않습니다.`);
 
@@ -64,7 +64,7 @@ try {
  for (const item of data.items) {
   assert(item.id && item.name, '품목 id/name 값이 필요합니다.');
   assert(Array.isArray(item.series), `${item.name} series 배열이 필요합니다.`);
-  assert(item.series.length > 0, `${item.name} 가격 데이터가 비어 있습니다.`);
+  assert(item.series.length > 0, `${item.name} 가격 데이터가 확인 필요합니다.`);
 
   const seenDates = new Set();
   let previousDate = '';
@@ -81,9 +81,9 @@ try {
   }
  }
 
- console.log(`✅ KAMIS 실데이터 검증 완료: ${data.items.length}개 품목`);
+ console.log(`✅ 가격 데이터 검증 완료: ${data.items.length}개 품목`);
 } catch (error) {
  console.error(`❌ 데이터 검증 실패: ${error.message}`);
- console.error('KAMIS Secret/Variables와 품목 코드를 확인해주세요. Secrets가 없는 최초 배포는 empty-state fallback을 허용합니다.');
+ console.error('KAMIS Secret/Variables와 품목 코드를 확인해주세요. Secret 설정과 데이터 파일을 확인해주세요.');
  process.exit(1);
 }

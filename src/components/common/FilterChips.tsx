@@ -5,6 +5,8 @@ export interface FilterChipsProps {
   ariaLabel?: string;
 }
 
+const displayLabels: Record<string, string> = { up: '상승', down: '하락', flat: '보합' };
+
 export function FilterChips({ items, active, onChange, ariaLabel = '필터' }: FilterChipsProps) {
   return (
     <div role="group" aria-label={ariaLabel} className="flex flex-wrap gap-ds-1">
@@ -24,7 +26,7 @@ export function FilterChips({ items, active, onChange, ariaLabel = '필터' }: F
                 : 'border-ink-200 bg-white text-ink-700 hover:bg-ink-100',
             ].join(' ')}
           >
-            {item}
+            {displayLabels[item] ?? item}
           </button>
         );
       })}

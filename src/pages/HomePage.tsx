@@ -4,6 +4,7 @@ import { HeroBanner } from '../components/common/HeroBanner';
 import { BottomWidgetPanel, Button, Card, FilterChips, MiniTrend, PriceBadge, SearchField, SectionHeader, StatsStrip } from '../components/common/ui';
 import { ItemCard } from '../components/feature/farm';
 import type { FarmData } from '../data/normalize';
+import brandMark from '../assets/home-brand-mark.webp';
 
 interface PageProps { data: FarmData; onTabChange: (tab: string) => void; onAction: (text: string) => void; }
 
@@ -32,8 +33,9 @@ export function HomePage({ data, onTabChange, onAction }: PageProps) {
         secondaryLabel="지역 비교"
         onPrimary={() => onTabChange('items')}
         onSecondary={() => onTabChange('regions')}
+      brandMarkSrc={brandMark}
+      brandMarkAlt="농산물 가격정보 브랜드 로고"
       />
-
       <div className="grid gap-ds-2 lg:grid-cols-search-action">
         <SearchField value={query} onChange={setQuery} placeholder="품목명·시장·지역 검색" />
         <Button variant="secondary" onClick={() => onAction('전국 기준으로 전환')}>전국</Button>
@@ -44,7 +46,7 @@ export function HomePage({ data, onTabChange, onAction }: PageProps) {
 
       <section>
         <SectionHeader title="오늘의 주요 품목 시세" action="더보기" onAction={() => onTabChange('items')} />
-        <div className="grid grid-cols-1 gap-ds-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6">
+        <div className="grid grid-cols-1 gap-ds-3 md:grid-cols-2 xl:grid-cols-3">
           {visibleItems.map((crop) => <ItemCard key={crop.id} crop={crop} selected={crop.name === active} onSelect={() => setActive(crop.name)} />)}
         </div>
       </section>
@@ -66,7 +68,7 @@ export function HomePage({ data, onTabChange, onAction }: PageProps) {
         </Card>
 
         <Card padding="normal">
-          <SectionHeader title="선택 품목 7일 흐름" action="통계" onAction={() => onTabChange('stats')} />
+          <SectionHeader title="선택 품목 가격 흐름" action="통계" onAction={() => onTabChange('stats')} />
           <div className="mt-ds-2 flex items-end justify-between gap-ds-2">
             <div>
               <p className="text-sm font-semibold text-ink-900">{selected.name}</p>

@@ -410,13 +410,13 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
   .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date) && row.price !== null && row.price > 0);
 
  if (!rawRows.length) {
-  throw new Error(`${product.name} 조회 결과가 비어 있습니다.${getPayloadMessage(payload)}`);
+  throw new Error(`${product.name} 조회 결과가 확인 필요합니다.${getPayloadMessage(payload)}`);
  }
 
  const dailyRows = toDailySeries(rawRows);
 
  if (!dailyRows.length) {
-  throw new Error(`${product.name} 일별 집계 결과가 비어 있습니다.`);
+  throw new Error(`${product.name} 일별 집계 결과가 확인 필요합니다.`);
  }
 
  const latestRow = dailyRows.at(-1);
@@ -444,8 +444,8 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
    countrycode: regionConfig?.code || '',
    regionName: regionConfig?.name || '전국',
    aggregation: 'daily-average',
-   rawSampleCount: rawRows.length,
-   dailySampleCount: dailyRows.length,
+   rawRowCount: rawRows.length,
+   dailyRowCount: dailyRows.length,
    totalObservations,
   },
   series: dailyRows.map((row) => ({
@@ -465,11 +465,11 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
  for (const kindcode of kindcodes) {
   try {
    const result = await fetchProductVariant(product, startDay, endDay, kindcode, regionConfig);
-   const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=empty';
+   const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=fallback';
    console.log(`✅ ${product.name} / ${regionConfig?.name || '전국'} 데이터 수집 완료 (${label})`);
    return result;
   } catch (error) {
-   const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=empty';
+   const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=fallback';
    errors.push(`${label}: ${error.message}`);
   }
  }
@@ -479,7 +479,7 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
 
 function isEmptyKamisResult(error) {
  const message = String(error?.message || '');
- return message.includes('조회 결과가 비어 있습니다') && !message.includes('fetch failed') && !message.includes('API 응답 실패');
+ return message.includes('조회 결과가 확인 필요합니다') && !message.includes('fetch failed') && !message.includes('API 응답 실패');
 }
 
 function summarizeFailures(productName, failures) {
@@ -557,7 +557,7 @@ async function main() {
 
  const coverage = filterItemsByFullRegionCoverage(items);
  if (!coverage.items.length) {
-  throw new Error(`전국·17개 시도 전체 커버리지를 만족하는 품목이 없습니다. ${coverage.excluded.join(' / ')}`);
+  throw new Error(`전국·17개 시도 전체 커버리지를 만족하는 품목이 확인 필요합니다. ${coverage.excluded.join(' / ')}`);
  }
 
  const notices = [];

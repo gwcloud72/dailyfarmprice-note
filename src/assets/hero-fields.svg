@@ -22,7 +22,7 @@
 <path d="M0 286 Q400 262 1200 280" fill="none"/>
 <path d="M0 316 Q400 294 1200 312" fill="none"/>
 </g>
-<!-- greenhouse -->
+
 <g transform="translate(840,196)">
 <path d="M0 60 Q70 6 140 60 Z" fill="#eef6ef" opacity=".92"/>
 <path d="M0 60 Q70 6 140 60" fill="none" stroke="#cfe4d0" stroke-width="2"/>

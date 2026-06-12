@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -63,9 +62,6 @@ const config = {
   "defaultKeyword": "시장"
 };
 
-function pending(notice) {
-  return { metadata: { source: 'pending', target, updatedAt: null, notice, queryCount: config.queries.length }, items: [] };
-}
 function clean(value) {
   return String(value || '')
     .replace(/<[^>]+>/g, '')
@@ -134,11 +130,11 @@ async function main() {
   const outputPath = path.join(root, config.output);
   await mkdir(path.dirname(outputPath), { recursive: true });
   if (!enabled) {
-    await writeFile(outputPath, JSON.stringify(pending('뉴스 수집이 비활성화되어 있습니다.'), null, 2) + '\n');
+    console.log('뉴스 갱신 비활성화: 기존 시장 동향 데이터를 유지합니다.');
     return;
   }
   if (!clientId || !clientSecret) {
-    await writeFile(outputPath, JSON.stringify(pending('뉴스 검색 키가 설정되면 최신 동향을 표시합니다.'), null, 2) + '\n');
+    console.log('뉴스 인증값 미설정: 기존 시장 동향 데이터를 유지합니다.');
     return;
   }
   const rows = [];
@@ -150,6 +146,10 @@ async function main() {
   const deduped = [...new Map(rows.map((item) => [item.originallink || item.link || item.title, item])).values()]
     .sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))
     .slice(0, maxItems);
+  if (!deduped.length) {
+    console.log(`${target} 뉴스 결과 없음: 기존 데이터를 유지합니다.`);
+    return;
+  }
   const payload = {
     metadata: {
       source: 'naver-search-news',

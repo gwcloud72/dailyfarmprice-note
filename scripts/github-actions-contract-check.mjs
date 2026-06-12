@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
 const errors = [];
 const warnings = [];
 
@@ -43,10 +44,27 @@ function optionalJsonArray(name) {
  }
 }
 
+function optionalGeminiModel() {
+ const raw = valueOf('GEMINI_MODEL');
+ if (!raw) return;
+ if (!/^gemini-[a-z0-9.\-]*flash[a-z0-9.\-]*$/i.test(raw) || /pro/i.test(raw)) {
+  errors.push('GEMINI_MODEL: Flash 계열 모델만 허용됩니다. 예: gemini-2.5-flash');
+ }
+}
+
+function truthy(value) {
+ return ['true', '1', 'yes', 'on'].includes(String(value || '').toLowerCase());
+}
+
+try {
+ require('../tailwind.config.cjs');
+} catch (error) {
+ errors.push(`tailwind.config.cjs 로드 실패: ${error.message}`);
+}
+
 optionalBoolean('KAMIS_FETCH_ENABLED');
 optionalBoolean('KAMIS_SKIP_EMPTY_PRODUCTS');
 optionalBoolean('KAMIS_REQUIRE_FULL_REGION_COVERAGE');
-optionalBoolean('GEMINI_REPORT_ENABLED');
 optionalInteger('LOOKBACK_DAYS', { min: 1, max: 365 });
 optionalInteger('REPORT_RANGE_DAYS', { min: 1, max: 365 });
 optionalInteger('NEWS_DISPLAY', { min: 1, max: 100 });
@@ -54,16 +72,20 @@ optionalInteger('NEWS_MAX_ITEMS', { min: 1, max: 100 });
 optionalInteger('NEWS_REQUEST_PAUSE_MS', { min: 0, max: 5000 });
 optionalEnum('KAMIS_PRICE_TYPE', ['retail', 'wholesale']);
 optionalJsonArray('KAMIS_PRODUCTS_JSON');
+optionalBoolean('GEMINI_REPORTS_ENABLED');
+optionalInteger('GEMINI_REQUEST_PAUSE_MS', { min: 5000, max: 60000 });
+optionalInteger('GEMINI_MAX_INPUT_CHARS', { min: 4000, max: 60000 });
+optionalInteger('GEMINI_MAX_RETRIES', { min: 0, max: 4 });
+optionalGeminiModel();
 
 if (!valueOf('KAMIS_CERT_ID') || !valueOf('KAMIS_CERT_KEY')) {
- warnings.push('KAMIS_CERT_ID/KAMIS_CERT_KEY가 비어 있으면 Actions는 기존 public/data를 사용합니다.');
+ warnings.push('KAMIS 인증 정보가 설정되지 않으면 Actions는 기존 public/data를 사용합니다.');
 }
-if (!valueOf('GEMINI_API_KEY')) {
- warnings.push('GEMINI_API_KEY가 비어 있으면 로컬 규칙 기반 리포트를 생성합니다.');
-}
-
 if (!valueOf('NEWS_CLIENT_ID') || !valueOf('NEWS_CLIENT_SECRET')) {
- warnings.push('NEWS_CLIENT_ID/NEWS_CLIENT_SECRET가 비어 있으면 뉴스 수집을 건너뜁니다.');
+ warnings.push('NEWS_CLIENT_ID/NEWS_CLIENT_SECRET가 설정되지 않으면 뉴스 수집을 건너뜁니다.');
+}
+if (truthy(valueOf('GEMINI_REPORTS_ENABLED')) && !valueOf('GEMINI_API_KEY')) {
+ errors.push('GEMINI_REPORTS_ENABLED=true이면 GEMINI_API_KEY가 필요합니다.');
 }
 
 if (warnings.length) {
@@ -76,4 +98,3 @@ if (errors.length) {
  process.exit(1);
 }
 console.log('actions:check passed');
-
