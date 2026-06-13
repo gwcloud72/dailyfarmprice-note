@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-12T23:51:24.093Z",
+    "updatedAt": "2026-06-13T23:29:25.674Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "55606d51ce1bb0db",
+      "title": "오타도매시장, '저장·분류·배송' 종합 유통 플랫폼",
+      "summary": "8ha 규모를 갖추고 있으며, 한국의 가락시장과 마찬가지로 일본 농산물 가격 발견의 기준시장으로 평가받는다. 시장 내 청과부문은 도쿄청과, 도쿄에바라청과, 도쿄간다청과 등 주요 도매법인이 운영하고 있으며, 2025년...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-06-13T20:40:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101301",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101301",
+      "keyword": "시장"
+    },
     {
       "id": "f1f66155f408742f",
       "title": "[일본도매시장을 가다] '가격 발견'보다 '물류기능 고도화'로 기능 재편",
@@ -118,16 +128,6 @@
       "keyword": "양파"
     },
     {
-      "id": "7e127bad8a2aabe5",
-      "title": "품목농협, 고품질 농산물 유통 새로운 표준 세운다",
-      "summary": "플랫폼에 가격 결정권을 종속당하는 기존의 유통 한계를 탈피하고, 산지가 주도하는 스마트 물류 인프라를 완성해 농업 생태계의 체질 개선을 선도하기 위한 포석이다. 농산물 온라인도매시장 1호 거래 체결 장면....",
-      "source": "wonyesanup.co.kr",
-      "publishedAt": "2026-06-10T01:38:00.000Z",
-      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
-      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
-      "keyword": "시장"
-    },
-    {
       "id": "91f27ac39a4a5250",
       "title": "농협, 최대 882억원 투입 양파 가격회복 총력",
       "summary": "그러나 지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로, 전년 동기(812원) 대비 30% 하락해 농가의... 증정 ▲농산물 직거래장터 연계 판매 활성화 ▲군 납품 물량 확대 등을 통해 국산 양파 소비 확대에 나선다....",
@@ -136,6 +136,16 @@
       "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
       "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64929",
       "keyword": "양파"
+    },
+    {
+      "id": "7e127bad8a2aabe5",
+      "title": "품목농협, 고품질 농산물 유통 새로운 표준 세운다",
+      "summary": "플랫폼에 가격 결정권을 종속당하는 기존의 유통 한계를 탈피하고, 산지가 주도하는 스마트 물류 인프라를 완성해 농업 생태계의 체질 개선을 선도하기 위한 포석이다. 농산물 온라인도매시장 1호 거래 체결 장면....",
+      "source": "wonyesanup.co.kr",
+      "publishedAt": "2026-06-10T01:38:00.000Z",
+      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
+      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64915",
+      "keyword": "시장"
     },
     {
       "id": "027b936edcd2730b",
@@ -156,16 +166,6 @@
       "link": "https://www.newspim.com/news/view/20260609000739",
       "originallink": "https://www.newspim.com/news/view/20260609000739",
       "keyword": "시장"
-    },
-    {
-      "id": "3cff38ed95336a42",
-      "title": "6월 2주 주요 제조업 전망",
-      "summary": "또 \"가장 비옥한 농지를 가진 미국이 왜 농산물 무역적자를 기록하고 에너지 자원도 부족하고 석탄도... 5배, 전 분기 대비 약 90% 증가한 수치임 - 카운터포인트리서치는 AI 수요 확대에 따른 낸드 가격 상승이 매출액...",
-      "source": "laborplus.co.kr",
-      "publishedAt": "2026-06-09T12:01:00.000Z",
-      "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=40952",
-      "originallink": "https://www.laborplus.co.kr/news/articleView.html?idxno=40952",
-      "keyword": "수급"
     }
   ]
 }
