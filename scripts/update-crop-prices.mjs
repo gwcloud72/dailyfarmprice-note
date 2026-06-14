@@ -495,6 +495,17 @@ async function writeData(data) {
  await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 }
 
+
+async function hasExistingData(fileUrl) {
+ try {
+  const text = await fs.readFile(fileUrl, 'utf8');
+  const payload = JSON.parse(text);
+  return Array.isArray(payload?.items) && payload.items.length > 0;
+ } catch {
+  return false;
+ }
+}
+
 async function main() {
  const productConfigs = await loadProductConfigs();
 
@@ -505,7 +516,12 @@ async function main() {
   if (!CERT_ID) missing.push('KAMIS_CERT_ID');
   if (productConfigs.length === 0) missing.push('scripts/kamis-products.json 또는 KAMIS_PRODUCTS_JSON');
 
-  throw new Error(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}. 대체 데이터 사용는 사용하지 않습니다.`);
+  if (await hasExistingData(DATA_PATH)) {
+   console.warn(`KAMIS 실데이터 수집 설정이 없어 기존 crop-prices.json을 유지합니다: ${missing.join(', ')}`);
+   return;
+  }
+
+  throw new Error(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}. 기존 데이터가 없어 생성을 중단합니다.`);
  }
 
  const today = toKstDate();

@@ -15,7 +15,7 @@
     "build:with-ai": "npm run update:data && npm run generate:ai-report && npm run validate:data && npm run build",
     "quality:check": "node scripts/quality-check.mjs",
     "data:check": "node scripts/data-contract-check.mjs",
-    "qa:check": "npm run quality:check && npm run data:check && npm run interaction:check && npm run render:check",
+    "qa:check": "npm run quality:check && npm run ui-copy:check && npm run selector:check && npm run data:check && npm run interaction:check && npm run render:check",
     "interaction:check": "node scripts/interaction-check.mjs",
     "render:check": "node scripts/render-check.mjs",
     "actions:check": "node scripts/github-actions-contract-check.mjs",
@@ -25,7 +25,9 @@
     "runtime-ui:check": "node scripts/runtime-ui-contract-check.mjs",
     "typecheck": "tsc --noEmit",
     "update:news": "node scripts/update-news.mjs",
-    "gemini:check": "node scripts/gemini-flash-contract-check.mjs"
+    "gemini:check": "node scripts/gemini-flash-contract-check.mjs",
+    "ui-copy:check": "node scripts/ui-copy-policy-check.mjs",
+    "selector:check": "node scripts/selector-audit.mjs"
   },
   "dependencies": {
     "dayjs": "^1.11.13",

@@ -46,7 +46,7 @@ function makeLocalReport({ item, series, stats, range }) {
    ? '구매 전 지역별 가격 확인이 필요한 흐름입니다.'
    : '큰 변동 없이 유지되는 흐름입니다.';
  return {
-  title: `${item.name} 가격 리포트`,
+  title: `${item.name} 품목 요약`,
   headline: `${range}일 기준 ${item.name} 가격은 ${trendText} 흐름입니다.`,
   tone: trend,
   badges: [

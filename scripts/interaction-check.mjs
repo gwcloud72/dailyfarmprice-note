@@ -25,7 +25,7 @@ function checkControls() {
   }
 }
 for (const snippet of ['href="#main-content"', 'id="main-content"', 'aria-current={active ? \'page\' : undefined}', 'aria-live="polite"', 'URLSearchParams', 'window.history.replaceState', "addEventListener('hashchange'", 'function MobileNav', 'VITE_DATA_VERSION', "cache: 'no-store'", 'setReloadKey']) expect(snippet, snippet);
-const expectedSnippets = ['품목별 가격 정보','시장별 가격 정보','가격 동향 분석','지역별 비교','통계 정보','시장 동향','알림 서비스','데이터 다운로드','즐겨찾는 품목','이용 안내','ADMIN_REGION_NAMES'];
+const expectedSnippets = ['오늘시세', '품목비교', '지역·도매', '수급뉴스', '관심품목', '데이터 다운로드', '관심 품목', '이용 안내', 'ADMIN_REGION_NAMES', 'favoriteCropIds'];
 for (const item of expectedSnippets) expect(item, item);
 checkControls();
 if (warnings.length) { console.log('interaction:check warnings'); warnings.forEach((warning) => console.log(`- ${warning}`)); }
