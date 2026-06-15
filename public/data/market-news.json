@@ -1,59 +1,171 @@
 {
   "metadata": {
-    "source": "public-market-news-baseline",
-    "updatedAt": "2026-06-12T09:00:00+09:00",
-    "itemCount": 5
+    "source": "naver-search-news",
+    "target": "farm",
+    "updatedAt": "2026-06-15T06:45:48.265Z",
+    "queryCount": 4,
+    "itemCount": 16
   },
   "items": [
     {
-      "id": "market-1",
-      "title": "배추·무 도매가, 최근 경매 기준 변동 확인",
-      "summary": "가락시장 최근 경매 기준으로 엽채류와 저장 채소 가격을 함께 확인합니다.",
-      "source": "수급 브리핑",
-      "publishedAt": "2026-06-08T09:00:00+09:00",
-      "link": "https://www.garakprice.com/",
-      "originallink": "https://www.garakprice.com/",
+      "id": "5d56ef3ddc5b179a",
+      "title": "최유철 의성군수 당선인, 마늘농가 일손돕기…가격 안정 대책 약속",
+      "summary": "가격 상승에, 올해 마늘 생산량 증가와 소비 위축에 따른 가격 하락까지 겹치면서 삼중고를 겪고 있는 실정이다. 이날 최 당선인은 현장에서 농협관계자와 함께 마늘 판매 방안과 수급 안정 대책에 대해 의견을 나누고...",
+      "source": "m-i.kr",
+      "publishedAt": "2026-06-15T06:32:00.000Z",
+      "link": "https://www.m-i.kr/news/articleView.html?idxno=1381693",
+      "originallink": "https://www.m-i.kr/news/articleView.html?idxno=1381693",
       "keyword": "수급"
     },
     {
-      "id": "market-2",
-      "title": "양파·대파, 단위별 가격 차이 확인 필요",
-      "summary": "1kg·단·상자 단위가 품목별로 달라 비교 시 기준단위를 먼저 확인해야 합니다.",
-      "source": "시장 리포트",
-      "publishedAt": "2026-06-09T09:00:00+09:00",
-      "link": "https://www.garakprice.com/",
-      "originallink": "https://www.garakprice.com/",
+      "id": "badc768410451afd",
+      "title": "[보험업계 동향] NH농협생명ㆍKB라이프ㆍKB손해보험ㆍiM라이프(6.15)",
+      "summary": "지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로 전년 동기 812원보다 약 30% 낮아졌다. 이에 양측은... 박 대표는 \"양파 소비 확대와 농가 지원에 보탬이 되길 바란다\"며 \"우리 농산물 소비 활성화와 농업·농촌 지원...",
+      "source": "weeklytoday.com",
+      "publishedAt": "2026-06-15T06:04:00.000Z",
+      "link": "http://www.weeklytoday.com/news/articleView.html?idxno=779908",
+      "originallink": "http://www.weeklytoday.com/news/articleView.html?idxno=779908",
+      "keyword": "양파"
+    },
+    {
+      "id": "986eb0851c5311ca",
+      "title": "전남 쌀 구매하고 양파 소비 UP! 농가 웃음 UP!",
+      "summary": "이어 \"농협 전남본부는 앞으로도 우리 농산물 소비촉진 운동을 지속해서 추진해 농업인 소득 증대와 농산물 수급 안정에 기여할 수 있도록 최선을 다하겠다\"고 덧붙였다. 한편, 최근 가락도매시장 기준 양파 가격은 kg당...",
+      "source": "nocutnews.co.kr",
+      "publishedAt": "2026-06-15T05:29:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/079/0004157905?sid=102",
+      "originallink": "https://www.nocutnews.co.kr/news/6533089?utm_source=naver&utm_medium=article&utm_campaign=20260615022852",
+      "keyword": "양파"
+    },
+    {
+      "id": "2bc32a9c09bf2db4",
+      "title": "최유철 의성군수 당선인·인수위, 마늘농가 일손돕기 현장 행보",
+      "summary": "마늘가격 하락과 인건비 상승으로 농업인들의 어려움이 어느 때보다 큰 상황”이라고 우려를 표했다.이어... 구체적으로는 ▲농산물 유통체계 개선 ▲농업인 경영안정 지원 ▲외국인 계절근로자 확대 운영 등 현장 체감형...",
+      "source": "kbsm.net",
+      "publishedAt": "2026-06-15T05:00:00.000Z",
+      "link": "https://www.kbsm.net/news/view.php?idx=523033",
+      "originallink": "https://www.kbsm.net/news/view.php?idx=523033",
+      "keyword": "수급"
+    },
+    {
+      "id": "931d3a78a47427dd",
+      "title": "\"어려운 농가 돕자\"… NH농협생명·생명보험협회, '양파 소비촉진' 맞손",
+      "summary": "이에 금융권이 단순한 성금 기부를 넘어 과잉 생산된 농산물을 대규모로 직접 수매해 취약계층에 전달하고... 지난 5월 기준 서울 가락동 농수산물도매시장의 양파 평균 도매가격은 kg당 570원 선까지 주저앉았다. 이는...",
+      "source": "dailysmart.co.kr",
+      "publishedAt": "2026-06-15T02:42:00.000Z",
+      "link": "http://www.dailysmart.co.kr/news/articleView.html?idxno=125529",
+      "originallink": "http://www.dailysmart.co.kr/news/articleView.html?idxno=125529",
+      "keyword": "양파"
+    },
+    {
+      "id": "68e1d99b3f93e7fb",
+      "title": "최유철 의성군수 당선인, 마늘 수확 현장 찾아 가격안정 대책 점검",
+      "summary": "이어 \"올해는 마늘가격 하락과 인건비 상승으로 농업인들이 겪는 부담이 크다\"고 말했다. 그는 새 군정의 주요 과제 가운데 하나로 마늘가격 안정 대책을 챙기겠다는 뜻을 밝혔다. 농협과 협의해 공공수매를 포함한 수급...",
+      "source": "eroun.net",
+      "publishedAt": "2026-06-15T01:32:00.000Z",
+      "link": "https://www.eroun.net/news/articleView.html?idxno=83064",
+      "originallink": "https://www.eroun.net/news/articleView.html?idxno=83064",
+      "keyword": "수급"
+    },
+    {
+      "id": "b5dcf02a67d652d3",
+      "title": "NH농협생명·생보협회, 가격 폭락한 양파 농가 살리기 나서",
+      "summary": "지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로, 전년 동기(812원) 대비 약 30% 하락했다. 올해 초부터... 함께 우리 농산물 소비 활성화와 농업·농촌 지원을 위한 다양한 활동을 이어가겠다”고 말했다.",
+      "source": "viva100.com",
+      "publishedAt": "2026-06-15T01:10:00.000Z",
+      "link": "https://www.viva100.com/article/20260615500143",
+      "originallink": "https://www.viva100.com/article/20260615500143",
+      "keyword": "양파"
+    },
+    {
+      "id": "48070c2fc10c05e8",
+      "title": "최유철 의성군수 당선인, 의성마늘 수확 현장 찾아 일손돕기",
+      "summary": "의성지역 마늘 농가는 최근 인건비와 영농자재 가격 상승에 더해 생산량 증가와 소비 위축에 따른 가격 하락... 의성군수직 인수위원회도 향후 업무보고 과정에서 주요 농산물 가격 안정 대책과 농번기 인력 지원...",
+      "source": "cnbnews.com",
+      "publishedAt": "2026-06-15T00:12:00.000Z",
+      "link": "https://www.cnbnews.com/news/articleView.html?idxno=1004557",
+      "originallink": "https://www.cnbnews.com/news/articleView.html?idxno=1004557",
+      "keyword": "수급"
+    },
+    {
+      "id": "1f1fdb5d8a49afd2",
+      "title": "농협생명, 생보협과 함께 양파 소비촉진 ‘앞장’",
+      "summary": "5월 기준 서울 가락시장 양파 도매가격은 1㎏당 570원으로 전년 동기(812원) 대비 30% 하락했다. 농협생명은... 생보협과 함께 우리농산물 소비 활성화와 농업·농촌 지원을 위함 다양한 활동을 이어가겠다”고 말했다.",
+      "source": "nongmin.com",
+      "publishedAt": "2026-06-15T00:11:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000097351?sid=101",
+      "originallink": "https://www.nongmin.com/article/20260615500022",
+      "keyword": "양파"
+    },
+    {
+      "id": "e678f11761033e44",
+      "title": "NH농협생명, 생명보험협회와 함께 양파 소비촉진 캠페인 실시",
+      "summary": "지난 5월 기준 가락시장 양파 도매가격은 kg당 570원으로 전년 동기(812원) 대비 약 30% 하락했다. 이에... 생명보험협회와 함께 우리 농산물 소비 활성화와 농업·농촌 지원을 위한 다양한 활동을 이어가겠다\"고 말했다.",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-06-14T23:50:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1712435",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1712435",
+      "keyword": "양파"
+    },
+    {
+      "id": "cde9b2f649d47499",
+      "title": "\"양파값 30% 폭락\"…농협생명, 출근길 양파 2000개 나눔",
+      "summary": "지난달 기준 가락시장 양파 도매가격은 kg당 570원으로 전년 동기(812원) 대비 약 30% 하락했다. 이에... 농산물 가격 급락 시기에 보험업계가 소비자 접점 캠페인과 기부를 결합한 농가 지원 모델을 선보이면서 업종 간...",
+      "source": "joongangenews.com",
+      "publishedAt": "2026-06-14T23:48:00.000Z",
+      "link": "https://www.joongangenews.com/news/articleView.html?idxno=525822",
+      "originallink": "https://www.joongangenews.com/news/articleView.html?idxno=525822",
+      "keyword": "양파"
+    },
+    {
+      "id": "55c8215fc47adb21",
+      "title": "\"군정은 현장에 답이 있다\"…최유철, 민생 속으로",
+      "summary": "인건비 상승, 농촌 인력난에 더해 올해 생산량 증가와 소비 부진에 따른 가격 하락까지 겹치면서 어려움을... 아울러 생산부터 저장·가공·유통까지 이어지는 의성마늘 산업 전반을 재점검하고, 농산물 유통체계 개선과...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-06-14T23:46:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20260615500021",
+      "originallink": "https://www.news2day.co.kr/article/20260615500021",
+      "keyword": "수급"
+    },
+    {
+      "id": "5341829951a10873",
+      "title": "최유철 의성군수, 마늘 농가의 가격 안정에 팔 걷어붙이다",
+      "summary": "의성지역 마늘 농가는 인건비와 영농자재 가격 상승, 생산량 증가와 소비 위축에 따른 가격 하락으로 어려움을 겪고 있다. 최 당선인은 농협 관계자들과 마늘 판매 확대와 수급 안정 방안을 논의하며 실질적인 지원책...",
+      "source": "viva100.com",
+      "publishedAt": "2026-06-14T23:44:00.000Z",
+      "link": "https://www.viva100.com/article/20260615500043",
+      "originallink": "https://www.viva100.com/article/20260615500043",
+      "keyword": "수급"
+    },
+    {
+      "id": "7f92028c37165593",
+      "title": "NH농협생명·생보협회, 양파 소비촉진 캠페인 실시",
+      "summary": "국산 농산물 소비를 활성화하기 위해 마련됐다. 한국농수산식품유통공사(aT)에 따르면 올해 양파 가격은 생산량 증가 영향으로 약세를 이어가고 있다. 실제 가락시장 양파 도매가격은 지난 5월 기준 kg당 570원으로 전년...",
+      "source": "newsfreezone.co.kr",
+      "publishedAt": "2026-06-14T22:44:00.000Z",
+      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=694402",
+      "originallink": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=694402",
+      "keyword": "양파"
+    },
+    {
+      "id": "639c5d219986d6ce",
+      "title": "[일본 도매시장, 경계를 허물다] 저장·소분·가공·배송까지…무한 변...",
+      "summary": "“2019년 관련법 개정 이후 농산물도매시장의 거래 방식을 다각화했습니다. 법이 유연해지자 각 시장의... 도쿄에선 면적·물동량이 가장 큰 시장으로 우리나라의 서울 가락시장 격이다. 토요스중앙도매시장은 매수·보관...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-06-14T20:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000097332?sid=101",
+      "originallink": "https://www.nongmin.com/article/20260612500766",
       "keyword": "시장"
     },
     {
-      "id": "market-3",
-      "title": "과일류는 상자 단위 경락가 중심으로 비교",
-      "summary": "사과와 배는 상자 단위 경락가를 기준으로 최근 흐름을 확인하는 방식이 적합합니다.",
-      "source": "지역 동향",
-      "publishedAt": "2026-06-10T09:00:00+09:00",
-      "link": "https://www.garakprice.com/",
-      "originallink": "https://www.garakprice.com/",
-      "keyword": "지역"
-    },
-    {
-      "id": "market-4",
-      "title": "풋고추·상추, 단기 가격 변동성 유의",
-      "summary": "생육과 반입량 영향을 받는 품목은 단기 변동폭이 커질 수 있어 최근 흐름을 함께 봅니다.",
-      "source": "가격 점검",
-      "publishedAt": "2026-06-11T09:00:00+09:00",
-      "link": "https://www.garakprice.com/",
-      "originallink": "https://www.garakprice.com/",
-      "keyword": "가격"
-    },
-    {
-      "id": "market-5",
-      "title": "공개 가격 기준선, API 수집 시 자동 갱신",
-      "summary": "배포 후 KAMIS 인증값이 적용되면 공개 기준선 대신 수집 데이터가 화면에 반영됩니다.",
-      "source": "데이터 안내",
-      "publishedAt": "2026-06-12T09:00:00+09:00",
-      "link": "https://www.garakprice.com/",
-      "originallink": "https://www.garakprice.com/",
-      "keyword": "데이터"
+      "id": "c7e1c25ac04aa59c",
+      "title": "최유철 의성군수 당선인, 마늘밭으로 향했다…수확철 농가 찾아 일손 보...",
+      "summary": "가격 하락과 생산비 상승으로 농가 부담이 어느 때보다 크다”며 “농협과 긴밀히 협력해 공공수매를 포함한 가격 안정 대책과 판로 확대 방안을 마련하는 데 행정력을 집중하겠다”고 밝혔다. 이를 위해 농산물 유통체계...",
+      "source": "pressian.com",
+      "publishedAt": "2026-06-14T14:54:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/002/0002444983?sid=102",
+      "originallink": "https://www.pressian.com/pages/articles/2026061419461338338?utm_source=naver&utm_medium=search",
+      "keyword": "수급"
     }
   ]
 }
