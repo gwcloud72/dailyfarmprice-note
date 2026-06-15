@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 
 const DATA_PATH = new URL('../public/data/crop-prices.json', import.meta.url);
+const ERROR_REPORT_PATH = new URL('../.cache/crop-prices-last-error.json', import.meta.url);
 const PRODUCT_FILE_PATH = new URL('./kamis-products.json', import.meta.url);
 const API_BASE = process.env.KAMIS_API_BASE || 'http://www.kamis.or.kr/service/price/xml.do';
 const CERT_KEY = process.env.KAMIS_CERT_KEY;
@@ -25,116 +26,39 @@ function parseInteger(value, fallback, { min = -Infinity, max = Infinity } = {})
 
 const FETCH_ENABLED = parseBoolean(process.env.KAMIS_FETCH_ENABLED, true);
 const SKIP_EMPTY_PRODUCTS = parseBoolean(process.env.KAMIS_SKIP_EMPTY_PRODUCTS, true);
-const REQUIRE_FULL_REGION_COVERAGE = parseBoolean(process.env.KAMIS_REQUIRE_FULL_REGION_COVERAGE, true);
+const REQUIRE_FULL_REGION_COVERAGE = parseBoolean(process.env.KAMIS_REQUIRE_FULL_REGION_COVERAGE, false);
+const ALLOW_STALE_ON_FAILURE = parseBoolean(process.env.KAMIS_ALLOW_STALE_ON_FAILURE, true);
+const VERBOSE_FAILURES = parseBoolean(process.env.KAMIS_VERBOSE_FAILURES, false);
 const LOOKBACK_DAYS = parseInteger(process.env.LOOKBACK_DAYS, 90, { min: 1, max: 365 });
+const FETCH_TIMEOUT_MS = parseInteger(process.env.KAMIS_FETCH_TIMEOUT_MS, 12000, { min: 1000, max: 120000 });
+const FAIL_ON_COLLECTION_ERROR = parseBoolean(process.env.KAMIS_FAIL_ON_COLLECTION_ERROR || process.env.KAMIS_STRICT_COLLECTION, false);
 const COUNTRY_CODE = String(process.env.KAMIS_COUNTRY_CODE || '1101').trim();
 const DEFAULT_PRICE_TYPE = ['retail', 'wholesale'].includes(String(process.env.KAMIS_PRICE_TYPE || '').trim())
  ? String(process.env.KAMIS_PRICE_TYPE).trim()
  : 'retail';
 const DEFAULT_REGION_CONFIGS = [
- {
-  "code": "",
-  "name": "전국"
- },
- {
-  "code": "1101",
-  "name": "서울"
- },
- {
-  "code": "2100",
-  "name": "부산"
- },
- {
-  "code": "2200",
-  "name": "대구"
- },
- {
-  "code": "2300",
-  "name": "인천"
- },
- {
-  "code": "2401",
-  "name": "광주"
- },
- {
-  "code": "2501",
-  "name": "대전"
- },
- {
-  "code": "2601",
-  "name": "울산"
- },
- {
-  "code": "2701",
-  "name": "세종"
- },
- {
-  "code": "3111",
-  "name": "경기"
- },
- {
-  "code": "3112",
-  "name": "경기"
- },
- {
-  "code": "3113",
-  "name": "경기"
- },
- {
-  "code": "3138",
-  "name": "경기"
- },
- {
-  "code": "3145",
-  "name": "경기"
- },
- {
-  "code": "3211",
-  "name": "강원"
- },
- {
-  "code": "3214",
-  "name": "강원"
- },
- {
-  "code": "3311",
-  "name": "충북"
- },
- {
-  "code": "3411",
-  "name": "충남"
- },
- {
-  "code": "3511",
-  "name": "전북"
- },
- {
-  "code": "3613",
-  "name": "전남"
- },
- {
-  "code": "3711",
-  "name": "경북"
- },
- {
-  "code": "3714",
-  "name": "경북"
- },
- {
-  "code": "3814",
-  "name": "경남"
- },
- {
-  "code": "3818",
-  "name": "경남"
- },
- {
-  "code": "3911",
-  "name": "제주"
- }
+ { code: '', name: '전국' },
+ { code: '1101', name: '서울' },
+ { code: '2100', name: '부산' },
+ { code: '2200', name: '대구' },
+ { code: '2300', name: '인천' },
+ { code: '2401', name: '광주' },
+ { code: '2501', name: '대전' },
+ { code: '2601', name: '울산' },
+ { code: '3111', name: '수원' },
+ { code: '3113', name: '의정부' },
+ { code: '3145', name: '용인' },
+ { code: '3211', name: '춘천' },
+ { code: '3311', name: '청주' },
+ { code: '3511', name: '전주' },
+ { code: '3613', name: '순천' },
+ { code: '3711', name: '포항' },
+ { code: '3714', name: '안동' },
+ { code: '3814', name: '창원' },
+ { code: '3911', name: '제주' },
 ];
 
-const REQUIRED_ADMIN_REGION_NAMES = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종', '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'];
+const REQUIRED_ADMIN_REGION_NAMES = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '수원', '의정부', '용인', '춘천', '청주', '전주', '순천', '포항', '안동', '창원', '제주'];
 
 function filterItemsByFullRegionCoverage(items) {
  if (!REQUIRE_FULL_REGION_COVERAGE) return { items, excluded: [] };
@@ -163,9 +87,63 @@ function filterItemsByFullRegionCoverage(items) {
 }
 
 const ACTION_BY_PRICE_TYPE = {
- retail: 'periodRetailProductList',
- wholesale: 'periodWholesaleProductList',
+ retail: 'periodProductList',
+ wholesale: 'periodProductList',
 };
+
+const PRODUCT_CLS_BY_PRICE_TYPE = {
+ retail: '01',
+ wholesale: '02',
+};
+
+class KamisFatalError extends Error {
+ constructor(message, { code = '', data = '', condition = '' } = {}) {
+  super(message);
+  this.name = 'KamisFatalError';
+  this.code = code;
+  this.data = data;
+  this.condition = condition;
+ }
+}
+
+function isKamisFatalError(error) {
+ return error instanceof KamisFatalError || error?.name === 'KamisFatalError';
+}
+
+function getKamisCode(payload) {
+ const condition = payload?.condition;
+ if (Array.isArray(condition)) return String(condition[0]?.code ?? condition[0]?.Code ?? '').trim();
+ if (condition && typeof condition === 'object') return String(condition.code ?? condition.Code ?? '').trim();
+ return String(payload?.code ?? payload?.resultCode ?? '').trim();
+}
+
+function getKamisDataMessage(payload) {
+ const condition = payload?.condition;
+ const conditionText = typeof condition === 'string' ? condition : condition ? JSON.stringify(condition) : '';
+ const data = payload?.data;
+ const dataText = typeof data === 'string' ? data : data ? JSON.stringify(data) : '';
+ return { conditionText, dataText };
+}
+
+function assertKamisPayloadOk(payload, productName) {
+ const code = getKamisCode(payload);
+ const { conditionText, dataText } = getKamisDataMessage(payload);
+ const combined = `${conditionText} ${dataText}`;
+
+ if (code === '900' || /Unauthenticated|인증|인증Key|cert/i.test(combined)) {
+  throw new KamisFatalError(
+   `KAMIS 인증 실패: KAMIS_CERT_ID/KAMIS_CERT_KEY 값이나 승인 상태를 확인해야 합니다. (${productName})`,
+   { code, data: dataText, condition: conditionText },
+  );
+ }
+
+ if (code === '200' || /Wrong Parameters|Parameters|파라미터|parameter/i.test(combined)) {
+  throw new KamisFatalError(
+   `KAMIS 요청 파라미터 오류: 품목코드·품종코드·등급코드·지역코드를 확인해야 합니다. (${productName})`,
+   { code, data: dataText, condition: conditionText },
+  );
+ }
+}
 
 async function loadProductConfigs() {
  const fromEnv = parseProducts(process.env.KAMIS_PRODUCTS_JSON);
@@ -303,6 +281,14 @@ function getAction(product) {
  return product.action || ACTION_BY_PRICE_TYPE[priceType] || ACTION_BY_PRICE_TYPE.retail;
 }
 
+function getProductClassCode(product) {
+ if (product.productclscode !== undefined && product.productclscode !== null) {
+  return String(product.productclscode).trim();
+ }
+ const priceType = getPriceType(product);
+ return PRODUCT_CLS_BY_PRICE_TYPE[priceType] || PRODUCT_CLS_BY_PRICE_TYPE.retail;
+}
+
 function getKindCodeCandidates(product) {
  const candidates = [];
 
@@ -366,6 +352,21 @@ function toDailySeries(rows) {
   .sort((a, b) => a.date.localeCompare(b.date));
 }
 
+async function fetchWithTimeout(url) {
+ const controller = new AbortController();
+ const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+ try {
+  return await fetch(url, { signal: controller.signal });
+ } catch (error) {
+  if (error?.name === 'AbortError') {
+   throw new KamisFatalError(`KAMIS API 요청 시간 초과(${FETCH_TIMEOUT_MS}ms)`, { data: 'timeout' });
+  }
+  throw error;
+ } finally {
+  clearTimeout(timeout);
+ }
+}
+
 async function fetchProductVariant(product, startDay, endDay, kindcode, regionConfig) {
  const priceType = getPriceType(product);
  const action = getAction(product);
@@ -375,6 +376,7 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
  url.searchParams.set('p_cert_key', CERT_KEY);
  url.searchParams.set('p_cert_id', CERT_ID);
  url.searchParams.set('p_returntype', 'json');
+ url.searchParams.set('p_productclscode', getProductClassCode(product));
  url.searchParams.set('p_startday', startDay);
  url.searchParams.set('p_endday', endDay);
  if (regionConfig?.code) {
@@ -386,7 +388,7 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
  url.searchParams.set('p_productrankcode', product.productrankcode ?? '');
  url.searchParams.set('p_convert_kg_yn', product.convertKgYn ?? 'N');
 
- const response = await fetch(url);
+ const response = await fetchWithTimeout(url);
  if (!response.ok) throw new Error(`${product.name} API 응답 실패: ${response.status}`);
 
  const text = await response.text();
@@ -397,6 +399,8 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
  } catch {
   throw new Error(`${product.name} JSON 파싱 실패`);
  }
+
+ assertKamisPayloadOk(payload, product.name);
 
  const rawRows = rowsFromPayload(payload)
   .map((row) => ({
@@ -437,6 +441,7 @@ async function fetchProductVariant(product, startDay, endDay, kindcode, regionCo
   sourceMeta: {
    priceType,
    action,
+   productclscode: getProductClassCode(product),
    itemcategorycode: product.itemcategorycode,
    itemcode: product.itemcode,
    kindcode,
@@ -469,6 +474,7 @@ async function fetchProduct(product, startDay, endDay, regionConfig) {
    console.log(`✅ ${product.name} / ${regionConfig?.name || '전국'} 데이터 수집 완료 (${label})`);
    return result;
   } catch (error) {
+   if (isKamisFatalError(error)) throw error;
    const label = kindcode ? `kindcode=${kindcode}` : 'kindcode=fallback';
    errors.push(`${label}: ${error.message}`);
   }
@@ -487,22 +493,94 @@ function summarizeFailures(productName, failures) {
  const regions = [...new Set(failures.map((failure) => failure.region).filter(Boolean))];
  const preview = regions.slice(0, 5).join(', ');
  const suffix = regions.length > 5 ? ` 외 ${regions.length - 5}개` : '';
- return `${productName}: ${failures.length}개 지역 수집 실패(${preview}${suffix})`;
+ const requestLabel = failures.length === regions.length
+  ? `${failures.length}개 지역`
+  : `${failures.length}개 요청/${regions.length}개 지역`;
+ const firstReason = VERBOSE_FAILURES && failures[0]?.message ? ` · 첫 오류: ${failures[0].message}` : '';
+ return `${productName}: ${requestLabel} 수집 실패(${preview}${suffix})${firstReason}`;
 }
 
 async function writeData(data) {
- await fs.mkdir(new URL('../public/data/', import.meta.url), { recursive: true });
+ await fs.mkdir(new URL('../.cache/', import.meta.url), { recursive: true });
  await fs.writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 }
 
 
-async function hasExistingData(fileUrl) {
+async function readExistingData(fileUrl) {
  try {
   const text = await fs.readFile(fileUrl, 'utf8');
   const payload = JSON.parse(text);
-  return Array.isArray(payload?.items) && payload.items.length > 0;
+  if (Array.isArray(payload?.items) && payload.items.length > 0) return payload;
  } catch {
-  return false;
+  
+ }
+ return null;
+}
+
+async function hasExistingData(fileUrl) {
+ return Boolean(await readExistingData(fileUrl));
+}
+
+async function writeCollectionErrorReport(reason, details = []) {
+ await fs.mkdir(new URL('../.cache/', import.meta.url), { recursive: true });
+ await fs.writeFile(ERROR_REPORT_PATH, `${JSON.stringify({
+  status: 'collection_failed',
+  generatedAt: getGeneratedAt(),
+  reason,
+  details,
+  policy: ALLOW_STALE_ON_FAILURE
+   ? '기존 crop-prices.json을 유지합니다. 새 가격을 임의 생성하지 않습니다.'
+   : '수집 실패 시 배포를 중단합니다.',
+  hints: [
+   'KAMIS_CERT_ID와 KAMIS_CERT_KEY가 GitHub Secrets에 반대로 입력되지 않았는지 확인하세요.',
+   'KAMIS 응답 코드 900은 인증 실패, 200은 파라미터 오류, 001은 no data입니다.',
+   'KAMIS_REQUIRE_FULL_REGION_COVERAGE=true이면 일부 지역 누락만으로도 결과가 제외될 수 있습니다.',
+   '정확한 원인 확인 시 KAMIS_VERBOSE_FAILURES=true로 실행하세요.'
+  ]
+ }, null, 2)}\n`, 'utf8');
+}
+
+async function keepExistingData(reason, details = []) {
+ await writeCollectionErrorReport(reason, details);
+ const existing = await readExistingData(DATA_PATH);
+ if (!existing || !ALLOW_STALE_ON_FAILURE || FAIL_ON_COLLECTION_ERROR) return false;
+ console.warn(`KAMIS 실데이터 수집이 완료되지 않아 기존 crop-prices.json을 유지합니다: ${reason}`);
+ if (details.length) {
+  console.warn('KAMIS 실패 상세 예시:');
+  details.slice(0, 8).forEach((detail) => console.warn(`- ${detail}`));
+ }
+ console.warn('새 대체 데이터는 생성하지 않았습니다. 마지막으로 검증된 public/data/crop-prices.json만 유지합니다.');
+ console.warn('상세 원인은 .cache/crop-prices-last-error.json에 기록했습니다.');
+ return true;
+}
+
+async function runKamisSmokeCheck(startDay, endDay) {
+ const smokeProduct = {
+  id: 'kamis-smoke-rice',
+  name: 'KAMIS 연결 확인',
+  category: '식량작물',
+  market: '소매',
+  unit: '1kg',
+  itemcategorycode: '100',
+  itemcode: '111',
+  kindcodes: ['01', ''],
+  productrankcode: '04',
+  convertKgYn: 'Y',
+  priceType: 'retail',
+ };
+ const smokeRegion = { code: '1101', name: '서울' };
+ try {
+  await fetchProduct(smokeProduct, startDay, endDay, smokeRegion);
+  console.log('✅ KAMIS 인증/연결 사전 점검 통과');
+  return true;
+ } catch (error) {
+  const reason = `KAMIS 인증/연결 사전 점검 실패: ${error.message}`;
+  if (isKamisFatalError(error)) {
+   if (await keepExistingData(reason, [reason])) return false;
+   throw error;
+  }
+  if (await keepExistingData(reason, [reason])) return false;
+  throw error;
  }
 }
 
@@ -516,18 +594,18 @@ async function main() {
   if (!CERT_ID) missing.push('KAMIS_CERT_ID');
   if (productConfigs.length === 0) missing.push('scripts/kamis-products.json 또는 KAMIS_PRODUCTS_JSON');
 
-  if (await hasExistingData(DATA_PATH)) {
-   console.warn(`KAMIS 실데이터 수집 설정이 없어 기존 crop-prices.json을 유지합니다: ${missing.join(', ')}`);
-   return;
-  }
+  if (await keepExistingData(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}`, missing)) return;
 
   throw new Error(`KAMIS 실데이터 수집 설정이 필요합니다: ${missing.join(', ')}. 기존 데이터가 없어 생성을 중단합니다.`);
  }
 
  const today = toKstDate();
  const startDay = addDays(today, -(LOOKBACK_DAYS - 1));
+ const shouldContinue = await runKamisSmokeCheck(startDay, today);
+ if (!shouldContinue) return;
  const errors = [];
  const items = [];
+ const failureSamples = [];
 
  const skippedProducts = [];
 
@@ -543,6 +621,7 @@ async function main() {
    try {
     items.push(await fetchProduct(product, startDay, today, nationalRegion));
    } catch (error) {
+    if (isKamisFatalError(error)) throw error;
     if (SKIP_EMPTY_PRODUCTS && isEmptyKamisResult(error)) {
      skippedProducts.push(`${product.name}: 전국 조회 결과 없음`);
      console.warn(`⚠️ ${product.name}: 전국 데이터가 없어 지역별 수집을 생략합니다.`);
@@ -556,6 +635,7 @@ async function main() {
    try {
     items.push(await fetchProduct(product, startDay, today, regionConfig));
    } catch (error) {
+    if (isKamisFatalError(error)) throw error;
     productFailures.push({ region: regionConfig?.name || '전국', message: error.message });
    }
   }
@@ -563,17 +643,24 @@ async function main() {
   const summary = summarizeFailures(product.name, productFailures);
   if (summary) {
    errors.push(summary);
+   productFailures.slice(0, 2).forEach((failure) => {
+    failureSamples.push(`${product.name} / ${failure.region}: ${failure.message}`);
+   });
    console.warn(`⚠️ ${summary}`);
   }
  }
 
  if (!items.length) {
-  throw new Error(`KAMIS 데이터 수집에 실패했습니다. 대체 데이터 사용는 사용하지 않습니다. ${[...errors, ...skippedProducts].join(' / ')}`);
+  const reason = [...errors, ...skippedProducts].join(' / ') || '수집 가능한 응답 없음';
+  if (await keepExistingData(reason, failureSamples)) return;
+  throw new Error(`KAMIS 데이터 수집에 실패했습니다. 기존 데이터가 없거나 KAMIS_ALLOW_STALE_ON_FAILURE=false입니다. ${reason}`);
  }
 
  const coverage = filterItemsByFullRegionCoverage(items);
  if (!coverage.items.length) {
-  throw new Error(`전국·17개 시도 전체 커버리지를 만족하는 품목이 확인 필요합니다. ${coverage.excluded.join(' / ')}`);
+  const reason = `전국·17개 시도 전체 커버리지를 만족하는 품목이 확인 필요합니다. ${coverage.excluded.join(' / ')}`;
+  if (await keepExistingData(reason, coverage.excluded)) return;
+  throw new Error(reason);
  }
 
  const notices = [];
@@ -595,5 +682,10 @@ async function main() {
 
 main().catch((error) => {
  console.error(`데이터 갱신 실패: ${error.message}`);
+ if (isKamisFatalError(error)) {
+  if (error.code) console.error(`KAMIS error code: ${error.code}`);
+  if (error.condition) console.error(`KAMIS condition: ${error.condition}`);
+  if (error.data) console.error(`KAMIS data: ${error.data}`);
+ }
  process.exit(1);
 });

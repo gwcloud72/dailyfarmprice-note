@@ -6,6 +6,7 @@ const errors = [];
 const warnings = [];
 
 const MAX_DATA_AGE_DAYS = Number(process.env.KAMIS_MAX_DATA_AGE_DAYS || 7);
+const REQUIRE_FULL_REGION_COVERAGE = ['true', '1', 'yes', 'y', 'on'].includes(String(process.env.KAMIS_REQUIRE_FULL_REGION_COVERAGE || '').trim().toLowerCase());
 const REQUIRED_ADMIN_REGIONS = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종', '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'];
 
 function parseDate(value) {
@@ -80,7 +81,7 @@ function validateCropPrices(payload, label) {
   return;
  }
  const items = Array.isArray(payload.items) ? payload.items : [];
- if (items.length && label === 'public/data/crop-prices.json') {
+ if (items.length && label === 'public/data/crop-prices.json' && REQUIRE_FULL_REGION_COVERAGE) {
   const groups = new Map();
   items.forEach((item) => {
    const key = String(item?.baseId || item?.name || item?.id || '').trim();

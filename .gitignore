@@ -8,3 +8,5 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+public/data/crop-prices-last-error.json
+.cache/

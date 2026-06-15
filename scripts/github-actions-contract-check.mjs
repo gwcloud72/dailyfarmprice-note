@@ -65,6 +65,7 @@ try {
 optionalBoolean('KAMIS_FETCH_ENABLED');
 optionalBoolean('KAMIS_SKIP_EMPTY_PRODUCTS');
 optionalBoolean('KAMIS_REQUIRE_FULL_REGION_COVERAGE');
+optionalBoolean('KAMIS_ALLOW_STALE_ON_FAILURE');
 optionalInteger('LOOKBACK_DAYS', { min: 1, max: 365 });
 optionalInteger('REPORT_RANGE_DAYS', { min: 1, max: 365 });
 optionalInteger('NEWS_DISPLAY', { min: 1, max: 100 });

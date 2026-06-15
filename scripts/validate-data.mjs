@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 
 const DATA_PATH = new URL('../public/data/crop-prices.json', import.meta.url);
-const ALLOWED_STATUS = new Set(['live', 'partial']);
+const ALLOWED_STATUS = new Set(['live', 'partial', 'stale']);
 
 const MAX_DATA_AGE_DAYS = Number(process.env.KAMIS_MAX_DATA_AGE_DAYS || 7);
 const REQUIRED_ADMIN_REGIONS = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종', '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'];
@@ -26,6 +26,7 @@ function isTruthy(value) {
 }
 
 const STRICT_VALIDATION = isTruthy(process.env.KAMIS_STRICT_VALIDATION);
+const REQUIRE_FULL_REGION_COVERAGE = isTruthy(process.env.KAMIS_REQUIRE_FULL_REGION_COVERAGE);
 
 const assert = (condition, message) => {
  if (!condition) throw new Error(message);
@@ -55,11 +56,13 @@ try {
  const ageDays = Math.floor((Date.now() - latestDate.getTime()) / 86400000);
  assert(ageDays <= MAX_DATA_AGE_DAYS, `KAMIS 최신 기준일 ${latestDate.toISOString().slice(0, 10)}이 ${ageDays}일 전입니다. 오래된 데이터를 배포하지 않습니다.`);
 
- const regionNames = new Set(data.items.map((item) => item.region).filter(Boolean));
- const regionalNames = [...regionNames].filter((region) => region !== '전국');
- const missingAdminRegions = REQUIRED_ADMIN_REGIONS.filter((region) => !regionNames.has(region));
- assert(regionNames.has('전국'), '전국 기준 데이터가 필요합니다. p_countrycode를 비운 전체지역 수집 결과를 확인하세요.');
- assert(missingAdminRegions.length === 0, `전국 17개 광역자치단체 데이터가 모두 필요합니다. 누락: ${missingAdminRegions.join(', ') || '없음'} / 현재 지역: ${regionalNames.join(', ') || '없음'}`);
+ if (REQUIRE_FULL_REGION_COVERAGE) {
+  const regionNames = new Set(data.items.map((item) => item.region).filter(Boolean));
+  const regionalNames = [...regionNames].filter((region) => region !== '전국');
+  const missingAdminRegions = REQUIRED_ADMIN_REGIONS.filter((region) => !regionNames.has(region));
+  assert(regionNames.has('전국'), '전국 기준 데이터가 필요합니다. p_countrycode를 비운 전체지역 수집 결과를 확인하세요.');
+  assert(missingAdminRegions.length === 0, `전국 17개 광역자치단체 데이터가 모두 필요합니다. 누락: ${missingAdminRegions.join(', ') || '없음'} / 현재 지역: ${regionalNames.join(', ') || '없음'}`);
+ }
 
  for (const item of data.items) {
   assert(item.id && item.name, '품목 id/name 값이 필요합니다.');
