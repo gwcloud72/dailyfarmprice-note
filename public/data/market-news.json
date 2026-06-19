@@ -2,11 +2,81 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-19T00:07:03.056Z",
+    "updatedAt": "2026-06-19T23:21:14.193Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "84d8fbcb0987a93b",
+      "title": "생활물가, 품목별 희비 교차",
+      "summary": "품목별 가격 등락이 뚜렷하게 나타났다. 한국물가협회에 따르면 6월 셋째 주 생활물가는 품목별 수급 여건에 따라 등락이 엇갈린 가운데 상추·시금치 등 엽채류는 상승하고 토마토·양배추는 하락한 것으로 나타났다....",
+      "source": "fsnews.co.kr",
+      "publishedAt": "2026-06-19T13:40:00.000Z",
+      "link": "http://www.fsnews.co.kr/news/articleView.html?idxno=61301",
+      "originallink": "http://www.fsnews.co.kr/news/articleView.html?idxno=61301",
+      "keyword": "배추"
+    },
+    {
+      "id": "465b26e215c72bb9",
+      "title": "가락시장 도매법인 '양파 수급안정' 나서",
+      "summary": "이어 홍성호 도매시장법인협회 가락시장지회장은 \"요즘 농산물 가격이 전반적으로 낮아 산지에서 너무 힘들어 한다\"면서 \"양파뿐만 아니라 국내산 농산물 소비가 많이 이뤄질 수 있도록 관심을 가져달라\"고 당부했다....",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-06-19T10:26:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=405118",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=405118",
+      "keyword": "양파"
+    },
+    {
+      "id": "9937f9f32fa60504",
+      "title": "대아청과·농어촌희망재단, 여름채소 산지 지원",
+      "summary": "이번 물류기자재 지원 사업의 경우 가락동 농수산물도매시장 4개 도매법인(대아·동아·서울·중앙청과)과... 대관령원협은 대표적인 여름 배추와 무 출하조직으로, 이상기후에도 불구하고 우수산 품질의 농산물을...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-06-19T10:26:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=405120",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=405120",
+      "keyword": "배추"
+    },
+    {
+      "id": "f43b1b0075b5040e",
+      "title": "농산물 가격안정제 '기준가격' 쟁점 부상···생산비·적정이윤 반영해...",
+      "summary": "등 수급 상황을 반영해 농산물가격안정심의위원회 심의를 거쳐 정하도록 했다. 이날 발제에 나선 김현식 농협미래전략연구소 연구위원은 쌀의 경우 생산비가 꾸준히 상승했음에도 산지가격은 정체되거나 하락하는...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-06-19T10:26:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=405132",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=405132",
+      "keyword": "수급"
+    },
+    {
+      "id": "db5b703e61f6fd6a",
+      "title": "서울·중앙·동화 3개 도매법인, '양파 소비촉진'에 3억 원 쾌척",
+      "summary": "최근 양파 가격 하락으로 어려움을 겪는 양파 재배농가를 지원하기 위해 서울 가락동 농수산물도매시장 내... 이에 정부와 농협이 수급안정대책을 추진하고 있어 서울청과, 중앙청과, 동화청과도 생산자 지원과 농산물...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-19T09:56:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=322825",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=322825",
+      "keyword": "양파"
+    },
+    {
+      "id": "a7b291ac7de9e4c6",
+      "title": "美-이란, 종전MOU 이행 착수⋯뉴욕증시, 상승 마감 外 [오늘의 주요뉴스...",
+      "summary": "뉴욕증시, 반도체 강세에 상승 마감 미국과 이란 간 종전 양해각서(MOU) 체결로 에너지 수급 불안이 다소... 5% 상승했습니다. 반면 농림수산품은 농산물 하락으로 0.8% 내렸고, 국내 공급물가는 원재료 하락 영향으로...",
+      "source": "etoday.co.kr",
+      "publishedAt": "2026-06-19T00:32:00.000Z",
+      "link": "https://www.etoday.co.kr/news/view/2595216",
+      "originallink": "https://www.etoday.co.kr/news/view/2595216",
+      "keyword": "수급"
+    },
+    {
+      "id": "8b0150c4633df504",
+      "title": "농어촌 위기 극복에 총력…농협·수협중앙회, 수급 안정·유류비 보조·...",
+      "summary": "농산물 수급 안정과 안전한 먹거리 공급, 고유가 피해 어업인을 위한 파격적인 자체 예산 투입, 그리고 해외... 회의에서는 최근 농자재 가격 상승과 농산물 가격 하락으로 이중고를 겪고 있는 농가들을 실질적으로 도울...",
+      "source": "dailypop.kr",
+      "publishedAt": "2026-06-19T00:20:00.000Z",
+      "link": "http://www.dailypop.kr/news/articleView.html?idxno=99819",
+      "originallink": "http://www.dailypop.kr/news/articleView.html?idxno=99819",
+      "keyword": "수급"
+    },
     {
       "id": "2dc2363c0dc8e8dc",
       "title": "[경북도의회 소식] 최병근 도의원, 양파 가격 폭락 대책 촉구",
@@ -96,76 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/025/0003531479?sid=101",
       "originallink": "https://www.joongang.co.kr/article/25437938",
       "keyword": "시장"
-    },
-    {
-      "id": "f0f9add887f7d549",
-      "title": "양파값 폭락에 경고장…최병근 도의원 \"농산물 수급관리 대전환 필요\"",
-      "summary": "또 가격 폭락 이후의 사후 지원보다 수급 불안 조짐이 나타날 때 시장 동향을 분석해 선제적으로 물량을 조절하는 대응체계 구축도 필요하다고 제안했다. 이와 함께 가격 하락으로 폐기되는 농산물의 자원화 사업을...",
-      "source": "kyongbuk.co.kr",
-      "publishedAt": "2026-06-18T07:08:00.000Z",
-      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4075898",
-      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4075898",
-      "keyword": "양파"
-    },
-    {
-      "id": "d5461f9c5a4336d8",
-      "title": "농협, 품목별협의회 총회 열고 농산물 수급·판매 확대 논의",
-      "summary": "농협이 농산물 수급 상황과 품목별 경쟁력 강화 방안을 점검했다. 농자재 가격 상승과 일부 농산물 가격 하락이 겹치면서 농업 현장의 부담이 커진 가운데, 품목별 조직을 중심으로 판매 확대와 농업인 지원 방안을 논의한...",
-      "source": "thepowernews.co.kr",
-      "publishedAt": "2026-06-18T06:30:00.000Z",
-      "link": "https://www.thepowernews.co.kr/view.php?ud=202606181528041319de3f0aa1be_7",
-      "originallink": "https://www.thepowernews.co.kr/view.php?ud=202606181528041319de3f0aa1be_7",
-      "keyword": "수급"
-    },
-    {
-      "id": "52eedbda4b3f0572",
-      "title": "바닥 찍고 날아오른다… 한울앤제주, 실적 턴어라운드 돌입하며 존재감...",
-      "summary": "밀가루 수급 안정을 위한 비용 지출이 늘어나며 주가가 하락 흐름을 타고 있다. 과일 통조림 및 농산물 가공... 제과 및 빙과류 전문 기업들 역시 여름철 특수 기대감보다는 원유 및 설탕 등 핵심 원부자재 가격 상승 압박이...",
-      "source": "pinpointnews.co.kr",
-      "publishedAt": "2026-06-18T06:16:00.000Z",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461221",
-      "originallink": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461221",
-      "keyword": "수급"
-    },
-    {
-      "id": "bc6ded2c1c6c9f50",
-      "title": "\"이럴 거면 왜 걷나\"…계란값 뛰는데 남아도는 자조금",
-      "summary": "(aT) 농산물유통정보(KAMIS)에 따르면 지난 17일 기준 특란 30구의 평균 소비자가격은 7383원이다. 지난달 1일... 이를 시세보다 저렴하게 판매한다. 보다 많은 소비자가 혜택을 받을 수 있도록 구매 수량은 1인당 1~2판으로...",
-      "source": "sidae.com",
-      "publishedAt": "2026-06-18T04:39:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/417/0001148089?sid=101",
-      "originallink": "https://www.sidae.com/article/2026061811295995846",
-      "keyword": "시장"
-    },
-    {
-      "id": "edc8cad9db233492",
-      "title": "대아청과, 고랭지 여름채소 생산안정에 '4천만원 지원'",
-      "summary": "고품질 농산물을 안정적으로 생산하는 데 도움이 되길 바란다\"고 말했다. 한편, 이번 지원사업은 대아청과를 비롯해 가락시장 도매법인인 서울청과, 중앙청과, 동화청과, 농협가락공판장이 한국농어촌희망재단에 출연한...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-06-18T04:26:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=73095",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=73095",
-      "keyword": "시장"
-    },
-    {
-      "id": "5bdb02f23b3785e6",
-      "title": "\"양파 농가 살리자\"…유통주체 직접 나선 '상생 모델' 주목",
-      "summary": "농산물 가격은 오히려 하락해 농민들의 어려움이 커지고 있다\"며 \"특히 양파는 수개월째 공급 과잉과 소비 부진이 이어지면서 농가들이 큰 부담을 안고 있는 상황\"이라고 말했다. 이어 그는 \"이러한 시기에 가락시장 도매법...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-06-18T04:22:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=73092",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=73092",
-      "keyword": "양파"
-    },
-    {
-      "id": "85b715f50a65b806",
-      "title": "농협, 품목별전국협의회 정기총회 개최 … 감귤·사과·토마토 등 우수...",
-      "summary": "참석자들은 최근 농산물 수급 현황을 점검하고 농산물 소비 확대와 품목별 경쟁력 강화를 위한 지원 방안을... 강호동 농협중앙회장은 \"최근 농자재 가격 상승과 농산물 가격 하락으로 농업인들의 어려움이 커지고 있다...",
-      "source": "worktoday.co.kr",
-      "publishedAt": "2026-06-18T03:52:00.000Z",
-      "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=85786",
-      "originallink": "http://www.worktoday.co.kr/news/articleView.html?idxno=85786",
-      "keyword": "수급"
     }
   ]
 }
