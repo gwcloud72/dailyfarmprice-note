@@ -2,11 +2,81 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-20T23:38:21.700Z",
+    "updatedAt": "2026-06-21T23:52:33.919Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "ac96baa7ffc757a1",
+      "title": "[시론] 기후위기 시대, 민관협력이 중요하다",
+      "summary": "마련하고 도매시장 종사자는 상생기금(가령 가락상생기금)이나 정부와 매칭펀드를 조성해 수급안정에도 직접 참여해야 한다. 이를 통해 신품종 농산물에 대한 최저가격을 보증해 농가의 리스크를 분담함으로써 재배...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-21T22:00:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=322814",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=322814",
+      "keyword": "시장"
+    },
+    {
+      "id": "8823b086f3fe5abe",
+      "title": "[Issue+] 물류로 변화 꾀하는 일본 도매시장",
+      "summary": "특히 서울 가락동 농수산물도매시장과 마찬가지로 오타시장에서 결정한 가격은 일본 전국시장 기준가격... 특히 핵심은 농산물 특화서비스인 어플리케이션 '니마루'를 연계해 생산자와 소통을 강화하는 것이다. 다만 정작...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-21T22:00:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=322818",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=322818",
+      "keyword": "시장"
+    },
+    {
+      "id": "91869e49828ea142",
+      "title": "[위성 관측 리포트] 한 포기 ‘2만원’ 고랭지 배추 가격 이면에는… 재...",
+      "summary": "농산물 가격이 뛰고, 물류 흐름이 막히고, 산업 현장이 멈춰서는 이상 신호는 오히려 공식 통계보다... 가락시장의 9월 도매가격과 비교하면, 위성 탐지면적이 넓은 2021년에는 가격이 낮았고 면적이 좁은 2024년에는...",
+      "source": "biz.chosun.com",
+      "publishedAt": "2026-06-21T21:04:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/366/0001173340?sid=105",
+      "originallink": "https://biz.chosun.com/science-chosun/science/2026/06/22/JI2LHNC4VZH53H7QLD5NJM42M4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "keyword": "배추"
+    },
+    {
+      "id": "3323d79d764cb379",
+      "title": "남도종 마늘농가 “수급조절 기준 현실화 시급”",
+      "summary": "현행 기준으로는 생산비 상승과 품종 특성 등을 제대로 반영하지 못해 적기에 수급조절 대책을 발동하기 어렵다는 주장이다. 가이드라인은 마늘을 포함한 주요 농산물의 가격에 따라 ‘안정대’와 ‘주의·경계·심각...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-06-21T20:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000097914?sid=102",
+      "originallink": "https://www.nongmin.com/article/20260619500572",
+      "keyword": "수급"
+    },
+    {
+      "id": "e9fe6ed048cd64dc",
+      "title": "계란 10개 5200원…벌써 '열' 받는 물가",
+      "summary": "농축산물 수급안정대책반을 꾸렸다. 건설업계의 공사비 상승세도 당분간 이어질 것이라는 전망이 많다. 미국과 이란 간 종전 양해각서(MOU) 체결 영향으로 국제 유가가 하락했지만 건설자재 가격 및 공사비에...",
+      "source": "hankyung.com",
+      "publishedAt": "2026-06-21T09:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/015/0005301072?sid=101",
+      "originallink": "https://www.hankyung.com/article/2026062189741",
+      "keyword": "수급"
+    },
+    {
+      "id": "50faff671a8bc80c",
+      "title": "양파 가격 하락에 농민들 시름…소비 촉진 팔 걷어붙인 경기농협",
+      "summary": "양파 수급안정 대책을 추진하고 있다. 엄범식 본부장은 \"최근 양파 공급 과잉에 따른 가격 하락으로 농업인들의 시름이 깊어 양파 소비에 대한 관심이 어느 때보다 필요하다\"며 \"앞으로도 경기농협은 우리 농산물 소비...",
+      "source": "joongboo.com",
+      "publishedAt": "2026-06-21T06:54:00.000Z",
+      "link": "https://www.joongboo.com/news/articleView.html?idxno=363729305",
+      "originallink": "https://www.joongboo.com/news/articleView.html?idxno=363729305",
+      "keyword": "양파"
+    },
+    {
+      "id": "2c40743af17a6022",
+      "title": "양파값 폭락에 가락시장 도매법인 3사 '3억원' 투입",
+      "summary": "양파 가격 폭락으로 산지 농가의 경영 부담이 커지는 가운데 가락시장 도매법인 3사가 3억 원을 공동 출연해... 더해 도매시장과 식자재 유통업계가 소비 확대에 직접 참여하면서 민관 협력형 농산물 가격안정 모델로...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-06-21T02:18:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101368",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101368",
+      "keyword": "양파"
+    },
     {
       "id": "84d8fbcb0987a93b",
       "title": "생활물가, 품목별 희비 교차",
@@ -95,76 +165,6 @@
       "publishedAt": "2026-06-18T15:01:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/025/0003531561?sid=101",
       "originallink": "https://www.joongang.co.kr/article/25438034",
-      "keyword": "시장"
-    },
-    {
-      "id": "00e2a25ec5584757",
-      "title": "최병근 경북도의원 \"양파값 500원대로 폭락…수급 안정 대책 시급\"",
-      "summary": "양파 가격 하락으로 어려움을 겪는 농가의 현실을 지적하며, 농산물 수급 안정과 소득 보전 대책 마련을... 500원대까지 하락해 생산비에도 못 미치고 있다\"고 밝혔다. 최 의원은 \"농산물 가격이 오르면 물가 상승의...",
-      "source": "gukjenews.com",
-      "publishedAt": "2026-06-18T14:04:00.000Z",
-      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3612319",
-      "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3612319",
-      "keyword": "양파"
-    },
-    {
-      "id": "6c0161d3914ea842",
-      "title": "농협, 품목별전국협의회 정기총회 개최…“국민 안전 먹거리 공급에 최...",
-      "summary": "참석자들은 최근 농산물 수급 현황을 점검하고 농산물 소비 확대 및 품목별 경쟁력 강화를 위한 지원 방안을... 강호동 농협중앙회장은 축사를 통해 “최근 농자재 가격 상승과 농산물 가격 하락으로 농업인들의 어려움이...",
-      "source": "fntimes.com",
-      "publishedAt": "2026-06-18T13:56:00.000Z",
-      "link": "http://www.fntimes.com/html/view.php?ud=202606182252082505dd55077bc2_18",
-      "originallink": "http://www.fntimes.com/html/view.php?ud=202606182252082505dd55077bc2_18",
-      "keyword": "수급"
-    },
-    {
-      "id": "6609a75cc66b513c",
-      "title": "대아청과, 기후위기 대응 고랭지 채소 생산 안정 지원",
-      "summary": "고품질 농산물을 안정적으로 생산하는 데 보탬이 되기를 바란다\"고 밝혔다. 한편, 이번 지원사업은 대아청과와 가락시장 도매법인(서울, 중앙, 동화, 농협가락공판장)들이 한국농어촌희망재단에 출연한 가락상생기금을...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-06-18T10:52:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16553",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16553",
-      "keyword": "시장"
-    },
-    {
-      "id": "316e1f71686f0bc0",
-      "title": "[4th-Infra] \"농안법·양곡법 안착 과제는 생산비·AI 수급관리\"",
-      "summary": "8월 시행 예정인 개정 농안법은 주요 농산물 가격이 기준가격 이하로 하락할 경우 차액 일부를 지원하는 가격안정제 도입을 담고 있다. 개정 양곡관리법 역시 쌀 수급관리 기능을 강화하는 내용을 포함하고 있다....",
-      "source": "4th.kr",
-      "publishedAt": "2026-06-18T09:16:00.000Z",
-      "link": "http://www.4th.kr/news/articleView.html?idxno=2113400",
-      "originallink": "http://www.4th.kr/news/articleView.html?idxno=2113400",
-      "keyword": "수급"
-    },
-    {
-      "id": "ce72f36b6d89c5c7",
-      "title": "[포토] 농협, 품목별전국협의회 회장단 정기총회",
-      "summary": "참석자들은 최근 농산물 수급 현황을 점검하고, 농산물 소비 확대와 품목별 경쟁력 강화를 위한 지원방안... 강호동 농협중앙회장은 축사에서“최근 농자재 가격 상승과 농산물 가격 하락으로 농업인들의 어려움이 커지고...",
-      "source": "edaily.co.kr",
-      "publishedAt": "2026-06-18T08:33:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/018/0006309335?sid=101",
-      "originallink": "https://www.edaily.co.kr/news/newspath.asp?newsid=05766246645483032",
-      "keyword": "수급"
-    },
-    {
-      "id": "b3cbb27e2ea82bb2",
-      "title": "농식품부 전자송품장 의무화 및 출하비용 보전제 전격 추진",
-      "summary": "생산자가 가락시장 도매법인·공판장과 도매시장으로 농산물을 출하하는 과정에서 발생하는 최소한의 유통비용보다 경매가격이 낮을 경우 그 차액을 지원하는 방식이다. 지난 3월 가락시장에서 시범 운영을 시작했고 5월...",
-      "source": "insight.co.kr",
-      "publishedAt": "2026-06-18T07:48:00.000Z",
-      "link": "https://www.insight.co.kr/news/559221",
-      "originallink": "https://www.insight.co.kr/news/559221",
-      "keyword": "시장"
-    },
-    {
-      "id": "64624e25cd578f82",
-      "title": "정부, 널뛰는 농산물 가격에 전자송품장·출하비용 보전 추진",
-      "summary": "생산자가 가락시장 도매법인·공판장과 도매시장으로 농산물을 출하하는 과정에서 발생하는 최소한의 유통비용(운송·박스비)보다 경매가격이 낮을 경우 그 차액을 지원하는 것이다. 지난 3월 가락시장에서 시범 운영을...",
-      "source": "joongang.co.kr",
-      "publishedAt": "2026-06-18T07:11:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/025/0003531479?sid=101",
-      "originallink": "https://www.joongang.co.kr/article/25437938",
       "keyword": "시장"
     }
   ]
