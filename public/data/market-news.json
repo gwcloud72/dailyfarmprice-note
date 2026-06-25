@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-24T23:29:55.177Z",
+    "updatedAt": "2026-06-25T23:51:48.255Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "baaf4b7bef92deb3",
+      "title": "개설 1년 만에 농수산물 유통비용 11%P 획기적 절감 [농어촌이 미래다-그...",
+      "summary": "2조… 2024년比 84% ↑ 누구든 자유롭게 농산물을 온라인에 판매할 수 있는 ‘농수산물 온라인도매시장’이... 온라인에서 즉각적인 가격·품질 경쟁이 확대되면서 이용자가 늘어나는 선순환 구조도 형성되고 있어...",
+      "source": "segye.com",
+      "publishedAt": "2026-06-25T21:04:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/022/0004138355?sid=101",
+      "originallink": "https://www.segye.com/newsView/20260624520951?OutUrl=naver",
+      "keyword": "시장"
+    },
     {
       "id": "5767b955b4875cff",
       "title": "중앙청과, 산지 물류비 절감에 2천만원 지원",
@@ -145,16 +155,6 @@
       "publishedAt": "2026-06-24T02:16:00.000Z",
       "link": "https://www.jejudomin.co.kr/news/articleView.html?idxno=320161",
       "originallink": "https://www.jejudomin.co.kr/news/articleView.html?idxno=320161",
-      "keyword": "배추"
-    },
-    {
-      "id": "603ea85d1992ac19",
-      "title": "제주도, 당근.양배추 농가에 가격안전관리 지원금 25억 지원",
-      "summary": "5월까지 도매시장의 15일 단위 평균가격이 목표관리 기준가격보다 하락하면 기준가격 이하 차액의 90%를 예산 범위에서 지원한다. 제주도가 당근, 양배추, 브로콜리에 대해 서울 가락시장의 지난해 11월부터 올해...",
-      "source": "samdailbo.com",
-      "publishedAt": "2026-06-24T02:00:00.000Z",
-      "link": "http://www.samdailbo.com/news/articleView.html?idxno=266504",
-      "originallink": "http://www.samdailbo.com/news/articleView.html?idxno=266504",
       "keyword": "배추"
     },
     {
