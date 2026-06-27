@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-26T23:31:19.384Z",
+    "updatedAt": "2026-06-27T23:24:30.390Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "1438b0ad85e4a444",
+      "title": "계란 10개 5천원·고등어 폭등에…'1조원' 쏟아부어 물가 사수 총력전",
+      "summary": "수입했지만, 가격 상승세를 막기에는 역부족이었다. 농산물과 수산물도 상황은 비슷하다.... 지정해 수급 상황을 상시 점검하기로 했다. 석유류 최고가격도 국제유가 하락분을 반영해 인하하고 유류세 인하 연장...",
+      "source": "news1.kr",
+      "publishedAt": "2026-06-27T23:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/421/0009027348?sid=101",
+      "originallink": "https://www.news1.kr/economy/trend/6209892",
+      "keyword": "수급"
+    },
     {
       "id": "08435b7e0632a26a",
       "title": "“인건비도 못 건져” 갈아엎는 양파밭···수입산보다 싼 국산 양파",
@@ -156,16 +166,6 @@
       "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101435",
       "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101435",
       "keyword": "시장"
-    },
-    {
-      "id": "ae6f2702ead9694c",
-      "title": "농산물값 폭락·농자재값 급등에 농민단체 반발",
-      "summary": "[사진=전종덕 의원실] 농산물 가격 하락과 농자재 가격 상승이 동시에... 주요 농산물 공공수급제 도입 등 근본적인 대책이 필요하다\"고 밝혔다. 농민단체들은 최근 국제 정세 변화와...",
-      "source": "youngnong.co.kr",
-      "publishedAt": "2026-06-24T16:24:00.000Z",
-      "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=60417",
-      "originallink": "http://www.youngnong.co.kr/news/articleView.html?idxno=60417",
-      "keyword": "수급"
     }
   ]
 }
