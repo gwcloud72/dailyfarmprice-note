@@ -2,11 +2,81 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-27T23:24:30.390Z",
+    "updatedAt": "2026-06-28T23:23:53.173Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "ec512376363e30d9",
+      "title": "[Issue+] 가락시장 시범휴업 추진 상황과 과제는",
+      "summary": "농산물을 출하하는 산지 농업인과 가락시장 중도매인 모두가 가격결정 과정에서 불안감을 갖고 있어 정가·수의매매보다는 경매를 압도적으로 선호하는데, 경매를 위해서는 휴업할 수 없다는 지적이다. 그는 \"프랑스와...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-28T22:00:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323286",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323286",
+      "keyword": "시장"
+    },
+    {
+      "id": "fa81364378b23c1d",
+      "title": "농산물 도매시장 쏠림 막는다…출하예측 20개 품목 확대",
+      "summary": "정부가 농산물 가격 변동성을 줄이기 위해 도매시장 출하예측 시스템을 대폭 고도화한다. 기존 6개 품목이던... 있도록 도매시장 출하예측 시스템을 구축하고 있으며 전자송품장도 2024년 말 가락시장 등 12개...",
+      "source": "newsis.com",
+      "publishedAt": "2026-06-28T21:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014033132?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20260626_0003684945",
+      "keyword": "시장"
+    },
+    {
+      "id": "dc0cb8cd0e30a75b",
+      "title": "경북도, 양파 가격 하락에 소비촉진·수출 확대 총력",
+      "summary": "반면 1인당 연간 소비량은 지속적으로 감소해 지난 23일 기준 가락시장 양파 도매가격(상품)은 kg당... 바로마켓은 농업인이 생산한 농산물의 유통단계를 줄여 신선하고 합리적인 가격에 제공하는 직거래장터(대구 북구...",
+      "source": "dkilbo.com",
+      "publishedAt": "2026-06-28T09:20:00.000Z",
+      "link": "https://www.dkilbo.com/news/articleView.html?idxno=547130",
+      "originallink": "https://www.dkilbo.com/news/articleView.html?idxno=547130",
+      "keyword": "양파"
+    },
+    {
+      "id": "72835daecf9b7839",
+      "title": "양파값 30% 급락…경북도 소비·수출 확대 총력 대응",
+      "summary": "공급 증가와 소비 부진이 맞물리면서 지난 23일 기준 가락시장 양파 도매가격은 ㎏당 689원으로 평년... 농업계에서는 생산비와 인건비 상승이 지속되는 상황에서 농산물 가격까지 하락하면서 농가 경영 부담이 커지고...",
+      "source": "kyongbuk.co.kr",
+      "publishedAt": "2026-06-28T06:22:00.000Z",
+      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4076750",
+      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4076750",
+      "keyword": "양파"
+    },
+    {
+      "id": "cef4217f919fe0df",
+      "title": "음성 화학물질 유출 8개월 넘었지만…일부 농민 아직도 보상 못 받아",
+      "summary": "이들은 농산물유통종합정보시스템(농넷) 도매가격과 정부 수매 기준가격 등을 적용해 총 손해액을... 기준과 가락시장 평균 거래가격을 종합해 합리적인 선에서 보상 기준을 마련했다”고 설명했다. 이어 그는 “기준과...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-06-28T05:18:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000098431?sid=102",
+      "originallink": "https://www.nongmin.com/article/20260625500484",
+      "keyword": "시장"
+    },
+    {
+      "id": "61a33a717f7a2fec",
+      "title": "금시세(금값) 28일",
+      "summary": "필수 농산물을 대규모로 구매할 계획을 세웠다. 트럼프 대통령은 현재 다수의 이란 국민들이 극심한... 달러 가치가 약세일 때는 금가격이 상승하는 경향이 있으며, 반대로 달러가 강세를 보일 때는 금가격이 하락할...",
+      "source": "bntnews.co.kr",
+      "publishedAt": "2026-06-28T00:28:00.000Z",
+      "link": "https://www.bntnews.co.kr/article/view/bnt202606280003",
+      "originallink": "https://www.bntnews.co.kr/article/view/bnt202606280003",
+      "keyword": "수급"
+    },
+    {
+      "id": "aaead016cb15ec59",
+      "title": "'계란 10개에 5000원'…물가 폭등에 '1조원' 쏟아 붓는다",
+      "summary": "닭고기 가격과 계란 가격이 동시에 상승하고 있는 셈이다. 농산물과 수산물도 상황은 비슷하다.... 지정해 수급 상황을 상시 점검하기로 했다. 석유류 최고가격도 국제유가 하락분을 반영해 인하하고 유류세 인하...",
+      "source": "hankyung.com",
+      "publishedAt": "2026-06-27T23:26:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/015/0005303510?sid=101",
+      "originallink": "https://www.hankyung.com/article/2026062817777",
+      "keyword": "수급"
+    },
     {
       "id": "1438b0ad85e4a444",
       "title": "계란 10개 5천원·고등어 폭등에…'1조원' 쏟아부어 물가 사수 총력전",
@@ -95,76 +165,6 @@
       "publishedAt": "2026-06-26T03:28:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/079/0004162116?sid=101",
       "originallink": "https://www.nocutnews.co.kr/news/6539175?utm_source=naver&utm_medium=article&utm_campaign=20260626122743",
-      "keyword": "시장"
-    },
-    {
-      "id": "e5088015c35bf2c2",
-      "title": "1조 투입해 '8월 고비' 정조준...정부, 하반기 물가 3% 방어 총력",
-      "summary": "정부가 최근 3%를 넘긴 소비자물가 상승률 하락을 위해 1조원 규모의 재정을 투입하고 석유 최고가격을... 이상기후에 대비한 중장기 수급 관리도 강화한다. 정부는 배추, 무, 마늘 등 농산물 비축을 확대하고, 고등어...",
-      "source": "newspim.com",
-      "publishedAt": "2026-06-26T02:39:00.000Z",
-      "link": "https://www.newspim.com/news/view/20260626000493",
-      "originallink": "https://www.newspim.com/news/view/20260626000493",
-      "keyword": "배추"
-    },
-    {
-      "id": "acbda74e48494945",
-      "title": "양파, 풍작인데 갈아엎는다…경북도 소비 촉진으로 농가 지원",
-      "summary": "하지만 1인당 양파 연간 소비량은 지속적으로 감소해 지난 6월 23일 기준 가락시장 양파 도매가격(상품)은... 농산물 직거래 장터인 바로마켓에서도 다음 달 11∼12일 특별 할인 행사를 할 예정이다. 도는 양파...",
-      "source": "yna.co.kr",
-      "publishedAt": "2026-06-26T00:44:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/001/0016160709?sid=102",
-      "originallink": "https://www.yna.co.kr/view/AKR20260626040300053?input=1195m",
-      "keyword": "양파"
-    },
-    {
-      "id": "7a64f07b9f0d28f5",
-      "title": "경북도, 양파값 급락에 소비 촉진 ‘총력’…수출도 확대",
-      "summary": "실제 지난 23일 기준 서울 가락시장 양파 도매가격(상품)은 ㎏당 689원으로, 평년 가격인 1016원보다 32.2... 농산물 유통단계를 줄여 신선한 농산물을 합리적인 가격에 제공하는 직거래장터인 바로마켓은 대구 북구...",
-      "source": "kukinews.com",
-      "publishedAt": "2026-06-26T00:20:00.000Z",
-      "link": "https://www.kukinews.com/article/view/kuk202606260021",
-      "originallink": "https://www.kukinews.com/article/view/kuk202606260021",
-      "keyword": "양파"
-    },
-    {
-      "id": "098d389d474232e8",
-      "title": "이철우 지사 \"양파 갈아엎는 농심 달래겠다\"",
-      "summary": "지난 23일 기준 가락시장 양파(상품) 도매가격은 kg당 689원으로, 평년 1016원에 비해 32.2%나 떨어졌다. 밭에서... 바로마켓은 매주 토·일요일 오전 9시부터 오후 5시까지 운영되며, 농민이 직접 생산한 농산물을 유통단계...",
-      "source": "hidomin.com",
-      "publishedAt": "2026-06-26T00:00:00.000Z",
-      "link": "https://www.hidomin.com/news/articleView.html?idxno=710943",
-      "originallink": "https://www.hidomin.com/news/articleView.html?idxno=710943",
-      "keyword": "양파"
-    },
-    {
-      "id": "7369c8dc1e7bcd90",
-      "title": "정부, 하반기 전기·가스요금 '동결' … 석유최고가격 인하 후 당분간 유...",
-      "summary": "등유와 LPG를 사용하는 에너지바우처 수급 가구에는 올해 10월부터 내년 5월까지 쓸 수 있는 14만7000원의... 이는 농축수산물 생산량 감소로 인한 '애그플레이션(농산물 가격 상승으로 인한 물가 상승)'을 유발할 수 있으며...",
-      "source": "biz.newdaily.co.kr",
-      "publishedAt": "2026-06-25T23:44:00.000Z",
-      "link": "https://biz.newdaily.co.kr/site/data/html/2026/06/26/2026062600034.html",
-      "originallink": "https://biz.newdaily.co.kr/site/data/html/2026/06/26/2026062600034.html",
-      "keyword": "수급"
-    },
-    {
-      "id": "baaf4b7bef92deb3",
-      "title": "개설 1년 만에 농수산물 유통비용 11%P 획기적 절감 [농어촌이 미래다-그...",
-      "summary": "2조… 2024년比 84% ↑ 누구든 자유롭게 농산물을 온라인에 판매할 수 있는 ‘농수산물 온라인도매시장’이... 온라인에서 즉각적인 가격·품질 경쟁이 확대되면서 이용자가 늘어나는 선순환 구조도 형성되고 있어...",
-      "source": "segye.com",
-      "publishedAt": "2026-06-25T21:04:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/022/0004138355?sid=101",
-      "originallink": "https://www.segye.com/newsView/20260624520951?OutUrl=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "5767b955b4875cff",
-      "title": "중앙청과, 산지 물류비 절감에 2천만원 지원",
-      "summary": "가락상생기금은 가락시장 도매시장법인인 중앙청과·서울청과·동화청과·대아청과와 농협가락공판장 등이 공동 조성해 한국농어촌희망재단에 출연한 공익기금이다. 산지 생산자 지원, 농산물 유통 활성화, 도매시장...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-06-24T22:24:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101435",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=101435",
       "keyword": "시장"
     }
   ]
