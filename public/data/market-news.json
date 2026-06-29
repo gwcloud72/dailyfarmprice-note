@@ -2,11 +2,91 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-06-28T23:23:53.173Z",
+    "updatedAt": "2026-06-29T23:20:47.138Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "1b9618932272a969",
+      "title": "‘늦은장마’로 농산물 출하 몰려⋯가격 급락",
+      "summary": "강원지역 농산물 가격이 출하 초기부터 무너지고 있다. 예년 같으면 장마가 시작돼야 할 시기에도 비가... 신북농협은 가격 하락을 막기 위해 서울 가락시장 반입량을 조절하고 다른 도매시장과 대형마트로 물량을...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-06-29T09:37:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000098523?sid=102",
+      "originallink": "https://www.nongmin.com/article/20260629500594",
+      "keyword": "시장"
+    },
+    {
+      "id": "02da6fce2e44f6b3",
+      "title": "[경북] 경북, 양파 가격 폭락에 소비촉진 행사 개최",
+      "summary": "진행하고, 농산물 직거래 장터인 바로마켓에서도 특별 할인 행사를 엽니다. 또 양파 가격 안정화를 위해... 지난 6월 23일 기준 가락시장 양파 도매가격은 1㎏에 689원으로 평년 천16원과 비교해 32.2% 하락했습니다.",
+      "source": "ytn.co.kr",
+      "publishedAt": "2026-06-29T08:10:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/052/0002372373?sid=102",
+      "originallink": "https://www.ytn.co.kr/_ln/0115_202606291710476063",
+      "keyword": "양파"
+    },
+    {
+      "id": "9b038729a28f5cee",
+      "title": "[N2심층] 양파밭에서 들려오는 경고음…한국 농업 이대로 괜찮은가?",
+      "summary": "낮아지는 '가격 역전' 현상이 반년 넘게 이어지고 있다는 점이다. 풍년이 재앙이 되고, 국산 농산물이... 지난 6월 23일 기준 가락시장 양파 도매가격은 ㎏당 689원으로 평년 가격(1016원)보다 32.2% 낮다. 일부 거래에서는...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-06-29T06:30:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20260629500128",
+      "originallink": "https://www.news2day.co.kr/article/20260629500128",
+      "keyword": "양파"
+    },
+    {
+      "id": "1af13dc8773ac430",
+      "title": "서울청과, 애월농협과 산지 농산물 유통 활성화 협력",
+      "summary": "도매시장법인 서울청과는 지난 22일 가락시장 사무실에서 제주 애월농협과 간담회를 갖고 제주산 농산물 유통... 전반적인 농산물 소비가 둔화해 농업인의 어려움이 커졌다고 설명했다. 특히 비료와 농약 등 농자재 가격과...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-29T05:58:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323292",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323292",
+      "keyword": "시장"
+    },
+    {
+      "id": "8322349586a78fb7",
+      "title": "동화청과, 서홍천·곤지암농협에 맞춤형 물류·영농기자재 전달",
+      "summary": "이번 사업은 농자재 가격 상승과 인력 부족 등으로 어려움을 겪는 산지 농가의 부담을 덜고 생산비 절감을 돕기 위해 마련됐다. 이를 위해 가락시장지회 소속 도매시장법인(동화청과·서울청과·중앙청과·대아청과)과...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-29T05:56:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323267",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323267",
+      "keyword": "시장"
+    },
+    {
+      "id": "d98bf13927b832ba",
+      "title": "대아청과·애월농협, 제주산 농산물 유통 활성화 '맞손'",
+      "summary": "서울 가락동 농수산물도매시장법인 대아청과(대표 이상용)는 지난 22일 가락시장 사무실에서 제주 애월농협과 간담회를 열고 제주산 농산물 유통 활성화 방안을 논의했다고 밝혔다. 이날 김병수 애월농협 조합장과...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-29T05:56:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323291",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323291",
+      "keyword": "시장"
+    },
+    {
+      "id": "7f3023802aedc4ff",
+      "title": "중앙청과, 서창농협에 물류·영농기자재 지원",
+      "summary": "한편 가락상생기금은 가락시장 도매시장법인(중앙·서울·동화·대아·농협가락공판장) 등이 공동 조성해 한국농어촌희망재단에 출연한 공익기금이다. 산지 생산자 지원·농산물 유통 활성화·도매시장 공익적 기능 강화를...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-06-29T05:38:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323244",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323244",
+      "keyword": "시장"
+    },
+    {
+      "id": "51e4b318854ba254",
+      "title": "농산물 도매시장 쏠림 막는다…출하예측 20개 품목 확대",
+      "summary": "정부가 농산물 가격 변동성을 줄이기 위해 도매시장 출하예측 시스템을 대폭 고도화한다. 기존 6개 품목이던... 있도록 도매시장 출하예측 시스템을 구축하고 있으며 전자송품장도 2024년 말 가락시장 등 12개...",
+      "source": "widedaily.com",
+      "publishedAt": "2026-06-29T01:54:00.000Z",
+      "link": "https://www.widedaily.com/news/articleView.html?idxno=296623",
+      "originallink": "https://www.widedaily.com/news/articleView.html?idxno=296623",
+      "keyword": "시장"
+    },
     {
       "id": "ec512376363e30d9",
       "title": "[Issue+] 가락시장 시범휴업 추진 상황과 과제는",
@@ -25,36 +105,6 @@
       "publishedAt": "2026-06-28T21:00:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/003/0014033132?sid=101",
       "originallink": "https://www.newsis.com/view/NISX20260626_0003684945",
-      "keyword": "시장"
-    },
-    {
-      "id": "dc0cb8cd0e30a75b",
-      "title": "경북도, 양파 가격 하락에 소비촉진·수출 확대 총력",
-      "summary": "반면 1인당 연간 소비량은 지속적으로 감소해 지난 23일 기준 가락시장 양파 도매가격(상품)은 kg당... 바로마켓은 농업인이 생산한 농산물의 유통단계를 줄여 신선하고 합리적인 가격에 제공하는 직거래장터(대구 북구...",
-      "source": "dkilbo.com",
-      "publishedAt": "2026-06-28T09:20:00.000Z",
-      "link": "https://www.dkilbo.com/news/articleView.html?idxno=547130",
-      "originallink": "https://www.dkilbo.com/news/articleView.html?idxno=547130",
-      "keyword": "양파"
-    },
-    {
-      "id": "72835daecf9b7839",
-      "title": "양파값 30% 급락…경북도 소비·수출 확대 총력 대응",
-      "summary": "공급 증가와 소비 부진이 맞물리면서 지난 23일 기준 가락시장 양파 도매가격은 ㎏당 689원으로 평년... 농업계에서는 생산비와 인건비 상승이 지속되는 상황에서 농산물 가격까지 하락하면서 농가 경영 부담이 커지고...",
-      "source": "kyongbuk.co.kr",
-      "publishedAt": "2026-06-28T06:22:00.000Z",
-      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4076750",
-      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4076750",
-      "keyword": "양파"
-    },
-    {
-      "id": "cef4217f919fe0df",
-      "title": "음성 화학물질 유출 8개월 넘었지만…일부 농민 아직도 보상 못 받아",
-      "summary": "이들은 농산물유통종합정보시스템(농넷) 도매가격과 정부 수매 기준가격 등을 적용해 총 손해액을... 기준과 가락시장 평균 거래가격을 종합해 합리적인 선에서 보상 기준을 마련했다”고 설명했다. 이어 그는 “기준과...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-06-28T05:18:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098431?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260625500484",
       "keyword": "시장"
     },
     {
@@ -88,26 +138,6 @@
       "keyword": "수급"
     },
     {
-      "id": "08435b7e0632a26a",
-      "title": "“인건비도 못 건져” 갈아엎는 양파밭···수입산보다 싼 국산 양파",
-      "summary": "한국농수산식품유통공사 농산물유통정보를 보면 지난 25일 가락시장 국산 양파(상품) 도매가격은 ㎏당 821원이었다. 같은 날 수입산 양파는 ㎏당 1500원에 거래됐다. 이 같은 현상은 지난해 말부터 6개월 넘게 이어지고...",
-      "source": "khan.co.kr",
-      "publishedAt": "2026-06-26T21:00:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/032/0003454612?sid=102",
-      "originallink": "https://www.khan.co.kr/article/202606270600041",
-      "keyword": "양파"
-    },
-    {
-      "id": "7128576c72de8428",
-      "title": "여주 대신농협, 가락공판장 찾아 ‘농산물 제값받기’ 협력 논의",
-      "summary": "서울 가락동 농산물공판장 현장 견학을 했다. 이번 방문은 경기 침체와 소비 위축으로 농산물 가격이 약세를... 대신농협은 이번 방문을 계기로 도매시장과의 협력 체계를 더욱 강화하고, 조합원들이 생산한 농산물의 판로...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-06-26T09:40:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098355?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260625500429",
-      "keyword": "시장"
-    },
-    {
       "id": "b12f30cc4f999072",
       "title": "[증시 인사이트] 코스피 급락에 사이드카·서킷브레이커…멀어지는 9천...",
       "summary": "메모리 가격 2.5배 이상 상승\" - 메모리 반도체 공급난에 따른 물가 충격 본격화 - AI발 인플레이션, 소비자... 수입 기대 - 이란 \"동결자산으로 미국 농산물 절대 안 살 것\" (자세한 내용은 동영상을 시청하시기 바랍니다.)",
@@ -116,36 +146,6 @@
       "link": "https://n.news.naver.com/mnews/article/374/0000518514?sid=101",
       "originallink": "https://biz.sbs.co.kr/article_hub/20000319158?division=NAVER",
       "keyword": "수급"
-    },
-    {
-      "id": "ae1cdca0425685ce",
-      "title": "'풍년의 역설' 시름 깊어진 양파 농가…경북도, 밥상 올리기·해외 유통...",
-      "summary": "이에 6월 23일 기준 가락시장 양파 도매가(상품)는 ㎏당 689원까지 떨어져 평년 가격(1016원) 대비 32.2%가량... 이철우 도지사는 \"정성껏 키운 농산물이 풍년을 맞이하고도 가격 하락으로 인해 밭을 갈아엎어야 하는...",
-      "source": "eroun.net",
-      "publishedAt": "2026-06-26T07:20:00.000Z",
-      "link": "https://www.eroun.net/news/articleView.html?idxno=84086",
-      "originallink": "https://www.eroun.net/news/articleView.html?idxno=84086",
-      "keyword": "양파"
-    },
-    {
-      "id": "0de78b5f5e7ff919",
-      "title": "경북도 양파 가격 하락에 맞서 소비 촉진·수출 확대 총력",
-      "summary": "그러나 1인당 연간 소비량은 지속적으로 감소해 지난 23일 기준 가락시장 양파 도매가격(상품)은 kg당... 바로마켓은 농업인이 직접 생산한 농산물을 유통 단계를 줄여 합리적인 가격에 제공하는 직거래 장터로, 대구...",
-      "source": "kbmaeil.com",
-      "publishedAt": "2026-06-26T07:10:00.000Z",
-      "link": "https://www.kbmaeil.com/article/20260626500131",
-      "originallink": "https://www.kbmaeil.com/article/20260626500131",
-      "keyword": "양파"
-    },
-    {
-      "id": "bdc941c459ce1dce",
-      "title": "경북도, 양파 가격 하락에 소비촉진·수출 확대",
-      "summary": "하지만 1인당 양파 연간 소비량은 지속적으로 감소해 지난 23일 기준 가락시장 양파 도매가격(상품)은 1㎏당... 농산물 직거래 장터인 바로마켓에서도 다음 달 11∼12일 특별 할인 행사를 할 예정이다. 경북도는 양파...",
-      "source": "hankookilbo.com",
-      "publishedAt": "2026-06-26T06:51:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/469/0000938820?sid=102",
-      "originallink": "https://www.hankookilbo.com/news/article/A2026062615210002497?did=NA",
-      "keyword": "양파"
     },
     {
       "id": "877c8d52def7dd18",
