@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-07-02T23:29:44.319Z",
+    "updatedAt": "2026-07-03T23:27:57.043Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "77bfa0f35cc1b3c0",
+      "title": "한국청과, 양파 출하조직에 파렛트용 그물랩 지원",
+      "summary": "한국청과에 따르면 서울 가락동 농수산물도매시장으로 출하되는 양파는 기계 선별을 거쳐 망(12kg, 15kg, 20kg)... 순차적으로 추진해 산지와의 상생협력을 꾀하고 안정적인 농산물 유통체계 구축에 기여한다는 방침이다.",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-07-03T05:26:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323622",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323622",
+      "keyword": "양파"
+    },
     {
       "id": "700c729ffc2c0e9e",
       "title": "늦장마·무더위 탓 생육 빨라진 강원농산물…출하 봇물에 값 ‘와르르’",
@@ -156,16 +166,6 @@
       "link": "http://www.amnews.co.kr/news/articleView.html?idxno=73290",
       "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=73290",
       "keyword": "시장"
-    },
-    {
-      "id": "8ede00078de46911",
-      "title": "\"더우면 더 비싸진다\"…계란·닭고기 덮친 '히트플레이션' 공포",
-      "summary": "한국육계협회에 따르면 치킨 프랜차이즈에서 주로 사용하는 9~10호 닭고기 평균 시세는 올해 3월... 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 이달 대파 1㎏ 소매가격은 2827원으로 지난해 6월보다...",
-      "source": "dailian.co.kr",
-      "publishedAt": "2026-07-01T21:44:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/119/0003107024?sid=101",
-      "originallink": "https://www.dailian.co.kr/news/view/1662124/?sc=Naver",
-      "keyword": "대파"
     }
   ]
 }
