@@ -2,11 +2,31 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-07-03T23:27:57.043Z",
+    "updatedAt": "2026-07-04T23:19:43.471Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "f1718a3cceb24266",
+      "title": "취임 사흘 만에 가락시장 찾은 김세훈 화천군수…\"농산물 제값 받도록 ...",
+      "summary": "[사진=화천군] 취임 사흘을 맞은 김세훈 화천군수가 첫 외부 일정으로 서울 가락동 농산물도매시장을 찾아 화천산 농산물 판매와 가격 안정을 위한 현장 행보에 나섰다. 취임 직후 재정 혁신과 농업 경쟁력 강화를 잇달아...",
+      "source": "ajunews.com",
+      "publishedAt": "2026-07-04T08:34:00.000Z",
+      "link": "https://www.ajunews.com/view/20260704172949942",
+      "originallink": "https://www.ajunews.com/view/20260704172949942",
+      "keyword": "시장"
+    },
+    {
+      "id": "6fcf5e63cdcffaf5",
+      "title": "경매대에 오른 화천군수… 취임 3일 만에 가락시장 ‘심야 세일즈’ 눈...",
+      "summary": "서울 가락동 농산물도매시장을 찾았다. 민연홍 농협 화천군지부장, 김명규 화천농협 조합장, 오흥선 간동농협... 이번 방문은 최근 오이와 애호박 가격이 지난해 대비 절반 수준까지 급락하는 등 산지 농가의 위기감이...",
+      "source": "kwnews.co.kr",
+      "publishedAt": "2026-07-04T07:58:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/087/0001203010?sid=102",
+      "originallink": "https://www.kwnews.co.kr/article/20260704500237",
+      "keyword": "시장"
+    },
     {
       "id": "77bfa0f35cc1b3c0",
       "title": "한국청과, 양파 출하조직에 파렛트용 그물랩 지원",
@@ -146,26 +166,6 @@
       "link": "http://www.ikpnews.net/news/articleView.html?idxno=70844",
       "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=70844",
       "keyword": "수급"
-    },
-    {
-      "id": "0637e0a07de6b055",
-      "title": "“기름값, 밥상물가 들썩” 두달째 3%대…정부 “당분간 상승세 지속”",
-      "summary": "여름철 수급 부족으로 먹거리 가격도 치솟고 있다. 6월 농축수산물 물가는 전년대비 3.2% 오르며 5월(2.2%)보다 상승 폭이 커졌다. 파(37.1%), 쌀(11.7%) 등이 올라 농산물이 1.1%로 전월 감소세에서 상승세로 돌아섰다....",
-      "source": "ekn.kr",
-      "publishedAt": "2026-07-02T02:34:00.000Z",
-      "link": "https://www.ekn.kr/web/view.php?key=20260702024548557",
-      "originallink": "https://www.ekn.kr/web/view.php?key=20260702024548557",
-      "keyword": "수급"
-    },
-    {
-      "id": "69881858efe566d3",
-      "title": "중앙청과, 가락상생기금으로 서창농협 지원",
-      "summary": "가락시장 도매시장법인 중앙청과가 가락상생기금을 활용해 산지 농가의 물류비 부담을 덜고 안정적인 농산물... 이번 사업은 한국농어촌희망재단에 출연된 가락상생기금을 활용해 추진됐으며, 최근 농자재 가격 상승과...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-07-02T01:32:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=73290",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=73290",
-      "keyword": "시장"
     }
   ]
 }
