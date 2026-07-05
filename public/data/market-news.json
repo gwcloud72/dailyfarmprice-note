@@ -2,11 +2,101 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-07-04T23:19:43.471Z",
+    "updatedAt": "2026-07-05T23:25:48.536Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "609ef889c28d710c",
+      "title": "[afl Interview] 김병율 한국농산업미래연구원장",
+      "summary": "서울 가락동 농산물도매시장 같은 시장 하나만 보고 전체를 판단하는 것이 아니라 전체 공급망의 맥을... 일본 전국농업협동조합연합회(JA전농) 단위로 출하하고 농산물 가격 형성과정에서 막강한 영향력을 행사한다....",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-07-05T22:00:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323734",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323734",
+      "keyword": "시장"
+    },
+    {
+      "id": "b84880a8e3c5979c",
+      "title": "농산물값 하락에… 화천군수 직접 세일즈",
+      "summary": "취임 첫 출장지는 서울 가락시장 김세훈 강원 화천군수가 취임 첫 출장지로 서울 가락동 농산물 도매시장을 선택했다. 애호박과 오이 등 농산물 도매가격 하락으로 농민들이 어려움을 겪자 직접 세일즈에 나선 것이다. 5일...",
+      "source": "segye.com",
+      "publishedAt": "2026-07-05T21:04:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/022/0004140741?sid=102",
+      "originallink": "https://www.segye.com/newsView/20260705509012?OutUrl=naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "c7409f2b4ce3b4e9",
+      "title": "고물가가 바꾼 유통 단계...정부는 온라인도매 키우고, 이커머스 ‘산지...",
+      "summary": "기존 가락시장을 거치던 방식을 벗어나 도매 수수료를 낮추고 물류 효율을 높여 농산물 가격을 안정시킨다는 전략이다. 유통기업들도 독자적인 물류망을 활용해 산지 직거래를 강화하며 중도매인과 도매시장 단계를...",
+      "source": "etoday.co.kr",
+      "publishedAt": "2026-07-05T21:00:00.000Z",
+      "link": "https://www.etoday.co.kr/news/view/2595689",
+      "originallink": "https://www.etoday.co.kr/news/view/2595689",
+      "keyword": "시장"
+    },
+    {
+      "id": "a2e6f0bd250afad6",
+      "title": "김세훈 화천군수 지역 농산물 세일즈 행보 본격화",
+      "summary": "김세훈 화천군수는 취임 사흘 만에 첫 출장지로 서울시 가락동 농산물 도매시장을 찾아 화천산 농산물... 가락동 시장을 찾았다. 이날 방문은 최근 생산량 급증으로 화천산 오이, 호박 등이 지난해 절반 수준으로 가격이...",
+      "source": "kado.net",
+      "publishedAt": "2026-07-05T15:08:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/654/0000188969?sid=102",
+      "originallink": "https://www.kado.net/news/articleView.html?idxno=2059551",
+      "keyword": "시장"
+    },
+    {
+      "id": "31d928f0954a7e40",
+      "title": "김세훈 군수, 화천 농산물 가격 안정 위한 발 빠른 현장 세일즈",
+      "summary": "강원도 화천군 김세훈 군수가 취임 사흘 만인 지난 3일 밤 서울 가락동 농산물 도매시장을 방문해 화천산 농산물의 가격 안정과 판로 개척을 위한 현장 세일즈에 나섰다. 이는 최근 오이와 호박의 생산량 급증으로 경매...",
+      "source": "viva100.com",
+      "publishedAt": "2026-07-05T07:42:00.000Z",
+      "link": "https://www.viva100.com/article/20260705500581",
+      "originallink": "https://www.viva100.com/article/20260705500581",
+      "keyword": "시장"
+    },
+    {
+      "id": "d5ffe9d098ea24c4",
+      "title": "\"화천 농산물 팔러온 김세훈 화천군수 입니다\"··· 취임식 사흘 만에 ...",
+      "summary": "농산물 가격이 폭락해 농민들의 근심이 크다\"며 \"최고 품질의 화천 농산물이 제값을 받을 수 있도록 각별히 살펴달라\"고 요청했다. 김세훈 화천군수가 지난 3일 밤 서울시 가락동 농산물 도매시장을 찾아 화천산 오이와...",
+      "source": "jeonmae.co.kr",
+      "publishedAt": "2026-07-05T03:48:00.000Z",
+      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1271514",
+      "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1271514",
+      "keyword": "시장"
+    },
+    {
+      "id": "be3ba24329f5bb1a",
+      "title": "김세훈 화천군수, 가락동 시장 첫 세일즈 행보",
+      "summary": "김세훈 강원 화천군수가 취임 직후 첫 서울 가락동 농산물 도매시장을 찾으며 ‘발로 뛰는 세일즈 행정’의... 품질의 농산물을 출하하기 위해 안간힘을 쓰고 있다”며 “화천 농민들의 정성을 잘 살펴 좋은 가격을 매겨...",
+      "source": "kukinews.com",
+      "publishedAt": "2026-07-05T02:54:00.000Z",
+      "link": "https://www.kukinews.com/article/view/kuk202607050012",
+      "originallink": "https://www.kukinews.com/article/view/kuk202607050012",
+      "keyword": "시장"
+    },
+    {
+      "id": "44ff82a8938289f1",
+      "title": "가락동도매시장 찾은 김세훈 화천군수…“농민들 정성이 제값 받게”",
+      "summary": "매일이라도 가락동을 찾겠다”고 당부했다. 그는 화천의 대표 농산물인 오이, 애호박의 포장과 신선도를 꼼꼼히 살폈고, 대형 청과업체 대표들을 만나 가격 동향과 유통환경도 점검했다. 도매시장에는 군의회 조웅희 의장...",
+      "source": "seoul.co.kr",
+      "publishedAt": "2026-07-05T01:30:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/081/0003658377?sid=102",
+      "originallink": "https://www.seoul.co.kr/news/society/2026/07/05/20260705500012?wlog_tag3=naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "367968bb147587e6",
+      "title": "김세훈 화천군수, 취임 사흘 만에 가락시장 찾아 농산물 판로 지원 나서",
+      "summary": "김세훈 강원 화천군수가 취임 사흘 만에 첫 공식 출장지로 서울 가락동 농수산물도매시장을 찾아 화천산 농산물 판로 확보와 가격 안정에 나섰다. 김 군수는 지난 3일 밤 화천군 방문단을 이끌고 가락시장을 방문해 오이와...",
+      "source": "shinailbo.co.kr",
+      "publishedAt": "2026-07-05T00:40:00.000Z",
+      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5037419",
+      "originallink": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5037419",
+      "keyword": "시장"
+    },
     {
       "id": "f1718a3cceb24266",
       "title": "취임 사흘 만에 가락시장 찾은 김세훈 화천군수…\"농산물 제값 받도록 ...",
@@ -15,66 +105,6 @@
       "publishedAt": "2026-07-04T08:34:00.000Z",
       "link": "https://www.ajunews.com/view/20260704172949942",
       "originallink": "https://www.ajunews.com/view/20260704172949942",
-      "keyword": "시장"
-    },
-    {
-      "id": "6fcf5e63cdcffaf5",
-      "title": "경매대에 오른 화천군수… 취임 3일 만에 가락시장 ‘심야 세일즈’ 눈...",
-      "summary": "서울 가락동 농산물도매시장을 찾았다. 민연홍 농협 화천군지부장, 김명규 화천농협 조합장, 오흥선 간동농협... 이번 방문은 최근 오이와 애호박 가격이 지난해 대비 절반 수준까지 급락하는 등 산지 농가의 위기감이...",
-      "source": "kwnews.co.kr",
-      "publishedAt": "2026-07-04T07:58:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/087/0001203010?sid=102",
-      "originallink": "https://www.kwnews.co.kr/article/20260704500237",
-      "keyword": "시장"
-    },
-    {
-      "id": "77bfa0f35cc1b3c0",
-      "title": "한국청과, 양파 출하조직에 파렛트용 그물랩 지원",
-      "summary": "한국청과에 따르면 서울 가락동 농수산물도매시장으로 출하되는 양파는 기계 선별을 거쳐 망(12kg, 15kg, 20kg)... 순차적으로 추진해 산지와의 상생협력을 꾀하고 안정적인 농산물 유통체계 구축에 기여한다는 방침이다.",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-07-03T05:26:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=323622",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=323622",
-      "keyword": "양파"
-    },
-    {
-      "id": "700c729ffc2c0e9e",
-      "title": "늦장마·무더위 탓 생육 빨라진 강원농산물…출하 봇물에 값 ‘와르르’",
-      "summary": "신북농협은 서울 가락시장 반입량을 조절하고 다른 도매시장과 대형마트로 물량을 분산했지만 가격 하락을 막기에는 역부족이었다. 농산물유통종합정보시스템(농넷)에 따르면 가락시장 토마토 경락값은 6월18일 10...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-07-02T20:03:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098859?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260701500652",
-      "keyword": "시장"
-    },
-    {
-      "id": "c9ddb2777d7de034",
-      "title": "음성 화학물질 유출 8개월…“현장조사 없이 일방적 피해산정 안될 말”",
-      "summary": "이들은 농산물유통종합정보시스템(농넷) 도매가격과 정부 수매 기준가격 등을 적용해 총손해액을... 서울 가락시장 평균 거래가격을 종합해 합리적인 선에서 보상 기준을 마련했다”고 설명했다. 그러면서 “기준과...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-07-02T20:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098835?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260701500508",
-      "keyword": "시장"
-    },
-    {
-      "id": "d6d3c387060bdbbe",
-      "title": "‘햇사레 감곡 복숭아’ 명성 이어간다",
-      "summary": "감곡농협은 6월26일 농산물산지유통센터(APC)에서 수도권 도매시장 경매사와 중도매인 등 300여명을 초청해... 경도훈 서울 가락시장 서울청과 부장은 “지난해 좋은 성과는 농가들이 고품질 복숭아 생산에 힘쓴 결과”...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-07-02T20:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098834?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260701500510",
-      "keyword": "시장"
-    },
-    {
-      "id": "4223de0e279055ce",
-      "title": "경기동부원예농협, ‘햇사레 복숭아’ 출하협의회 열어",
-      "summary": "수취가격은 기대에 못 미칠 수 있는 만큼 당도 관리와 선별에 더욱 신경 써 달라”고 당부했다. 이어... 이날 협의회에는 유재웅 조합장과 김기원 대표를 비롯해 서울 가락·강서시장과 경기 구리시장 농산물도매시장 법인...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-07-02T10:46:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098811?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260702500514",
       "keyword": "시장"
     },
     {
@@ -135,36 +165,6 @@
       "publishedAt": "2026-07-02T06:15:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/656/0000180523?sid=101",
       "originallink": "https://www.daejonilbo.com/news/articleView.html?idxno=2285311",
-      "keyword": "수급"
-    },
-    {
-      "id": "2435a0c2e9533e02",
-      "title": "중동발 유가 충격 영향 6월 물가 3.2% ↑... 충청권 체감 부담 '확대'",
-      "summary": "농축수산물 가격도 전국 물가 상승에 가세했다. 6월 농축수산물은 전년 동월 대비 3.2% 상승해 5월 2.2%보다 오름 폭이 확대됐다. 농산물은 5월 0.8% 하락에서 6월 1.1% 상승으로 전환했고, 축산물과 수산물은 각각 6.2%, 3....",
-      "source": "chungnamilbo.co.kr",
-      "publishedAt": "2026-07-02T05:04:00.000Z",
-      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=896842",
-      "originallink": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=896842",
-      "keyword": "수급"
-    },
-    {
-      "id": "40dcd175287f59b2",
-      "title": "[AI로 읽는 경제] 농가소득 5000만원의 착시…농사로 버는 돈 30년째 '100...",
-      "summary": "달리 농산물은 시장 수급과 유통 구조, 정부의 물가 관리 정책 영향을 크게 받아 농가가 가격을 자율적으로... 이를 위해 자연재해로 인한 수확량 감소에서 시장가격 하락에 따른 수입 손실까지 일정 수준 보장하는...",
-      "source": "newspim.com",
-      "publishedAt": "2026-07-02T04:43:00.000Z",
-      "link": "https://www.newspim.com/news/view/20260702000396",
-      "originallink": "https://www.newspim.com/news/view/20260702000396",
-      "keyword": "수급"
-    },
-    {
-      "id": "6f1149b9566cefd6",
-      "title": "생산비 폭등에도 초저가 농산물값…농민은 내년이 없다",
-      "summary": "고등어처럼 수급불안을 이유로 고가를 형성한 일부 품목을 앞세워 전체 농축산물 가격이 상승하고 있다는... 소비자가 찔끔 내릴 때, 농민 수취가 '뭉텅이' 하락 농산물 가격이 필요 이상으로 조명받는 동안 농민들의...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-07-02T04:18:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=70844",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=70844",
       "keyword": "수급"
     }
   ]
