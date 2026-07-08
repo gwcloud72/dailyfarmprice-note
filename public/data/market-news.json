@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-07-07T23:23:37.367Z",
+    "updatedAt": "2026-07-08T23:34:06.638Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "1e6248c22b615d5a",
+      "title": "밥상부터 외식까지 다 올랐다…고유가·고환율 덮친 상반기",
+      "summary": "같은 기간 쌀(15.1%), 인삼(14.6%), 감자(10.5%) 등 토종 농산물의 가격 상승 이면에도 석유화학 제품과 수입... 물가의 상승세가 이어질 가능성이 크다고 내다봤다. 이은희 인하대 소비자학과 명예교수는 \"국제 유가 하락분은...",
+      "source": "jnilbo.com",
+      "publishedAt": "2026-07-08T23:17:00.000Z",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000048719",
+      "originallink": "https://www.jnilbo.com/news/articleView.html?idxno=90000048719",
+      "keyword": "감자"
+    },
+    {
+      "id": "f9cfb80b786d1106",
+      "title": "고유가·고환율에 '밥상 물가' 급등…가격폭락 농가도 '이중고'",
+      "summary": "같은 기간 쌀(15.1%), 인삼(14.6%), 감자(10.5%) 등 토종 농산물의 가격 상승 이면에도 석유화학 제품과 수입... 성심당은 \"망고 수급 상황에 따라 판매 일정이 예상보다 빠르게 결정됐다\"고 설명했다. 지난 2024년 출시돼 인기를...",
+      "source": "yna.co.kr",
+      "publishedAt": "2026-07-08T23:04:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/001/0016183998?sid=101",
+      "originallink": "https://www.yna.co.kr/view/AKR20260708187800030?input=1195m",
+      "keyword": "감자"
+    },
+    {
+      "id": "fe70ad3a784fae84",
+      "title": "농산물값 하락·고유가 이중고…정부, 농가 경영안정 종합대책 총력",
+      "summary": "또 선제적인 수급관리에도 불구하고 가격이 일정 수준 이하로 떨어질 경우 하락분의 일부 또는 전부를 지원하는 농산물 가격안정제를 오는 8월부터 처음 시행한다. 농가 경영비 부담 완화를 위한 지원도 확대했다....",
+      "source": "youngnong.co.kr",
+      "publishedAt": "2026-07-08T13:54:00.000Z",
+      "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=60805",
+      "originallink": "http://www.youngnong.co.kr/news/articleView.html?idxno=60805",
+      "keyword": "수급"
+    },
+    {
+      "id": "d0c99cf919efe2dc",
+      "title": "농식품부, 농가 경영 안정을 위해 총력 대응",
+      "summary": "가격이 상승하여 농가 부담이 가중되고 있는 현 상황을 엄중히 인식하고, 농가 경영부담을 완화하기 위해 각별히 노력하고 있다고 밝혔다. 가격이 하락한 농산물 중 저장성이 있는 품목은 일정 물량을 정부가 비축하여...",
+      "source": "newsam.co.kr",
+      "publishedAt": "2026-07-08T05:54:00.000Z",
+      "link": "https://www.newsam.co.kr/news/article.html?no=43447",
+      "originallink": "https://www.newsam.co.kr/news/article.html?no=43447",
+      "keyword": "수급"
+    },
     {
       "id": "3c1f15e766dc16ab",
       "title": "농산물 가격 폭락에 농민 울분…정부, 경영 안정 위해 '총력 대응'",
@@ -75,46 +115,6 @@
       "publishedAt": "2026-07-07T07:57:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/001/0016181028?sid=101",
       "originallink": "https://www.yna.co.kr/view/AKR20260707144700030?input=1195m",
-      "keyword": "양파"
-    },
-    {
-      "id": "5f7482974c77f4f5",
-      "title": "\"가격 급락 막고 소득 지킨다\"…'농산물 가격안정제' 내달 도입",
-      "summary": "정부가 농산물 가격 하락과 경영비 상승으로 어려움을 겪는 농가 지원을 위해 다음 달 '농산물 가격안정제'를... 농산물 안정생산·공급지원 사업'을 올해 처음 도입해 245억 원을 투입하고 있다. 소비 촉진을 통한 수급 안정...",
-      "source": "news1.kr",
-      "publishedAt": "2026-07-07T07:42:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009045884?sid=101",
-      "originallink": "https://www.news1.kr/economy/trend/6220581",
-      "keyword": "수급"
-    },
-    {
-      "id": "bfd30f2ce681296b",
-      "title": "농식품부, 농가 경영부담 완화 총력…가격안정제 도입·수입안정보험 지...",
-      "summary": "정부는 일부 농산물 가격 하락과 경영비 상승으로 이중고를 겪고 있는 농가들의 부담을 덜어주기 위해... 경영안정장치인 농산물 가격안정제를 오는 8월 도입한다. 농산물 가격안정제는 선제적 수급관리에도 가격이 일정...",
-      "source": "foodnews.co.kr",
-      "publishedAt": "2026-07-07T07:16:00.000Z",
-      "link": "http://www.foodnews.co.kr/news/articleView.html?idxno=119284",
-      "originallink": "http://www.foodnews.co.kr/news/articleView.html?idxno=119284",
-      "keyword": "수급"
-    },
-    {
-      "id": "db729b47087f38c1",
-      "title": "채솟값은 떨어지고 기름값은 뛰고…농가 이중고에 ‘안전망’ 가동",
-      "summary": "올해부터 농업수입안정보험 지원 대상을 기존 15개 품목에서 20개 품목으로 확대했고, 8월에는 농산물 가격안정제를 도입한다. 가격안정제는 선제적 수급관리에도 가격이 일정 수준 이하로 떨어질 경우 하락분 일부...",
-      "source": "etoday.co.kr",
-      "publishedAt": "2026-07-07T06:58:00.000Z",
-      "link": "https://www.etoday.co.kr/news/view/2601182",
-      "originallink": "https://www.etoday.co.kr/news/view/2601182",
-      "keyword": "수급"
-    },
-    {
-      "id": "b7c771fc9844c08a",
-      "title": "[패트롤] 익산시-권요안 전북도의원",
-      "summary": "시는 익산푸드통합지원센터와 협력해 지역 농식품기업과 생산농가를 연결하는 '기업맞춤형 농산물 수급안정... 이번 매입량 증가는 최근 양파 생산량 증가에 따른 가격 하락과 생산비 상승 등으로 어려움을 겪고 있는...",
-      "source": "ekn.kr",
-      "publishedAt": "2026-07-07T06:44:00.000Z",
-      "link": "https://www.ekn.kr/web/view.php?key=20260707027350058",
-      "originallink": "https://www.ekn.kr/web/view.php?key=20260707027350058",
       "keyword": "양파"
     },
     {
