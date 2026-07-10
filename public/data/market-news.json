@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-07-09T23:35:05.205Z",
+    "updatedAt": "2026-07-10T23:21:23.381Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "08eb05f3ea39c7be",
+      "title": "서울시농수산식품공사 “인공지능 경영으로 전환”",
+      "summary": "생성되는 가락시장이야말로 AX가 가장 큰 효과를 낼 수 있는 현장”이라며 “AI 활용역량은 앞으로 조직... 문 사장은 “공영도매시장의 방대한 거래정보를 데이터화해 농산물 가격과 수급을 예측하고, 입차·하역 등...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-07-10T08:26:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000099417?sid=101",
+      "originallink": "https://www.nongmin.com/article/20260710500469",
+      "keyword": "시장"
+    },
+    {
+      "id": "c0c8b870d366470a",
+      "title": "서울시농수산식품공사, 'Value-up with AI' 선언…AI 경영 전환 본격화",
+      "summary": "중심이었던 도매시장 운영을 데이터 기반의 미래형 유통·물류체계로 전환하겠다고 설명했다. 특히 하루 4만6천 대의 차량이 출입하고 8천 톤의 농수산물이 거래되며 20만 건의 거래정보가 생성되는 가락시장이 AI...",
+      "source": "livesnews.com",
+      "publishedAt": "2026-07-10T00:58:00.000Z",
+      "link": "https://www.livesnews.com/news/article.html?no=62485",
+      "originallink": "https://www.livesnews.com/news/article.html?no=62485",
+      "keyword": "시장"
+    },
+    {
+      "id": "b9d6364193b27a71",
+      "title": "반복되는 농산물 가격 파동",
+      "summary": "2020년 이후 쌀, 육류, 계란 등은 가격상승이 컸으며 채소류와 일부 과일류는 소비감소에다 공급과잉이 겹쳐 큰 폭의 가격하락을 기록하였다. 농산물 과잉생산은 가격 폭락과 농가 소득 불안정을 초래하기 때문에 정부가...",
+      "source": "smedaily.co.kr",
+      "publishedAt": "2026-07-10T00:50:00.000Z",
+      "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=360080",
+      "originallink": "http://www.smedaily.co.kr/news/articleView.html?idxno=360080",
+      "keyword": "수급"
+    },
     {
       "id": "d60892e7bf5ad2a3",
       "title": "[농협] K-라이스페스타 접수 / NH콕뱅크 10주년 이벤트 / 양파 수급 안정...",
@@ -118,26 +148,6 @@
       "keyword": "시장"
     },
     {
-      "id": "017cc509a693229f",
-      "title": "서울시농수산식품공사, 'VISION 2030 : Value-up with AI' 선포",
-      "summary": "AI 농산물 가격예측 시스템 구축과 가락시장의 만성적인 물류 정체를 해소할 AX 기반 지능형 입차·하역 자동관제 체계 구축을 내세웠다. 이를 통해 공영도매시장의 방대한 거래정보를 체계적으로 데이터화해 농산물...",
-      "source": "pinpointnews.co.kr",
-      "publishedAt": "2026-07-09T07:00:00.000Z",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=467114",
-      "originallink": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=467114",
-      "keyword": "시장"
-    },
-    {
-      "id": "a410ed16a0d2c332",
-      "title": "AI 도입했더니 연간 6만시간 절감…도매시장 혁신 가속",
-      "summary": "생성되는 가락시장이 AI 전환 효과가 큰 현장이라고 설명했다. 이어 AI 활용 역량이 앞으로 조직 경쟁력을... 문영표 사장은 공영도매시장의 방대한 거래정보를 데이터화해 농산물 가격과 수급을 예측하고, 입차...",
-      "source": "gukjenews.com",
-      "publishedAt": "2026-07-09T07:00:00.000Z",
-      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3631318",
-      "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3631318",
-      "keyword": "시장"
-    },
-    {
       "id": "c551c914c84edff4",
       "title": "\"장바구니 든 손이 벌벌\"… 조기·쌀값 두 자릿수 급등, 밥상물가 비상",
       "summary": "5%) 등은 오히려 가격이 급락했다. 도매가 하락에도 비료값·기름값·인건비 부담은 그대로여서 농가는... 비용 상승이 복합적으로 작용한 결과라고 분석했다. 보고서에 따르면 농산물 가격이 장기적으로 10% 오르면...",
@@ -156,16 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/016/0002667957?sid=101",
       "originallink": "https://biz.heraldcorp.com/article/10803379?ref=naver",
       "keyword": "수급"
-    },
-    {
-      "id": "f4088f7201c08328",
-      "title": "고유가·고환율에 밥상물가 '들썩'…쌀값 15.1% 뛰었다",
-      "summary": "망고 수급 상황에 따라 판매 일정이 예상보다 빠르게 결정됐다\"고 설명했다. 반면 일부 농산물은 과잉 생산으로 가격이 크게 떨어졌다. 같은 기간 당근은 37.8%, 양배추는 35.0%, 무는 33.7%, 부추는 21.4%, 배는 20.9% 하락했...",
-      "source": "sisajournal.com",
-      "publishedAt": "2026-07-09T00:35:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/586/0000133349?sid=101",
-      "originallink": "https://www.sisajournal.com/news/articleView.html?idxno=379195",
-      "keyword": "배추"
     }
   ]
 }
