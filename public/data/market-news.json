@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-19T22:50:17.548Z",
+    "updatedAt": "2026-08-20T22:52:38.265Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "c21fa3fae143aae1",
+      "title": "[농산유통 집중해부③] 막대한 통행료 편취 오명 '중도매인'…\"도‧소매...",
+      "summary": "[그림=챗GPT] [뉴스투데이=장수지 기자] 중도매인은 농산물 가격이 오를 때마다 도매시장법인과 함께 비판의... 지난 2022년 발의된 농안법 개정안 제안이유에 따르면 가락동농수산물도매시장에선 연간 약 2조7000억원의...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-08-20T21:02:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20260820500017",
+      "originallink": "https://www.news2day.co.kr/article/20260820500017",
+      "keyword": "시장"
+    },
+    {
+      "id": "4f970b4969b0ac3d",
+      "title": "국제유가 하락에 생산자물가 11개월 만에↓…\"8월엔 상승 압력\"",
+      "summary": "6% 상승했다\"며 \"올해도 폭염이 있었지만 지난해보다는 영향이 크지 않았다\"고 설명했다. 8월 농산물 가격은 기상 여건과 수급 상황을 더 지켜봐야 한다는 게 한은의 판단이다. 이 팀장은 \"8월 초순 배추와 시금치...",
+      "source": "mt.co.kr",
+      "publishedAt": "2026-08-20T21:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/008/0005402801?sid=101",
+      "originallink": "https://www.mt.co.kr/economy/2026/08/21/2026082017082734502",
+      "keyword": "배추"
+    },
+    {
+      "id": "18136d5029d613e6",
+      "title": "“이틀간 출하 못하면 품위 저하”…가락·구리시장 ‘겹치기 휴장’에...",
+      "summary": "납품가격 인하’라는 연쇄 피해를 볼 수밖에 없다”고 말했다. 이에 대해 농림축산식품부 관계자는 “구리·강서 시장 등 수도권 주요 공영도매시장이 가락시장과 같이 쉬면 출하자 피해가 막대할 수밖에 없다”며...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-08-20T20:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000102310?sid=101",
+      "originallink": "https://www.nongmin.com/article/20260819500785",
+      "keyword": "시장"
+    },
+    {
+      "id": "c9d0c6f2fd047ba7",
+      "title": "중앙청과, 무주 구천동농협 홍로 초매식…본격 출하 돌입",
+      "summary": "전북 무주지역 홍로 사과가 가락시장을 통해 본격적인 출하에 들어갔다. 중앙청과㈜(대표이사 이원석)는... 사랑받는 농산물로 자리매김할 수 있도록 산지와 농협, 도매시장이 지속적으로 협력해야 한다고 강조했다....",
+      "source": "amnews.co.kr",
+      "publishedAt": "2026-08-20T02:52:00.000Z",
+      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=74030",
+      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=74030",
+      "keyword": "시장"
+    },
+    {
+      "id": "b5ef4ed4654a04cd",
+      "title": "[원자재 시황] 미 국채 바이백에 시장 '반색'",
+      "summary": "선물 가격을 지지하고 있다고 분석했다. 미 재무부의 국채 바이백 확대에 따른 달러화 급락도 유가 상승 재료로 작용했다. 국제 원유는 달러로 거래되는 만큼 달러 가치가 하락하면 비달러권 투자자의 구매 부담이...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-08-20T00:44:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1720982",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1720982",
+      "keyword": "수급"
+    },
+    {
+      "id": "f787b4a646b58830",
+      "title": "[초동시각]농산물 가격 '보이지 않는 손'",
+      "summary": "\"계란뿐 아니라 삼겹살이며 채소까지 유통구조 문제는 어제오늘 일이 아니다.\" 본지가 이달 초 달걀 가격... 농산물 영역에서는 민간 도매시장법인이 보이지 않는 손으로 지목된다. 서울 송파구 가락동...",
+      "source": "view.asiae.co.kr",
+      "publishedAt": "2026-08-20T00:24:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/277/0005805053?sid=110",
+      "originallink": "https://view.asiae.co.kr/article/2026082009165945999",
+      "keyword": "시장"
+    },
     {
       "id": "bf33a2324ebb3640",
       "title": "폭염 따라 오르내린 채솟값 [39도의 일상②]",
@@ -88,36 +148,6 @@
       "keyword": "수급"
     },
     {
-      "id": "d1dba2e0eeb4704b",
-      "title": "물복파도 딱복파도…복숭아 지금 사야 하는 이유 [해시태그]",
-      "summary": "한국농수산식품유통공사 농산물유통정보에 따르면 7일 백도 상품의 평균 소매가격은 10개당 1만8602원으로 지난해 같은 날보다 17.4% 낮았죠. 농촌경제연구원도 8월 천중도백도 상품의 가락시장 도매가격을 4㎏당 2만4000원...",
-      "source": "etoday.co.kr",
-      "publishedAt": "2026-08-19T06:56:00.000Z",
-      "link": "https://www.etoday.co.kr/news/view/2616026",
-      "originallink": "https://www.etoday.co.kr/news/view/2616026",
-      "keyword": "시장"
-    },
-    {
-      "id": "d80f1b652760d74d",
-      "title": "새벽 가락시장 밝힌 '반딧불'… 무주 홍로, 20분 만에 완판",
-      "summary": "중도매인들에게 인사를 하고 있다. 8월 17일 오전 7시, 서울 가락시장 중앙청과 과일 경매장. 해가 채 오르기... 고품질 농산물의 출하 기반을 다지고, 소비지 시장 정보를 산지에 전달해 농가 수취가격을 끌어올리는 데...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-08-19T03:34:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16771",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16771",
-      "keyword": "시장"
-    },
-    {
-      "id": "363c98c9461bd94b",
-      "title": "\"수입 포도 잡는다\"… 경북도, 신품종 '골드스위트·레드클라렛' 수도권...",
-      "summary": "서울 가락동 농수산물도매시장 중앙청과에서 중도매인과 경매사를 대상으로 관능 평가 및 모의 경매를 진행해 실제 출하 가격 정보를 확보할 계획이다. 경북도는 10월에도 만생종 신품종인 ‘글로리스타’를 앞세워...",
-      "source": "hankookilbo.com",
-      "publishedAt": "2026-08-19T02:32:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/469/0000948808?sid=102",
-      "originallink": "https://www.hankookilbo.com/news/article/A2026081910580005313?did=NA",
-      "keyword": "시장"
-    },
-    {
       "id": "ab9d675697cf36fd",
       "title": "경남 역대급 폭우에 더 쪼그라든 장바구니",
       "summary": "한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 지난 14일 기준 시금치 평균 소매가격은... 자연산 광어(23.5%), 자연산 농어(10.7%), 고등어(47.4%), 깐굴(48.2%) 등도 경락시세가 오름세를 보이고 있다....",
@@ -128,16 +158,6 @@
       "keyword": "시장"
     },
     {
-      "id": "3e5b29312b356a0c",
-      "title": "경북이 육성한 신품종 포도, 서울·경기서 홍보 행사",
-      "summary": "24일에는 가락시장 중앙청과에서 경북포도연합회와 함께 중도매인·경매사를 대상으로 관능 평가와 모의 경매를 열어 출하 전략에 활용할 실제 가격 정보를 확보한다. 도농기원은 오는 10월에는 만생종 ‘글로리스타’...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-08-19T01:33:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000102179?sid=102",
-      "originallink": "https://www.nongmin.com/article/20260819500057",
-      "keyword": "시장"
-    },
-    {
       "id": "363f4b6cade04f44",
       "title": "\"파프리카 5㎏이 단돈 500원\" 상자째 내던져진 농심",
       "summary": "수개월째 이어지는 농산물 가격 하락에 강원지역 농민들이 정부와 지자체에 대책 마련을 촉구하고 나선... 감행하며 \"농산물 가격 폭락, 농자재값과 유가 폭등, 외국산 농축산물 수입 확대, 수급 안정을 핑계로 한...",
@@ -145,26 +165,6 @@
       "publishedAt": "2026-08-18T15:08:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/654/0000195845?sid=102",
       "originallink": "https://www.kado.net/news/articleView.html?idxno=2067338",
-      "keyword": "수급"
-    },
-    {
-      "id": "592f15f471af0658",
-      "title": "\"채소는 금값, 빵·라면은 줄인상\"…하반기 밥상물가 '들썩'",
-      "summary": "0% 상승했고 깻잎(55.7%), 배추(40.7%), 양파(22.3%)도 일제히 뛰었다. 폭염과 가뭄으로 누적된 농작물 피해에 최근 남부지방 집중호우까지 겹치며 농산물 수급 불안 우려는 더욱 증폭됐다. 주요 식재료 가격도 지난해 대비...",
-      "source": "ziksir.com",
-      "publishedAt": "2026-08-18T06:00:00.000Z",
-      "link": "https://www.ziksir.com/news/articleView.html?idxno=143446",
-      "originallink": "https://www.ziksir.com/news/articleView.html?idxno=143446",
-      "keyword": "배추"
-    },
-    {
-      "id": "278a023960a369ae",
-      "title": "농산물값 폭락에 벼랑끝 내몰린 강원 농민들…\"생존권 보장하라\"",
-      "summary": "생산비 치솟고 이상기후 피해까지 '삼중고'…삭발로 절박함 호소 농산물 가격 하락과 농자재 가격 상승으로... 이들은 \"그러나 정부에서는 농가 경영난 해소에 대한 실질적인 대책 마련 없이 수급 안정과 밥상 물가에만...",
-      "source": "yna.co.kr",
-      "publishedAt": "2026-08-18T05:48:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/001/0016256612?sid=102",
-      "originallink": "https://www.yna.co.kr/view/AKR20260818104800062?input=1195m",
       "keyword": "수급"
     }
   ]
