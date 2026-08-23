@@ -2,11 +2,91 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-20T22:52:38.265Z",
+    "updatedAt": "2026-08-23T22:44:52.621Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "f6aa7aaaf61dcde4",
+      "title": "\"상추 싸졌네\" 좋아했더니…토마토 가격 보고 '깜짝' [프라이스&]",
+      "summary": "한여름 농산물 가격이 일주일 새 크게 엇갈렸다. 폭염에 가격이 치솟았던 상추와 열무는 출하량이... 토마토 가격 상승세는 다른 도매시장에서도 뚜렷하게 나타났다. 서울 가락시장에서 거래된 토마토 특품 5...",
+      "source": "hankyung.com",
+      "publishedAt": "2026-08-23T01:34:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/015/0005323567?sid=101",
+      "originallink": "https://www.hankyung.com/article/202608236669i",
+      "keyword": "시장"
+    },
+    {
+      "id": "5c94bdc26caeef8c",
+      "title": "[한은] 생산자물가 11개월 만에 하락…전북 '비용 반등' 경계",
+      "summary": "반면 농림수산품은 작황 부진과 양식어종 폐사 등의 영향으로 전월보다 1.5% 상승했다. 농산물은 2.4%, 수산물은 2.2% 올랐으며 시금치는 한 달 사이 115.8% 뛰었다. 계절과 기상, 수급 상황에 따른 품목별 가격 변동성이...",
+      "source": "newsfreezone.co.kr",
+      "publishedAt": "2026-08-22T12:40:00.000Z",
+      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=705183",
+      "originallink": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=705183",
+      "keyword": "수급"
+    },
+    {
+      "id": "2eb4f3012e94a743",
+      "title": "“빵값 또 오르겠네”…러·우 ‘흑해 난타전’에 곡물가 급등",
+      "summary": "흑해 농산물 시장을 전문으로 하는 연구 기관인 소브에콘의 안드레이 시조프 전무이사는 “이것은 원유... 비료 수급 부족 등으로 곡물 가격이 상방 압력을 받는 와중에, 최근의 확전이 밀 가격 상승을 더욱 부추길...",
+      "source": "biz.heraldcorp.com",
+      "publishedAt": "2026-08-21T22:05:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/016/0002686936?sid=104",
+      "originallink": "https://biz.heraldcorp.com/article/10848594?ref=naver",
+      "keyword": "수급"
+    },
+    {
+      "id": "4c073419c158454b",
+      "title": "엔비디아, 월가는 실적보다 '이것'에 더 관심 [박신영의 개장전 요것만...",
+      "summary": "가격 상승이 특히 중요한 이유는 디젤이 단순한 자동차 연료가 아니기 때문입니다. 트럭과 화물운송을 비롯해 농업기계, 산업시설, 난방 등 경제 전반에서 사용됩니다. 디젤 가격이 오르면 트럭 운송비와 농산물...",
+      "source": "hankyung.com",
+      "publishedAt": "2026-08-21T17:52:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/015/0005323464?sid=104",
+      "originallink": "https://www.hankyung.com/article/202608225783i",
+      "keyword": "수급"
+    },
+    {
+      "id": "68d7d9f29d0480de",
+      "title": "농업인 물류·기자재 지원···소비자 유통인식 전환 추진",
+      "summary": "가락상생기금 공익사업에서 가장 큰 비중을 차지하는 물류·영농기자재 지원사업과 함께 가격 폭락으로 어려움을 겪었던 양파 농가 지원을 위해 양파 소비 촉진 사업에도 동참했다. 또한 농산물 유통구조와 도매시장...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-08-21T09:18:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=406602",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=406602",
+      "keyword": "양파"
+    },
+    {
+      "id": "39e56d129ab24af3",
+      "title": "[원자재 시황] 금·코인 오르고 뉴욕증시 하락",
+      "summary": "비철금속 시장에서는 LME 재고 증가로 구리 가격이 하락했다. 금값, 미 국채금리 반등에도 상승 20일... 미국산 농산물의 수출 수요, 흑해 지역의 물류 불안 등이 가격을 끌어올렸다. 달러화가 밤사이 3개월 만의 최저...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-08-21T00:30:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1721145",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1721145",
+      "keyword": "수급"
+    },
+    {
+      "id": "2725f238a23d5c37",
+      "title": "경북농기원, 서울서 '프리미엄 경북 포도' 홍보 나서",
+      "summary": "24일에는 가락시장 중앙청과에서 경북포도연합회와 함께 중도매인·경매사를 대상으로 관능 평가와 모의경매를 열어 출하 전략에 활용할 실제 가격 정보를 확보한다. 이어 10월에는 만생종 '글로리스타'를 앞세워 셰프와...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-08-21T00:14:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=326612",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=326612",
+      "keyword": "시장"
+    },
+    {
+      "id": "ad2265c451cfe8a4",
+      "title": "사상 최고치 찍었는데 전문가들 \"더 오른다\"…AI 시대 주목받는 원자재...",
+      "summary": "그러나 고점을 찍은 이후 차익 실현 매물과 수급 완화 소식이 맞물리며 이틀 연속 하락세를 보이며 1만4180선으로 내려왔다. 고점을 찍은 상황에서 대형 원자재 중개업체의 실물 인도가 가격을 끌어내렸다. 삼성선물에...",
+      "source": "view.asiae.co.kr",
+      "publishedAt": "2026-08-20T23:17:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/277/0005805550?sid=101",
+      "originallink": "https://view.asiae.co.kr/article/2026082016161306456",
+      "keyword": "수급"
+    },
     {
       "id": "c21fa3fae143aae1",
       "title": "[농산유통 집중해부③] 막대한 통행료 편취 오명 '중도매인'…\"도‧소매...",
@@ -86,86 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/008/0005402200?sid=102",
       "originallink": "https://www.mt.co.kr/society/2026/08/20/2026081916081335692",
       "keyword": "시장"
-    },
-    {
-      "id": "489fee943ce3ae52",
-      "title": "경북 신품종 포도, 서울 4대 유통망 공략…'K-포도' 육성 본격화",
-      "summary": "지난해 체결한 ‘프리미엄 경북 농산물 유통 활성화 업무 협약’과 연계해 공공기관이 육성한 신품종을... 이를 통해 도매시장 관계자들의 평가를 확인하고 실제 가격 정보를 확보해 향후 출하 시기와 물량, 가격 전략...",
-      "source": "ajunews.com",
-      "publishedAt": "2026-08-19T20:02:00.000Z",
-      "link": "https://www.ajunews.com/view/20260820013903649",
-      "originallink": "https://www.ajunews.com/view/20260820013903649",
-      "keyword": "시장"
-    },
-    {
-      "id": "5b01ada0d18e1cb5",
-      "title": "경북 신품종 포도, 서울 소비자 사로잡는다",
-      "summary": "24일에는 가락시장 중앙청과에서 경북포도연합회와 함께 중도매인과 경매사를 대상으로 관능평가와 모의 경매를 실시해 출하 전략에 활용할 가격 정보를 확보한다. 이번에 선보이는 품종은 8월 수확종인 '골드스위트'와...",
-      "source": "idaegu.co.kr",
-      "publishedAt": "2026-08-19T12:24:00.000Z",
-      "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=557088",
-      "originallink": "https://www.idaegu.co.kr/news/articleView.html?idxno=557088",
-      "keyword": "시장"
-    },
-    {
-      "id": "634543484716f7c8",
-      "title": "폭염·가뭄인데 채소값 떨어진 이유",
-      "summary": "가격 상승을 예상하기는 어렵다. 올해처럼 기상 조건이 특정 작물의 생산량을 늘리고 소비가 이를 따라가지 못하면 오히려 가격이 떨어질 수 있다. 다음 달 추석을 앞둔 가운데, 당분간 농산물 수급에 큰 차질은 없을...",
-      "source": "newspenguin.com",
-      "publishedAt": "2026-08-19T09:16:00.000Z",
-      "link": "https://www.newspenguin.com/news/articleView.html?idxno=22050",
-      "originallink": "https://www.newspenguin.com/news/articleView.html?idxno=22050",
-      "keyword": "수급"
-    },
-    {
-      "id": "f922569a097da57f",
-      "title": "무주서 키운 햇 홍로사과 올해 첫 출하",
-      "summary": "사과 생산 농가들이 안심하고 출하할 수 있는 농산물 유통 환경 조성을 위해 산지와 농협, 도매법인이 지속적으로 협력해 나가기로 의견을 모았다. 우정수 기자 woojs@agrinet.co.kr 가락시장서 초매식 황인홍 군수 등 참석",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-08-19T08:48:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=406508",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=406508",
-      "keyword": "시장"
-    },
-    {
-      "id": "ba6aea59975f8613",
-      "title": "경북도농업기술원, 서울 유통망서 신품종 포도 집중 홍보",
-      "summary": "경북도농업기술원은 지난해 체결한 '프리미엄 경북 농산물 유통 활성화 업무협약'과 연계해 공공기관이... 24일에는 가락시장 중앙청과에서 경북포도연합회와 함께 중도매인과 경매사를 대상으로 관능평가와 모의경매를...",
-      "source": "jeonmae.co.kr",
-      "publishedAt": "2026-08-19T08:10:00.000Z",
-      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1285289",
-      "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1285289",
-      "keyword": "시장"
-    },
-    {
-      "id": "d18d82dd8862b4fb",
-      "title": "폭염·집중호우에 전남광주 장바구니 물가 '희비'…채소 오르고 과일 내...",
-      "summary": "악화로 가격이 오른 반면, 사과와 포도는 햇품과 다른 품종의 공급이 늘면서 가격이 하락했다. 기상 여건뿐... 같은 농산물 가격 상승이라도 채소류는 기상 악화에 따른 공급 감소, 식량작물은 햇품 수요 증가라는 서로...",
-      "source": "namdonews.com",
-      "publishedAt": "2026-08-19T07:32:00.000Z",
-      "link": "https://www.namdonews.com/news/articleView.html?idxno=920485",
-      "originallink": "https://www.namdonews.com/news/articleView.html?idxno=920485",
-      "keyword": "수급"
-    },
-    {
-      "id": "ab9d675697cf36fd",
-      "title": "경남 역대급 폭우에 더 쪼그라든 장바구니",
-      "summary": "한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 지난 14일 기준 시금치 평균 소매가격은... 자연산 광어(23.5%), 자연산 농어(10.7%), 고등어(47.4%), 깐굴(48.2%) 등도 경락시세가 오름세를 보이고 있다....",
-      "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-08-19T02:24:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002685553?sid=101",
-      "originallink": "https://biz.heraldcorp.com/article/10845214?ref=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "363f4b6cade04f44",
-      "title": "\"파프리카 5㎏이 단돈 500원\" 상자째 내던져진 농심",
-      "summary": "수개월째 이어지는 농산물 가격 하락에 강원지역 농민들이 정부와 지자체에 대책 마련을 촉구하고 나선... 감행하며 \"농산물 가격 폭락, 농자재값과 유가 폭등, 외국산 농축산물 수입 확대, 수급 안정을 핑계로 한...",
-      "source": "kado.net",
-      "publishedAt": "2026-08-18T15:08:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/654/0000195845?sid=102",
-      "originallink": "https://www.kado.net/news/articleView.html?idxno=2067338",
-      "keyword": "수급"
     }
   ]
 }
