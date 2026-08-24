@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-23T22:44:52.621Z",
+    "updatedAt": "2026-08-24T22:50:56.532Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "d44ccec77fbfa08b",
+      "title": "폭염·폭우에 치솟은 채솟값… 추석 밥상물가 '비상'",
+      "summary": "가격이 오르면서 체감 부담은 쉽게 가라앉지 않고 있다. 24일 한국농수산식품유통공사(aT)의 농산물유통정... 전월보다 하락했다. 품목별 작황과 출하량에 따라 가격 흐름이 엇갈리고 있다는 의미다. 채소 가격 상승은...",
+      "source": "the-biz.co.kr",
+      "publishedAt": "2026-08-24T06:20:00.000Z",
+      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=726699",
+      "originallink": "http://www.the-biz.co.kr/news/articleView.html?idxno=726699",
+      "keyword": "수급"
+    },
+    {
+      "id": "f63b71364e48b2aa",
+      "title": "홈플러스 공백에 농축산물 판로 ‘직격탄’…연 1.3조원 시장 흔들리나",
+      "summary": "서울시농수산식품공사 자료에 따르면 올해 5월 말까지 서울 가락시장에서 거래된 청과류는 116만톤으로... 도매시장으로 이동했고 이 같은 추가 공급이 가격 하락 압력을 높인 요인 가운데 하나로 거론된다. 농산물은...",
+      "source": "inews24.com",
+      "publishedAt": "2026-08-24T05:10:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/031/0001051887?sid=102",
+      "originallink": "http://www.inews24.com/view/1997615",
+      "keyword": "시장"
+    },
+    {
+      "id": "d8ad8d9fff4be684",
+      "title": "[원자재 시황] 이란 제재에 잭슨홀까지…투심은 어디로",
+      "summary": "달러 약세와 국제유가 상승도 곡물시장 전반에 우호적으로 작용했다. 달러화 가치가 2~3개월 만의 최저 수준까지 떨어지면서 미국산 농산물의 가격 경쟁력이 높아진 가운데 WTI가 배럴당 87달러를 웃돌면서 에탄올...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-08-24T02:02:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1721388",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1721388",
+      "keyword": "수급"
+    },
+    {
+      "id": "5c95116b71b6e2be",
+      "title": "中서 '발암물질 배추' 적발···중국산 수입은 최대, 국내 농가만 '죽을...",
+      "summary": "허베이성 도매시장에서도 유사 사례가 적발됐다. 중국산 농산물의 안전성 논란이 반복되는 사이 국내 수입... 가격마저 생산비를 보장하지 못하고 있다. 지난 1일부터 21일까지 서울 가락시장에서 생산원가 이하로...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-08-24T01:56:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102052",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102052",
+      "keyword": "배추"
+    },
+    {
+      "id": "d7530d6cb41a2e57",
+      "title": "[2026년 8월 5주] 주요 농산물 경락가 상승·하락 품목 - 사과 부사·토마...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 17일부터 24일까지 한 주간 거래된 엽근채소, 양념채소, 과일...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-08-24T01:40:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=326800",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=326800",
+      "keyword": "시장"
+    },
+    {
+      "id": "e4764b02b71d8169",
+      "title": "토마토값 한 달 새 4배로…폭염·소나기에 채소 수급 불안 우려",
+      "summary": "수급의 불확실성이 커질 수 있다는 우려가 나온다. 24일 한국농수산식품유통공사(aT)가 공개한 '주요 농산물 일일도매가격'에 따르면 지난 21일 토마토 도매가격은 5㎏당 3만5430원으로 전월 하순 9159원보다 286.8% 상승...",
+      "source": "newsis.com",
+      "publishedAt": "2026-08-24T01:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014143305?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20260824_0003759388",
+      "keyword": "수급"
+    },
     {
       "id": "f6aa7aaaf61dcde4",
       "title": "\"상추 싸졌네\" 좋아했더니…토마토 가격 보고 '깜짝' [프라이스&]",
@@ -106,66 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/008/0005402801?sid=101",
       "originallink": "https://www.mt.co.kr/economy/2026/08/21/2026082017082734502",
       "keyword": "배추"
-    },
-    {
-      "id": "18136d5029d613e6",
-      "title": "“이틀간 출하 못하면 품위 저하”…가락·구리시장 ‘겹치기 휴장’에...",
-      "summary": "납품가격 인하’라는 연쇄 피해를 볼 수밖에 없다”고 말했다. 이에 대해 농림축산식품부 관계자는 “구리·강서 시장 등 수도권 주요 공영도매시장이 가락시장과 같이 쉬면 출하자 피해가 막대할 수밖에 없다”며...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-08-20T20:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000102310?sid=101",
-      "originallink": "https://www.nongmin.com/article/20260819500785",
-      "keyword": "시장"
-    },
-    {
-      "id": "c9d0c6f2fd047ba7",
-      "title": "중앙청과, 무주 구천동농협 홍로 초매식…본격 출하 돌입",
-      "summary": "전북 무주지역 홍로 사과가 가락시장을 통해 본격적인 출하에 들어갔다. 중앙청과㈜(대표이사 이원석)는... 사랑받는 농산물로 자리매김할 수 있도록 산지와 농협, 도매시장이 지속적으로 협력해야 한다고 강조했다....",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-08-20T02:52:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=74030",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=74030",
-      "keyword": "시장"
-    },
-    {
-      "id": "b5ef4ed4654a04cd",
-      "title": "[원자재 시황] 미 국채 바이백에 시장 '반색'",
-      "summary": "선물 가격을 지지하고 있다고 분석했다. 미 재무부의 국채 바이백 확대에 따른 달러화 급락도 유가 상승 재료로 작용했다. 국제 원유는 달러로 거래되는 만큼 달러 가치가 하락하면 비달러권 투자자의 구매 부담이...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-08-20T00:44:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1720982",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1720982",
-      "keyword": "수급"
-    },
-    {
-      "id": "f787b4a646b58830",
-      "title": "[초동시각]농산물 가격 '보이지 않는 손'",
-      "summary": "\"계란뿐 아니라 삼겹살이며 채소까지 유통구조 문제는 어제오늘 일이 아니다.\" 본지가 이달 초 달걀 가격... 농산물 영역에서는 민간 도매시장법인이 보이지 않는 손으로 지목된다. 서울 송파구 가락동...",
-      "source": "view.asiae.co.kr",
-      "publishedAt": "2026-08-20T00:24:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/277/0005805053?sid=110",
-      "originallink": "https://view.asiae.co.kr/article/2026082009165945999",
-      "keyword": "시장"
-    },
-    {
-      "id": "bf33a2324ebb3640",
-      "title": "폭염 따라 오르내린 채솟값 [39도의 일상②]",
-      "summary": "19일 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)와 기상청 종관기상관측자료(AOS)를 대조해... KAMIS에 따르면 7일 서울 가락시장 기준 시금치(4kg)의 도매가격은 6만2257원이다. 한 달 전인 지난달 7일 가격은...",
-      "source": "kukinews.com",
-      "publishedAt": "2026-08-19T21:02:00.000Z",
-      "link": "https://www.kukinews.com/article/view/kuk202608190066",
-      "originallink": "https://www.kukinews.com/article/view/kuk202608190066",
-      "keyword": "시장"
-    },
-    {
-      "id": "3862d48d8756c669",
-      "title": "\"수박 든 자가 미인 얻는다?\"...가짜뉴스에 낚인 중국인, 명동 활보",
-      "summary": "도매가격으로 보면 서울 가락시장에서 19일 상등급 수박이 ㎏당 평균 2113원에 거래됐다. 반면 중국의 수박... 날씨에 따른 작황 변화도 가격을 크게 좌우한다. 한국농촌경제연구원도 앞서 국내 농산물 가격이 높은 주요...",
-      "source": "mt.co.kr",
-      "publishedAt": "2026-08-19T21:00:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/008/0005402200?sid=102",
-      "originallink": "https://www.mt.co.kr/society/2026/08/20/2026081916081335692",
-      "keyword": "시장"
     }
   ]
 }
