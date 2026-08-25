@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-24T22:50:56.532Z",
+    "updatedAt": "2026-08-25T22:54:08.665Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "04d50afa674bfa93",
+      "title": "4개월 만에 꺾인 소비심리…다시 고개 든 ‘농축수산물’ 물가 불안",
+      "summary": "현재까지 가락동농수산물도매시장에서 실제 거래된 농산물의 양은 전년 대비 1.7% 증가했고, 거래액은 4.1% 감소했다. 거래량은 늘었지만 거래액이 감소하면서 전반적인 가격 약세가 거래 흐름에 반영됐다. 시장...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-08-25T22:00:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20260825500215",
+      "originallink": "https://www.news2day.co.kr/article/20260825500215",
+      "keyword": "시장"
+    },
+    {
+      "id": "4a4732fd54ce0f70",
+      "title": "[농협 60년사] (117) 공판사업 청과류 중심으로 재편",
+      "summary": "따라 농산물을 산지에서 도매시장을 거치지 않고 수요처로 직배송하는 상물분리 방식의 전자거래시스템을 도입했다. 농협가락공판장 경매모습. 사진=『한국농협 60년사』. 2012년 농안법 개정으로 경매제도의 가격변...",
+      "source": "econotelling.com",
+      "publishedAt": "2026-08-25T22:00:00.000Z",
+      "link": "http://www.econotelling.com/news/articleView.html?idxno=21145",
+      "originallink": "http://www.econotelling.com/news/articleView.html?idxno=21145",
+      "keyword": "시장"
+    },
+    {
+      "id": "cd62a5d2395bd6a9",
+      "title": "홈플러스 위기…농수축산물 매출 '56.5% 뚝'",
+      "summary": "송 의원 측은 홈플러스에 공급되지 못한 물량이 도매시장으로 몰리면서 청과류 가격 하락에 압력을 가한 것으로 분석했다. 서울시농수산식품공사에 따르면 올해 1~5월 가락시장의 청과류 거래량은 116만톤, 톤당...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-08-25T10:02:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=406686",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=406686",
+      "keyword": "시장"
+    },
+    {
+      "id": "4c935f22fd2f0cda",
+      "title": "올 추석엔 ‘금사과’ 없다… 생산량 늘며 가격 안정세",
+      "summary": "산지 시세는 전년 대비 약 20% 낮고 추석 대표 품종인 홍로는 지난해와 비슷한 수준을 유지하고 있다. 현재 유통되는 저장 사과 가격도 지난해보다 낮은 수준이다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에...",
+      "source": "fnnews.com",
+      "publishedAt": "2026-08-25T09:10:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/014/0005566272?sid=101",
+      "originallink": "https://www.fnnews.com/news/202608251809057896",
+      "keyword": "시장"
+    },
+    {
+      "id": "e96166b0bbe9c6e0",
+      "title": "쌀값 고공행진에 외식업계 ‘한숨’…새 양곡법에 가격 인상 우려",
+      "summary": "사진은 이날 서울의 한 김밥가게 가격표. (사진=연합뉴스) 25일 한국농수산식품유통공사(aT) 농산물유통정보... 쌀 가격이 평년보다 5~8% 하락할 경우 수급안정대책을 마련하도록 기준을 구체화했다. 생산자와 소비자...",
+      "source": "asiatime.co.kr",
+      "publishedAt": "2026-08-25T06:38:00.000Z",
+      "link": "https://www.asiatime.co.kr/article/20260825500379",
+      "originallink": "https://www.asiatime.co.kr/article/20260825500379",
+      "keyword": "수급"
+    },
+    {
+      "id": "c3d24573c56bf2ab",
+      "title": "'금사과' 우려 덜었지만…추석 선물용 대과는 변수",
+      "summary": "산지 시세는 전년 대비 약 20% 낮고 추석 대표 품종인 홍로는 지난해와 비슷한 수준을 유지하고 있다. 현재 유통되는 저장 사과 가격도 지난해보다 낮은 수준이다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에...",
+      "source": "fnnews.com",
+      "publishedAt": "2026-08-25T04:50:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/014/0005566060?sid=101",
+      "originallink": "https://www.fnnews.com/news/202608241434369669",
+      "keyword": "시장"
+    },
     {
       "id": "d44ccec77fbfa08b",
       "title": "폭염·폭우에 치솟은 채솟값… 추석 밥상물가 '비상'",
@@ -106,66 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/015/0005323464?sid=104",
       "originallink": "https://www.hankyung.com/article/202608225783i",
       "keyword": "수급"
-    },
-    {
-      "id": "68d7d9f29d0480de",
-      "title": "농업인 물류·기자재 지원···소비자 유통인식 전환 추진",
-      "summary": "가락상생기금 공익사업에서 가장 큰 비중을 차지하는 물류·영농기자재 지원사업과 함께 가격 폭락으로 어려움을 겪었던 양파 농가 지원을 위해 양파 소비 촉진 사업에도 동참했다. 또한 농산물 유통구조와 도매시장...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-08-21T09:18:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=406602",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=406602",
-      "keyword": "양파"
-    },
-    {
-      "id": "39e56d129ab24af3",
-      "title": "[원자재 시황] 금·코인 오르고 뉴욕증시 하락",
-      "summary": "비철금속 시장에서는 LME 재고 증가로 구리 가격이 하락했다. 금값, 미 국채금리 반등에도 상승 20일... 미국산 농산물의 수출 수요, 흑해 지역의 물류 불안 등이 가격을 끌어올렸다. 달러화가 밤사이 3개월 만의 최저...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-08-21T00:30:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1721145",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1721145",
-      "keyword": "수급"
-    },
-    {
-      "id": "2725f238a23d5c37",
-      "title": "경북농기원, 서울서 '프리미엄 경북 포도' 홍보 나서",
-      "summary": "24일에는 가락시장 중앙청과에서 경북포도연합회와 함께 중도매인·경매사를 대상으로 관능 평가와 모의경매를 열어 출하 전략에 활용할 실제 가격 정보를 확보한다. 이어 10월에는 만생종 '글로리스타'를 앞세워 셰프와...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-08-21T00:14:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=326612",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=326612",
-      "keyword": "시장"
-    },
-    {
-      "id": "ad2265c451cfe8a4",
-      "title": "사상 최고치 찍었는데 전문가들 \"더 오른다\"…AI 시대 주목받는 원자재...",
-      "summary": "그러나 고점을 찍은 이후 차익 실현 매물과 수급 완화 소식이 맞물리며 이틀 연속 하락세를 보이며 1만4180선으로 내려왔다. 고점을 찍은 상황에서 대형 원자재 중개업체의 실물 인도가 가격을 끌어내렸다. 삼성선물에...",
-      "source": "view.asiae.co.kr",
-      "publishedAt": "2026-08-20T23:17:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/277/0005805550?sid=101",
-      "originallink": "https://view.asiae.co.kr/article/2026082016161306456",
-      "keyword": "수급"
-    },
-    {
-      "id": "c21fa3fae143aae1",
-      "title": "[농산유통 집중해부③] 막대한 통행료 편취 오명 '중도매인'…\"도‧소매...",
-      "summary": "[그림=챗GPT] [뉴스투데이=장수지 기자] 중도매인은 농산물 가격이 오를 때마다 도매시장법인과 함께 비판의... 지난 2022년 발의된 농안법 개정안 제안이유에 따르면 가락동농수산물도매시장에선 연간 약 2조7000억원의...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-08-20T21:02:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20260820500017",
-      "originallink": "https://www.news2day.co.kr/article/20260820500017",
-      "keyword": "시장"
-    },
-    {
-      "id": "4f970b4969b0ac3d",
-      "title": "국제유가 하락에 생산자물가 11개월 만에↓…\"8월엔 상승 압력\"",
-      "summary": "6% 상승했다\"며 \"올해도 폭염이 있었지만 지난해보다는 영향이 크지 않았다\"고 설명했다. 8월 농산물 가격은 기상 여건과 수급 상황을 더 지켜봐야 한다는 게 한은의 판단이다. 이 팀장은 \"8월 초순 배추와 시금치...",
-      "source": "mt.co.kr",
-      "publishedAt": "2026-08-20T21:00:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/008/0005402801?sid=101",
-      "originallink": "https://www.mt.co.kr/economy/2026/08/21/2026082017082734502",
-      "keyword": "배추"
     }
   ]
 }
