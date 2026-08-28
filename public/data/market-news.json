@@ -2,11 +2,91 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-25T22:54:08.665Z",
+    "updatedAt": "2026-08-28T06:26:56.582Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "9d2b74c8f23061a7",
+      "title": "구리·정제유 강세 속 7월 원자재 지수 동반 하락",
+      "summary": "비에너지 가격 지수는 0.3% 상승에 그쳤고 식품 가격은 0.3% 내렸다. 음료 가격은 17.4% 올랐지만 원재료 가격은 0.5% 하락했다. 한 방향의 원자재 장세라기보다 품목별 수급과 지정학 변수가 가격을 갈랐다는 해석이...",
+      "source": "tokenpost.kr",
+      "publishedAt": "2026-08-27T23:38:00.000Z",
+      "link": "https://www.tokenpost.kr/news/economy/399357",
+      "originallink": "https://www.tokenpost.kr/news/economy/399357",
+      "keyword": "수급"
+    },
+    {
+      "id": "03331b0a551e6fc1",
+      "title": "농산물값 떨어지면 정부가 보전...9월 세부 기준 앞두고 유통가 '촉각'",
+      "summary": "이마트 푸드마켓 채소코너/사진=이소라 기자 농산물 가격이 기준치 밑으로 떨어지면 정부가 차액을 보전해... 산지 가격 하락분이 정부 재정으로 일정 수준 지지되면, 풍작 때 가락시장 등 도매시장 경락가가 크게 떨어지던...",
+      "source": "techm.kr",
+      "publishedAt": "2026-08-27T01:42:00.000Z",
+      "link": "https://www.techm.kr/news/articleView.html?idxno=154662",
+      "originallink": "https://www.techm.kr/news/articleView.html?idxno=154662",
+      "keyword": "시장"
+    },
+    {
+      "id": "ccbfc33407c6d881",
+      "title": "가계빚·근원물가에 '연속 긴축'…한은, 기준금리 3.00%로 인상",
+      "summary": "인하와 농산물 가격 하락 등의 영향으로 상승폭이 둔화됐다\"면서도 \"근원물가는 비용 충격의 전이 등으로... 경상수지 흑자는 외환 수급을 개선해 금리인상 과정에서 발생할 수 있는 금융시장 변동성을 흡수하는...",
+      "source": "joseilbo.com",
+      "publishedAt": "2026-08-27T01:29:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/123/0002389104?sid=101",
+      "originallink": "http://www.joseilbo.com/news/news_read.php?uid=574564&class=18&grp=",
+      "keyword": "수급"
+    },
+    {
+      "id": "7a14c5bc729fff42",
+      "title": "매달 200억 쏟아붓는 '농할상품권'…장바구니 물가 잡는 묘수일까",
+      "summary": "소비자가격 억제에만 정책 역량이 집중되고 있다는 분석이다. 이와 관련해 가락동농수산물도매시장의 한 유통인은 \"이 같은 정책이 소비자에게 농산물값은 비싸면 안 된다는 인식을 심어주고 있다\"고 경고했다. 그는...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-08-26T21:50:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20260826500248",
+      "originallink": "https://www.news2day.co.kr/article/20260826500248",
+      "keyword": "시장"
+    },
+    {
+      "id": "0c37087c868a9e6e",
+      "title": "화천에 돈 제대로 돌도록… 기본소득, 지역화폐로 쏩니다",
+      "summary": "김 군수는 지난달 3일 찾은 서울 가락동 농산물 도매시장에서 마이크를 잡고 경매대에 올라 “화천 농민들의 정성을 잘 살펴 좋은 가격을 매겨 달라. 군수가 방문해서 가격이 올라간다고 하면, 매일이라도 가락동을...",
+      "source": "seoul.co.kr",
+      "publishedAt": "2026-08-26T20:03:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/081/0003673938?sid=102",
+      "originallink": "https://www.seoul.co.kr/news/publicnews/local_govern/news_local/2026/08/27/20260827020002?wlog_tag3=naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "a904cf5d2698b33f",
+      "title": "서울시농수산식품공사, 경영평가 6년 연속 '최우수'",
+      "summary": "유통환경에서도 가락·강서시장 거래물량을 2년 연속 늘린 성과를 인정받았다. 도매시장법인과 협력을 강화하고 물가 중점관리품목의 산지 출하를 확대해 농산물 수급과 가격 안정에 대응했다는 것이다....",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-08-26T15:26:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102119",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102119",
+      "keyword": "시장"
+    },
+    {
+      "id": "6f39920671d4a5ba",
+      "title": "[미국 ETF 히든 챔피언] ㉞ 지구촌 식량 위기·인플레 방어선 DBA",
+      "summary": "이변이 농산물 공급망을 자극하고 있다고 주장한 것. 단순한 수급 문제를 넘어 농작물 생산율 감소로 인한... 때문에 농산물 가격 상승에 직접 연동하면서 자산 가치를 방어한다. 주식과 채권이 하락하는 구간에도...",
+      "source": "newspim.com",
+      "publishedAt": "2026-08-26T06:37:00.000Z",
+      "link": "https://www.newspim.com/news/view/20260826000891",
+      "originallink": "https://www.newspim.com/news/view/20260826000891",
+      "keyword": "수급"
+    },
+    {
+      "id": "be17d08cb0e70a5e",
+      "title": "[특별기획③-2026 K-원예 희망 보고서 : 위기를 넘어 희망을 짓다] '풍년...",
+      "summary": "농산물은 가격이 떨어진다고 해서 생산량을 즉시 줄이기 어렵고, 값이 싸졌다고 해서 소비가 단기간에 대폭 늘어나지도 않는 수급의 비탄력성을 지닌다. 결국 생산량이 조금만 늘어나더라도 가격 하락 폭이 훨씬 크게...",
+      "source": "wonyesanup.co.kr",
+      "publishedAt": "2026-08-26T02:04:00.000Z",
+      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65592",
+      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65592",
+      "keyword": "수급"
+    },
     {
       "id": "04d50afa674bfa93",
       "title": "4개월 만에 꺾인 소비심리…다시 고개 든 ‘농축수산물’ 물가 불안",
@@ -86,86 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/031/0001051887?sid=102",
       "originallink": "http://www.inews24.com/view/1997615",
       "keyword": "시장"
-    },
-    {
-      "id": "d8ad8d9fff4be684",
-      "title": "[원자재 시황] 이란 제재에 잭슨홀까지…투심은 어디로",
-      "summary": "달러 약세와 국제유가 상승도 곡물시장 전반에 우호적으로 작용했다. 달러화 가치가 2~3개월 만의 최저 수준까지 떨어지면서 미국산 농산물의 가격 경쟁력이 높아진 가운데 WTI가 배럴당 87달러를 웃돌면서 에탄올...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-08-24T02:02:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1721388",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1721388",
-      "keyword": "수급"
-    },
-    {
-      "id": "5c95116b71b6e2be",
-      "title": "中서 '발암물질 배추' 적발···중국산 수입은 최대, 국내 농가만 '죽을...",
-      "summary": "허베이성 도매시장에서도 유사 사례가 적발됐다. 중국산 농산물의 안전성 논란이 반복되는 사이 국내 수입... 가격마저 생산비를 보장하지 못하고 있다. 지난 1일부터 21일까지 서울 가락시장에서 생산원가 이하로...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-08-24T01:56:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102052",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102052",
-      "keyword": "배추"
-    },
-    {
-      "id": "d7530d6cb41a2e57",
-      "title": "[2026년 8월 5주] 주요 농산물 경락가 상승·하락 품목 - 사과 부사·토마...",
-      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 17일부터 24일까지 한 주간 거래된 엽근채소, 양념채소, 과일...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-08-24T01:40:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=326800",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=326800",
-      "keyword": "시장"
-    },
-    {
-      "id": "e4764b02b71d8169",
-      "title": "토마토값 한 달 새 4배로…폭염·소나기에 채소 수급 불안 우려",
-      "summary": "수급의 불확실성이 커질 수 있다는 우려가 나온다. 24일 한국농수산식품유통공사(aT)가 공개한 '주요 농산물 일일도매가격'에 따르면 지난 21일 토마토 도매가격은 5㎏당 3만5430원으로 전월 하순 9159원보다 286.8% 상승...",
-      "source": "newsis.com",
-      "publishedAt": "2026-08-24T01:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/003/0014143305?sid=101",
-      "originallink": "https://www.newsis.com/view/NISX20260824_0003759388",
-      "keyword": "수급"
-    },
-    {
-      "id": "f6aa7aaaf61dcde4",
-      "title": "\"상추 싸졌네\" 좋아했더니…토마토 가격 보고 '깜짝' [프라이스&]",
-      "summary": "한여름 농산물 가격이 일주일 새 크게 엇갈렸다. 폭염에 가격이 치솟았던 상추와 열무는 출하량이... 토마토 가격 상승세는 다른 도매시장에서도 뚜렷하게 나타났다. 서울 가락시장에서 거래된 토마토 특품 5...",
-      "source": "hankyung.com",
-      "publishedAt": "2026-08-23T01:34:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/015/0005323567?sid=101",
-      "originallink": "https://www.hankyung.com/article/202608236669i",
-      "keyword": "시장"
-    },
-    {
-      "id": "5c94bdc26caeef8c",
-      "title": "[한은] 생산자물가 11개월 만에 하락…전북 '비용 반등' 경계",
-      "summary": "반면 농림수산품은 작황 부진과 양식어종 폐사 등의 영향으로 전월보다 1.5% 상승했다. 농산물은 2.4%, 수산물은 2.2% 올랐으며 시금치는 한 달 사이 115.8% 뛰었다. 계절과 기상, 수급 상황에 따른 품목별 가격 변동성이...",
-      "source": "newsfreezone.co.kr",
-      "publishedAt": "2026-08-22T12:40:00.000Z",
-      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=705183",
-      "originallink": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=705183",
-      "keyword": "수급"
-    },
-    {
-      "id": "2eb4f3012e94a743",
-      "title": "“빵값 또 오르겠네”…러·우 ‘흑해 난타전’에 곡물가 급등",
-      "summary": "흑해 농산물 시장을 전문으로 하는 연구 기관인 소브에콘의 안드레이 시조프 전무이사는 “이것은 원유... 비료 수급 부족 등으로 곡물 가격이 상방 압력을 받는 와중에, 최근의 확전이 밀 가격 상승을 더욱 부추길...",
-      "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-08-21T22:05:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002686936?sid=104",
-      "originallink": "https://biz.heraldcorp.com/article/10848594?ref=naver",
-      "keyword": "수급"
-    },
-    {
-      "id": "4c073419c158454b",
-      "title": "엔비디아, 월가는 실적보다 '이것'에 더 관심 [박신영의 개장전 요것만...",
-      "summary": "가격 상승이 특히 중요한 이유는 디젤이 단순한 자동차 연료가 아니기 때문입니다. 트럭과 화물운송을 비롯해 농업기계, 산업시설, 난방 등 경제 전반에서 사용됩니다. 디젤 가격이 오르면 트럭 운송비와 농산물...",
-      "source": "hankyung.com",
-      "publishedAt": "2026-08-21T17:52:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/015/0005323464?sid=104",
-      "originallink": "https://www.hankyung.com/article/202608225783i",
-      "keyword": "수급"
     }
   ]
 }
