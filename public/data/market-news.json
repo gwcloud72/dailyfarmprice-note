@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-08-31T00:41:59.373Z",
+    "updatedAt": "2026-09-01T01:31:29.534Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "8f0756d4f22babb2",
+      "title": "[경제칼럼] 풍년에도 울고 흉년에도 우는 농부",
+      "summary": "소비자에게 농산물 가격 상승은 분명 부담이지만, 그 가격이 곧 농업인의 소득을 의미하는 것은 아니다. 풍년이면 가격하락을 걱정하고, 흉년이면 생산량 감소와 비용 증가를 걱정하는 것이 오늘날 농업인의 현실이다....",
+      "source": "jjan.kr",
+      "publishedAt": "2026-08-31T08:58:00.000Z",
+      "link": "https://www.jjan.kr/article/20260831500242",
+      "originallink": "https://www.jjan.kr/article/20260831500242",
+      "keyword": "수급"
+    },
+    {
+      "id": "d5d524bafa3cf7fd",
+      "title": "[사실은 이렇습니다] 정부는 외식물가 안정을 위해 농산물 가격안정에 ...",
+      "summary": "9%↑) ❸ 정부는 외식물가 안정을 위해 농산물 등 가격안정에 최선을 다하고, 업계와의 소통·협력을... 산지 가격은 점차 하락중에 있습니다. 농식품부는 계란 수급 안정을 위해 농축산물 할인지원사업, 농협...",
+      "source": "korea.kr",
+      "publishedAt": "2026-08-31T08:57:00.000Z",
+      "link": "https://www.korea.kr/briefing/actuallyView.do?newsId=148970937&call_from=naver_news",
+      "originallink": "https://www.korea.kr/briefing/actuallyView.do?newsId=148970937&call_from=naver_news",
+      "keyword": "수급"
+    },
+    {
+      "id": "4874703fee381530",
+      "title": "[2026년 8월 6주] 주요 농산물 경락가 상승·하락 품목 - 수박·쌈배추·...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 24일부터 31일까지 한 주간 거래된 엽근채소, 양념채소, 과일...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-08-31T01:20:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=327197",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=327197",
+      "keyword": "배추"
+    },
+    {
+      "id": "ff3b7e6a3019d5a3",
+      "title": "홈플러스 '미정산 불똥' 튄 농가… 미수금만 1천억 육박",
+      "summary": "특히 미정산 사태는 농산물 시세 하락이라는 2차 부작용으로 이어지고 있다. 송 의원은 홈플러스를 통한 판로가 막히면서 도매시장으로의 청과류 반입량이 늘어 시세가 떨어지는 부작용이 나타났다고 지적했다. 실제...",
+      "source": "kyeonggi.com",
+      "publishedAt": "2026-08-31T00:46:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/666/0000121255?sid=101",
+      "originallink": "https://www.kyeonggi.com/article/20260831580048",
+      "keyword": "시장"
+    },
     {
       "id": "1f1f55f70479ad47",
       "title": "손가락 경매에서 전자식까지 40년의 보람 [6411의 목소리]",
@@ -126,46 +166,6 @@
       "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65592",
       "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65592",
       "keyword": "수급"
-    },
-    {
-      "id": "4a4732fd54ce0f70",
-      "title": "[농협 60년사] (117) 공판사업 청과류 중심으로 재편",
-      "summary": "따라 농산물을 산지에서 도매시장을 거치지 않고 수요처로 직배송하는 상물분리 방식의 전자거래시스템을 도입했다. 농협가락공판장 경매모습. 사진=『한국농협 60년사』. 2012년 농안법 개정으로 경매제도의 가격변...",
-      "source": "econotelling.com",
-      "publishedAt": "2026-08-25T22:00:00.000Z",
-      "link": "http://www.econotelling.com/news/articleView.html?idxno=21145",
-      "originallink": "http://www.econotelling.com/news/articleView.html?idxno=21145",
-      "keyword": "시장"
-    },
-    {
-      "id": "04d50afa674bfa93",
-      "title": "4개월 만에 꺾인 소비심리…다시 고개 든 ‘농축수산물’ 물가 불안",
-      "summary": "현재까지 가락동농수산물도매시장에서 실제 거래된 농산물의 양은 전년 대비 1.7% 증가했고, 거래액은 4.1% 감소했다. 거래량은 늘었지만 거래액이 감소하면서 전반적인 가격 약세가 거래 흐름에 반영됐다. 시장...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-08-25T22:00:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20260825500215",
-      "originallink": "https://www.news2day.co.kr/article/20260825500215",
-      "keyword": "시장"
-    },
-    {
-      "id": "cd62a5d2395bd6a9",
-      "title": "홈플러스 위기…농수축산물 매출 '56.5% 뚝'",
-      "summary": "송 의원 측은 홈플러스에 공급되지 못한 물량이 도매시장으로 몰리면서 청과류 가격 하락에 압력을 가한 것으로 분석했다. 서울시농수산식품공사에 따르면 올해 1~5월 가락시장의 청과류 거래량은 116만톤, 톤당...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-08-25T10:02:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=406686",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=406686",
-      "keyword": "시장"
-    },
-    {
-      "id": "4c935f22fd2f0cda",
-      "title": "올 추석엔 ‘금사과’ 없다… 생산량 늘며 가격 안정세",
-      "summary": "산지 시세는 전년 대비 약 20% 낮고 추석 대표 품종인 홍로는 지난해와 비슷한 수준을 유지하고 있다. 현재 유통되는 저장 사과 가격도 지난해보다 낮은 수준이다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에...",
-      "source": "fnnews.com",
-      "publishedAt": "2026-08-25T09:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/014/0005566272?sid=101",
-      "originallink": "https://www.fnnews.com/news/202608251809057896",
-      "keyword": "시장"
     }
   ]
 }
