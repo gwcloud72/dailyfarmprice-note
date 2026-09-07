@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-06T00:00:38.804Z",
+    "updatedAt": "2026-09-07T00:02:10.077Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "3ab3f3decc86e7eb",
+      "title": "판로 상실·미수금 증가…홈플러스 사태에 농업계도 '치명타'",
+      "summary": "한편 홈플러스 위기는 판로 잃은 농산물들이 가락시장 등 도매시장으로 넘어가지 않을 수 없게 만들었다.... 잃은 농산물이 가락시장에 몰림으로써 그만큼 농산물 시장가격도 폭락한다는 점이다. 홈플러스에 납품하던...",
+      "source": "ikpnews.net",
+      "publishedAt": "2026-09-06T09:28:00.000Z",
+      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71380",
+      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71380",
+      "keyword": "시장"
+    },
+    {
+      "id": "4c76fe83dd8a5239",
+      "title": "농산물가격안정제가 '빈말'이 되지 않으려면",
+      "summary": "농산물 가격 변동성이 심각한 한 해를 지나고 있는 가운데, 농민들의 농업소득 안정을 위해 도입한... 관련법에서 정의하는 평균가격이란 가락시장 도매가격에서 유통비용을 제외한 농가수취가격을 말한다. 가락시장에서...",
+      "source": "ikpnews.net",
+      "publishedAt": "2026-09-06T09:28:00.000Z",
+      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
+      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
+      "keyword": "시장"
+    },
+    {
+      "id": "ec8cbed261578d65",
+      "title": "올 추석 차례상 비용 껑충…전통시장 30만 원·대형마트 40만 원 훌쩍",
+      "summary": "시금치 가격이 하락하면서 상승분을 일부 상쇄했다. 이동훈 한국물가정보 팀장은 \"최근 기온이 낮아지면서 농산물의 생육과 출하 여건이 점차 개선되고 있고, 햇상품 출하도 본격화될 것으로 예상된다\"며...",
+      "source": "joongboo.com",
+      "publishedAt": "2026-09-06T07:24:00.000Z",
+      "link": "https://www.joongboo.com/news/articleView.html?idxno=363735883",
+      "originallink": "https://www.joongboo.com/news/articleView.html?idxno=363735883",
+      "keyword": "수급"
+    },
+    {
+      "id": "3580cc30b47e6af1",
+      "title": "미 천연가스 2.87달러 전망, 엘니뇨에 수요 둔화",
+      "summary": "유럽 전력 수급도 천연가스 시장의 변수로 거론된다. 대신증권은 라인강 수위 하락, 수력 발전 부진, 원전 냉각수 문제 등이 겹칠 경우 유럽 액화천연가스(LNG) 가격이 미국 헨리허브보다 더 민감하게 움직일 수...",
+      "source": "tokenpost.kr",
+      "publishedAt": "2026-09-06T05:18:00.000Z",
+      "link": "https://www.tokenpost.kr/news/economy/403260",
+      "originallink": "https://www.tokenpost.kr/news/economy/403260",
+      "keyword": "수급"
+    },
     {
       "id": "7e64b0760a0fe918",
       "title": "배·조기 8%대↑, 채솟값도 '껑충'…추석 차례상 부담 커진다",
@@ -125,46 +165,6 @@
       "publishedAt": "2026-09-03T20:02:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/022/0004156257?sid=101",
       "originallink": "https://www.segye.com/newsView/20260904501013?OutUrl=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "0408e55aaf81f8ce",
-      "title": "농업 예산 증가했지만 축산 비중은 4.4%에 그쳐…\"상대적 홀대\"",
-      "summary": "사료가격 상승에 대응하기 위한 예산은 전년 1000억원에서 1500억원으로 확대됐다. 이와 함께 낙농 용도별... 아울러 농지관리기금과 농산물가격안정기금, FTA기금을 통합해 '농업발전기금'을 설치하는 과정에서 FTA...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-09-03T09:48:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71343",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71343",
-      "keyword": "수급"
-    },
-    {
-      "id": "60c1fbb175475b2b",
-      "title": "'금사과' 사라진 추석…이번엔 한우가 걱정",
-      "summary": "7% 하락했다. 신선채소와 신선과실이 각각 9.8%, 10.0% 떨어지면서 추석을 앞둔 소비자들의 농산물 장바구니... 가격 상승에는 사육 규모 조정에 따른 공급 감소가 영향을 미친 것으로 분석된다. 공급 과잉과 가격 하락을...",
-      "source": "inews24.com",
-      "publishedAt": "2026-09-03T07:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/031/0001055217?sid=101",
-      "originallink": "http://www.inews24.com/view/2001513",
-      "keyword": "수급"
-    },
-    {
-      "id": "6f180b7c8b31c051",
-      "title": "동화청과, 포항 찾아 부추 출하자 맞춤형 교육",
-      "summary": "지원하고 가락시장에서 포항 농산물 경쟁력을 끌어올리고자 마련됐다. 동화청과는 산지 유통 중심 역할을 담당하는 포항시농협조공법인과의 협력 관계를 바탕으로 도매시장 정보와 현장 경험을 농가에 직접 전달했다....",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-09-03T02:54:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=327355",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=327355",
-      "keyword": "시장"
-    },
-    {
-      "id": "fde93af016fa8a77",
-      "title": "동화청과, 포항초·부추 농가 맞춤형 교육 진행",
-      "summary": "포항 농산물의 가락시장 경쟁력을 높이기 위해 마련됐다. 동화청과 가귀현 부추 담당 경매사는 수도권 도매시장의 소비·유통 동향과 타 산지 우수 사례를 소개하고, 산지 조직화 전략과 가격 경쟁력 확보 방안을...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-09-03T02:14:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=74280",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=74280",
       "keyword": "시장"
     }
   ]
