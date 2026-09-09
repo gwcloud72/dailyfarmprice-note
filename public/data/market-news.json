@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-08T00:26:04.252Z",
+    "updatedAt": "2026-09-09T00:19:52.645Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "4e177adfdcc2782e",
+      "title": "현대百 '고당도 청과'의 비결 \"경매장 찾아 당도 체크ㆍ선별\"",
+      "summary": "어둠이 짙게 깔린 8일 새벽 4시 가락시장. 스피커에서 과일 정보가 흘러나오는 경매장을 지나 찾아간... 사과와 배의 출하량 증가로 전체 도매가격이 하락했음에도, 고품질을 찾는 고객들의 발길이 현대백화점으로 몰린...",
+      "source": "dnews.co.kr",
+      "publishedAt": "2026-09-08T21:20:00.000Z",
+      "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609080804400080041",
+      "originallink": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609080804400080041",
+      "keyword": "시장"
+    },
+    {
+      "id": "eae5a95f27fe64ed",
+      "title": "'金사과' 잡았더니 '金계란'…엇갈린 추석 장바구니 물가",
+      "summary": "추석 성수기 사과 홍로 도매가격은 가락시장 상품 5킬로그램(㎏) 기준 5만 7000원으로 지난해보다 약 7%, 배... 농·축·수산물 가격이 올랐지만 최근 기온이 낮아지면서 농산물의 생육과 출하 여건은 점차 개선되고...",
+      "source": "edaily.co.kr",
+      "publishedAt": "2026-09-08T21:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/018/0006365905?sid=101",
+      "originallink": "https://www.edaily.co.kr/News/Read?newsId=02168086645578480&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "keyword": "시장"
+    },
+    {
+      "id": "042eff122c546287",
+      "title": "9월 2주 주요 제조업 전망",
+      "summary": "아울러 현장 식당에 지역 농산물을 연간 707톤 규모로 공급하고, 삼성 임직원의 지역 상권 이용 확대를... 완화해 가격 상승 폭을 제한했다고 밝힘. 석유 수급 측면에선 미국과 이란의 군사 충돌로 호르무즈...",
+      "source": "laborplus.co.kr",
+      "publishedAt": "2026-09-08T13:52:00.000Z",
+      "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=41432",
+      "originallink": "https://www.laborplus.co.kr/news/articleView.html?idxno=41432",
+      "keyword": "수급"
+    },
+    {
+      "id": "55c1d253d08ddeb2",
+      "title": "경남도의회, 교복 지원부터 농정·교통·투자까지 현안 집중 점검",
+      "summary": "8월 경남 소비자물가는 3.3%, 생활물가는 3.5% 상승한 반면 농산물 가격은 5.8% 하락했다. 농산물 생산비... 권 의원은 가격 폭락 이후 지원하는 방식에서 벗어나 생산·출하 단계부터 수급을 관리하고 농산물수급관리센터...",
+      "source": "kukinews.com",
+      "publishedAt": "2026-09-08T07:36:00.000Z",
+      "link": "https://www.kukinews.com/article/view/kuk202609080189",
+      "originallink": "https://www.kukinews.com/article/view/kuk202609080189",
+      "keyword": "수급"
+    },
+    {
+      "id": "cd7f266038d7b2e5",
+      "title": "채소값 '쑥' 과일값 '뚝'…지자체 추석 밥상 물가 안정화 총력",
+      "summary": "뚜렷한 하락세를 보이고 있어 정부의 추석 물가 안정화 대책에 관심이 쏠린다. 8일 한국농수산식품유통공사(aT)의 농산물유통정보(KAMIS) 등에 따르면 기상 여건 악화로 전남광주지역의 채소류의 가격 상승이...",
+      "source": "jnilbo.com",
+      "publishedAt": "2026-09-08T05:08:00.000Z",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000063528",
+      "originallink": "https://www.jnilbo.com/news/articleView.html?idxno=90000063528",
+      "keyword": "시장"
+    },
+    {
+      "id": "7aeba6cd9c6766a2",
+      "title": "\"농민에게 수급 책임만 물어선 안 돼\"",
+      "summary": "수급관리의 문제 진단과 지속가능한 대응 방안 모색을 위한 토론회'를 개최했다. 이수미 농업농민정책연구소 녀름 소장. 이날 주제발표에 나선 이수미 농업농민정책연구소 녀름 소장은 농산물 가격 하락과 생산비 상승이...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-09-08T02:06:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102240",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102240",
+      "keyword": "수급"
+    },
     {
       "id": "6f55169c2990a75c",
       "title": "[진단] '역대급' 농업예산 증액의 명과 암…성과의 그늘에 가려진 5대 맹...",
@@ -19,7 +79,7 @@
     },
     {
       "id": "ad56fbc6211da01e",
-      "title": "\"하품도 88% 뛰었네\"…추석 앞두고 배값 고공행진에 '화들짝' [프라이스...",
+      "title": "추석 앞두고 배값 작년보다 30% 넘게 가격 치솟았다 [프라이스&]",
       "summary": "농업관측센터는 추석 성수기 신고배 도매가격이 상품 기준 7.5㎏당 3만6000원 안팎으로 지난해 3만7200원보다 3.2% 낮아질 것으로 내다봤다. 현재 가락시장 가격은 전년보다 30% 넘게 높지만 출하 물량이 본격적으로...",
       "source": "hankyung.com",
       "publishedAt": "2026-09-07T22:40:00.000Z",
@@ -106,66 +166,6 @@
       "link": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
       "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
       "keyword": "시장"
-    },
-    {
-      "id": "3ab3f3decc86e7eb",
-      "title": "판로 상실·미수금 증가…홈플러스 사태에 농업계도 '치명타'",
-      "summary": "한편 홈플러스 위기는 판로 잃은 농산물들이 가락시장 등 도매시장으로 넘어가지 않을 수 없게 만들었다.... 잃은 농산물이 가락시장에 몰림으로써 그만큼 농산물 시장가격도 폭락한다는 점이다. 홈플러스에 납품하던...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-09-06T09:28:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71380",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71380",
-      "keyword": "시장"
-    },
-    {
-      "id": "ec8cbed261578d65",
-      "title": "올 추석 차례상 비용 껑충…전통시장 30만 원·대형마트 40만 원 훌쩍",
-      "summary": "시금치 가격이 하락하면서 상승분을 일부 상쇄했다. 이동훈 한국물가정보 팀장은 \"최근 기온이 낮아지면서 농산물의 생육과 출하 여건이 점차 개선되고 있고, 햇상품 출하도 본격화될 것으로 예상된다\"며...",
-      "source": "joongboo.com",
-      "publishedAt": "2026-09-06T07:24:00.000Z",
-      "link": "https://www.joongboo.com/news/articleView.html?idxno=363735883",
-      "originallink": "https://www.joongboo.com/news/articleView.html?idxno=363735883",
-      "keyword": "수급"
-    },
-    {
-      "id": "3580cc30b47e6af1",
-      "title": "미 천연가스 2.87달러 전망, 엘니뇨에 수요 둔화",
-      "summary": "유럽 전력 수급도 천연가스 시장의 변수로 거론된다. 대신증권은 라인강 수위 하락, 수력 발전 부진, 원전 냉각수 문제 등이 겹칠 경우 유럽 액화천연가스(LNG) 가격이 미국 헨리허브보다 더 민감하게 움직일 수...",
-      "source": "tokenpost.kr",
-      "publishedAt": "2026-09-06T05:18:00.000Z",
-      "link": "https://www.tokenpost.kr/news/economy/403260",
-      "originallink": "https://www.tokenpost.kr/news/economy/403260",
-      "keyword": "수급"
-    },
-    {
-      "id": "7e64b0760a0fe918",
-      "title": "배·조기 8%대↑, 채솟값도 '껑충'…추석 차례상 부담 커진다",
-      "summary": "가공식품 중에서는 당면과 참기름이 전월보다 각각 6.1%, 4.7% 상승했다. 국가데이터처 관계자는 \"농축수산물은 출하량 증가와 정부 할인 지원 등의 영향으로 하락했지만 일부 품목은 수급 여건에 따라 가격이 높은...",
-      "source": "news1.kr",
-      "publishedAt": "2026-09-05T21:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009152949?sid=101",
-      "originallink": "https://www.news1.kr/economy/trend/6280785",
-      "keyword": "수급"
-    },
-    {
-      "id": "1b0ef3eb66de8da7",
-      "title": "세계 식량가격 2개월 연속 상승…2022년 11월 이후 최고",
-      "summary": "이어지면서 농산물 시장의 불안정이 커진 것으로 유엔 식량농업기구(FAO)는 분석했다. 4일(현지시간)... 소폭 하락했다. 육류 가격지수는 한 달 동안 1.0% 상승했다. 가금류·돼지고기·양고기 가격이 모두 올랐다....",
-      "source": "tfmedia.co.kr",
-      "publishedAt": "2026-09-05T00:18:00.000Z",
-      "link": "https://www.tfmedia.co.kr/news/article.html?no=206994",
-      "originallink": "https://www.tfmedia.co.kr/news/article.html?no=206994",
-      "keyword": "수급"
-    },
-    {
-      "id": "8fcbb3182a672b67",
-      "title": "세계 식량가격 2개월 연속 상승…2022년 11월 이후 최고",
-      "summary": "이어지면서 농산물 시장의 불안정이 커진 것으로 유엔 식량농업기구(FAO)는 분석했다. FAO가 4일(현지시간)... 소폭 하락했다. 육류 가격지수는 한 달 동안 1.0% 상승했다. 가금류·돼지고기·양고기 가격이 모두 올랐다....",
-      "source": "yna.co.kr",
-      "publishedAt": "2026-09-04T17:04:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/001/0016291326?sid=104",
-      "originallink": "https://www.yna.co.kr/view/AKR20260905001900099?input=1195m",
-      "keyword": "수급"
     }
   ]
 }
