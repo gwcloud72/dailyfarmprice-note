@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-09T00:19:52.645Z",
+    "updatedAt": "2026-09-10T00:21:35.177Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "34f281e7a80b6e8c",
+      "title": "[사설]소비자는 우리 농수산물 합리적인 가격 원한다",
+      "summary": "줄면서 가격 상승의 원인이 됐다. 물론 농산물은 산지의 불안정한 기상 여건이 채소류 공급에 영향을 미치다는 사실을 알고 있다. 하지만 정부와 해당 기관은 수급 상황을 꼼꼼히 점검하고 부족한 품목에 대해서는...",
+      "source": "kjdaily.com",
+      "publishedAt": "2026-09-09T10:34:00.000Z",
+      "link": "http://www.kjdaily.com/article.php?aid=1788949744686467018",
+      "originallink": "http://www.kjdaily.com/article.php?aid=1788949744686467018",
+      "keyword": "수급"
+    },
+    {
+      "id": "bb641805b3f89a02",
+      "title": "사과·한우·계란 '추석 할인' 최대 50%… 장바구니 부담 던다",
+      "summary": "성수품 중 과일류는 작황이 양호해 낮은 가격대를 유지하고 있다. 한국농수산식품유통공사(aT) 농산물유... 이 기간 가락시장 도매가격(상품)은 7.5㎏당 3만6000원 내외로 지난해보다 3.23% 하락할 것으로 분석됐다....",
+      "source": "asiatoday.co.kr",
+      "publishedAt": "2026-09-09T10:14:00.000Z",
+      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260910010003716",
+      "originallink": "https://www.asiatoday.co.kr/kn/view.php?key=20260910010003716",
+      "keyword": "시장"
+    },
+    {
+      "id": "42e6652aa6a54860",
+      "title": "정부, 추석 물가잡기 900억 추가 투입…농축산물 할인 한도 없애고 수산...",
+      "summary": "품목별로는 사과 1만7000톤, 배 1만4600톤, 배추 7000톤, 무 6000톤, 마늘과 양파 각각 1000톤 등을 공급한다. 축산물은 돼지고기 6만7000톤, 소고기 2만2530톤, 닭고기 1만6500톤, 계란 4914톤을 시장에 공급한다. 수산물은 명태...",
+      "source": "thepowernews.co.kr",
+      "publishedAt": "2026-09-09T05:38:00.000Z",
+      "link": "https://www.thepowernews.co.kr/view.php?ud=202609091433057502de3f0aa1be_7",
+      "originallink": "https://www.thepowernews.co.kr/view.php?ud=202609091433057502de3f0aa1be_7",
+      "keyword": "배추"
+    },
+    {
+      "id": "5a5ff09e1c866be1",
+      "title": "유가 다시 뛰는데…마트·식품·외식업계 원가 '빨간불' 켜지나?",
+      "summary": "유가 상승이 곧바로 식품 가격 인상으로 이어지는 것은 아니지만, 포장재와 물류비, 수입 원재료 비용 등을... 5% 하락했고 농산물은 6.7% 내렸다. 기상과 작황, 출하량 등 개별 품목의 수급 여건이 식품 가격에 미치는...",
+      "source": "greened.kr",
+      "publishedAt": "2026-09-09T05:23:00.000Z",
+      "link": "https://www.greened.kr/news/articleView.html?idxno=349637",
+      "originallink": "https://www.greened.kr/news/articleView.html?idxno=349637",
+      "keyword": "수급"
+    },
     {
       "id": "4e177adfdcc2782e",
       "title": "현대百 '고당도 청과'의 비결 \"경매장 찾아 당도 체크ㆍ선별\"",
@@ -19,7 +59,7 @@
     },
     {
       "id": "eae5a95f27fe64ed",
-      "title": "'金사과' 잡았더니 '金계란'…엇갈린 추석 장바구니 물가",
+      "title": "사과값 잡았더니 계란이…엇갈린 추석 장바구니 물가",
       "summary": "추석 성수기 사과 홍로 도매가격은 가락시장 상품 5킬로그램(㎏) 기준 5만 7000원으로 지난해보다 약 7%, 배... 농·축·수산물 가격이 올랐지만 최근 기온이 낮아지면서 농산물의 생육과 출하 여건은 점차 개선되고...",
       "source": "edaily.co.kr",
       "publishedAt": "2026-09-08T21:02:00.000Z",
@@ -126,46 +166,6 @@
       "link": "https://www.newsgn.com/news/articleView.html?idxno=571916",
       "originallink": "https://www.newsgn.com/news/articleView.html?idxno=571916",
       "keyword": "수급"
-    },
-    {
-      "id": "b982d890c437eed4",
-      "title": "사과·배 가격 내렸어도 차례상 비용은 올라…추석물가 복병은 ‘축산물...",
-      "summary": "정부는 수요가 몰리는 시기에 공급을 늘려 가격 상승을 억제하겠다는 방침이다. 농식품부는 추석 3주 전부터 사과·배·소고기·돼지고기·계란 등 13대 성수품 16만3000t을 평시의 1.6배 수준으로 공급한다. 농산물은...",
-      "source": "etoday.co.kr",
-      "publishedAt": "2026-09-07T08:00:00.000Z",
-      "link": "https://www.etoday.co.kr/news/view/2622662",
-      "originallink": "https://www.etoday.co.kr/news/view/2622662",
-      "keyword": "수급"
-    },
-    {
-      "id": "50ef18a28b24533e",
-      "title": "위성곤 제주지사, '농수산물유통공사 설립' 공약 사실상 철회",
-      "summary": "주도적으로 가격 결정권을 행사하는 '제값 받는 농어업 시대'를 열겠다\"며 '제주농수산물유통공사 설립'을 공약한 바 있다. 당시 위 지사는 \"전국의 농산물이 서울 가락농수산물종합도매시장으로 집결돼 경매가 진행되는...",
-      "source": "news1.kr",
-      "publishedAt": "2026-09-07T06:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009155400?sid=102",
-      "originallink": "https://www.news1.kr/local/jeju/6282351",
-      "keyword": "시장"
-    },
-    {
-      "id": "2ab4da3ecff5cd62",
-      "title": "[2026년 9월 2주] 주요 농산물 경락가 상승·하락 품목 - 쌈배추·복숭아...",
-      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 8월 31일부터 이달 7일까지 한 주간 거래된 엽근채소, 양념채소...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-09-07T01:46:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=327659",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=327659",
-      "keyword": "배추"
-    },
-    {
-      "id": "4c76fe83dd8a5239",
-      "title": "농산물가격안정제가 '빈말'이 되지 않으려면",
-      "summary": "농산물 가격 변동성이 심각한 한 해를 지나고 있는 가운데, 농민들의 농업소득 안정을 위해 도입한... 관련법에서 정의하는 평균가격이란 가락시장 도매가격에서 유통비용을 제외한 농가수취가격을 말한다. 가락시장에서...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-09-06T09:28:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71364",
-      "keyword": "시장"
     }
   ]
 }
