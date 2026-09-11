@@ -2,11 +2,91 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-10T00:21:35.177Z",
+    "updatedAt": "2026-09-11T00:17:34.087Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "fb62667ab12526f3",
+      "title": "농산물값 떨어져도 농가소득 80% 보장…가격안정제 본격 시행",
+      "summary": "농산물 가격을 단순히 정부 재정으로 떠받치는 방식으로는 지속적인 가격 안정을 기대하기 어렵기 때문이다. 정부는 도매시장 효율화를 위해 도매법인 평가와 관련 제도를 손보고, 온라인도매시장의 정착을 위한 보완책도...",
+      "source": "mediapen.com",
+      "publishedAt": "2026-09-11T00:08:00.000Z",
+      "link": "https://www.mediapen.com/news/view/1122861",
+      "originallink": "https://www.mediapen.com/news/view/1122861",
+      "keyword": "시장"
+    },
+    {
+      "id": "1b490b1463962d38",
+      "title": "[원자재 시황] 전망치 웃돈 물가에 위축된 시장",
+      "summary": "세계 농산물 수급 전망(WASDE) 발표를 앞두고 강세를 나타냈다. 옥수수와 대두는 미국 생산량과 기말재고 감소 전망이 가격을 끌어올렸으며 밀은 흑해 지역의 지정학적 불안과 러시아 수출 감소 전망에 상승했다....",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-09-10T23:22:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1723853",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1723853",
+      "keyword": "수급"
+    },
+    {
+      "id": "bc3651be52d4cebc",
+      "title": "명절 제수용품 가격, 9월 들어 하락세…정부 지원 ‘효과’",
+      "summary": "한국소비자단체협의회는 “명절 차례상 비용은 명절이 가까워질수록 가격이 점차 상승하는 추세가 나타난다\"며 “정부는 성수기 막바지까지 주요 품목의 출하 확대와 현장 수급 관리에 만전을 기해야 한다\"고...",
+      "source": "ekn.kr",
+      "publishedAt": "2026-09-10T11:02:00.000Z",
+      "link": "https://www.ekn.kr/web/view.php?key=20260910025272835",
+      "originallink": "https://www.ekn.kr/web/view.php?key=20260910025272835",
+      "keyword": "수급"
+    },
+    {
+      "id": "0a5b8671ed81a8c2",
+      "title": "2026년 농산물가격안정제 대상 품목은 '마늘·양파'",
+      "summary": "기준가격과 함께 지급액 산정의 기준이 되는 농산물 평균가격은 시행규칙상 '가락시장 도매가격에서 유통비용을 제외한 가격'으로 규정돼 있는데, 위원회는 이 가격에 해당 작물의 수확기 상·중·하품 가격을 모두...",
+      "source": "ikpnews.net",
+      "publishedAt": "2026-09-10T10:00:00.000Z",
+      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71414",
+      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71414",
+      "keyword": "양파"
+    },
+    {
+      "id": "270e2c3529be26b0",
+      "title": "더위 꺾였지만 고수온·폭염 여파 계속…경남 추석 물가 '비상등'",
+      "summary": "올여름 폭염과 가뭄은 농산물에도 부담을 줬다. 고온이 장기간 이어지면서 배추 등 일부 채소류의 생육이 부진해지고 출하량이 줄어들 경우 가격 상승 압력이 커질 수 있기 때문이다. 여기에 고수온에 따른 수산물...",
+      "source": "newsgn.com",
+      "publishedAt": "2026-09-10T08:46:00.000Z",
+      "link": "https://www.newsgn.com/news/articleView.html?idxno=572958",
+      "originallink": "https://www.newsgn.com/news/articleView.html?idxno=572958",
+      "keyword": "배추"
+    },
+    {
+      "id": "b04559592596dbe6",
+      "title": "[만나GO] 안재민 상주시장 \"청사 이전, 12월 여론조사로 결정\"",
+      "summary": "지금은 농산물이 1차 산물 형태로 가락시장 같은 대규모 공영도매시장으로 납품된다. 하지만 상주에... 조직을 개편해 귀농인이든 청년농이든 상주에 들어와 농사를 짓겠다고 하면 작물 선택 과정부터 가격 급등락 같은...",
+      "source": "kyongbuk.co.kr",
+      "publishedAt": "2026-09-10T08:16:00.000Z",
+      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4083818",
+      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4083818",
+      "keyword": "시장"
+    },
+    {
+      "id": "2de011bf8d8054c7",
+      "title": "대출정책 허점 지적·주택공급 제언 … 부동산 보도 균형 잘 잡혀",
+      "summary": "다만 국제 유가와 폭염에 따른 농산물 가격 상승처럼 공급 측 요인이 물가를 끌어올리는 상황에서 금리... 다만 최근 주가 하락이 외국인 매도 등 단기 수급 변화에서 비롯된 것인지, 국내 반도체와 혁신기업의 성장성과...",
+      "source": "mk.co.kr",
+      "publishedAt": "2026-09-10T06:56:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/009/0005733361?sid=102",
+      "originallink": "https://www.mk.co.kr/article/12149440",
+      "keyword": "수급"
+    },
+    {
+      "id": "ee966fd24887932a",
+      "title": "김치협회, '김치종주국 지킴 캠페인' 첫 결실 맺어",
+      "summary": "올해 8월 가락시장 기준 배추 도매가격(상품 10kg기준)은 1만 689원으로, 전년(1만 4340원) 및 평년(1만 4132원)... 원료 농산물 생산기반까지 흔들고 있다\"면서 \"이 시점에서 김치협회의 자발적 캠페인은 단순한 홍보를 넘어...",
+      "source": "amnews.co.kr",
+      "publishedAt": "2026-09-10T04:20:00.000Z",
+      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=74432",
+      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=74432",
+      "keyword": "배추"
+    },
     {
       "id": "34f281e7a80b6e8c",
       "title": "[사설]소비자는 우리 농수산물 합리적인 가격 원한다",
@@ -85,86 +165,6 @@
       "publishedAt": "2026-09-08T07:36:00.000Z",
       "link": "https://www.kukinews.com/article/view/kuk202609080189",
       "originallink": "https://www.kukinews.com/article/view/kuk202609080189",
-      "keyword": "수급"
-    },
-    {
-      "id": "cd7f266038d7b2e5",
-      "title": "채소값 '쑥' 과일값 '뚝'…지자체 추석 밥상 물가 안정화 총력",
-      "summary": "뚜렷한 하락세를 보이고 있어 정부의 추석 물가 안정화 대책에 관심이 쏠린다. 8일 한국농수산식품유통공사(aT)의 농산물유통정보(KAMIS) 등에 따르면 기상 여건 악화로 전남광주지역의 채소류의 가격 상승이...",
-      "source": "jnilbo.com",
-      "publishedAt": "2026-09-08T05:08:00.000Z",
-      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000063528",
-      "originallink": "https://www.jnilbo.com/news/articleView.html?idxno=90000063528",
-      "keyword": "시장"
-    },
-    {
-      "id": "7aeba6cd9c6766a2",
-      "title": "\"농민에게 수급 책임만 물어선 안 돼\"",
-      "summary": "수급관리의 문제 진단과 지속가능한 대응 방안 모색을 위한 토론회'를 개최했다. 이수미 농업농민정책연구소 녀름 소장. 이날 주제발표에 나선 이수미 농업농민정책연구소 녀름 소장은 농산물 가격 하락과 생산비 상승이...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-09-08T02:06:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102240",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102240",
-      "keyword": "수급"
-    },
-    {
-      "id": "6f55169c2990a75c",
-      "title": "[진단] '역대급' 농업예산 증액의 명과 암…성과의 그늘에 가려진 5대 맹...",
-      "summary": "내세운 농산물 온라인도매시장에는 결제·정산자금 확대(1,500억 원)와 거래 바우처 및 이용 지원(505억 원) 등 총 2,005억 원의 막대한 재정이 투입된다. 가락동 농수산물도매시장을 비롯한 전국의 기존 공영도매시장...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-09-07T23:30:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16850",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16850",
-      "keyword": "시장"
-    },
-    {
-      "id": "ad56fbc6211da01e",
-      "title": "추석 앞두고 배값 작년보다 30% 넘게 가격 치솟았다 [프라이스&]",
-      "summary": "농업관측센터는 추석 성수기 신고배 도매가격이 상품 기준 7.5㎏당 3만6000원 안팎으로 지난해 3만7200원보다 3.2% 낮아질 것으로 내다봤다. 현재 가락시장 가격은 전년보다 30% 넘게 높지만 출하 물량이 본격적으로...",
-      "source": "hankyung.com",
-      "publishedAt": "2026-09-07T22:40:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/015/0005329812?sid=101",
-      "originallink": "https://www.hankyung.com/article/202609089942i",
-      "keyword": "시장"
-    },
-    {
-      "id": "6c16d1bc89841bb6",
-      "title": "역대 최대 성수품 공급에도…추석 장바구니 가격은 '제각각'",
-      "summary": "농산물공영도매시장 시세도 품목별로 큰 차이를 보였다. 서울시농수산식품공사에 따르면 4일 기준 추석 성수품 가격은 청과‧수산부류에 따라 큰 차이를 보였다. 청과부류는 배추‧무‧당근‧시금치‧느타리버섯...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-09-07T21:52:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20260907500161",
-      "originallink": "https://www.news2day.co.kr/article/20260907500161",
-      "keyword": "배추"
-    },
-    {
-      "id": "2fcd9c1542943f77",
-      "title": "위성곤 지사, 제주농수산물유통공사 대안은 '빈칸'",
-      "summary": "대형 저온저장시설과 제주 농산물 전용 창고, 전속 화물 운송체계를 구축해 제주 농어민이 부담하는 과도한 해상물류비를 낮추고 가격 경쟁력을 높이겠다는 계획이었다. 서울 가락농수산물종합도매시장 중심의...",
-      "source": "gukjenews.com",
-      "publishedAt": "2026-09-07T13:34:00.000Z",
-      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3687681",
-      "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3687681",
-      "keyword": "시장"
-    },
-    {
-      "id": "bf706827e46ea814",
-      "title": "권성현 경남도의원, 농산물 가격하락 대응·선제적 수급관리체계 구축 ...",
-      "summary": "2026년 8월 경남의 소비자물가는 전년 동월 대비 3.3%, 생활물가는 3.5% 상승한 반면 농산물 가격은 5.8% 하락했으... 있다\"며 \"가격하락이 장기화하면 농가 경영 악화와 생산기반 위축으로 이어질 수 있는 만큼 선제적인 수급...",
-      "source": "gndomin.com",
-      "publishedAt": "2026-09-07T09:24:00.000Z",
-      "link": "http://www.gndomin.com/news/articleView.html?idxno=488350",
-      "originallink": "http://www.gndomin.com/news/articleView.html?idxno=488350",
-      "keyword": "수급"
-    },
-    {
-      "id": "c95166c759a3eb18",
-      "title": "\"오르는 물가·내리는 농산물 가격…경남형 가격안정 대책 강화해야\"",
-      "summary": "2026년 8월 경남의 소비자물가는 전년 동월 대비 3.3%, 생활물가는 3.5% 상승한 반면 농산물 가격은 5.8% 하락했으... 있다\"며 \"가격하락이 장기화하면 농가 경영 악화와 생산기반 위축으로 이어질 수 있는 만큼 선제적인 수급...",
-      "source": "newsgn.com",
-      "publishedAt": "2026-09-07T08:30:00.000Z",
-      "link": "https://www.newsgn.com/news/articleView.html?idxno=571916",
-      "originallink": "https://www.newsgn.com/news/articleView.html?idxno=571916",
       "keyword": "수급"
     }
   ]
