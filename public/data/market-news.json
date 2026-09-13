@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-12T00:23:19.056Z",
+    "updatedAt": "2026-09-13T00:11:57.865Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "f986ec87c7f85adc",
+      "title": "[숲코노미] ④가을엔 표고다…食·藥 넘나드는 ‘임산물’",
+      "summary": "흔히 농산물로 생각하지만 나무와 밀접한 관계를 맺고 자라는 버섯 대부은 임산물로 분류된다. 산림청이... 2024년 가락시장 생표고 평균 도매가격도 1㎏당 5876원으로 전년보다 4.5% 떨어졌다. 가격은 비싸지만 국산 표고를...",
+      "source": "biz.chosun.com",
+      "publishedAt": "2026-09-12T21:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/366/0001191953?sid=102",
+      "originallink": "https://biz.chosun.com/topics/topics_social/2026/09/13/GJ56JGX7JJAS7N7SGOCYLKVRQY/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "keyword": "시장"
+    },
+    {
+      "id": "d9354f2cba9499b5",
+      "title": "가락시장 ‘파렛트 물류’ 90% 돌파… 느타리·봄동·제주당근도 의무화...",
+      "summary": "산지에서 출하된 농산물이 도매시장에 도착한 뒤 일일이 상·하차 작업을 반복하던 기존 체계를 개선해, 산지부터 도매시장까지 파렛트 단위로 일관 이동하는 ‘통합 물류체계’를 구축하는 것이 핵심이다. 특히 가락시...",
+      "source": "dailyt.co.kr",
+      "publishedAt": "2026-09-12T07:20:00.000Z",
+      "link": "https://www.dailyt.co.kr/newsView/dlt202609120009",
+      "originallink": "https://www.dailyt.co.kr/newsView/dlt202609120009",
+      "keyword": "시장"
+    },
+    {
+      "id": "8ed6d5df744ff56c",
+      "title": "가락시장 파렛트 출하 확대…느타리버섯·봄동·제주당근 의무화",
+      "summary": "가락시장 파렛트 출하 확대는 농림축산식품부가 2023년 발표한 '농산물 유통구조 선진화 방안'에도 포함된 사업이다. 반복적인 수작업 상·하차를 줄여 하역시간과 물류비를 낮추고 산지와 도매시장 물류 효율을 높이는...",
+      "source": "youngnong.co.kr",
+      "publishedAt": "2026-09-12T02:24:00.000Z",
+      "link": "https://www.youngnong.co.kr/news/articleView.html?idxno=70289",
+      "originallink": "https://www.youngnong.co.kr/news/articleView.html?idxno=70289",
+      "keyword": "시장"
+    },
     {
       "id": "5c515825d5416207",
       "title": "가락시장, 10월부터 느타리·봄동 파렛트 출하 의무화…물류 효율↑",
@@ -136,36 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/009/0005733361?sid=102",
       "originallink": "https://www.mk.co.kr/article/12149440",
       "keyword": "수급"
-    },
-    {
-      "id": "ee966fd24887932a",
-      "title": "김치협회, '김치종주국 지킴 캠페인' 첫 결실 맺어",
-      "summary": "올해 8월 가락시장 기준 배추 도매가격(상품 10kg기준)은 1만 689원으로, 전년(1만 4340원) 및 평년(1만 4132원)... 원료 농산물 생산기반까지 흔들고 있다\"면서 \"이 시점에서 김치협회의 자발적 캠페인은 단순한 홍보를 넘어...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-09-10T04:20:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=74432",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=74432",
-      "keyword": "배추"
-    },
-    {
-      "id": "34f281e7a80b6e8c",
-      "title": "[사설]소비자는 우리 농수산물 합리적인 가격 원한다",
-      "summary": "줄면서 가격 상승의 원인이 됐다. 물론 농산물은 산지의 불안정한 기상 여건이 채소류 공급에 영향을 미치다는 사실을 알고 있다. 하지만 정부와 해당 기관은 수급 상황을 꼼꼼히 점검하고 부족한 품목에 대해서는...",
-      "source": "kjdaily.com",
-      "publishedAt": "2026-09-09T10:34:00.000Z",
-      "link": "http://www.kjdaily.com/article.php?aid=1788949744686467018",
-      "originallink": "http://www.kjdaily.com/article.php?aid=1788949744686467018",
-      "keyword": "수급"
-    },
-    {
-      "id": "bb641805b3f89a02",
-      "title": "사과·한우·계란 '추석 할인' 최대 50%… 장바구니 부담 던다",
-      "summary": "성수품 중 과일류는 작황이 양호해 낮은 가격대를 유지하고 있다. 한국농수산식품유통공사(aT) 농산물유... 이 기간 가락시장 도매가격(상품)은 7.5㎏당 3만6000원 내외로 지난해보다 3.23% 하락할 것으로 분석됐다....",
-      "source": "asiatoday.co.kr",
-      "publishedAt": "2026-09-09T10:14:00.000Z",
-      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260910010003716",
-      "originallink": "https://www.asiatoday.co.kr/kn/view.php?key=20260910010003716",
-      "keyword": "시장"
     }
   ]
 }
