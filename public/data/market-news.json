@@ -2,11 +2,61 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-13T00:11:57.865Z",
+    "updatedAt": "2026-09-14T00:22:10.990Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "e5d12c6830f12cb3",
+      "title": "남촌농축산물도매시장, 추석 맞아 성수품 공급 확대··· 영업시간 연장",
+      "summary": "남촌농축산물도매시장관리사무소는 추석 명절 농산물 수급과 가격 안정을 위해 사과, 배, 배추, 무, 양파, 마늘, 감자, 밤, 대추 등 주요 성수품 9개 품목 4828톤을 공급할 계획이다. 이는 지난해 공급량 4024톤보다 20...",
+      "source": "incheontoday.com",
+      "publishedAt": "2026-09-14T00:08:00.000Z",
+      "link": "https://www.incheontoday.com/news/articleView.html?idxno=323579",
+      "originallink": "https://www.incheontoday.com/news/articleView.html?idxno=323579",
+      "keyword": "배추"
+    },
+    {
+      "id": "e9735889145c6569",
+      "title": "인천 남촌도매시장, 추석 성수품 4828톤 공급…영업시간도 연장",
+      "summary": "매일일보 = 이종민 기자 | 인천광역시 남촌농축산물도매시장관리사무소가 추석 명절을 앞두고 성수품 수요... 먼저 추석 명절 농산물 수급 안정과 가격 안정을 위해 사과·배·배추·무·양파·마늘·감자·밤·대추 등...",
+      "source": "m-i.kr",
+      "publishedAt": "2026-09-13T23:30:00.000Z",
+      "link": "https://www.m-i.kr/news/articleView.html?idxno=1413238",
+      "originallink": "https://www.m-i.kr/news/articleView.html?idxno=1413238",
+      "keyword": "배추"
+    },
+    {
+      "id": "12be06262e6c07b8",
+      "title": "[원자재 시황] \"미 기준금리 올린다\" 금·코인 동반하락",
+      "summary": "타이트한 수급 여건이 가격의 추가 하락을 제한할 것으로 예상된다. 다른 비철금속도 미국의 금리 상승과... 구매가 가격을 지지했다. 하지만 주 후반 USDA 농작물 생산량 보고서와 세계 농산물 수급 전망(WASDE)이...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-09-13T23:30:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1724068",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1724068",
+      "keyword": "수급"
+    },
+    {
+      "id": "16937f33e20368af",
+      "title": "[경필회동-이상용 대아청과 대표] \"농산물 유통 몰이해 심각···오해로...",
+      "summary": "이날 포럼에서는 공영도매시장인 가락시장에서 30년 이상 현장 경험을 쌓은 이상용 대아청과 대표이사가... 농산물 가격 문제를 유통 단계와 중간상인의 문제로 단순화하는 접근에도 한계가 있다고 지적했다. 기상재해와...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-09-13T07:26:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102289",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102289",
+      "keyword": "시장"
+    },
+    {
+      "id": "249afc7f2f42e6d3",
+      "title": "“전쟁에 엘니뇨까지, 미리 움직인 그들 웃었다”…6개월새 13% 뛴 농산...",
+      "summary": "지금처럼 농산물 가격이 올라간다면 애그플레이션이 발생할 가능성이 높다. 사료용 곡물 수급이 원활하지 못하면 유럽 축산 농가들의 파산 위험성이 커지고, 결국엔 식탁 물가 상승으로 이어지게 된다. 과거...",
+      "source": "mk.co.kr",
+      "publishedAt": "2026-09-13T04:03:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/009/0005734360?sid=101",
+      "originallink": "https://www.mk.co.kr/article/12151315",
+      "keyword": "수급"
+    },
     {
       "id": "f986ec87c7f85adc",
       "title": "[숲코노미] ④가을엔 표고다…食·藥 넘나드는 ‘임산물’",
@@ -115,56 +165,6 @@
       "publishedAt": "2026-09-10T23:22:00.000Z",
       "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1723853",
       "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1723853",
-      "keyword": "수급"
-    },
-    {
-      "id": "bc3651be52d4cebc",
-      "title": "명절 제수용품 가격, 9월 들어 하락세…정부 지원 ‘효과’",
-      "summary": "한국소비자단체협의회는 “명절 차례상 비용은 명절이 가까워질수록 가격이 점차 상승하는 추세가 나타난다\"며 “정부는 성수기 막바지까지 주요 품목의 출하 확대와 현장 수급 관리에 만전을 기해야 한다\"고...",
-      "source": "ekn.kr",
-      "publishedAt": "2026-09-10T11:02:00.000Z",
-      "link": "https://www.ekn.kr/web/view.php?key=20260910025272835",
-      "originallink": "https://www.ekn.kr/web/view.php?key=20260910025272835",
-      "keyword": "수급"
-    },
-    {
-      "id": "0a5b8671ed81a8c2",
-      "title": "2026년 농산물가격안정제 대상 품목은 '마늘·양파'",
-      "summary": "기준가격과 함께 지급액 산정의 기준이 되는 농산물 평균가격은 시행규칙상 '가락시장 도매가격에서 유통비용을 제외한 가격'으로 규정돼 있는데, 위원회는 이 가격에 해당 작물의 수확기 상·중·하품 가격을 모두...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-09-10T10:00:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71414",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71414",
-      "keyword": "양파"
-    },
-    {
-      "id": "270e2c3529be26b0",
-      "title": "더위 꺾였지만 고수온·폭염 여파 계속…경남 추석 물가 '비상등'",
-      "summary": "올여름 폭염과 가뭄은 농산물에도 부담을 줬다. 고온이 장기간 이어지면서 배추 등 일부 채소류의 생육이 부진해지고 출하량이 줄어들 경우 가격 상승 압력이 커질 수 있기 때문이다. 여기에 고수온에 따른 수산물...",
-      "source": "newsgn.com",
-      "publishedAt": "2026-09-10T08:46:00.000Z",
-      "link": "https://www.newsgn.com/news/articleView.html?idxno=572958",
-      "originallink": "https://www.newsgn.com/news/articleView.html?idxno=572958",
-      "keyword": "배추"
-    },
-    {
-      "id": "b04559592596dbe6",
-      "title": "[만나GO] 안재민 상주시장 \"청사 이전, 12월 여론조사로 결정\"",
-      "summary": "지금은 농산물이 1차 산물 형태로 가락시장 같은 대규모 공영도매시장으로 납품된다. 하지만 상주에... 조직을 개편해 귀농인이든 청년농이든 상주에 들어와 농사를 짓겠다고 하면 작물 선택 과정부터 가격 급등락 같은...",
-      "source": "kyongbuk.co.kr",
-      "publishedAt": "2026-09-10T08:16:00.000Z",
-      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4083818",
-      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4083818",
-      "keyword": "시장"
-    },
-    {
-      "id": "2de011bf8d8054c7",
-      "title": "대출정책 허점 지적·주택공급 제언 … 부동산 보도 균형 잘 잡혀",
-      "summary": "다만 국제 유가와 폭염에 따른 농산물 가격 상승처럼 공급 측 요인이 물가를 끌어올리는 상황에서 금리... 다만 최근 주가 하락이 외국인 매도 등 단기 수급 변화에서 비롯된 것인지, 국내 반도체와 혁신기업의 성장성과...",
-      "source": "mk.co.kr",
-      "publishedAt": "2026-09-10T06:56:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/009/0005733361?sid=102",
-      "originallink": "https://www.mk.co.kr/article/12149440",
       "keyword": "수급"
     }
   ]
