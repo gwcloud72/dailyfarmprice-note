@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-16T00:25:41.899Z",
+    "updatedAt": "2026-09-17T00:37:34.894Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "5782346efd310f6f",
+      "title": "농식품부 예산 22.2조 '역대 최대'···공익직불 3조 시대 연다",
+      "summary": "온라인도매시장을 육성해 가락시장을 거치지 않는 산지-소비지 직거래 확산 및 물류비 등 절감 추진합니다. 한편, 소비자들이 주변 판매처별 농산물 가격을 손쉽게 파악할 수 있는 ‘알뜰 소비 앱’을 출시(9월말 예정)...",
+      "source": "ktv.go.kr",
+      "publishedAt": "2026-09-16T00:50:00.000Z",
+      "link": "https://www.ktv.go.kr/content/view?content_id=761094",
+      "originallink": "https://www.ktv.go.kr/content/view?content_id=761094",
+      "keyword": "시장"
+    },
     {
       "id": "f760381520d0c780",
       "title": "[원자재 시황] 원유 공급차질 우려에 금·코인·뉴욕증시 동반 하락",
@@ -156,16 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/003/0014188085?sid=104",
       "originallink": "https://www.newsis.com/view/NISX20260914_0003788226",
       "keyword": "수급"
-    },
-    {
-      "id": "cf4c6c384ea53154",
-      "title": "[지상중계] 경필회동 두번재 이야기, \"유통을 논하다\"",
-      "summary": "농업전문기자포럼이 주최하는 경필회동 두 번째 모임을 열고 서울 가락동 농수산물도매시장에서 이상용... 최근 시행된 농산물 가격안정제에 대해서는 \"기준가격 유지에 실제로 어떤 영향을 미칠지 지켜봐야 한다\"면서도...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-09-14T01:56:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16876",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16876",
-      "keyword": "시장"
     }
   ]
 }
