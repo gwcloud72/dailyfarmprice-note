@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-18T00:19:02.878Z",
+    "updatedAt": "2026-09-19T00:25:11.291Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "4228011c59308504",
+      "title": "비트코인서 거시·원자재로…제이슨 황 투자법 확장",
+      "summary": "GBTC 사례에서는 가격 하락만으로 저평가 여부를 판단하지 않았다고 말했다. FTX 사태 이후 GBTC와 기초자산인... 황은 석유 가격 상승이 비용 구조를 통해 농산물에 영향을 줄 것으로 봤지만 몇 달을 기다린 뒤 거래를...",
+      "source": "tokenpost.kr",
+      "publishedAt": "2026-09-18T07:04:00.000Z",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/410201",
+      "originallink": "https://www.tokenpost.kr/news/cryptocurrency/410201",
+      "keyword": "수급"
+    },
+    {
+      "id": "bcef65caf394b3e9",
+      "title": "8월 생산자물가 한 달 만에 반등...폭염·유가 상승에 0.2% 오름세",
+      "summary": "국내 생산자물가가 폭염에 따른 농산물 수급 불안과 국제유가 상승 여파로 한 달 만에 오름세로 돌아섰다.... 한국은행은 환율 하락과 7월 국제유가 인하 효과로 통관 기준 수입 가격이 낮아지면서 중간재와 원재료...",
+      "source": "ppss.kr",
+      "publishedAt": "2026-09-18T00:56:00.000Z",
+      "link": "https://www.ppss.kr/news/articleView.html?idxno=311372",
+      "originallink": "https://www.ppss.kr/news/articleView.html?idxno=311372",
+      "keyword": "수급"
+    },
+    {
+      "id": "5db9737117d1192f",
+      "title": "[기획] 추석 차례상 물가 '들쭉날쭉'…유통업계 할인 경쟁 본격화",
+      "summary": "사진=명경민 기자 | 뉴스워치= 명경민 기자 | 올해 추석 주요 제수용품 가격이 지난해보다 대체로 하락한... (aT)의 농산물유통정보(KAMIS)에 따르면 추석을 2주 앞둔 9월 2주차 제수용품 시세는 계란과 무, 애호박...",
+      "source": "newswatch.kr",
+      "publishedAt": "2026-09-18T00:26:00.000Z",
+      "link": "http://www.newswatch.kr/news/articleView.html?idxno=81196",
+      "originallink": "http://www.newswatch.kr/news/articleView.html?idxno=81196",
+      "keyword": "시장"
+    },
     {
       "id": "19ddda3e1e22acd4",
       "title": "8월 생산자물가 0.2% ↑…폭염에 시금치 52% 폭등",
@@ -136,36 +166,6 @@
       "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102321",
       "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102321",
       "keyword": "시장"
-    },
-    {
-      "id": "d8ae48f2658511dd",
-      "title": "남원시의회 경농위, 농업인단체와 현장 간담회",
-      "summary": "간담회에서는 농촌의 인력난과 농자재 가격 상승, 농산물 가격 불안 등 농업 경영을 압박하는 현실을 반영한... 쌀값 하락이나 수급 불안이 반복될 때 농민들의 피해를 줄일 수 있도록 위원회가 단순한 의견수렴 창구에...",
-      "source": "jeollailbo.com",
-      "publishedAt": "2026-09-15T02:38:00.000Z",
-      "link": "http://www.jeollailbo.com/news/articleView.html?idxno=811090",
-      "originallink": "http://www.jeollailbo.com/news/articleView.html?idxno=811090",
-      "keyword": "수급"
-    },
-    {
-      "id": "cc1f0b5995e96d82",
-      "title": "추석 밥상 물가 잡는 농수산물 온라인 도매법 국회 쟁점 점검",
-      "summary": "산지에서 생산된 농산물이 식탁에 오르기까지 여러 단계의 도매상을 거치며 유통비용이 눈덩이처럼... 농수산물 도매시장은 지난 1985년 가락시장 개장 이후 전국 농축수산물의 수집과 분산, 기준가격...",
-      "source": "gokorea.kr",
-      "publishedAt": "2026-09-15T00:54:00.000Z",
-      "link": "https://www.gokorea.kr/news/articleView.html?idxno=878432",
-      "originallink": "https://www.gokorea.kr/news/articleView.html?idxno=878432",
-      "keyword": "시장"
-    },
-    {
-      "id": "9dcaa54e2907247a",
-      "title": "정부, 추석 성수품 계획보다 초과 공급…13대 성수품 할인지원 1천490억...",
-      "summary": "▲ 추석 연휴를 앞두고 14일 부산 해운대구 반여농산물도매시장을 찾은 시민들이 명절 선물용과 제수용... 13대 추석 성수품은 사과, 배, 배추, 무, 양파, 마늘, 애호박, 소고기, 돼지고기, 닭고기, 계란, 밤, 대춥니다....",
-      "source": "news.sbs.co.kr",
-      "publishedAt": "2026-09-14T08:47:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/055/0001388200?sid=101",
-      "originallink": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008752686&plink=ORI&cooper=NAVER",
-      "keyword": "배추"
     }
   ]
 }
