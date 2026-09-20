@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-19T00:25:11.291Z",
+    "updatedAt": "2026-09-20T00:17:34.493Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "34ed807675ed560e",
+      "title": "“호르무즈 막히자 수익률 치솟았다”…요즘 ETF 시장은 원유·농산물이...",
+      "summary": "인베스팅닷컴에 따르면 지난 17일(현지시간) WTI 가격은 전 거래일 보다 1.31% 하락한 배럴당 101.09달러를... 농산물 가격 상승도 중동 분쟁과 관련이 깊다. 전쟁 이후 카타르 등에서 생산되는 천연가스 수급에 차질이...",
+      "source": "mk.co.kr",
+      "publishedAt": "2026-09-19T23:56:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/009/0005737718?sid=101",
+      "originallink": "https://www.mk.co.kr/article/12157282",
+      "keyword": "수급"
+    },
+    {
+      "id": "640f5343464a17d7",
+      "title": "올해 추석 평균 차례상 비용 19만6630원",
+      "summary": "반면 추석을 앞두고 공급량이 늘어난 과일류는 7.2%, 수산물은 4.9%, 임산물은 8.4% 각각 하락했다. 쌀이 포함된 곡류도 9.3% 낮아졌으며 채소류와 가공식품은 각각 2.7%, 2.0% 상승했다. 품목별 가격 움직임은 엇갈렸다....",
+      "source": "fsnews.co.kr",
+      "publishedAt": "2026-09-19T10:30:00.000Z",
+      "link": "http://www.fsnews.co.kr/news/articleView.html?idxno=62215",
+      "originallink": "http://www.fsnews.co.kr/news/articleView.html?idxno=62215",
+      "keyword": "수급"
+    },
+    {
+      "id": "5330c546bc67492d",
+      "title": "올해 추석 차례상 차림 비용 19만6000원…전년比 1.5% 하락",
+      "summary": "3% 상승한 것으로 나타났다. 반면 밀가루(1㎏), 식혜(1500㎖), 약과(350g) 가격은 1.2%, 3.5%, 3.2% 가격이 하락... 한편 농산물·축산물·임산물은 9월 30일까지 최대 40%까지 할인된 가격으로 구매할 수 있다. 또...",
+      "source": "newsis.com",
+      "publishedAt": "2026-09-19T00:37:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014201000?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20260919_0003796478",
+      "keyword": "수급"
+    },
     {
       "id": "4228011c59308504",
       "title": "비트코인서 거시·원자재로…제이슨 황 투자법 확장",
@@ -135,36 +165,6 @@
       "publishedAt": "2026-09-15T08:02:00.000Z",
       "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407249",
       "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407249",
-      "keyword": "시장"
-    },
-    {
-      "id": "9dc8ade2da4b2e0a",
-      "title": "봄동·당근 파렛트 출하 의무화",
-      "summary": "가락시장, 올해 연말부터 2033년 전 품목 100% 목표 산지 작업 여건 충분치 않아 작업 애로·비용 증가 등 우려... 산지와 농산물도매시장의 동반 성장을 위한 핵심 과제임을 표명하고 있다. 이러한 기조 속에 2024년 12월...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-09-15T05:22:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407257",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407257",
-      "keyword": "시장"
-    },
-    {
-      "id": "38749b458aae65e4",
-      "title": "느타리·봄동·제주당근까지…가락시장 파렛트 의무출하 가속",
-      "summary": "서울시농수산식품공사(사장 문영표)는 서울 가락동 농수산물도매시장의 시설현대화사업 단계별 추진과... 파렛트 출하 확대는 농림축산식품부의 2023년 '농산물 유통구조 선진화 방안'에 포함된 계획이다. 반복적인...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-09-15T03:46:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=328249",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=328249",
-      "keyword": "시장"
-    },
-    {
-      "id": "044ae10b1eff4e70",
-      "title": "가락시장 '파렛트 물류' 전환 가속",
-      "summary": "6%p 상승 2033년까지 신축동 전체 품목으로 단계적 확대 (한국농업신문=박현욱 기자) 가락시장이... 이에 따라 농산물의 파렛트 단위 출하와 하역이 신축 도매시장 운영을 위한 필수 조건이 된다. 공사는 채소2동의 운영...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-09-15T02:46:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102321",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102321",
       "keyword": "시장"
     }
   ]
