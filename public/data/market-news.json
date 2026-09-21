@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-20T00:17:34.493Z",
+    "updatedAt": "2026-09-21T00:20:46.594Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "d23888a77927cd55",
+      "title": "[오늘의 신문] 반도체 호황에 성장률 상향 기대…고금리·전세 불안은 부...",
+      "summary": "올해 서울 전세가격 누적 상승률은 7.79%로 집계됐다. 입주 물량 감소와 매물 부족이 동시에 영향을 미치고... 중국 ‘유황 훈증 죽순’ 논란…식약처 “농산물 수입 없어”중국 광둥성에서 유황으로 훈증 처리한 죽순이...",
+      "source": "kor.theasian.asia",
+      "publishedAt": "2026-09-20T22:46:00.000Z",
+      "link": "http://kor.theasian.asia/archives/415146",
+      "originallink": "http://kor.theasian.asia/archives/415146",
+      "keyword": "수급"
+    },
+    {
+      "id": "4953851b813a2a75",
+      "title": "농산물 제값받기 핵심은? “산지 출하창구 일원화”",
+      "summary": "‘농산물 유통구조 혁신’ 국회 토론회 서삼석 농해수위원장 등 공동 주최 농업단체협의회·식품유통학회... 김 원장은 “전체 유통비용이 소비자 가격의 50% 정도를 차지하는 상황에서 가락도매시장 기준으로 4.5%에 달하는...",
+      "source": "mk.co.kr",
+      "publishedAt": "2026-09-20T21:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/009/0005738021?sid=101",
+      "originallink": "https://www.mk.co.kr/article/12157690",
+      "keyword": "시장"
+    },
+    {
+      "id": "3360600a33c6909e",
+      "title": "[취재수첩] 공영도매시장의 존재 이유",
+      "summary": "가락시장을 열었다. 농수산물을 한데 모아 공정하게 가격을 정하고 효율적으로 분산하는 공영도매시장의... 농민에겐 출하선택권을 넓히고, 소비자에겐 농산물을 안정적으로 공급하겠다는 취지였다. 그런 두 시장이...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-09-20T20:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000104730?sid=110",
+      "originallink": "https://www.nongmin.com/article/20260918500614",
+      "keyword": "시장"
+    },
+    {
+      "id": "76b3fb16cccbee5e",
+      "title": "추석 장바구니 '축산물 부담'…대구 계란값 48% 급등",
+      "summary": "가격 상승으로 돼지고기에 수요가 몰리면서 최근 가격이 오른 것으로 분석된다. 농산물에서는... 특히 정부 비축 물량이 풀린 부세조기는 23.2% 하락했다. aT 이재욱 수급이사는 \"이번 추석에 정부에서 역대...",
+      "source": "kyongbuk.co.kr",
+      "publishedAt": "2026-09-20T07:24:00.000Z",
+      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
+      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
+      "keyword": "수급"
+    },
+    {
+      "id": "e5a543e76095e469",
+      "title": "[르포] \"울진군의회가 '민생지원금'만 안깎았으면 추석대목장 사람 개락...",
+      "summary": "기초생활수급자 40만 원의 지원금을 지원했다. 주민들은 이 같은 사례를 기억하며 이번 울진군의회의... 채소류·어물 가격 상승... 장기적 폭염·폭우따른 작황부진 영향 한국농수산식품유통공사 농산물유통정보에...",
+      "source": "newspim.com",
+      "publishedAt": "2026-09-20T02:51:00.000Z",
+      "link": "https://www.newspim.com/news/view/20260920000040",
+      "originallink": "https://www.newspim.com/news/view/20260920000040",
+      "keyword": "수급"
+    },
+    {
+      "id": "79e9c15dd2c43132",
+      "title": "추석 차례상 비용 2년 연속 하락… 4인 가족 추석 차례상 19만 6630원",
+      "summary": "표면적인 가격 상승분보다 낮을 것으로 aT는 분석했다. 2년 연속 하락…민간조사 추산액과는 차이 이번... 농산물과 축산물, 임산물은 오는 30일까지 최대 40% 할인된 가격에 구매할 수 있고, 전통시장에서 국산...",
+      "source": "wikitree.co.kr",
+      "publishedAt": "2026-09-20T00:26:00.000Z",
+      "link": "https://www.wikitree.co.kr/articles/1160760",
+      "originallink": "https://www.wikitree.co.kr/articles/1160760",
+      "keyword": "수급"
+    },
     {
       "id": "34ed807675ed560e",
       "title": "“호르무즈 막히자 수익률 치솟았다”…요즘 ETF 시장은 원유·농산물이...",
@@ -106,66 +166,6 @@
       "link": "https://www.m-economynews.com/news/article.html?no=70802",
       "originallink": "https://www.m-economynews.com/news/article.html?no=70802",
       "keyword": "배추"
-    },
-    {
-      "id": "5782346efd310f6f",
-      "title": "농식품부 예산 22.2조 '역대 최대'···공익직불 3조 시대 연다",
-      "summary": "온라인도매시장을 육성해 가락시장을 거치지 않는 산지-소비지 직거래 확산 및 물류비 등 절감 추진합니다. 한편, 소비자들이 주변 판매처별 농산물 가격을 손쉽게 파악할 수 있는 ‘알뜰 소비 앱’을 출시(9월말 예정)...",
-      "source": "ktv.go.kr",
-      "publishedAt": "2026-09-16T00:50:00.000Z",
-      "link": "https://www.ktv.go.kr/content/view?content_id=761094",
-      "originallink": "https://www.ktv.go.kr/content/view?content_id=761094",
-      "keyword": "시장"
-    },
-    {
-      "id": "f760381520d0c780",
-      "title": "[원자재 시황] 원유 공급차질 우려에 금·코인·뉴욕증시 동반 하락",
-      "summary": "금값, 유가 급등·금리 상승 부담에 하락 국제 금 가격은 에너지 가격 급등에 따른 인플레이션 우려가... 수요가 가격 하단을 지지하고 있다. 다만 달러화 강세와 연준의 금리 인상 전망은 미국산 농산물의 가격...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-09-15T23:30:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1724412",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1724412",
-      "keyword": "수급"
-    },
-    {
-      "id": "2251713df198f85a",
-      "title": "[농산유통 집중해부⑦] 수십 년째 이어진 개혁…농산물 유통, 어떻게 달...",
-      "summary": "‘합리적 가격’ 요구 여전한 실정 기후변화가 일상이 되며 농산물값이 큰 폭으로 출렁이고 있다. 비싼... 공영도매시장은 1985년 가락동농수산물도매시장 개장 이후 농산물 유통의 주요 경로로 자리 잡았고, 정부는...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-09-15T22:00:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20260915500233",
-      "originallink": "https://www.news2day.co.kr/article/20260915500233",
-      "keyword": "시장"
-    },
-    {
-      "id": "bde2435b20f6c267",
-      "title": "인천원예농협·농협 인천본부, 추석 맞아 남촌농산물도매시장 현장 점검",
-      "summary": "한편, 남촌농산물도매시장은 추석을 앞두고 성수품 공급량을 늘리고 영업시간을 연장하는 등 자체 수급 안정 조치에 나선다. 사과·배·배추·무·양파·마늘·감자·밤·대추 등 9개 주요 성수품을 지난해 4,024톤보다 20...",
-      "source": "wonyesanup.co.kr",
-      "publishedAt": "2026-09-15T09:42:00.000Z",
-      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65766",
-      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65766",
-      "keyword": "배추"
-    },
-    {
-      "id": "0c47bb9230cac5e6",
-      "title": "가락시장, 파렛트 중심 물류체계 전환 가속화",
-      "summary": "등 농산물 물류 전반의 효율성 향상을 통한 산지와 도매시장의 동반 성장을 주요 목적으로 추진 중이다.... 가격 개선에도 크게 기여할 것으로 기대된다. 공사는 가락시장 시설현대화사업의 성공적인 추진과 농산물...",
-      "source": "wonyesanup.co.kr",
-      "publishedAt": "2026-09-15T09:42:00.000Z",
-      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65781",
-      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=65781",
-      "keyword": "시장"
-    },
-    {
-      "id": "54be92ec81e049ed",
-      "title": "\"농산물 가격 왜 오르고 내릴까\"···유통·가격 바로알기 캠페인",
-      "summary": "대상으로 '농산물 유통·가격 바로 알기 소비자 캠페인'을 실시했다. 이번 캠페인은 한국농수산물도매시장법인협회 가락시장지회(서울·중앙·동화·대아청과)와 농협가락공판장에서 출연한 '가락상생기금'을 활용한...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-09-15T08:02:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407249",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407249",
-      "keyword": "시장"
     }
   ]
 }
