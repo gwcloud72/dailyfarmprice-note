@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-21T00:20:46.594Z",
+    "updatedAt": "2026-09-22T00:59:14.522Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "741ea663e46bdbf1",
+      "title": "[원자재 시황] 중동 긴장완화 기대감에 코인·증시 '활짝'",
+      "summary": "지난 주말 진행된 미·중 사전협상에 이어 이번 주 고위급 회담이 예정되면서 중국의 미국산 농산물 구매... 11%로 하락한 것으로 나타나 최근 가격 상승과 개인투자자의 시장 참여 사이에는 괴리가 나타났다....",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-09-21T23:16:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1725222",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1725222",
+      "keyword": "수급"
+    },
+    {
+      "id": "5e143d6be3e740d9",
+      "title": "성수품 할인 지원에도…\"채솟값 무슨 일?\" 추석 앞 시민들 '한숨'",
+      "summary": "비싼 가격이 체감되면서다. 21일 뉴스1 취재에 따르면 서울시농수산식품공사가 지난 9일 서울 전통시장 16곳·대형마트 8곳·가락몰 등 25곳을 조사한 결과 6인 가족 기준 차례상 성수품 34개 품목의 평균 구매비용은 전년...",
+      "source": "news1.kr",
+      "publishedAt": "2026-09-21T08:27:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/421/0009184225?sid=102",
+      "originallink": "https://www.news1.kr/society/general-society/6297805",
+      "keyword": "시장"
+    },
+    {
+      "id": "550de40815ad53b8",
+      "title": "\"제주 농산물 가격결정력 키워야\"…생산자 중심 유통 전환 제안",
+      "summary": "정작 농산물 가격을 결정하지 못하고 타지역 도매시장에 의존하는 유통구조를 바꿔야 한다는 지적이... 오후 5시나 7시께 제주에서 출항한 배가 8∼9시간 뒤 육지에 도착하고, 서울 가락시장에서는 다시 그날 밤 10시...",
+      "source": "yna.co.kr",
+      "publishedAt": "2026-09-21T08:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/001/0016327288?sid=101",
+      "originallink": "https://www.yna.co.kr/view/AKR20260921114700056?input=1195m",
+      "keyword": "시장"
+    },
+    {
+      "id": "85a2cd9f3351909f",
+      "title": "“이 가격, 어디서 붙었나”… 소비자 3명 중 1명 “농산물 유통비용 알...",
+      "summary": "주요 농산물 25개 품목 37종류의 유통경로와 유통비용 등을 조사하고 있습니다. 중도매인 판매가격은 76개... 열우물전통시장, 경기 하남 신장전통시장, 부산 초량전통시장·탑마트 초량점 일대에서 참여 프로그램을...",
+      "source": "jibs.co.kr",
+      "publishedAt": "2026-09-21T07:08:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/661/0000083593?sid=101",
+      "originallink": "https://www.jibs.co.kr/news/articles/articlesDetail/65723?feed=na",
+      "keyword": "시장"
+    },
+    {
+      "id": "7152b699a7e13c51",
+      "title": "농지전수조사 꼭 필요한데, 왜 위기에 처했을까",
+      "summary": "결국 지금의 농지 전수조사가 자칫하면 경자유전의 확립은커녕 농지가격 하락, 임차농 피해, 형식적 자경... 이 자료는 농산물 수급 관리의 중요한 기초 자료가 될 수 있다. 생산량과 재배면적을 파악하면 농산물 가격의...",
+      "source": "ohmynews.com",
+      "publishedAt": "2026-09-21T05:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/047/0002529774?sid=102",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003269067&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "keyword": "수급"
+    },
+    {
+      "id": "1d1e1f67c16aa88e",
+      "title": "[2026년 9월 4주] 주요 농산물 경락가 상승·하락 품목 - 양배추·참외(일...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 14일부터 21일까지 한 주간 거래된 엽근채소, 양념채소...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-09-21T03:30:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=328643",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=328643",
+      "keyword": "배추"
+    },
     {
       "id": "d23888a77927cd55",
       "title": "[오늘의 신문] 반도체 호황에 성장률 상향 기대…고금리·전세 불안은 부...",
@@ -106,66 +166,6 @@
       "link": "https://www.tokenpost.kr/news/cryptocurrency/410201",
       "originallink": "https://www.tokenpost.kr/news/cryptocurrency/410201",
       "keyword": "수급"
-    },
-    {
-      "id": "bcef65caf394b3e9",
-      "title": "8월 생산자물가 한 달 만에 반등...폭염·유가 상승에 0.2% 오름세",
-      "summary": "국내 생산자물가가 폭염에 따른 농산물 수급 불안과 국제유가 상승 여파로 한 달 만에 오름세로 돌아섰다.... 한국은행은 환율 하락과 7월 국제유가 인하 효과로 통관 기준 수입 가격이 낮아지면서 중간재와 원재료...",
-      "source": "ppss.kr",
-      "publishedAt": "2026-09-18T00:56:00.000Z",
-      "link": "https://www.ppss.kr/news/articleView.html?idxno=311372",
-      "originallink": "https://www.ppss.kr/news/articleView.html?idxno=311372",
-      "keyword": "수급"
-    },
-    {
-      "id": "5db9737117d1192f",
-      "title": "[기획] 추석 차례상 물가 '들쭉날쭉'…유통업계 할인 경쟁 본격화",
-      "summary": "사진=명경민 기자 | 뉴스워치= 명경민 기자 | 올해 추석 주요 제수용품 가격이 지난해보다 대체로 하락한... (aT)의 농산물유통정보(KAMIS)에 따르면 추석을 2주 앞둔 9월 2주차 제수용품 시세는 계란과 무, 애호박...",
-      "source": "newswatch.kr",
-      "publishedAt": "2026-09-18T00:26:00.000Z",
-      "link": "http://www.newswatch.kr/news/articleView.html?idxno=81196",
-      "originallink": "http://www.newswatch.kr/news/articleView.html?idxno=81196",
-      "keyword": "시장"
-    },
-    {
-      "id": "19ddda3e1e22acd4",
-      "title": "8월 생산자물가 0.2% ↑…폭염에 시금치 52% 폭등",
-      "summary": "농산물이 4.9%, 축산물이 2.8% 각각 올랐으며 품목별로는 시금치가 51.9% 치솟았고 돼지고기도 5.4% 상승했다.... 원자재 가격 상승이 2차 가공식품과 외식 물가 전반으로 확산되는 악순환을 차단하기 위한 수급 안정...",
-      "source": "sentv.co.kr",
-      "publishedAt": "2026-09-17T23:44:00.000Z",
-      "link": "https://www.sentv.co.kr/article/view/sentv202609180017",
-      "originallink": "https://www.sentv.co.kr/article/view/sentv202609180017",
-      "keyword": "수급"
-    },
-    {
-      "id": "95f6f5394d67d887",
-      "title": "추석 앞두고 비상품 감귤 유통 꿈틀…1건 적발",
-      "summary": "제주도는 지난 16일부터 17일까지 서울 가락시장과 경기 구리농산물도매시장, 대구 북부농산물도매시장에서... 김영준 제주도 농축산식품국장은 \"상품외감귤 출하는 전체 감귤 가격과 소비자 신뢰에 영향을 미치는 만큼...",
-      "source": "jemin.com",
-      "publishedAt": "2026-09-17T09:48:00.000Z",
-      "link": "https://www.jemin.com/news/articleView.html?idxno=843165",
-      "originallink": "https://www.jemin.com/news/articleView.html?idxno=843165",
-      "keyword": "시장"
-    },
-    {
-      "id": "cd2bc92007d57caf",
-      "title": "아직 날 더운데...상품외 제주감귤 1톤 출하 적발",
-      "summary": "17일 제주도에 따르면, 16일부터 오늘까지 서울 가락시장과 경기 구리농산물도매시장, 대구... 감귤 가격과 소비자 신뢰에 영향을 미치는 만큼 생산자와 선과장, 유통업체 모두 품질 기준과 규격을 지켜 선별 출하에 신경...",
-      "source": "jejusori.net",
-      "publishedAt": "2026-09-17T05:54:00.000Z",
-      "link": "https://www.jejusori.net/news/articleView.html?idxno=506638",
-      "originallink": "https://www.jejusori.net/news/articleView.html?idxno=506638",
-      "keyword": "시장"
-    },
-    {
-      "id": "029c2148a2e59514",
-      "title": "CPTPP 시대 농업과 지역 상권을 함께 지키는 길",
-      "summary": "국내 농산물의 중요한 다품목 수요처라고 할 수 있다. 한국농촌경제연구원의 2025년 외식업체 조사에서도 사과·배·계란·풋고추와 홍고추·대파·배추·무·쌀·양파·감자의 국산 사용 비중은 96% 이상으로 나타났다. 멸치...",
-      "source": "m-economynews.com",
-      "publishedAt": "2026-09-17T02:32:00.000Z",
-      "link": "https://www.m-economynews.com/news/article.html?no=70802",
-      "originallink": "https://www.m-economynews.com/news/article.html?no=70802",
-      "keyword": "배추"
     }
   ]
 }
