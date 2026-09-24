@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-23T00:37:05.805Z",
+    "updatedAt": "2026-09-24T00:40:18.377Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "04156eeb299b3679",
+      "title": "명절 앞 성수품값 상승이 공식?…올 추석엔 되레 떨어졌다",
+      "summary": "가격 안정에 영향을 미쳤을 가능성이 제기된다. 24일 뉴시스가 한국농수산식품유통공사(aT)의 농산물유통정... 배 가격은 23.0% 올랐다. 고등어와 명태 상승률은 각각 0.2%, 0.5%에 그쳤다. 반면 무는 20.5% 하락했다....",
+      "source": "newsis.com",
+      "publishedAt": "2026-09-23T23:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014211923?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20260923_0003802345",
+      "keyword": "수급"
+    },
     {
       "id": "ec0bb6d0a324fd49",
       "title": "[원자재 시황] 미·이란 \"생산적\" 협상 소식에 시장 '순풍'",
@@ -155,16 +165,6 @@
       "publishedAt": "2026-09-20T07:24:00.000Z",
       "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
       "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
-      "keyword": "수급"
-    },
-    {
-      "id": "e5a543e76095e469",
-      "title": "[르포] \"울진군의회가 '민생지원금'만 안깎았으면 추석대목장 사람 개락...",
-      "summary": "기초생활수급자 40만 원의 지원금을 지원했다. 주민들은 이 같은 사례를 기억하며 이번 울진군의회의... 채소류·어물 가격 상승... 장기적 폭염·폭우따른 작황부진 영향 한국농수산식품유통공사 농산물유통정보에...",
-      "source": "newspim.com",
-      "publishedAt": "2026-09-20T02:51:00.000Z",
-      "link": "https://www.newspim.com/news/view/20260920000040",
-      "originallink": "https://www.newspim.com/news/view/20260920000040",
       "keyword": "수급"
     }
   ]
