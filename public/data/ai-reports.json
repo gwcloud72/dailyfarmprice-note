@@ -2,7 +2,7 @@
   "status": "generated",
   "source": "local-rules",
   "model": null,
-  "generatedAt": "2026-09-24T00:40:15.175Z",
+  "generatedAt": "2026-09-25T00:41:40.123Z",
   "reports": {
     "cabbage-all": {
       "7": {
@@ -17887,17 +17887,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "11,290원",
+            "value": "13,767원",
             "tone": "down"
           },
           {
             "label": "평균",
-            "value": "14,573원",
+            "value": "13,728원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "-281원",
+            "value": "-75원",
             "tone": "down"
           }
         ],
@@ -17928,17 +17928,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "11,290원",
+            "value": "13,767원",
             "tone": "down"
           },
           {
             "label": "평균",
-            "value": "13,001원",
+            "value": "12,995원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "-281원",
+            "value": "-75원",
             "tone": "down"
           }
         ],
@@ -17969,17 +17969,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "11,290원",
+            "value": "13,767원",
             "tone": "down"
           },
           {
             "label": "평균",
-            "value": "10,772원",
+            "value": "11,747원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "-281원",
+            "value": "-75원",
             "tone": "down"
           }
         ],
@@ -19762,17 +19762,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "19,900원",
+            "value": "26,483원",
             "tone": "up"
           },
           {
             "label": "평균",
-            "value": "19,614원",
+            "value": "25,077원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "+2,000원",
+            "value": "+2,508원",
             "tone": "up"
           }
         ],
@@ -19803,17 +19803,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "19,900원",
+            "value": "26,483원",
             "tone": "up"
           },
           {
             "label": "평균",
-            "value": "20,349원",
+            "value": "24,050원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "+2,000원",
+            "value": "+2,508원",
             "tone": "up"
           }
         ],
@@ -19830,7 +19830,7 @@
           },
           {
             "title": "데이터 범위",
-            "value": "30개 기준점",
+            "value": "19개 기준점",
             "description": "공개 가격 데이터의 최신 기준값만 사용했습니다."
           }
         ],
@@ -19844,17 +19844,17 @@
         "badges": [
           {
             "label": "현재가",
-            "value": "19,900원",
+            "value": "26,483원",
             "tone": "up"
           },
           {
             "label": "평균",
-            "value": "20,130원",
+            "value": "24,050원",
             "tone": "flat"
           },
           {
             "label": "변동",
-            "value": "+2,000원",
+            "value": "+2,508원",
             "tone": "up"
           }
         ],
@@ -19871,7 +19871,7 @@
           },
           {
             "title": "데이터 범위",
-            "value": "35개 기준점",
+            "value": "19개 기준점",
             "description": "공개 가격 데이터의 최신 기준값만 사용했습니다."
           }
         ],

@@ -2,11 +2,31 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-24T00:40:18.377Z",
+    "updatedAt": "2026-09-25T00:41:42.741Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "324eb825fa2b32ac",
+      "title": "가락시장 파렛트 출하 의무화 확대…느타리버섯·봄동·제주당근 대상",
+      "summary": "농산물의 눌림과 파손을 줄이는 효과도 기대된다. 이를 통해 상품성 유지와 출하자의 수취가격 개선에도 도움이 될 것으로 공사는 설명했다. 공사 관계자는 \"파렛트 중심 물류체계 전환은 시설현대화 이후 가락시장의...",
+      "source": "youngnong.co.kr",
+      "publishedAt": "2026-09-24T13:42:00.000Z",
+      "link": "https://www.youngnong.co.kr/news/articleView.html?idxno=70438",
+      "originallink": "https://www.youngnong.co.kr/news/articleView.html?idxno=70438",
+      "keyword": "시장"
+    },
+    {
+      "id": "2d36312079523725",
+      "title": "가락시장 거래 5조 넘는데 정가·수의는 9.4%…농산물 가격 '역주행'",
+      "summary": "그럼에도 전국 정가·수의매매 비중은 과거보다 낮아졌고, 국내 최대 농산물 도매시장인 가락시장 5대 법인은 전국 평균에도 크게 미치지 못하고 있다. 신장식 의원은 \"농산물 가격이 요동칠 때마다 그 부담은...",
+      "source": "apnews.kr",
+      "publishedAt": "2026-09-24T08:08:00.000Z",
+      "link": "https://www.apnews.kr/news/articleView.html?idxno=3051505",
+      "originallink": "https://www.apnews.kr/news/articleView.html?idxno=3051505",
+      "keyword": "시장"
+    },
     {
       "id": "04156eeb299b3679",
       "title": "명절 앞 성수품값 상승이 공식?…올 추석엔 되레 떨어졌다",
@@ -146,26 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/009/0005738021?sid=101",
       "originallink": "https://www.mk.co.kr/article/12157690",
       "keyword": "시장"
-    },
-    {
-      "id": "3360600a33c6909e",
-      "title": "[취재수첩] 공영도매시장의 존재 이유",
-      "summary": "가락시장을 열었다. 농수산물을 한데 모아 공정하게 가격을 정하고 효율적으로 분산하는 공영도매시장의... 농민에겐 출하선택권을 넓히고, 소비자에겐 농산물을 안정적으로 공급하겠다는 취지였다. 그런 두 시장이...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-09-20T20:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000104730?sid=110",
-      "originallink": "https://www.nongmin.com/article/20260918500614",
-      "keyword": "시장"
-    },
-    {
-      "id": "76b3fb16cccbee5e",
-      "title": "추석 장바구니 '축산물 부담'…대구 계란값 48% 급등",
-      "summary": "가격 상승으로 돼지고기에 수요가 몰리면서 최근 가격이 오른 것으로 분석된다. 농산물에서는... 특히 정부 비축 물량이 풀린 부세조기는 23.2% 하락했다. aT 이재욱 수급이사는 \"이번 추석에 정부에서 역대...",
-      "source": "kyongbuk.co.kr",
-      "publishedAt": "2026-09-20T07:24:00.000Z",
-      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
-      "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084849",
-      "keyword": "수급"
     }
   ]
 }
