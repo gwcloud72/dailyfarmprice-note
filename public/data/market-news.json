@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-25T00:41:42.741Z",
+    "updatedAt": "2026-09-26T00:44:10.441Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "67e3abc9fe1cb0ac",
+      "title": "추석 물가 소고기 16%↑·달걀 8%↑ 축산물 강세…과일·채소는 안정세",
+      "summary": "소고기 안심·등심 두 자릿수대 상승…채소·과일은 하락세 26일 축산물품질평가원 축산유통정보, 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS) 등에 따르면 추석 주간인 9월 4주 차 평균 가격은 소고기 안심...",
+      "source": "news1.kr",
+      "publishedAt": "2026-09-25T22:05:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/421/0009191997?sid=101",
+      "originallink": "https://www.news1.kr/economy/trend/6301715",
+      "keyword": "시장"
+    },
     {
       "id": "324eb825fa2b32ac",
       "title": "가락시장 파렛트 출하 의무화 확대…느타리버섯·봄동·제주당근 대상",
@@ -156,16 +166,6 @@
       "link": "http://kor.theasian.asia/archives/415146",
       "originallink": "http://kor.theasian.asia/archives/415146",
       "keyword": "수급"
-    },
-    {
-      "id": "4953851b813a2a75",
-      "title": "농산물 제값받기 핵심은? “산지 출하창구 일원화”",
-      "summary": "‘농산물 유통구조 혁신’ 국회 토론회 서삼석 농해수위원장 등 공동 주최 농업단체협의회·식품유통학회... 김 원장은 “전체 유통비용이 소비자 가격의 50% 정도를 차지하는 상황에서 가락도매시장 기준으로 4.5%에 달하는...",
-      "source": "mk.co.kr",
-      "publishedAt": "2026-09-20T21:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/009/0005738021?sid=101",
-      "originallink": "https://www.mk.co.kr/article/12157690",
-      "keyword": "시장"
     }
   ]
 }
