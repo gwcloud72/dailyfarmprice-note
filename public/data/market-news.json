@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-26T00:44:10.441Z",
+    "updatedAt": "2026-09-27T00:43:24.565Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "86025c70c1ba14fd",
+      "title": "올해 '추석 장바구니 물가' 어떤가 보니…품목별 가격은 이랬다",
+      "summary": "추석을 앞두고 주요 축산물과 일부 가공식품 가격이 지난해보다 오른 반면 채소와 과일 가격은 하락한... 축산물 가격 상승26일 축산물품질평가원 축산유통정보와 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)...",
+      "source": "wikitree.co.kr",
+      "publishedAt": "2026-09-26T00:50:00.000Z",
+      "link": "https://www.wikitree.co.kr/articles/1162079",
+      "originallink": "https://www.wikitree.co.kr/articles/1162079",
+      "keyword": "시장"
+    },
     {
       "id": "67e3abc9fe1cb0ac",
       "title": "추석 물가 소고기 16%↑·달걀 8%↑ 축산물 강세…과일·채소는 안정세",
@@ -156,16 +166,6 @@
       "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=328643",
       "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=328643",
       "keyword": "배추"
-    },
-    {
-      "id": "d23888a77927cd55",
-      "title": "[오늘의 신문] 반도체 호황에 성장률 상향 기대…고금리·전세 불안은 부...",
-      "summary": "올해 서울 전세가격 누적 상승률은 7.79%로 집계됐다. 입주 물량 감소와 매물 부족이 동시에 영향을 미치고... 중국 ‘유황 훈증 죽순’ 논란…식약처 “농산물 수입 없어”중국 광둥성에서 유황으로 훈증 처리한 죽순이...",
-      "source": "kor.theasian.asia",
-      "publishedAt": "2026-09-20T22:46:00.000Z",
-      "link": "http://kor.theasian.asia/archives/415146",
-      "originallink": "http://kor.theasian.asia/archives/415146",
-      "keyword": "수급"
     }
   ]
 }
