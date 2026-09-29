@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-09-28T00:55:00.620Z",
+    "updatedAt": "2026-09-29T01:59:23.254Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "03e3b807605f7297",
+      "title": "다시 온 원자재 ‘슈퍼랠리’…과거와 다르다",
+      "summary": "폭 하락하면서 원자재 가격 전반을 상승시켰다”며 “이란 전쟁 종식 시 긴축 우려가 진화되면서 완만한... 원자재 가격도 낮아질 수 있다. 반대로 전쟁이 길어지면 원자재뿐 아니라 운송비, 비료·농산물 등으로 가격...",
+      "source": "mk.co.kr",
+      "publishedAt": "2026-09-28T12:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/024/0000108547?sid=102",
+      "originallink": "https://www.mk.co.kr/article/12157989",
+      "keyword": "수급"
+    },
+    {
+      "id": "1e97bd12b03d39f6",
+      "title": "도매시장법인 평가·재지정 체계 개편…경쟁·공공성 강화",
+      "summary": "정부가 농산물 도매시장의 경쟁을 촉진하고 공공성과 효율성을 높이기 위해 도매시장법인 관리체계를... 독과점·고수익 구조에 제도 개선론 수면 위 그동안 현장에서는 가락시장 도매시장법인의 독과점 구조와 높은...",
+      "source": "dailian.co.kr",
+      "publishedAt": "2026-09-28T02:26:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/119/0003136853?sid=101",
+      "originallink": "https://www.dailian.co.kr/news/view/1694986/?sc=Naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "575be423dfb4cbb5",
+      "title": "[2026년 9월 5주] 주요 농산물 경락가 상승·하락 품목 - 쌈배추·단감 송...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 21일부터 28일까지 한 주간 거래된 엽근채소, 양념채소...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-09-28T01:34:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=328926",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=328926",
+      "keyword": "배추"
+    },
     {
       "id": "97d7c4bb44014fac",
       "title": "[원자재 시황] 미 물가·고용지표에 쏠리는 눈…국채금리 부담 덜까",
@@ -135,36 +165,6 @@
       "publishedAt": "2026-09-22T08:08:00.000Z",
       "link": "https://www.newspost.kr/news/articleView.html?idxno=225878",
       "originallink": "https://www.newspost.kr/news/articleView.html?idxno=225878",
-      "keyword": "시장"
-    },
-    {
-      "id": "f9a290fbf0d026dc",
-      "title": "올해는 한우·계란이 金값…‘공급 시차’가 추석상 흔들었다 [Deep Spot]",
-      "summary": "애호박(92.8%)과 무(24.0%), 배(16.0%) 등 일부 채소·과일도 상승했다. 차례상 비용이 매년 오르기만 하는 것은... 농산물유통정보(KAMIS)에 따르면 사과(홍로) 상품 10개 가격은 17일 기준 2만3120원으로 전년 대비 11.5% 하락했...",
-      "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-09-22T02:36:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002700870?sid=101",
-      "originallink": "https://biz.heraldcorp.com/article/10881988?ref=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "741ea663e46bdbf1",
-      "title": "[원자재 시황] 중동 긴장완화 기대감에 코인·증시 '활짝'",
-      "summary": "지난 주말 진행된 미·중 사전협상에 이어 이번 주 고위급 회담이 예정되면서 중국의 미국산 농산물 구매... 11%로 하락한 것으로 나타나 최근 가격 상승과 개인투자자의 시장 참여 사이에는 괴리가 나타났다....",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-09-21T23:16:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1725222",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1725222",
-      "keyword": "수급"
-    },
-    {
-      "id": "5e143d6be3e740d9",
-      "title": "성수품 할인 지원에도…\"채솟값 무슨 일?\" 추석 앞 시민들 '한숨'",
-      "summary": "비싼 가격이 체감되면서다. 21일 뉴스1 취재에 따르면 서울시농수산식품공사가 지난 9일 서울 전통시장 16곳·대형마트 8곳·가락몰 등 25곳을 조사한 결과 6인 가족 기준 차례상 성수품 34개 품목의 평균 구매비용은 전년...",
-      "source": "news1.kr",
-      "publishedAt": "2026-09-21T08:27:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009184225?sid=102",
-      "originallink": "https://www.news1.kr/society/general-society/6297805",
       "keyword": "시장"
     }
   ]
