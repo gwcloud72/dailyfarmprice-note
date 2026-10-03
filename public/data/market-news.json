@@ -2,109 +2,139 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-02T01:50:22.214Z",
+    "updatedAt": "2026-10-03T01:19:43.832Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
     {
-      "id": "8a15ea4a54bacd7e",
+      "id": "6aab17efe3605a7b",
+      "title": "세계식량가격, 3년 10개월만 최고… FAO 전가 경고",
+      "summary": "전쟁 여파로 흑해 교역이 크게 위축된 가운데 주요 생산지의 가뭄과 폭우가 겹치며 글로벌 농산물 공급망의... 식물유 가격지수도 0.9% 상승하며 오름세에 힘을 보탰다. 반면 육류 가격지수는 전월 대비 1.1% 하락했고...",
+      "source": "g-enews.com",
+      "publishedAt": "2026-10-03T01:08:00.000Z",
+      "link": "https://www.g-enews.com/view.php?ud=202610031007043139e7e8286d56_1",
+      "originallink": "https://www.g-enews.com/view.php?ud=202610031007043139e7e8286d56_1",
+      "keyword": "수급"
+    },
+    {
+      "id": "1185745a7eb6faf3",
+      "title": "물가 상승률은 떨어졌는데…장바구니 채소값 14%↑",
+      "summary": "전년 동월 대비 농축수산물은 0.3% 내렸는데, 농산물이 4% 하락하는 동안 축산물과 수산물이 각각 3.7%·4.5... 물론 소비 부진 여파로 채소류 가격이 최근 부진했던 측면을 고려할 필요가 있다. 가락동농수산물도매시장...",
+      "source": "news2day.co.kr",
+      "publishedAt": "2026-10-02T22:02:00.000Z",
+      "link": "https://www.news2day.co.kr/article/20261002500148",
+      "originallink": "https://www.news2day.co.kr/article/20261002500148",
+      "keyword": "시장"
+    },
+    {
+      "id": "6bf9ed1023142ab0",
+      "title": "9월 물가 2.9%로 낮아졌지만…석유류 14.8%·공업제품 4.2% 상승",
+      "summary": "국가데이터처는 과실 출하 증가와 정부 할인 지원, 수급 여건 등이 농산물 가격 하락에 복합적으로 영향을 미쳤다고 설명했다. 반면 공업제품 가격은 전년 동월보다 4.2% 상승했다. 특히 석유류는 14.8% 올라 전체...",
+      "source": "dailyt.co.kr",
+      "publishedAt": "2026-10-02T11:32:00.000Z",
+      "link": "https://www.dailyt.co.kr/newsView/dlt202610020018",
+      "originallink": "https://www.dailyt.co.kr/newsView/dlt202610020018",
+      "keyword": "수급"
+    },
+    {
+      "id": "80a0261cc15145e5",
+      "title": "\"심고 난 뒤엔 늦다\"...농산물 수급 '사후 대응→선제 관리'로 전환",
+      "summary": "채소가격안정제는 가격 하락시 참여 농가에 하락분 일부를 보조하거나 과잉물량을 격리하고, 가격 상승시... 선제적 수급관리에도 불구하고 농산물 '평균가격'이 '기준가격' 이하로 하락하면 농가에 차액의 일부 또는...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-02T10:58:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407682",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407682",
+      "keyword": "수급"
+    },
+    {
+      "id": "0f058aaf2ba5d7dd",
+      "title": "[기자수첩] '알뜰하게 장볼지도' 말고 '제값에 팔지도'",
+      "summary": "당장 알뜰 앱은 농산물의 특성을 충분히 고려하지 않았단 지적이 나온다. 농산물은 같은 품목이라도 시기와... 6개월에 달하는 할인 기간 동안 가락동 농수산물도매시장에서 양배추 도매가격이 평년보다 높았던 건 12일에...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-02T10:58:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
+      "keyword": "배추"
+    },
+    {
+      "id": "c512ce43f4dc5a55",
+      "title": "[배 수출 현장 점검] 관세 부담•해상운송비 상승...수출 악재 겹치며 농...",
+      "summary": "신선농산물 중 주요 수출 품목인 배 수출이 조생품종인 '원황'을 시작으로 8월부터 본격화됐다. 10월부터는... 관세 오른 탓 현지가격 상승 지난해 23~25→올해 34달러로 소비 위축으로 이어져 걱정 반값 중국산...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-02T10:58:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407646",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407646",
+      "keyword": "수급"
+    },
+    {
+      "id": "e78d1ebf3caa7c21",
+      "title": "[2026 추석 결산 - 과일 부문] 추석 과일 소비 '활기'…멜론 '다크호스'...",
+      "summary": "농수산물도매시장(이하 가락시장)의 사과 전체 거래량은 2822톤으로 지난해 같은 기간 대비 20.1% 증가했다. 거래액은 141억2300만 원으로 지난해 수준에 머물렀다. 홍로(상품) 10kg 상자 가격은 지난달 14일...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-10-02T08:46:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329191",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329191",
+      "keyword": "시장"
+    },
+    {
+      "id": "20073f97f422c9db",
+      "title": "9월 물가 2.9%↑···정부, 금융·물가 안정 대응",
+      "summary": "농축수산물 전체 물가는 0.3% 내린 가운데 농산물이 4% 하락했고, 축산물과 수산물은 상승했습니다. 특히 석유류는 14.8% 올라 전체 물가를 0.56%포인트 끌어올렸습니다. 정부는 석유제품 최고가격제를 통해 9월 물가...",
+      "source": "ktv.go.kr",
+      "publishedAt": "2026-10-02T07:45:00.000Z",
+      "link": "https://www.ktv.go.kr/content/view?content_id=761909",
+      "originallink": "https://www.ktv.go.kr/content/view?content_id=761909",
+      "keyword": "수급"
+    },
+    {
+      "id": "c5ec377e82223f37",
+      "title": "추석 끝나고 장바구니 물가 희비…배추 오르고 계란 내리고",
+      "summary": "7% 떨어졌지만 9월에는 전년 동월과 같은 수준을 기록하며 하락세도 멈췄다. 배추 가격 상승세가... 배추 가격은 15.2% 낮은 수준이다. 봄철 배추와 저장 배추 출하량 증가 등의 영향이다. 전체 농산물 가격도 전년...",
+      "source": "asiatime.co.kr",
+      "publishedAt": "2026-10-02T05:48:00.000Z",
+      "link": "https://www.asiatime.co.kr/article/20261002500258",
+      "originallink": "https://www.asiatime.co.kr/article/20261002500258",
+      "keyword": "배추"
+    },
+    {
+      "id": "60fa85c20b6217e9",
+      "title": "9월 소비자물가 2.9% 상승…기름값·먹거리 부담 여전",
+      "summary": "3% 하락해 전체 물가 상승률을 0.03%포인트 낮췄다. 농산물 가격은 4.0% 떨어져 전체 물가를 0.17%포인트... 5% 올랐고, 신선식품지수는 과실류 가격 하락 등의 영향으로 3.3% 내렸다. 정부는 농축수산물 수급·가격 관리와...",
+      "source": "smarttimes.co.kr",
+      "publishedAt": "2026-10-02T05:12:00.000Z",
+      "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=49424",
+      "originallink": "http://www.smarttimes.co.kr/news/articleView.html?idxno=49424",
+      "keyword": "수급"
+    },
+    {
+      "id": "70d414ec3158672d",
+      "title": "9월 물가 2.9%↑…상승폭 둔화했지만 ‘통신비 착시’",
+      "summary": "최고가격제가 없었을 경우 9월 물가 상승률은 3.5%에 달했을 것으로 추정했다. 지난달 농축수산물 물가는 0.3% 내렸다. 특히 농산물 물가는 1년 전보다 4.0% 하락했다. 이두원 심의관은 “정부 할인 지원과 수급 여건이...",
+      "source": "hani.co.kr",
+      "publishedAt": "2026-10-02T04:36:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/028/0002825737?sid=101",
+      "originallink": "https://www.hani.co.kr/arti/economy/economy_general/1280619.html",
+      "keyword": "수급"
+    },
+    {
+      "id": "709fe25de0e4fac5",
+      "title": "농축산물 할인지원·최고가격제로 누른 물가…9월 소비자물가 2.9%↑",
+      "summary": "중동전쟁 여파로 석유류 가격이 두 자릿수 상승세를 이어갔지만, 농산물 가격 하락과 정부의 석유제품... 2%)보다 상승폭이 줄었다. ‘밥상 물가’를 보여주는 신선식품지수는 3.3% 하락했다. 정부는 농축수산물 수급...",
+      "source": "joongang.co.kr",
+      "publishedAt": "2026-10-02T03:34:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/025/0003555378?sid=101",
+      "originallink": "https://www.joongang.co.kr/article/25466661",
+      "keyword": "수급"
+    },
+    {
+      "id": "86fbf2bd0e93a180",
       "title": "9월 소비자물가 2.9% 상승...농·축·수산물 0.3%↓·석유류 14.8%↑",
       "summary": "서비스 물가는 2.7% 오른 가운데, 국제항공료는 22.5% 상승했습니다. 자주 구매하는 품목 중심으로 짜여 체감 물가를 보여주는 생활물가지수는 2.5% 올랐습니다. 정부는 농·축·수산물의 품목별 수급과 가격 관리를...",
       "source": "ytn.co.kr",
-      "publishedAt": "2026-10-02T01:36:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/052/0002413837?sid=101",
-      "originallink": "https://www.ytn.co.kr/_ln/0102_202610021036024713",
-      "keyword": "수급"
-    },
-    {
-      "id": "6235b214fa848b75",
-      "title": "9월 소비자물가 다시 2%대…추석 할인·석유 최고가격제 효과(종합)",
-      "summary": "식료품·에너지 제외지수는 지난해 같은 달보다 2.8% 올라 8월(3.4%)보다 상승폭이 축소됐다. 농산물·석유류... 다만 전월 대비로는 석유류 가격이 0.2% 하락했다. 전기·가스·수도 가격은 지난해 같은 달보다 0.4% 상승했...",
-      "source": "edaily.co.kr",
-      "publishedAt": "2026-10-02T01:12:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/018/0006379396?sid=101",
-      "originallink": "https://www.edaily.co.kr/News/Read?newsId=03043846645608984&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-      "keyword": "수급"
-    },
-    {
-      "id": "3f3db794fe15700f",
-      "title": "농산물 물가 4% 떨어졌는데…축산물은 추석 수요에 3.7% ↑",
-      "summary": "농축산물 물가 1% 하락...추석 성수품 공급 확대·할인행사 영향 9월 농산물 물가가 전년 동월 대비 4.0... 0% 하락했다. 다만 애호박 등 일부 품목은 일시적으로 가격이 상승했다. 애호박은 8월 폭염과 강우로 생육이 일부...",
-      "source": "news.tf.co.kr",
-      "publishedAt": "2026-10-02T01:09:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/629/0000538907?sid=101",
-      "originallink": "https://news.tf.co.kr/read/economy/2372347.htm",
-      "keyword": "수급"
-    },
-    {
-      "id": "14a493c15cb7c1cf",
-      "title": "9월 소비자물가 2.9% ↑…고유가 지속에도 2%대 복귀",
-      "summary": "아시아투데이 서병주 기자 = 고유가에도 농산물 가격 하락에 소비자물가 상승률이 한 달만에 2%대로... 물가 하락 폭이 확대됐다\"며 \"정부의 할인 지원과 수급 여건 등이 복합적으로 작용해 농산물 물가가 하락했다\"고...",
-      "source": "asiatoday.co.kr",
-      "publishedAt": "2026-10-02T01:02:00.000Z",
-      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261002010000595",
-      "originallink": "https://www.asiatoday.co.kr/kn/view.php?key=20261002010000595",
-      "keyword": "수급"
-    },
-    {
-      "id": "3a01406792b4dda9",
-      "title": "9월 소비자 물가 2.9% 상승…석유·먹거리 불안 여전(종합)",
-      "summary": "농산물 4.0% 하락…과일값 안정세 농축수산물은 전년 동월 대비 0.3% 하락했다. 농산물이 4.0% 내리면서 전체... 정부는 중동전쟁 장기화로 물가 상승 압력이 이어질 가능성이 있는 만큼 농축수산물의 수급·가격 관리를...",
-      "source": "view.asiae.co.kr",
-      "publishedAt": "2026-10-02T00:54:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/277/0005823968?sid=101",
-      "originallink": "https://view.asiae.co.kr/article/2026100209285359116",
-      "keyword": "수급"
-    },
-    {
-      "id": "d64f1306e754da9f",
-      "title": "9월 물가 2.9%로 내려왔지만…한은 \"10월 다시 3% 안팎\"",
-      "summary": "1% 상승했다. 반면 농축수산물 가격은 전년 동월보다 0.3% 하락했다. 농산물이 4.0% 내린 가운데 사과와 포도... 재정경제부는 이날 농축수산물 품목별 수급과 가격 관리를 강화하고 유통구조 개선을 추진하는 한편...",
-      "source": "wikileaks-kr.org",
-      "publishedAt": "2026-10-02T00:50:00.000Z",
-      "link": "http://www.wikileaks-kr.org/news/articleView.html?idxno=192744",
-      "originallink": "http://www.wikileaks-kr.org/news/articleView.html?idxno=192744",
-      "keyword": "수급"
-    },
-    {
-      "id": "c614f02589ea36c4",
-      "title": "9월 소비자물가 상승률 2.9%… 농축수산물↓·석유류↑",
-      "summary": "이어 “정부 할인 지원, 수급 여건 등이 복합적으로 작용해 농산물 물가는 하락했다”고 했다. 반면 축산물과 수산물은 각각 3.7%, 4.5% 상승했다. 공급량 감소와 추석 명절 수요 증가로 상승 폭이 확대됐다. 가공식품은...",
-      "source": "seoul.co.kr",
-      "publishedAt": "2026-10-02T00:42:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/081/0003685507?sid=101",
-      "originallink": "https://www.seoul.co.kr/news/economy/2026/10/02/20261002500041?wlog_tag3=naver",
-      "keyword": "수급"
-    },
-    {
-      "id": "24520aca1aca0734",
-      "title": "9월 소비자물가 2.9% 상승…농축수산물 두 달째 하락에 오름폭 둔화",
-      "summary": "0% 하락했다\"고 밝혔다. 농산물은 작황이 좋아 4.0% 내렸지만 축산물은 추석 수요가 몰리며 3.7% 올랐다. 쇠고기·돼지고기는 도축 마릿수 감소로 높은 가격이 이어지고 있다. 농식품부는 돼지고기의 경우 하반기 도축...",
-      "source": "imaeil.com",
-      "publishedAt": "2026-10-02T00:38:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/088/0001031874?sid=101",
-      "originallink": "https://www.imaeil.com/page/view/2026100209370288982",
-      "keyword": "수급"
-    },
-    {
-      "id": "1f7f95c326bdb326",
-      "title": "9월 물가 2.9%↑…정부 \"석유 최고가격제 없었다면 3.5%\"(종합)",
-      "summary": "1% 각각 상승했다. 정부는 농축수산물 할인지원과 생산량 증가 등이 농산물 가격 하락에 기여했다고... 5% 상승했을 것으로 추정된다\"고 밝혔다. 정부는 농축수산물 품목별 수급·가격관리를 강화하고 유통구조...",
-      "source": "newsis.com",
-      "publishedAt": "2026-10-02T00:33:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/003/0014229195?sid=101",
-      "originallink": "https://www.newsis.com/view/NISX20261002_0003811936",
-      "keyword": "수급"
-    },
-    {
-      "id": "4b35152759ff066e",
-      "title": "9월 소비자물가 2.9%↑ …기름값은 두 달 연속 14%대 상승",
-      "summary": "3% 하락하면서 전체 물가 상승률을 0.03%포인트(p) 낮췄다. 특히 농산물 가격은 4.0% 떨어져 전체 물가를 0.17%p... 3% 하락했다. 재정경제부는 이날 “농축수산물 품목별 수급·가격관리를 강화하고 유통구조 개선 노력도...",
-      "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-10-02T00:27:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002704678?sid=101",
-      "originallink": "https://biz.heraldcorp.com/article/10891334?ref=naver",
+      "publishedAt": "2026-10-02T02:50:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/052/0002413887?sid=101",
+      "originallink": "https://www.ytn.co.kr/_ln/0102_202610021150065342",
       "keyword": "수급"
     },
     {
@@ -136,36 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/277/0005822565?sid=101",
       "originallink": "https://view.asiae.co.kr/article/2026093009074636488",
       "keyword": "배추"
-    },
-    {
-      "id": "7722ad89b8253e0c",
-      "title": "\"김장철 물가 안정 총력전\"…롯데마트·슈퍼, 절임배추 물량 20% 확대 공...",
-      "summary": "공공 유통 정보에 따르면 가락시장 기준 배추 도매 가격이 최근 안정세를 보이고 있으나 김장철 수요... 아울러 CA(Controlled Atmosphere) 농산물 저장 기법을 적용해 원물의 품질 변화를 최소화한 신선 농산물 공급 노력을...",
-      "source": "thefairnews.co.kr",
-      "publishedAt": "2026-09-29T22:26:00.000Z",
-      "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=89328",
-      "originallink": "https://www.thefairnews.co.kr/news/articleView.html?idxno=89328",
-      "keyword": "배추"
-    },
-    {
-      "id": "f569c9e7d3517bf0",
-      "title": "농산물 수급조절위, '자문기구'서 법정위원회로 격상…김장채소 수급 점...",
-      "summary": "농협경제지주와 무·배추생산자연합회, 마늘연합회, 양파연합회, 고추산업연합회, 농업생산자중앙연합회, 과수농업협동조합연합회 등이 참여하며, 소비자 측에서는 소비자단체협의회, 김치협회, 외식업중앙회, 도매시장...",
-      "source": "youngnong.co.kr",
-      "publishedAt": "2026-09-29T12:54:00.000Z",
-      "link": "https://www.youngnong.co.kr/news/articleView.html?idxno=70675",
-      "originallink": "https://www.youngnong.co.kr/news/articleView.html?idxno=70675",
-      "keyword": "배추"
-    },
-    {
-      "id": "1e97bd12b03d39f6",
-      "title": "도매시장법인 평가·재지정 체계 개편…경쟁·공공성 강화",
-      "summary": "정부가 농산물 도매시장의 경쟁을 촉진하고 공공성과 효율성을 높이기 위해 도매시장법인 관리체계를... 독과점·고수익 구조에 제도 개선론 수면 위 그동안 현장에서는 가락시장 도매시장법인의 독과점 구조와 높은...",
-      "source": "dailian.co.kr",
-      "publishedAt": "2026-09-28T02:26:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/119/0003136853?sid=101",
-      "originallink": "https://www.dailian.co.kr/news/view/1694986/?sc=Naver",
-      "keyword": "시장"
     }
   ]
 }
