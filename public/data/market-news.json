@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-04T00:44:30.560Z",
+    "updatedAt": "2026-10-05T01:02:59.698Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "7799f95e338dac4b",
+      "title": "[농정춘추] 탄소중립 시대 농산물 유통, 기본에서 시작하자",
+      "summary": "농산물 유통에서도 비슷한 흐름이 나타난다. 온라인도매시장, 스마트APC, AI 기반 수급 예측, 자동선별ㆍ물류... 품목, 농가, 출하량, 등급, 규격, 품질, 폐기량 등의 원물 정보와 판매처, 판매량, 가격, 재고, 반품 등의 유통...",
+      "source": "ikpnews.net",
+      "publishedAt": "2026-10-04T11:02:00.000Z",
+      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71556",
+      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71556",
+      "keyword": "시장"
+    },
     {
       "id": "da8a4c8bc740ef9c",
       "title": "[슬금슬금] 물가 내려도 왜 안 떨어질까… 美 국채금리 뒤흔드는 '큰손...",
@@ -156,16 +166,6 @@
       "link": "http://www.ikpnews.net/news/articleView.html?idxno=71573",
       "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71573",
       "keyword": "배추"
-    },
-    {
-      "id": "87af450de78fcdcc",
-      "title": "[공개편지] 이재명 대통령께 드리는 글",
-      "summary": "쿠팡과 마켓컬리 같은 민간 유통 기업들은 농산물 집배송과 선별·패킹을 도맡는 첨단 대형 물류센터를 불과 2~3년 만에 뚝딱 지어 올립니다. 그런데 대한민국 공영도매시장의 심장이라는 가락시장의 현대화 사업은 지금...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-09-30T13:20:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16966",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16966",
-      "keyword": "시장"
     }
   ]
 }
