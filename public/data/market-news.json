@@ -2,11 +2,31 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-05T01:02:59.698Z",
+    "updatedAt": "2026-10-06T02:27:50.567Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "3c1f77cd40fdfe2c",
+      "title": "[단독]국내 농가 보호한다더니…수입업자에 흘러간 50억 보조금",
+      "summary": "중도매인이 가락시장에 출하자로 재등록한 뒤 다시 경매에 내놓는 방식이다. 이 경우 같은 농산물이 두 차례 경매를 거치면서 위탁수수료가 이중으로 부과될 수 있다. 이렇게 늘어난 비용이 최종적으로 소비자 가격에...",
+      "source": "nocutnews.co.kr",
+      "publishedAt": "2026-10-06T01:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/079/0004195809?sid=103",
+      "originallink": "https://www.nocutnews.co.kr/news/6587303?utm_source=naver&utm_medium=article&utm_campaign=20261006100009",
+      "keyword": "시장"
+    },
+    {
+      "id": "a886e9ced82c6ac9",
+      "title": "[팜히스토리] 울타리 하나 사이 농협과 현대자동차의 26년",
+      "summary": "1994년 가락시장 중도매인들이 경매를 거부한 '농안법 파동'이 터지자, 정부는 산지 포장센터 160개, 간이집하장 1,600개, 대도시 농산물물류센터 16개를 세우는 '신(新)유통체계' 대책을 내놨다. 그리고 그 수행기관으로...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-05T08:30:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=16986",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16986",
+      "keyword": "시장"
+    },
     {
       "id": "7799f95e338dac4b",
       "title": "[농정춘추] 탄소중립 시대 농산물 유통, 기본에서 시작하자",
@@ -146,26 +166,6 @@
       "link": "https://www.ktv.go.kr/content/view?content_id=761909",
       "originallink": "https://www.ktv.go.kr/content/view?content_id=761909",
       "keyword": "수급"
-    },
-    {
-      "id": "c5ec377e82223f37",
-      "title": "추석 끝나고 장바구니 물가 희비…배추 오르고 계란 내리고",
-      "summary": "7% 떨어졌지만 9월에는 전년 동월과 같은 수준을 기록하며 하락세도 멈췄다. 배추 가격 상승세가... 배추 가격은 15.2% 낮은 수준이다. 봄철 배추와 저장 배추 출하량 증가 등의 영향이다. 전체 농산물 가격도 전년...",
-      "source": "asiatime.co.kr",
-      "publishedAt": "2026-10-02T05:48:00.000Z",
-      "link": "https://www.asiatime.co.kr/article/20261002500258",
-      "originallink": "https://www.asiatime.co.kr/article/20261002500258",
-      "keyword": "배추"
-    },
-    {
-      "id": "00a19dd182701e02",
-      "title": "'법정위원회'로 도약한 농산물 수급조절위, 제8기 출범",
-      "summary": "배추생산자연합회 △마늘연합회 △양파연합회 △고추산업연합회 △농업생산자중앙연합회 △과수농업협동조합연합회 대표들이 참여했다. 소비자 측에서는 △소비자단체협의회 △김치협회 △외식업중앙회 △도매시장...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-10-01T09:28:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71573",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71573",
-      "keyword": "배추"
     }
   ]
 }
