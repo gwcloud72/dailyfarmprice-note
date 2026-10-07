@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-06T02:27:50.567Z",
+    "updatedAt": "2026-10-07T01:41:37.932Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "daaec0ed5393a00e",
+      "title": "[특별 인터뷰] “농민 목소리 정책·입법·예산에 충실히 반영되도록 노...",
+      "summary": "20대 국회 등원 당시부터 농민들에게 약속했던 ‘농산물 최저가격보장제도(가격안정제)’도 법제화돼... 여기에 기후위기로 가뭄과 폭염·폭우가 반복되고 국제정세와 글로벌 공급망 불안으로 농자재 가격 상승까지 겹쳐...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-10-06T20:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000105673?sid=102",
+      "originallink": "https://www.nongmin.com/article/20261003500027",
+      "keyword": "수급"
+    },
+    {
+      "id": "d9131d935bfd7b5b",
+      "title": "브라질: 앞으로 4년 더?",
+      "summary": "그러나 당시에는 브라질이 수출하는 농산물과 에너지 자원의 가격이 급등해, 룰라가 노동자들의 삶을... 원자재 가격이 상승했고 경제성장도 가속화해 남미의 다른 나라 대부분을 앞질렀다. 고용이 늘고 실업률은...",
+      "source": "newscham.net",
+      "publishedAt": "2026-10-06T07:24:00.000Z",
+      "link": "https://newscham.net/130004/",
+      "originallink": "https://newscham.net/130004/",
+      "keyword": "수급"
+    },
+    {
+      "id": "c588e384764f5ce6",
+      "title": "[2026년 10월 2주] 주요 농산물 경락가 상승·하락 품목 - 사과 시나노스...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난달 28일(월)부터 이달 6일(화)까지 거래된 엽근채소, 양념채소...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-10-06T05:08:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329305",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329305",
+      "keyword": "시장"
+    },
     {
       "id": "3c1f77cd40fdfe2c",
       "title": "[단독]국내 농가 보호한다더니…수입업자에 흘러간 50억 보조금",
@@ -136,36 +166,6 @@
       "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
       "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
       "keyword": "배추"
-    },
-    {
-      "id": "c512ce43f4dc5a55",
-      "title": "[배 수출 현장 점검] 관세 부담•해상운송비 상승...수출 악재 겹치며 농...",
-      "summary": "신선농산물 중 주요 수출 품목인 배 수출이 조생품종인 '원황'을 시작으로 8월부터 본격화됐다. 10월부터는... 관세 오른 탓 현지가격 상승 지난해 23~25→올해 34달러로 소비 위축으로 이어져 걱정 반값 중국산...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-02T10:58:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407646",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407646",
-      "keyword": "수급"
-    },
-    {
-      "id": "e78d1ebf3caa7c21",
-      "title": "[2026 추석 결산 - 과일 부문] 추석 과일 소비 '활기'…멜론 '다크호스'...",
-      "summary": "농수산물도매시장(이하 가락시장)의 사과 전체 거래량은 2822톤으로 지난해 같은 기간 대비 20.1% 증가했다. 거래액은 141억2300만 원으로 지난해 수준에 머물렀다. 홍로(상품) 10kg 상자 가격은 지난달 14일...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-02T08:46:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329191",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329191",
-      "keyword": "시장"
-    },
-    {
-      "id": "20073f97f422c9db",
-      "title": "9월 물가 2.9%↑···정부, 금융·물가 안정 대응",
-      "summary": "농축수산물 전체 물가는 0.3% 내린 가운데 농산물이 4% 하락했고, 축산물과 수산물은 상승했습니다. 특히 석유류는 14.8% 올라 전체 물가를 0.56%포인트 끌어올렸습니다. 정부는 석유제품 최고가격제를 통해 9월 물가...",
-      "source": "ktv.go.kr",
-      "publishedAt": "2026-10-02T07:45:00.000Z",
-      "link": "https://www.ktv.go.kr/content/view?content_id=761909",
-      "originallink": "https://www.ktv.go.kr/content/view?content_id=761909",
-      "keyword": "수급"
     }
   ]
 }
