@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-07T01:41:37.932Z",
+    "updatedAt": "2026-10-08T02:01:46.739Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "5dd33af5c5caf9fe",
+      "title": "'농지조사' 준비 미흡에 송미령 \"제 불찰\"…재산권 침해엔 선 그어(종합...",
+      "summary": "계란 수급과 산란계 산업 정책, CPTPP 가입 문제 등을 놓고 여야 의원들의 질의가 이어졌다. \"농지 전수조사, 사유재산 침해 아냐\"…준비 미흡엔 \"제 불찰\" 농지 전수조사를 둘러싸고는 조사 목적과 방식, 농지가격 하락 우려...",
+      "source": "newsis.com",
+      "publishedAt": "2026-10-07T12:46:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014240284?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20261007_0003817995",
+      "keyword": "수급"
+    },
+    {
+      "id": "78e798b89fab780a",
+      "title": "문대림 의원 \"수입상 출하자 특혜…보조금 50억 샜다\"",
+      "summary": "따르면, 가락시장 청과부류 출하자는 2022년 8,334명에서 2025년 6,558명으로 줄었다.... 전국 농산물 가격의 기준이 되는 도매시장 가격을 왜곡할 수 있다는 우려가...",
+      "source": "breaknews.com",
+      "publishedAt": "2026-10-07T03:36:00.000Z",
+      "link": "http://www.breaknews.com/1241412",
+      "originallink": "http://www.breaknews.com/1241412",
+      "keyword": "시장"
+    },
+    {
+      "id": "069348f74918aaca",
+      "title": "도매시장 출하장려금 수입업자에도 지급",
+      "summary": "따르면, 가락시장 청과부류 출하자는 2022년 8334명에서 2025년 6558명으로 줄었다. 반면 같은 기간 수입상... 전국 농산물 가격의 기준이 되는 도매시장 가격을 왜곡할 수 있다는 우려가 뒤따른다. 이에 문 의원은 출하자...",
+      "source": "bokuennews.com",
+      "publishedAt": "2026-10-07T02:12:00.000Z",
+      "link": "http://www.bokuennews.com/news/article.html?no=285200",
+      "originallink": "http://www.bokuennews.com/news/article.html?no=285200",
+      "keyword": "시장"
+    },
     {
       "id": "daaec0ed5393a00e",
       "title": "[특별 인터뷰] “농민 목소리 정책·입법·예산에 충실히 반영되도록 노...",
@@ -136,36 +166,6 @@
       "link": "https://www.news2day.co.kr/article/20261002500148",
       "originallink": "https://www.news2day.co.kr/article/20261002500148",
       "keyword": "시장"
-    },
-    {
-      "id": "6bf9ed1023142ab0",
-      "title": "9월 물가 2.9%로 낮아졌지만…석유류 14.8%·공업제품 4.2% 상승",
-      "summary": "국가데이터처는 과실 출하 증가와 정부 할인 지원, 수급 여건 등이 농산물 가격 하락에 복합적으로 영향을 미쳤다고 설명했다. 반면 공업제품 가격은 전년 동월보다 4.2% 상승했다. 특히 석유류는 14.8% 올라 전체...",
-      "source": "dailyt.co.kr",
-      "publishedAt": "2026-10-02T11:32:00.000Z",
-      "link": "https://www.dailyt.co.kr/newsView/dlt202610020018",
-      "originallink": "https://www.dailyt.co.kr/newsView/dlt202610020018",
-      "keyword": "수급"
-    },
-    {
-      "id": "80a0261cc15145e5",
-      "title": "\"심고 난 뒤엔 늦다\"...농산물 수급 '사후 대응→선제 관리'로 전환",
-      "summary": "채소가격안정제는 가격 하락시 참여 농가에 하락분 일부를 보조하거나 과잉물량을 격리하고, 가격 상승시... 선제적 수급관리에도 불구하고 농산물 '평균가격'이 '기준가격' 이하로 하락하면 농가에 차액의 일부 또는...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-02T10:58:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407682",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407682",
-      "keyword": "수급"
-    },
-    {
-      "id": "0f058aaf2ba5d7dd",
-      "title": "[기자수첩] '알뜰하게 장볼지도' 말고 '제값에 팔지도'",
-      "summary": "당장 알뜰 앱은 농산물의 특성을 충분히 고려하지 않았단 지적이 나온다. 농산물은 같은 품목이라도 시기와... 6개월에 달하는 할인 기간 동안 가락동 농수산물도매시장에서 양배추 도매가격이 평년보다 높았던 건 12일에...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-02T10:58:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407674",
-      "keyword": "배추"
     }
   ]
 }
