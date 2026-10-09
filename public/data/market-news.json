@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-08T02:01:46.739Z",
+    "updatedAt": "2026-10-09T02:13:08.103Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "00ecb0d974205d79",
+      "title": "\"진짜 공포는 내년\"…전쟁·라니냐 겹치는 글로벌 식량위기 경고",
+      "summary": "경우 '애그플레이션(농산물 가격 급등에 따른 물가상승)'이 본격화해 저소득 국가의 식량위기를 촉발할 수... 그는 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면 천연가스 가격은 상승 방향이고, 비료와 이를...",
+      "source": "newsroad.co.kr",
+      "publishedAt": "2026-10-09T01:06:00.000Z",
+      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
+      "originallink": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
+      "keyword": "수급"
+    },
+    {
+      "id": "796282b3acaa33d3",
+      "title": "호르무즈 막히자 치솟는 곡물값⋯내년 식탁 물가 비상",
+      "summary": "미·이란 전쟁이 장기화되면서 국제 곡물 가격이 가파른 상승세를 타고 있다. 호르무즈 해협 봉쇄로 비료 원료 수급에 차질이 빚어지고, 에너지 가격까지 치솟아 농산물 생산비 부담이 눈덩이처럼 불어난 탓이다....",
+      "source": "viva100.com",
+      "publishedAt": "2026-10-09T01:00:00.000Z",
+      "link": "https://www.viva100.com/article/20261009500028",
+      "originallink": "https://www.viva100.com/article/20261009500028",
+      "keyword": "수급"
+    },
+    {
+      "id": "dfa77f0bf246a4ba",
+      "title": "미·이란 전쟁에 '애그플레이션' 경고…\"내년 식량위기 오나\"",
+      "summary": "내년부터 '애그플레이션'(농산물 가격 상승)으로 인한 충격이 본격화할 수 있다는 우려가 고개를 들고... 특히 \"비료는 내년 애그플레이션을 만들 원흉\"이라면서 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면...",
+      "source": "jnilbo.com",
+      "publishedAt": "2026-10-09T00:03:00.000Z",
+      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000072049",
+      "originallink": "https://www.jnilbo.com/news/articleView.html?idxno=90000072049",
+      "keyword": "수급"
+    },
+    {
+      "id": "80db14e982b96e3d",
+      "title": "전쟁에 치솟는 곡물가, 식량위기 우려 고개…\"진짜 공포는 내년\"",
+      "summary": "내년부터 '애그플레이션'(농산물 가격 상승)으로 인한 충격이 본격화할 수 있다는 우려가 고개를 들고... 특히 \"비료는 내년 애그플레이션을 만들 원흉\"이라면서 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면...",
+      "source": "yna.co.kr",
+      "publishedAt": "2026-10-08T22:10:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/001/0016367176?sid=101",
+      "originallink": "https://www.yna.co.kr/view/AKR20261008104500008?input=1195m",
+      "keyword": "수급"
+    },
+    {
+      "id": "3b7eb4876b800162",
+      "title": "배추 '뚝' 무·새우젓 '쑥'...'김장 물가' 불안감 여전 [앵커리포트]",
+      "summary": "앞서 보셨듯 배추 가격은 소폭 하락했지만 무와 양념류인 젓갈 가격이 동반 상승하면서 김장 비용 부담이 만만치 않을 전망입니다. 이는 이상 기후로 인한 수산물 어획량 감소와 여름철 농산물 생육 지연 등이 맞물린...",
+      "source": "ytn.co.kr",
+      "publishedAt": "2026-10-08T14:25:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/052/0002416556?sid=102",
+      "originallink": "https://www.ytn.co.kr/_ln/0103_202610082325047435",
+      "keyword": "배추"
+    },
+    {
+      "id": "0c84d5a897efaf23",
+      "title": "동화청과, 부추·시금치 출하 앞두고 출하자 품질관리교육",
+      "summary": "미흡한 농산물의 실제 사례를 비교해 품질 차이가 시장 가격에 미치는 영향을 살펴보고 산지 조직화와 품질 균일화의 필요성을 강조했다. 안종대 경주시부추작목연합회장은 \"겨울철 부추 출하를 앞두고 가락시장의 생생한...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-10-08T08:58:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329444",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329444",
+      "keyword": "시장"
+    },
     {
       "id": "5dd33af5c5caf9fe",
       "title": "'농지조사' 준비 미흡에 송미령 \"제 불찰\"…재산권 침해엔 선 그어(종합...",
@@ -106,66 +166,6 @@
       "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=728711",
       "originallink": "http://www.the-biz.co.kr/news/articleView.html?idxno=728711",
       "keyword": "수급"
-    },
-    {
-      "id": "200d5d075771e3b0",
-      "title": "\"관세 인하 목록서 빠졌다\"… 美 대두 선물 한 달 만에 최저치 폭락",
-      "summary": "최대 농산물 수출 품목인 미가공 대두(Soybean·콩)가 대상 목록에서 전격 제외되면서 국제 대두 가격이 약... 풍작에 따른 공급 과잉 우려가 커진 상황에서 관세 인하 호재마저 소멸하자, 가격 상승에 베팅했던 투기적...",
-      "source": "g-enews.com",
-      "publishedAt": "2026-10-03T20:46:00.000Z",
-      "link": "https://www.g-enews.com/view.php?ud=2026100317403727620c8c1c064d_1",
-      "originallink": "https://www.g-enews.com/view.php?ud=2026100317403727620c8c1c064d_1",
-      "keyword": "수급"
-    },
-    {
-      "id": "07f672bf17f90f32",
-      "title": "사과·배 가격 ‘뚝’ 떨어졌는데…“장보기 겁나” 곡소리 나오는 이유...",
-      "summary": "젓갈류도 원재료 수급 불균형과 숙성·저장 비용 부담 등의 영향으로 오름세를 나타냈다. 새우젓 역시 원재료 확보 여건과 관리 비용이 가격 상승 요인으로 작용했다. 반대로 건어물 가격은 내렸다. 햇멸치 출하가 늘어난...",
-      "source": "sedaily.com",
-      "publishedAt": "2026-10-03T16:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/011/0004668042?sid=101",
-      "originallink": "https://www.sedaily.com/article/20097933?ref=naver",
-      "keyword": "수급"
-    },
-    {
-      "id": "b0f452f5e9dec01e",
-      "title": "“도매가가 더 싸던데?” 농산물 가격은 단계부터 맞춰 비교",
-      "summary": "한국농수산식품유통공사(aT)의 농산물유통정보(KAMIS)는 소매가격, 도매가격인 중도매인 판매가격, 가락시장 경락가격을 구분해 제공한다. KAMIS에서 소매가격은 대형마트와 전통시장 등에서 소비자에게 판매하는...",
-      "source": "vegannews.co.kr",
-      "publishedAt": "2026-10-03T06:14:00.000Z",
-      "link": "https://www.vegannews.co.kr/news/article.html?no=391046",
-      "originallink": "https://www.vegannews.co.kr/news/article.html?no=391046",
-      "keyword": "시장"
-    },
-    {
-      "id": "d1254f9be4ae7300",
-      "title": "채소값 오르고 과일은 내렸다…‘9월 물가’ 품목별 온도차",
-      "summary": "9월 국내 농산물 생활물가가 품목별로 온도차를 보인 것으로 나타났다. 기상 악화로 수급이 불안했던 채소류는 가격이 상승한 반면, 본격적인 출하기를 맞은 과일은 공급이 늘며 내림세를 탓다. 한국물가정보가 1일...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-10-03T06:06:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000105529?sid=101",
-      "originallink": "https://www.nongmin.com/article/20261002500235",
-      "keyword": "수급"
-    },
-    {
-      "id": "6aab17efe3605a7b",
-      "title": "세계식량가격, 3년 10개월만 최고… FAO 전가 경고",
-      "summary": "전쟁 여파로 흑해 교역이 크게 위축된 가운데 주요 생산지의 가뭄과 폭우가 겹치며 글로벌 농산물 공급망의... 식물유 가격지수도 0.9% 상승하며 오름세에 힘을 보탰다. 반면 육류 가격지수는 전월 대비 1.1% 하락했고...",
-      "source": "g-enews.com",
-      "publishedAt": "2026-10-03T01:08:00.000Z",
-      "link": "https://www.g-enews.com/view.php?ud=202610031007043139e7e8286d56_1",
-      "originallink": "https://www.g-enews.com/view.php?ud=202610031007043139e7e8286d56_1",
-      "keyword": "수급"
-    },
-    {
-      "id": "1185745a7eb6faf3",
-      "title": "물가 상승률은 떨어졌는데…장바구니 채소값 14%↑",
-      "summary": "전년 동월 대비 농축수산물은 0.3% 내렸는데, 농산물이 4% 하락하는 동안 축산물과 수산물이 각각 3.7%·4.5... 물론 소비 부진 여파로 채소류 가격이 최근 부진했던 측면을 고려할 필요가 있다. 가락동농수산물도매시장...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-10-02T22:02:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20261002500148",
-      "originallink": "https://www.news2day.co.kr/article/20261002500148",
-      "keyword": "시장"
     }
   ]
 }
