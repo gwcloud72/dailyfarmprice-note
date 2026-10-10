@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-09T02:13:08.103Z",
+    "updatedAt": "2026-10-10T01:56:33.992Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "5ae0c525dc7560c0",
+      "title": "“내년에 진짜 식량 위기 온다고?” 왜?…호르무즈 봉쇄에 기상이변 겹...",
+      "summary": "‘애그플레이션(농산물 가격 급등에 따른 물가 상승)’이 닥칠 수 있다는 경고음이 커지고 있다. 10일... 최진영 대신증권 연구원은 “내년 동태평양 연안 해수면 온도가 하락 방향이라면 천연가스 가격은 상승 방향이고...",
+      "source": "munhwa.com",
+      "publishedAt": "2026-10-09T21:50:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/021/0002824108?sid=101",
+      "originallink": "https://www.munhwa.com/article/11622456?ref=naver",
+      "keyword": "수급"
+    },
     {
       "id": "00ecb0d974205d79",
       "title": "\"진짜 공포는 내년\"…전쟁·라니냐 겹치는 글로벌 식량위기 경고",
@@ -25,6 +35,16 @@
       "publishedAt": "2026-10-09T01:00:00.000Z",
       "link": "https://www.viva100.com/article/20261009500028",
       "originallink": "https://www.viva100.com/article/20261009500028",
+      "keyword": "수급"
+    },
+    {
+      "id": "e617b5d18a4a9526",
+      "title": "중동 전쟁에 국제 곡물가 급등…내년 '애그플레이션' 충격 우려",
+      "summary": "미국과 이란의 전쟁 장기화로 국제 곡물 가격이 상승하면서 내년부터 농산물 가격 급등에 따른... 이후 상승세를 확대했다. 미국과 이란의 종전 양해각서(MOU) 합의로 지난 6월에는 1100센트대 초반까지 하락했지만...",
+      "source": "polinews.co.kr",
+      "publishedAt": "2026-10-09T00:10:00.000Z",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=745325",
+      "originallink": "https://www.polinews.co.kr/news/articleView.html?idxno=745325",
       "keyword": "수급"
     },
     {
@@ -146,26 +166,6 @@
       "link": "https://www.farminsight.net/news/articleView.html?idxno=16986",
       "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16986",
       "keyword": "시장"
-    },
-    {
-      "id": "7799f95e338dac4b",
-      "title": "[농정춘추] 탄소중립 시대 농산물 유통, 기본에서 시작하자",
-      "summary": "농산물 유통에서도 비슷한 흐름이 나타난다. 온라인도매시장, 스마트APC, AI 기반 수급 예측, 자동선별ㆍ물류... 품목, 농가, 출하량, 등급, 규격, 품질, 폐기량 등의 원물 정보와 판매처, 판매량, 가격, 재고, 반품 등의 유통...",
-      "source": "ikpnews.net",
-      "publishedAt": "2026-10-04T11:02:00.000Z",
-      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71556",
-      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71556",
-      "keyword": "시장"
-    },
-    {
-      "id": "da8a4c8bc740ef9c",
-      "title": "[슬금슬금] 물가 내려도 왜 안 떨어질까… 美 국채금리 뒤흔드는 '큰손...",
-      "summary": "경유 가격 상승은 화물 운송비와 농산물 생산비를 거쳐 식료품과 공산품 가격에 영향을 미칠 수 있다는... 채권금리 상승은 기존 채권 가격의 하락을 의미한다. 높은 이자수익을 기대할 수 있더라도 금리가 추가로...",
-      "source": "the-biz.co.kr",
-      "publishedAt": "2026-10-03T22:00:00.000Z",
-      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=728711",
-      "originallink": "http://www.the-biz.co.kr/news/articleView.html?idxno=728711",
-      "keyword": "수급"
     }
   ]
 }
