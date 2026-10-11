@@ -2,11 +2,21 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-10T01:56:33.992Z",
+    "updatedAt": "2026-10-11T01:07:25.036Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "bd201b79e49b212f",
+      "title": "“붕어빵 계절왔다”…1개 1000원에서 또 오를까? [푸드360]",
+      "summary": "붕어빵 시세에 대한 관심도 덩달아 높아지고 있다. ‘1개 1000원, 3개 2000원’으로 익숙해진 가격이 더... 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 지난 7일 기준 국산 붉은 팥 500g 소매가격은...",
+      "source": "biz.heraldcorp.com",
+      "publishedAt": "2026-10-10T02:50:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/016/0002707485?sid=101",
+      "originallink": "https://biz.heraldcorp.com/article/10897611?ref=naver",
+      "keyword": "시장"
+    },
     {
       "id": "5ae0c525dc7560c0",
       "title": "“내년에 진짜 식량 위기 온다고?” 왜?…호르무즈 봉쇄에 기상이변 겹...",
@@ -155,16 +165,6 @@
       "publishedAt": "2026-10-06T01:01:00.000Z",
       "link": "https://n.news.naver.com/mnews/article/079/0004195809?sid=103",
       "originallink": "https://www.nocutnews.co.kr/news/6587303?utm_source=naver&utm_medium=article&utm_campaign=20261006100009",
-      "keyword": "시장"
-    },
-    {
-      "id": "a886e9ced82c6ac9",
-      "title": "[팜히스토리] 울타리 하나 사이 농협과 현대자동차의 26년",
-      "summary": "1994년 가락시장 중도매인들이 경매를 거부한 '농안법 파동'이 터지자, 정부는 산지 포장센터 160개, 간이집하장 1,600개, 대도시 농산물물류센터 16개를 세우는 '신(新)유통체계' 대책을 내놨다. 그리고 그 수행기관으로...",
-      "source": "farminsight.net",
-      "publishedAt": "2026-10-05T08:30:00.000Z",
-      "link": "https://www.farminsight.net/news/articleView.html?idxno=16986",
-      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=16986",
       "keyword": "시장"
     }
   ]
