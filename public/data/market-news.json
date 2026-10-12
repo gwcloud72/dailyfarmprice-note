@@ -2,11 +2,31 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-11T01:07:25.036Z",
+    "updatedAt": "2026-10-12T01:28:13.545Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "9bae3d2450005da6",
+      "title": "[원자재 시황] 중동 긴장 완화에 금·코인 상승",
+      "summary": "금값, 美 이란 공격 유예·국채금리 하락에 1%대 상승 국제 금 가격은 도널드 트럼프 미국 대통령이... 우크라이나 측은 물류 차질이 장기화할 경우 최대 3500만톤의 농산물 운송이 지연될 수 있다고 추산했다. 유엔...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-10-11T23:40:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
+      "keyword": "수급"
+    },
+    {
+      "id": "850b7c1946e70138",
+      "title": "동화청과, 부추·시금치 출하 앞두고 농가 맞춤형 밀착 교육 실시",
+      "summary": "교육을 맡은 가귀현 동화청과 부추 담당 경매사는 가락시장 최근 시세와 수도권 도매시장의 소비·유통... 상품성이 우수한 농산물과 품질이 미흡한 농산물의 실제 사례를 비교하며 품질 차이가 시장 평가에 미치는 영향을...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-10-11T22:24:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102575",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102575",
+      "keyword": "시장"
+    },
     {
       "id": "bd201b79e49b212f",
       "title": "“붕어빵 계절왔다”…1개 1000원에서 또 오를까? [푸드360]",
@@ -138,16 +158,6 @@
       "keyword": "수급"
     },
     {
-      "id": "d9131d935bfd7b5b",
-      "title": "브라질: 앞으로 4년 더?",
-      "summary": "그러나 당시에는 브라질이 수출하는 농산물과 에너지 자원의 가격이 급등해, 룰라가 노동자들의 삶을... 원자재 가격이 상승했고 경제성장도 가속화해 남미의 다른 나라 대부분을 앞질렀다. 고용이 늘고 실업률은...",
-      "source": "newscham.net",
-      "publishedAt": "2026-10-06T07:24:00.000Z",
-      "link": "https://newscham.net/130004/",
-      "originallink": "https://newscham.net/130004/",
-      "keyword": "수급"
-    },
-    {
       "id": "c588e384764f5ce6",
       "title": "[2026년 10월 2주] 주요 농산물 경락가 상승·하락 품목 - 사과 시나노스...",
       "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난달 28일(월)부터 이달 6일(화)까지 거래된 엽근채소, 양념채소...",
@@ -155,16 +165,6 @@
       "publishedAt": "2026-10-06T05:08:00.000Z",
       "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329305",
       "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329305",
-      "keyword": "시장"
-    },
-    {
-      "id": "3c1f77cd40fdfe2c",
-      "title": "[단독]국내 농가 보호한다더니…수입업자에 흘러간 50억 보조금",
-      "summary": "중도매인이 가락시장에 출하자로 재등록한 뒤 다시 경매에 내놓는 방식이다. 이 경우 같은 농산물이 두 차례 경매를 거치면서 위탁수수료가 이중으로 부과될 수 있다. 이렇게 늘어난 비용이 최종적으로 소비자 가격에...",
-      "source": "nocutnews.co.kr",
-      "publishedAt": "2026-10-06T01:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/079/0004195809?sid=103",
-      "originallink": "https://www.nocutnews.co.kr/news/6587303?utm_source=naver&utm_medium=article&utm_campaign=20261006100009",
       "keyword": "시장"
     }
   ]
