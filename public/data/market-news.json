@@ -2,30 +2,120 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-13T03:12:01.169Z",
+    "updatedAt": "2026-10-16T00:30:43.851Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
     {
-      "id": "1985cc2aa68d74c5",
-      "title": "[르포] 배추값 ‘뚝’·양념값 ‘쑥’…올해 김장철, ‘담그는 김치’서...",
-      "summary": "가락시장에서 30여년간 배추를 팔아온 70대 상인은 “올해 태풍이 거의 없어 배추를 비롯한 주요 농산물... 이달 가락시장 배추 도매가격도 10㎏당 8000원 선으로, 평년보다 21% 낮을 것으로 예상했다. 문제는 김장에...",
-      "source": "mydaily.co.kr",
-      "publishedAt": "2026-10-12T08:06:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/117/0004114379?sid=103",
-      "originallink": "https://www.mydaily.co.kr/page/view/2026101216412997740",
-      "keyword": "배추"
+      "id": "bad25fc13d07e9da",
+      "title": "제주, 도매시장서 상품기준 위반 감귤 출하행위 잇따라 적발",
+      "summary": "도매시장에서 유통 실태를 점검한 결과 상품 출하 규정을 위반한 사례가 잇따라 적발됐다. 사진은 서울 가락... 제주도는 지난 14일부터 15일까지 이틀간 경기 수원 농산물도매시장과 부산 엄궁 농산물도매시장에서 합동...",
+      "source": "headlinejeju.co.kr",
+      "publishedAt": "2026-10-15T11:08:00.000Z",
+      "link": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=600517",
+      "originallink": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=600517",
+      "keyword": "시장"
     },
     {
-      "id": "b544f045fb9d217d",
-      "title": "식자재유통협회, 양파 소비촉진 할인전…농가·외식업 소상공인 지원",
-      "summary": "이번 행사는 산지 농산물의 판로를 외식업 식재료 구매 수요와 연결하는 방식으로 기획됐다. 양파를... 농어촌희망재단, 가락시장 도매법인들이 유기적으로 협력하여 가격 하락 시기에 선제적인 대량 소진 채널을...",
+      "id": "e4c97f8b2e0964c6",
+      "title": "[농담] 유통혁신 외치는데 도매시장은 동시휴업…농민 출하권 누가 지키...",
+      "summary": "떨어지는 농산물에 시장의 휴무일은 때로 가격을 좌우하는 변수다. 최근 수도권 핵심 도매시장들이 같은 날... 하지만 현장에서 먼저 눈에 띄는 변화는 거래의 확대가 아니라 도매시장의 휴업 확산이다. 서울 가락시장은...",
+      "source": "mt.co.kr",
+      "publishedAt": "2026-10-15T08:28:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/008/0005427051?sid=101",
+      "originallink": "https://www.mt.co.kr/economy/2026/10/15/2026101517182935801",
+      "keyword": "시장"
+    },
+    {
+      "id": "5ad19137136a07e6",
+      "title": "상품외감귤 885kg 적발 \"맛과 규격 사이, 제주감귤 적정 기준은?\"",
+      "summary": "제주도는 14일부터 15일까지 경기 수원 농산물도매시장과 부산 엄궁 농산물도매시장을 점검해 상품외감귤... 제주감귤 전체 가격과 소비자 인식에 부정적 영향을 줄 수 있다. 지난해 10월에도 서울 가락시장과 경기...",
+      "source": "mediajeju.com",
+      "publishedAt": "2026-10-15T02:46:00.000Z",
+      "link": "https://www.mediajeju.com/news/articleView.html?idxno=366786",
+      "originallink": "https://www.mediajeju.com/news/articleView.html?idxno=366786",
+      "keyword": "시장"
+    },
+    {
+      "id": "904df976c3c50564",
+      "title": "동화청과, 청년농 유통·출하 역량 강화 교육 2기 개강",
+      "summary": "품목의 농산물 유통 특성'을 주제로 강의했다. 윤 이사는 출하주 브랜드화 전략과 온라인도매시장 활용법, 농약 허용물질목록 관리제도(PLS) 등을 설명하고 균일한 상품성 확보와 신선도 관리, 지속적인 출하가 가격...",
+      "source": "amnews.co.kr",
+      "publishedAt": "2026-10-15T02:30:00.000Z",
+      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=75029",
+      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=75029",
+      "keyword": "시장"
+    },
+    {
+      "id": "6cfeb57368c9c919",
+      "title": "[국감] '실적 부풀리기' 얼룩진 농산물 온라인도매시장",
+      "summary": "농산물 유통 단계를 축소하고 유통 비용을 절감하겠다는 취지로 출범한 농산물 온라인도매시장이 '실적... 6대 도매법인에 월별·연간 목표치를 부여해 주간·월간 단위로 실적을 관리해 왔다고 밝혔다. 특히 농협 가락공...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-15T01:04:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17033",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17033",
+      "keyword": "시장"
+    },
+    {
+      "id": "b755490ae51cce5e",
+      "title": "‘휴업’ 번지는 도매시장…산지 “정부, 농가피해 최소화방안 찾아야",
+      "summary": "경북 ‘청도반시’ 출하조직 관계자는 “주요 도매시장이 동시 휴업한다면 수도권으로 가야할 물량이 산지농협 공판장으로 몰려 가격이 폭락할 수 있고, 농산물 시세는 한번 꺾이면 회복하기 어렵다”고 걱정했다....",
+      "source": "nongmin.com",
+      "publishedAt": "2026-10-14T22:01:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000106127?sid=101",
+      "originallink": "https://www.nongmin.com/article/20261014500604",
+      "keyword": "시장"
+    },
+    {
+      "id": "1e2336b5c209bd54",
+      "title": "[발행인 칼럼] 관료의 조급증이 부른 '샤인머스캣의 데자뷔', 사과 과수...",
+      "summary": "포도 가격은 처참한 바닥을 기고 있다. 서울 가락동 농수산물도매시장에서 샤인머스캣 2kg 평균 경락가는 1만... 아무리 매력적인 재화라도 시장에 넘쳐나 흔해지면 가치가 폭락한다는 한계효용 체감의 법칙은 농산물...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-14T19:50:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17032",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17032",
+      "keyword": "시장"
+    },
+    {
+      "id": "9ba638408e8fa13b",
+      "title": "농산물값 절반이 유통비용…온라인 도매시장도 '4건 중 1건' 이상거래",
+      "summary": "비해 농산물 가격은 그만큼 오르지 않아 유통비용률이 높아지고 있다\"며 \"온라인 도매시장과 직거래 사업... 2024년부터 가락시장 6개 도매법인·공판장에 연간·월간 거래 목표치를 부여하고 주별·월별로 실적을...",
+      "source": "mt.co.kr",
+      "publishedAt": "2026-10-14T07:42:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/008/0005426335?sid=100",
+      "originallink": "https://www.mt.co.kr/politics/2026/10/14/2026101416090646366",
+      "keyword": "시장"
+    },
+    {
+      "id": "7a3cc3f46d3060d7",
+      "title": "빚 못 갚는 농민 1만 5000명 육박…농협 조합원 연체액 2조원 넘어",
+      "summary": "반면 농산물 가격과 수확량은 기상 여건과 수급 상황에 따라 크게 달라져 안정적인 소득을 확보하기... 농업 외 소득에 대한 의존도가 높은 상황에서 영농비 상승이나 농산물 가격 하락 등으로 수익성이 악화하면...",
       "source": "news1.kr",
-      "publishedAt": "2026-10-12T07:58:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009222968?sid=101",
-      "originallink": "https://www.news1.kr/industry/distribution/6317293",
-      "keyword": "양파"
+      "publishedAt": "2026-10-14T00:13:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/421/0009226182?sid=101",
+      "originallink": "https://www.news1.kr/economy/trend/6319077",
+      "keyword": "수급"
+    },
+    {
+      "id": "cf2833adab3ac539",
+      "title": "[품목포커스/대추방울토마토] 출하량 증가로 평년 대비 약세",
+      "summary": "추석 직전(9월 14~24일) 가락동 농수산물도매시장의 대추방울토마토 평균 도매가격(3kg, 상품)은 2만9469원으로... 전반적으로 농산물 소비가 부진한 상황에서 생산량 증가까지 겹치면 도매가격은 지금과 같이 평년 대비...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-13T10:34:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407887",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407887",
+      "keyword": "시장"
+    },
+    {
+      "id": "9bb4a4df5feb9088",
+      "title": "배추는 풍작인데 양념값은 상승…엇갈리는 김장 물가",
+      "summary": "13일 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)와 한국농촌경제연구원(KREI) 등에 따르면 올해... 10월 가락시장 상품 기준 배추 도매가격은 10㎏당 8000원 안팎으로 전년과 평년보다 낮을 것으로 전망했다. 무...",
+      "source": "etoday.co.kr",
+      "publishedAt": "2026-10-13T08:02:00.000Z",
+      "link": "https://www.etoday.co.kr/news/view/2634772",
+      "originallink": "https://www.etoday.co.kr/news/view/2634772",
+      "keyword": "배추"
     },
     {
       "id": "575b3e9dbbd7019e",
@@ -38,26 +128,6 @@
       "keyword": "배추"
     },
     {
-      "id": "0838a4fef21254e7",
-      "title": "동화청과, 청년농 유통·출하 역량강화 교육 2기 운영",
-      "summary": "이어 균일한 상품성과 신선도 관리, 꾸준한 출하 등 가격 경쟁력을 높이는 주요 요인을 소개하고 질의응답을 진행했다. 홍성호 대표는 \"처음 도매시장에 출하하는 청년농업인에게는 좋은 농산물을 생산하는 것뿐 아니라...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-12T02:08:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329570",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329570",
-      "keyword": "시장"
-    },
-    {
-      "id": "794059aa6a1fc25b",
-      "title": "[2026년 10월 3주] 주요 농산물 경락가 상승·하락 품목 - 사과·포도 거...",
-      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 지난 5일부터 12일까지 한 주간 거래된 엽근채소, 양념채소, 과일...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-12T02:08:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329572",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329572",
-      "keyword": "시장"
-    },
-    {
       "id": "9bae3d2450005da6",
       "title": "[원자재 시황] 중동 긴장 완화에 금·코인 상승",
       "summary": "금값, 美 이란 공격 유예·국채금리 하락에 1%대 상승 국제 금 가격은 도널드 트럼프 미국 대통령이... 우크라이나 측은 물류 차질이 장기화할 경우 최대 3500만톤의 농산물 운송이 지연될 수 있다고 추산했다. 유엔...",
@@ -66,16 +136,6 @@
       "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
       "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
       "keyword": "수급"
-    },
-    {
-      "id": "850b7c1946e70138",
-      "title": "동화청과, 부추·시금치 출하 앞두고 농가 맞춤형 밀착 교육 실시",
-      "summary": "교육을 맡은 가귀현 동화청과 부추 담당 경매사는 가락시장 최근 시세와 수도권 도매시장의 소비·유통... 상품성이 우수한 농산물과 품질이 미흡한 농산물의 실제 사례를 비교하며 품질 차이가 시장 평가에 미치는 영향을...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-10-11T22:24:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102575",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102575",
-      "keyword": "시장"
     },
     {
       "id": "bd201b79e49b212f",
@@ -106,66 +166,6 @@
       "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
       "originallink": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
       "keyword": "수급"
-    },
-    {
-      "id": "796282b3acaa33d3",
-      "title": "호르무즈 막히자 치솟는 곡물값⋯내년 식탁 물가 비상",
-      "summary": "미·이란 전쟁이 장기화되면서 국제 곡물 가격이 가파른 상승세를 타고 있다. 호르무즈 해협 봉쇄로 비료 원료 수급에 차질이 빚어지고, 에너지 가격까지 치솟아 농산물 생산비 부담이 눈덩이처럼 불어난 탓이다....",
-      "source": "viva100.com",
-      "publishedAt": "2026-10-09T01:00:00.000Z",
-      "link": "https://www.viva100.com/article/20261009500028",
-      "originallink": "https://www.viva100.com/article/20261009500028",
-      "keyword": "수급"
-    },
-    {
-      "id": "e617b5d18a4a9526",
-      "title": "중동 전쟁에 국제 곡물가 급등…내년 '애그플레이션' 충격 우려",
-      "summary": "미국과 이란의 전쟁 장기화로 국제 곡물 가격이 상승하면서 내년부터 농산물 가격 급등에 따른... 이후 상승세를 확대했다. 미국과 이란의 종전 양해각서(MOU) 합의로 지난 6월에는 1100센트대 초반까지 하락했지만...",
-      "source": "polinews.co.kr",
-      "publishedAt": "2026-10-09T00:10:00.000Z",
-      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=745325",
-      "originallink": "https://www.polinews.co.kr/news/articleView.html?idxno=745325",
-      "keyword": "수급"
-    },
-    {
-      "id": "dfa77f0bf246a4ba",
-      "title": "미·이란 전쟁에 '애그플레이션' 경고…\"내년 식량위기 오나\"",
-      "summary": "내년부터 '애그플레이션'(농산물 가격 상승)으로 인한 충격이 본격화할 수 있다는 우려가 고개를 들고... 특히 \"비료는 내년 애그플레이션을 만들 원흉\"이라면서 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면...",
-      "source": "jnilbo.com",
-      "publishedAt": "2026-10-09T00:03:00.000Z",
-      "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000072049",
-      "originallink": "https://www.jnilbo.com/news/articleView.html?idxno=90000072049",
-      "keyword": "수급"
-    },
-    {
-      "id": "80db14e982b96e3d",
-      "title": "전쟁에 치솟는 곡물가, 식량위기 우려 고개…\"진짜 공포는 내년\"",
-      "summary": "내년부터 '애그플레이션'(농산물 가격 상승)으로 인한 충격이 본격화할 수 있다는 우려가 고개를 들고... 특히 \"비료는 내년 애그플레이션을 만들 원흉\"이라면서 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면...",
-      "source": "yna.co.kr",
-      "publishedAt": "2026-10-08T22:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/001/0016367176?sid=101",
-      "originallink": "https://www.yna.co.kr/view/AKR20261008104500008?input=1195m",
-      "keyword": "수급"
-    },
-    {
-      "id": "3b7eb4876b800162",
-      "title": "배추 '뚝' 무·새우젓 '쑥'...'김장 물가' 불안감 여전 [앵커리포트]",
-      "summary": "앞서 보셨듯 배추 가격은 소폭 하락했지만 무와 양념류인 젓갈 가격이 동반 상승하면서 김장 비용 부담이 만만치 않을 전망입니다. 이는 이상 기후로 인한 수산물 어획량 감소와 여름철 농산물 생육 지연 등이 맞물린...",
-      "source": "ytn.co.kr",
-      "publishedAt": "2026-10-08T14:25:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/052/0002416556?sid=102",
-      "originallink": "https://www.ytn.co.kr/_ln/0103_202610082325047435",
-      "keyword": "배추"
-    },
-    {
-      "id": "0c84d5a897efaf23",
-      "title": "동화청과, 부추·시금치 출하 앞두고 출하자 품질관리교육",
-      "summary": "미흡한 농산물의 실제 사례를 비교해 품질 차이가 시장 가격에 미치는 영향을 살펴보고 산지 조직화와 품질 균일화의 필요성을 강조했다. 안종대 경주시부추작목연합회장은 \"겨울철 부추 출하를 앞두고 가락시장의 생생한...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-08T08:58:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=329444",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=329444",
-      "keyword": "시장"
     }
   ]
 }
