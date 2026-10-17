@@ -2,11 +2,71 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-16T00:30:43.851Z",
+    "updatedAt": "2026-10-17T00:32:23.755Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "27f5cade947917ad",
+      "title": "[팩트체크] 비료 사업 흑자 나면 농민 곡소리… 남해화학 내수 적자는 ...",
+      "summary": "중동 정세 불안으로 비료 원자재 가격이 요동치고 해상 물류망의 불확실성이 커지면서 원료 도입 단가와 운임이 동반 상승하는 이중고를 겪고 있다. 원료 수급 자체가 비상인 대외적 위기 상황에서도 남해화학은 국내...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-16T16:24:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17058",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17058",
+      "keyword": "수급"
+    },
+    {
+      "id": "89ddfed8808238d7",
+      "title": "포도농가 경영난, 더는 방치 안 된다",
+      "summary": "농산물 가격의 불안정과 생산비 부담, 판로 확보의 어려움은 현재 수많은 포도농가가 함께 겪고 있는 절박한 문제이기 때문이다. 샤인머스켓의 가락시장 8~10월 평균 도매가격은 상품 2kg 기준 2020년 2만8532원에서 지난해...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-16T11:14:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407997",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407997",
+      "keyword": "시장"
+    },
+    {
+      "id": "01989d3d313277c5",
+      "title": "6년새 가격 1/3로 뚝…'벼랑 끝' 몰린 샤인머스켓 농가",
+      "summary": "애도하며 가격 하락과 생산비 상승으로 어려움을 겪는 포도농가를 위한 실효성 있는 대책을 촉구했다. 한국포도회는 12일 성명을 통해 \"이번 일을 한 개인의 불행으로만 받아들일 수 없다\"며 \"농산물 가격의 불안정...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-10-16T08:26:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407947",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407947",
+      "keyword": "수급"
+    },
+    {
+      "id": "6c9e820616b48c5a",
+      "title": "수출 호조에 투자도 양호…정부 \"경기 회복세 지속\"",
+      "summary": "실업률은 2.0%로 전년 동월보다 0.1%포인트 하락했다. 물가는 여전히 상승 압력을 받고 있다. 9월 소비자물가는 전년 동월 대비 2.9% 상승했다. 식료품·에너지를 제외한 근원물가는 2.8%, 농산물·석유류를 제외한 지수는 2.7...",
+      "source": "financialpost.co.kr",
+      "publishedAt": "2026-10-16T07:38:00.000Z",
+      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=280948",
+      "originallink": "https://www.financialpost.co.kr/news/articleView.html?idxno=280948",
+      "keyword": "수급"
+    },
+    {
+      "id": "5bfc10528af26fe6",
+      "title": "정부 \"수출·투자 중심 경기 회복세 지속\"…중동發 고유가·고용부담 발...",
+      "summary": "하락했다. 소비자물가 상승률은 9월 2.9%로 8월 3.1%보다 낮아졌다. 식료품·에너지 제외 지수는 2.8%, 농산물... 주택시장에서는 8월 매매가격과 전세가격이 모두 상승했다. 매매가격은 전월 대비 0.32% 올라 7월 상승률 0....",
+      "source": "view.asiae.co.kr",
+      "publishedAt": "2026-10-16T01:30:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/277/0005829422?sid=101",
+      "originallink": "https://view.asiae.co.kr/article/2026101609482249630",
+      "keyword": "수급"
+    },
+    {
+      "id": "6710c244c583c800",
+      "title": "정부 “견조한 경기회복 흐름”…소비는 ‘완만한 개선’",
+      "summary": "3% 하락했지만 석유류 가격은 14.8% 상승했다. 식료품 및 에너지 제외 근원물가는 2.8%, 농산물 및 석유류... 재경부는 중동전쟁의 영향을 최소화하기 위해 주요 품목의 수급관리를 강화하는 한편, 경기 회복의 온기가...",
+      "source": "dailian.co.kr",
+      "publishedAt": "2026-10-16T01:30:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/119/0003143478?sid=101",
+      "originallink": "https://www.dailian.co.kr/news/view/1702279/?sc=Naver",
+      "keyword": "수급"
+    },
     {
       "id": "bad25fc13d07e9da",
       "title": "제주, 도매시장서 상품기준 위반 감귤 출하행위 잇따라 적발",
@@ -98,74 +158,14 @@
       "keyword": "수급"
     },
     {
-      "id": "cf2833adab3ac539",
-      "title": "[품목포커스/대추방울토마토] 출하량 증가로 평년 대비 약세",
-      "summary": "추석 직전(9월 14~24일) 가락동 농수산물도매시장의 대추방울토마토 평균 도매가격(3kg, 상품)은 2만9469원으로... 전반적으로 농산물 소비가 부진한 상황에서 생산량 증가까지 겹치면 도매가격은 지금과 같이 평년 대비...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-13T10:34:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=407887",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=407887",
-      "keyword": "시장"
-    },
-    {
       "id": "9bb4a4df5feb9088",
       "title": "배추는 풍작인데 양념값은 상승…엇갈리는 김장 물가",
-      "summary": "13일 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)와 한국농촌경제연구원(KREI) 등에 따르면 올해... 10월 가락시장 상품 기준 배추 도매가격은 10㎏당 8000원 안팎으로 전년과 평년보다 낮을 것으로 전망했다. 무...",
+      "summary": "배추 풍작으로 주재료 가격이 안정세를 보이는 가운데 새우젓과 마늘 등 일부 양념·부재료 가격과 향후 기상 여건이 실제 김장비용을 좌우할 변수로 꼽힌다. 13일 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)와...",
       "source": "etoday.co.kr",
       "publishedAt": "2026-10-13T08:02:00.000Z",
       "link": "https://www.etoday.co.kr/news/view/2634772",
       "originallink": "https://www.etoday.co.kr/news/view/2634772",
       "keyword": "배추"
-    },
-    {
-      "id": "575b3e9dbbd7019e",
-      "title": "배추값은 내렸는데 김장 부담은 그대로…무·양념값 변수",
-      "summary": "수급 상황에 달렸다는 분석이다. 12일 한국농수산식품유통공사(aT)에 따르면 지난 8일 기준 배추 소매가격은 포기당 5833원으로 전년보다 12.85% 하락했다. 무 가격도 개당 2292원으로 17.94% 내렸다. 그러나 무 가격 상승...",
-      "source": "ajunews.com",
-      "publishedAt": "2026-10-12T06:26:00.000Z",
-      "link": "https://www.ajunews.com/view/20261012151833958",
-      "originallink": "https://www.ajunews.com/view/20261012151833958",
-      "keyword": "배추"
-    },
-    {
-      "id": "9bae3d2450005da6",
-      "title": "[원자재 시황] 중동 긴장 완화에 금·코인 상승",
-      "summary": "금값, 美 이란 공격 유예·국채금리 하락에 1%대 상승 국제 금 가격은 도널드 트럼프 미국 대통령이... 우크라이나 측은 물류 차질이 장기화할 경우 최대 3500만톤의 농산물 운송이 지연될 수 있다고 추산했다. 유엔...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-10-11T23:40:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1727353",
-      "keyword": "수급"
-    },
-    {
-      "id": "bd201b79e49b212f",
-      "title": "“붕어빵 계절왔다”…1개 1000원에서 또 오를까? [푸드360]",
-      "summary": "붕어빵 시세에 대한 관심도 덩달아 높아지고 있다. ‘1개 1000원, 3개 2000원’으로 익숙해진 가격이 더... 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 지난 7일 기준 국산 붉은 팥 500g 소매가격은...",
-      "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-10-10T02:50:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002707485?sid=101",
-      "originallink": "https://biz.heraldcorp.com/article/10897611?ref=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "5ae0c525dc7560c0",
-      "title": "“내년에 진짜 식량 위기 온다고?” 왜?…호르무즈 봉쇄에 기상이변 겹...",
-      "summary": "‘애그플레이션(농산물 가격 급등에 따른 물가 상승)’이 닥칠 수 있다는 경고음이 커지고 있다. 10일... 최진영 대신증권 연구원은 “내년 동태평양 연안 해수면 온도가 하락 방향이라면 천연가스 가격은 상승 방향이고...",
-      "source": "munhwa.com",
-      "publishedAt": "2026-10-09T21:50:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/021/0002824108?sid=101",
-      "originallink": "https://www.munhwa.com/article/11622456?ref=naver",
-      "keyword": "수급"
-    },
-    {
-      "id": "00ecb0d974205d79",
-      "title": "\"진짜 공포는 내년\"…전쟁·라니냐 겹치는 글로벌 식량위기 경고",
-      "summary": "경우 '애그플레이션(농산물 가격 급등에 따른 물가상승)'이 본격화해 저소득 국가의 식량위기를 촉발할 수... 그는 \"내년 동태평양 연안 해수면 온도가 하락 방향이라면 천연가스 가격은 상승 방향이고, 비료와 이를...",
-      "source": "newsroad.co.kr",
-      "publishedAt": "2026-10-09T01:06:00.000Z",
-      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
-      "originallink": "http://www.newsroad.co.kr/news/articleView.html?idxno=65522",
-      "keyword": "수급"
     }
   ]
 }
