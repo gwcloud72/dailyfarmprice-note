@@ -2,11 +2,131 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-23T00:48:18.268Z",
+    "updatedAt": "2026-10-24T00:44:34.872Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "8089c8468574428b",
+      "title": "aT, 농산물 가격예측 해커톤 본선 개막",
+      "summary": "농산물 가격 변동성은 생산자와 소비자 모두에게 지속적인 부담을 안겨주는 유통 구조의 대표적인 과제다.... 품목인 배추, 무, 양파, 깐마늘, 건고추의 도매시장 가격을 예측하고 모형의 정확도를 겨루게 된다. aT는...",
+      "source": "ccnnews.co.kr",
+      "publishedAt": "2026-10-24T00:36:00.000Z",
+      "link": "http://www.ccnnews.co.kr/news/articleView.html?idxno=416729",
+      "originallink": "http://www.ccnnews.co.kr/news/articleView.html?idxno=416729",
+      "keyword": "배추"
+    },
+    {
+      "id": "8ea16df556b1fc13",
+      "title": "aT, AI 농산물 가격예측 해커톤 본선 진출 15개 팀 선정",
+      "summary": "한국농수산식품유통공사(aT)는 '2026년 AI 농산물 가격예측 온라인 해커톤'에 총 394개 팀, 566명이 참가했으며... 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형별 예측 정확도를...",
+      "source": "lawissue.co.kr",
+      "publishedAt": "2026-10-23T10:50:00.000Z",
+      "link": "https://www.lawissue.co.kr/view.php?ud=20261023194855940f4ab64559d_12",
+      "originallink": "https://www.lawissue.co.kr/view.php?ud=20261023194855940f4ab64559d_12",
+      "keyword": "배추"
+    },
+    {
+      "id": "9b90bb83a866129c",
+      "title": "동화청과, 청년농 역량 강화 3주차…\"도매시장 맞춤해법 제시\"",
+      "summary": "동화청과는 지난 22일 서울 가락동 사무실에서 '2026년 청년농 유통·출하 역량강화 교육' 2기 3주 차 교육을 진행했다. 이번 교육은 청년농업인이 판로와 가격 형성 구조를 이해하도록 돕고자 마련했다. 교육에서는 도매시장...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-10-23T10:30:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330267",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330267",
+      "keyword": "시장"
+    },
+    {
+      "id": "17fc0029c3f8555b",
+      "title": "[기획] 로컬푸드직매장, 인구소멸지역 등대 되다",
+      "summary": "정성껏 키운 신선한 농산물을 최대한 보기 좋게 포장해 진열하기 위해 로컬푸드직매장을 찾는 거죠.... 판매가격은 농가가 직접 정하는데 보통 가락동 농수산물도매시장 경락가격을 기준으로 삼는다. 때문에 물류비...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-10-23T10:18:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330318",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330318",
+      "keyword": "시장"
+    },
+    {
+      "id": "20f3dd94e903c093",
+      "title": "aT, AI 활용 농산물 가격예측 정확도 높인다",
+      "summary": "결합해 농산물 가격예측 모형의 정확도를 높이고, 농산물 유통 분야의 데이터 활용 확대에 나섰다.... 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형의 정확도를 겨룬다. aT는...",
+      "source": "farmnmarket.com",
+      "publishedAt": "2026-10-23T08:46:00.000Z",
+      "link": "https://www.farmnmarket.com/news/article.html?no=28327",
+      "originallink": "https://www.farmnmarket.com/news/article.html?no=28327",
+      "keyword": "배추"
+    },
+    {
+      "id": "64aa1e2cdadbe554",
+      "title": "AI로 농산물 가격 예측…394개 팀 해커톤 도전",
+      "summary": "aT, 우수 아이디어에 AI 코딩 더해 농산물 가격예측 정확도 높인다(출처=한국농수산식품유통공사)... 본선 진출팀은 예선에서 제안한 아이디어를 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을...",
+      "source": "gukjenews.com",
+      "publishedAt": "2026-10-23T08:44:00.000Z",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3730963",
+      "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3730963",
+      "keyword": "배추"
+    },
+    {
+      "id": "a9cfbd1499863027",
+      "title": "가락시장 현대화사업비 급증…송옥주 의원 \"수도권 외곽 이전 검토해야...",
+      "summary": "농산물이 도매시장을 직접 거치지 않고 산지에서 소비지로 배송되는 '물상분리' 방식이 중요하지만, 가락... 가락시장의 오프라인 경매 기능을 수도권 외곽 스마트 풀필먼트 신시장으로 이전해 농가 수취가격을...",
+      "source": "shinailbo.co.kr",
+      "publishedAt": "2026-10-23T07:32:00.000Z",
+      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5075330",
+      "originallink": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5075330",
+      "keyword": "시장"
+    },
+    {
+      "id": "9d3e38fd2c00ecc9",
+      "title": "포도가 FTA 극복 사례?…\"농민 짓밟고 수출 1억 달성하려나\"",
+      "summary": "정작 농산물을 생산하는 농민이 죽어가는데 수출이 지속가능하겠는가\"라며 개탄했다. 결국 포도 수출을 위해선 국내 생산 기반의 안정화와 품질 관리가 먼저라는 것이다. 강근진 중앙청과 차장은 \"도매시장에서 가격이...",
+      "source": "ikpnews.net",
+      "publishedAt": "2026-10-23T04:24:00.000Z",
+      "link": "http://www.ikpnews.net/news/articleView.html?idxno=71769",
+      "originallink": "http://www.ikpnews.net/news/articleView.html?idxno=71769",
+      "keyword": "시장"
+    },
+    {
+      "id": "8cac0a5f66103c31",
+      "title": "aT, '2026 AI 농산물 가격예측 해커톤' 본선 15팀 선정",
+      "summary": "AI 농산물 가격예측 온라인 해커톤' 예선전을 거쳐 본선 무대에 오를 최종 15개 팀을 선발했다고 23일... 직결되는 배추, 무, 양파, 깐마늘, 건고추 등 5대 채소류의 도매시장 가격을 가장 정확하게 예측하는 실력을...",
+      "source": "newsworker.co.kr",
+      "publishedAt": "2026-10-23T02:18:00.000Z",
+      "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=510157",
+      "originallink": "https://www.newsworker.co.kr/news/articleView.html?idxno=510157",
+      "keyword": "배추"
+    },
+    {
+      "id": "c9eefcf4c78f26f4",
+      "title": "aT, AI 활용 농산물 가격예측 해커톤 본선 15개 팀 진출",
+      "summary": "한국농수산식품유통공사(aT)가 인공지능(AI)을 활용한 농산물 가격예측 온라인 해커톤 예선 심사를 마치고... 참가팀은 배추와 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형의 정확도를 겨루게...",
+      "source": "news.bbsi.co.kr",
+      "publishedAt": "2026-10-23T02:16:00.000Z",
+      "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4114257",
+      "originallink": "https://news.bbsi.co.kr/news/articleView.html?idxno=4114257",
+      "keyword": "배추"
+    },
+    {
+      "id": "cac7407de69a61c5",
+      "title": "aT, AI 농산물 가격예측 해커톤 본선 진출 15개 팀 선정",
+      "summary": "농산물 가격예측 온라인 해커톤 포스터. 사진=한국농수산삭품유통공사 한국농수산식품유통공사(aT)는... 진출팀은 예선에서 제안한 아이디어를 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격...",
+      "source": "pointdaily.co.kr",
+      "publishedAt": "2026-10-23T02:00:00.000Z",
+      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=323379",
+      "originallink": "https://www.pointdaily.co.kr/news/articleView.html?idxno=323379",
+      "keyword": "배추"
+    },
+    {
+      "id": "18794e7100fd2125",
+      "title": "제주농협 ‘제주 농업·농촌을 위한 건의사항’ 전달…10개 현안 대정부...",
+      "summary": "이상기후와 농산물값 불안, 농업경영비 상승 등 제주 농업·농촌이 직면한 각종 현안과제와 영농현장의... 인한 농산물 수급불안과 가격변동성 확대, 농가 수취값 하락이 불가피한 만큼 올해 수준의 국비지원이 유지돼야...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-10-23T01:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000106781?sid=102",
+      "originallink": "https://www.nongmin.com/article/20261022500280",
+      "keyword": "수급"
+    },
     {
       "id": "5ad9f788e0b5aed2",
       "title": "aT, '2026년 AI 농산물 가격예측 온라인 해커톤' 개최",
@@ -46,126 +166,6 @@
       "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330198",
       "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330198",
       "keyword": "시장"
-    },
-    {
-      "id": "22f61595064c0186",
-      "title": "제주감귤, 당도 높고 품질 최상인데...시장 가격 '불안', 왜?",
-      "summary": "있지만, 도매시장 가격은 다소 불안한 출발을 보이고 있다. 사진은 서울 가락동 농수산물도매시장 전경.... 누적 평균 경락가격도 5㎏들이 한 상자당 1만원 아래로 떨어졌다. 22일 제주특별자치도와 제주농산물수급관리...",
-      "source": "headlinejeju.co.kr",
-      "publishedAt": "2026-10-22T08:36:00.000Z",
-      "link": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=600890",
-      "originallink": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=600890",
-      "keyword": "시장"
-    },
-    {
-      "id": "868d301c08fce144",
-      "title": "대아청과, '2026 어린이 김치교실' 성료",
-      "summary": "가락시장 대아청과(대표이사 이상용)는 지난 17일 가족 참여형 김장 체험 프로그램 '두근두근, 우리가족 첫... 어린이들은 중도매인 역할을 맡아 경매에 참여하며 도매시장의 농산물 가격 결정 과정을 쉽고 재미있게...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-10-22T02:16:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=75153",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=75153",
-      "keyword": "시장"
-    },
-    {
-      "id": "9871464b61abf736",
-      "title": "[기획] 동화청과, 농산물 상생 유통에 '승부수'",
-      "summary": "산지에서 공들여 키운 농산물이 도매시장에 도착한 뒤 어떤 평가를 받고, 어떤 과정을 거쳐 소비자에게 전달되는지 이해해야 비로소 생산과 판매를 연결하는 힘이 생긴다. 가락시장 동화청과(대표 홍성호)가 청년농 교육과...",
-      "source": "amnews.co.kr",
-      "publishedAt": "2026-10-22T02:06:00.000Z",
-      "link": "http://www.amnews.co.kr/news/articleView.html?idxno=75150",
-      "originallink": "http://www.amnews.co.kr/news/articleView.html?idxno=75150",
-      "keyword": "시장"
-    },
-    {
-      "id": "56e0638ff112f378",
-      "title": "할인으로 낮춘 장바구니, 산지 농가·중소 식품사 수익까지 이어져야",
-      "summary": "소매 단계에서는 가격 상승이 소비자가격에 비교적 빠르게 반영되는 반면 하락은 제한적으로 반영될 수... 식품 가격은 국내 농산물 수급만으로 설명되지 않는다. 밀·옥수수·설탕 등 수입 원재료는 국제 시세와 환율...",
-      "source": "smedaily.co.kr",
-      "publishedAt": "2026-10-22T01:26:00.000Z",
-      "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=365014",
-      "originallink": "http://www.smedaily.co.kr/news/articleView.html?idxno=365014",
-      "keyword": "수급"
-    },
-    {
-      "id": "4628f9254e5aacf9",
-      "title": "[농담] 1조2769억 들여 고치는 가락시장…농민들은 왜 이전을 꺼냈나",
-      "summary": "정부에 가락시장 이전을 적극 검토하라고 촉구했다. 40여년간 수도권 먹거리 공급과 전국 농산물 기준가격... 한농연은 서울 송파구 가락시장 약 54만㎡ 부지를 공공주택과 주거복합단지로 활용하고, 도매시장은...",
-      "source": "mt.co.kr",
-      "publishedAt": "2026-10-21T20:24:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/008/0005429879?sid=101",
-      "originallink": "https://www.mt.co.kr/economy/2026/10/22/2026102205115155625",
-      "keyword": "시장"
-    },
-    {
-      "id": "318fc93d1e6cea87",
-      "title": "한농연, 가락시장 이전 검토 촉구",
-      "summary": "한농연은 21일 성명을 통해 국민들이 안전하고 신선한 농산물을 합리적 가격에 공급받기 위해서는 유통 인프라의 근본적 혁신이 시급하다고 주장했다. 가락동농수산물도매시장을 외곽 거점으로 이전해 산지와 소비지를...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-21T08:42:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=408107",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=408107",
-      "keyword": "시장"
-    },
-    {
-      "id": "dacc4dc2ee7164b9",
-      "title": "'포도 수출 1억 달러' 시대 연다",
-      "summary": "이번 행사는 우리 신선농산물 역사상 최초로 단일 품목 '수출 1억 달러' 돌파라는 대기록을 달성하고, 포도... 수급 조절판 역할을 하여 내수 시장의 홍수 출하 및 가격 하락 압력을 분산시키고, 농가 수취 가격을 상승...",
-      "source": "wonyesanup.co.kr",
-      "publishedAt": "2026-10-21T03:10:00.000Z",
-      "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=66097",
-      "originallink": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=66097",
-      "keyword": "수급"
-    },
-    {
-      "id": "2187fa0df43d980b",
-      "title": "[더벨][2026 더벨 글로벌 투자 로드쇼-인도네시아] 김태강 DMC 대표 \"옴니...",
-      "summary": "농산물 가격, 낮은 인건비, 초기 단계인 현지 시설 수준이 한국 투자자들에게 기회가 될 수 있다고 강조했다. DMC가 올해 7~8월 말랑 시세를 조사한 결과 파프리카 도매가는 국내 최대 농산물 도매시장인 서울 가락시...",
-      "source": "thebell.co.kr",
-      "publishedAt": "2026-10-21T01:02:00.000Z",
-      "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610160340117160103953",
-      "originallink": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610160340117160103953",
-      "keyword": "시장"
-    },
-    {
-      "id": "5ac962aa58740e64",
-      "title": "\"노동력 생각하면 포장김치\"… 올해 김장 예상비용 26.4만원",
-      "summary": "(aT) 농산물유통정보(KAMIS)를 통해 주요 김장재료 13개 품목의 소매가격을 토대로 올해 김장 비용을 추산한... 재료의 가격을 토대로 조사하는 방식에 따라 시세가 등록되지 않은 갓을 제외한 13개 품목을 중심으로 4인...",
-      "source": "view.asiae.co.kr",
-      "publishedAt": "2026-10-19T22:10:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/277/0005830646?sid=101",
-      "originallink": "https://view.asiae.co.kr/article/2026101916425839864",
-      "keyword": "시장"
-    },
-    {
-      "id": "ecedc337cdfb260a",
-      "title": "김장철 앞두고 배추·무값 하락…장바구니 부담 줄지만 농가는 '한숨'",
-      "summary": "김장 양념에 쓰이는 일부 재료 가격이 상승세를 보이고 있지만, 배추와 무 가격 하락은 소비자들의 김장... 0% 상승했다. 소비자 입장에서 반길 농산물 가격 안정이 생산농가에도 긍정적인 것만은 아니다. 농산물...",
-      "source": "newsis.com",
-      "publishedAt": "2026-10-19T21:00:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/003/0014264326?sid=101",
-      "originallink": "https://www.newsis.com/view/NISX20261019_0003831933",
-      "keyword": "배추"
-    },
-    {
-      "id": "eb66098cd3722579",
-      "title": "김장물가, 배추보다 양념채소가 변수",
-      "summary": "마늘과 양파, 젓갈류 등 가격 상승이 예상되는 재료를 얼마나 안정적으로 공급하고, 유통업체의 할인행사가 소비자가 체감할 수 있는 가격 인하로 이어지느냐가 관건이다. 정부의 수급 관리가 생산지에서 유통 현장까지...",
-      "source": "smedaily.co.kr",
-      "publishedAt": "2026-10-19T21:00:00.000Z",
-      "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=364864",
-      "originallink": "http://www.smedaily.co.kr/news/articleView.html?idxno=364864",
-      "keyword": "배추"
-    },
-    {
-      "id": "e90924f0b6c64f1f",
-      "title": "[끈적한 물가] 3%대 성장 기대 속 물가 부담…2% 안착 언제쯤?",
-      "summary": "수준까지 하락하지는 않았다. 식료품과 에너지를 제외한 근원물가는 전년 대비 2.8% 뛰었으며 농산물과 석유류를 제외한 지수도 2.7% 올랐다. 한국은행의 수입물가 통계에서도 국제 가격 상승과 환율 흐름이 엇갈리는...",
-      "source": "ajunews.com",
-      "publishedAt": "2026-10-19T09:02:00.000Z",
-      "link": "https://www.ajunews.com/view/20261019151959065",
-      "originallink": "https://www.ajunews.com/view/20261019151959065",
-      "keyword": "수급"
     }
   ]
 }
