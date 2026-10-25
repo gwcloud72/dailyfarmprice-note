@@ -2,11 +2,41 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-24T00:44:34.872Z",
+    "updatedAt": "2026-10-25T00:34:50.834Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "ee0954af68709ad4",
+      "title": "[국감] \"고비용 순환재건축 한계…가락시장 수도권 외곽 이전 검토해야...",
+      "summary": "이라며 \"가락시장의 오프라인 경매 기능을 수도권 외곽의 스마트 풀필먼트 신시장으로 이전해 유통비용을 혁신하고 생산자 수취가격 제고와 장바구니 물가 안정을 이끌어내야 한다\"고 강조했다. 이어 \"온라인 도매와...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-25T00:28:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17089",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17089",
+      "keyword": "시장"
+    },
+    {
+      "id": "802c1b863040a459",
+      "title": "한국농수산식품유통공사(aT), 'AI 농산물 가격예측 해커톤' 본선 돌입",
+      "summary": "AI 농산물 가격예측 온라인 해커톤' 본선 무대를 본격 개막한다. 컨슈머타임스=안성렬 기자... 진출팀들은 배추, 무, 양파, 깐마늘, 건고추 등 수급 민감도가 높은 주요 5대 채소 품목의 도매시장 경락가를 예측하며...",
+      "source": "cstimes.com",
+      "publishedAt": "2026-10-24T12:34:00.000Z",
+      "link": "https://www.cstimes.com/news/articleView.html?idxno=725187",
+      "originallink": "https://www.cstimes.com/news/articleView.html?idxno=725187",
+      "keyword": "배추"
+    },
+    {
+      "id": "081d1ae5262cfb48",
+      "title": "[국감]문금주 의원 \"수산물 거래 늘어나는데 정산자금 감소\"",
+      "summary": "수산물 생산자가 중도매인과 직접 거래하는 가락시장의 상장예외거래 규모는 커지고 있지만, 출하대금... 농산물가격안정기금 20억 원이 지난해와 올해 각각 10억 원씩 회수된 데 따른 것이다. 농산부류는...",
+      "source": "namdonews.com",
+      "publishedAt": "2026-10-24T06:24:00.000Z",
+      "link": "https://www.namdonews.com/news/articleView.html?idxno=927076",
+      "originallink": "https://www.namdonews.com/news/articleView.html?idxno=927076",
+      "keyword": "시장"
+    },
     {
       "id": "8089c8468574428b",
       "title": "aT, 농산물 가격예측 해커톤 본선 개막",
@@ -136,36 +166,6 @@
       "link": "https://n.news.naver.com/mnews/article/008/0005430573?sid=102",
       "originallink": "https://www.mt.co.kr/policy/2026/10/23/2026102309341731178",
       "keyword": "배추"
-    },
-    {
-      "id": "8952e3634eab6312",
-      "title": "aT, AI 농산물 가격예측 해커톤 본선 진출 15개 팀 선정",
-      "summary": "농산물 가격예측 온라인 해커톤 포스터. (사진제공=aT) 한국농수산식품유통공사(aT)가 '2026년 AI 농산물... 구체화해 배추와 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형의 정확도를 겨룬다....",
-      "source": "chungnamilbo.co.kr",
-      "publishedAt": "2026-10-23T00:14:00.000Z",
-      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=916432",
-      "originallink": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=916432",
-      "keyword": "배추"
-    },
-    {
-      "id": "83fd02226a644084",
-      "title": "[독립문에서] 달력 한칸, 정부의 빈칸",
-      "summary": "서울시농수산식품공사는 1·2차 시범휴업에서 통계적으로 뚜렷한 가격 하락 효과는 없었다고 분석했다. 그러나 그 결과만으로 이후 동시휴업의 영향까지 설명할 수는 없다. 국내 최대 도매시장인 가락시장이 쉴 때 다른...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-10-22T20:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000106753?sid=110",
-      "originallink": "https://www.nongmin.com/article/20261021500502",
-      "keyword": "시장"
-    },
-    {
-      "id": "d0487eb4488195ba",
-      "title": "한농연, \"가락시장 현대화는 한계 있어\"…이전 검토 요구",
-      "summary": "통해 농산물 유통 백년대계와 수도권 주택 공급 안정을 위한 서울 가락동 농수산물도매시장 이전 적극... 전국 농산물 기준가격 형성의 중심 역할을 해 온 가락시장이 도심 내 협소한 부지와 극심한 교통 정체, 시설 노후화...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-22T10:36:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330198",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330198",
-      "keyword": "시장"
     }
   ]
 }
