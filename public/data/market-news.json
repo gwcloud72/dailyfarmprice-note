@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-25T00:34:50.834Z",
+    "updatedAt": "2026-10-26T00:32:31.406Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "548a3b935b85b881",
+      "title": "‘100년에 한 번 나올 포도’는 어쩌다 헐값이 됐나",
+      "summary": "모동면 이동리에 있는 서상주농협 농산물집하장에서는 커다란 윙바디 트럭에 샤인머스캣 상자를 팔레트째... 서울 가락시장 등 전국 도매시장으로 보낸다. 곳곳에 걸린 현수막이 아니었다면, 외지인은 포도 농가의...",
+      "source": "weekly.khan.co.kr",
+      "publishedAt": "2026-10-25T21:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/033/0000052940?sid=101",
+      "originallink": "https://weekly.khan.co.kr/article/202610260600021",
+      "keyword": "시장"
+    },
+    {
+      "id": "0722853b2c82caf6",
+      "title": "[칼럼] 계란 유통 혁신의 본질은 '거래비용' 제거에",
+      "summary": "우리나라 농산물 공영도매시장과 축산물공판장의 거래체계가 출하자(농가)와 구매자(중도매인·상인) 모두에게 얼마나 유리하게 설계된 '혁신적인 플랫폼'인가 하는 점이다. 가락시장을 비롯한 전국 공영도매시장에서는...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-10-25T16:32:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17093",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17093",
+      "keyword": "시장"
+    },
+    {
+      "id": "5368bc10ef068674",
+      "title": "AI가 아이디어를 코드로 구현…aT 농산물 가격예측 해커톤 본선 15개 팀...",
+      "summary": "코딩 경험이 없어도 인공지능(AI)을 활용해 농산물 가격예측 모형을 개발할 수 있는 해커톤에 394개 팀이... 구체화해 배추·무·양파·깐마늘·건고추 등 5개 품목의 도매시장 가격을 예측하고, 모형의 정확도를 겨룬다....",
+      "source": "youngnong.co.kr",
+      "publishedAt": "2026-10-25T12:34:00.000Z",
+      "link": "https://www.youngnong.co.kr/news/articleView.html?idxno=71315",
+      "originallink": "https://www.youngnong.co.kr/news/articleView.html?idxno=71315",
+      "keyword": "배추"
+    },
+    {
+      "id": "ad7293ba946764f0",
+      "title": "aT, 농산물값 예측 고도화 작업 한창...민간 아이디어에 AI코딩 접목",
+      "summary": "활용한 '농산물 가격예측 모델' 구축을 추진하고 있다. 예측의 고도화를 위해 민간의 아이디어도 적극 수렴... 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형의 정확도를...",
+      "source": "metroseoul.co.kr",
+      "publishedAt": "2026-10-25T05:12:00.000Z",
+      "link": "http://www.metroseoul.co.kr/article/20261025500177",
+      "originallink": "http://www.metroseoul.co.kr/article/20261025500177",
+      "keyword": "배추"
+    },
     {
       "id": "ee0954af68709ad4",
       "title": "[국감] \"고비용 순환재건축 한계…가락시장 수도권 외곽 이전 검토해야...",
@@ -125,46 +165,6 @@
       "publishedAt": "2026-10-23T02:18:00.000Z",
       "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=510157",
       "originallink": "https://www.newsworker.co.kr/news/articleView.html?idxno=510157",
-      "keyword": "배추"
-    },
-    {
-      "id": "c9eefcf4c78f26f4",
-      "title": "aT, AI 활용 농산물 가격예측 해커톤 본선 15개 팀 진출",
-      "summary": "한국농수산식품유통공사(aT)가 인공지능(AI)을 활용한 농산물 가격예측 온라인 해커톤 예선 심사를 마치고... 참가팀은 배추와 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고 모형의 정확도를 겨루게...",
-      "source": "news.bbsi.co.kr",
-      "publishedAt": "2026-10-23T02:16:00.000Z",
-      "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4114257",
-      "originallink": "https://news.bbsi.co.kr/news/articleView.html?idxno=4114257",
-      "keyword": "배추"
-    },
-    {
-      "id": "cac7407de69a61c5",
-      "title": "aT, AI 농산물 가격예측 해커톤 본선 진출 15개 팀 선정",
-      "summary": "농산물 가격예측 온라인 해커톤 포스터. 사진=한국농수산삭품유통공사 한국농수산식품유통공사(aT)는... 진출팀은 예선에서 제안한 아이디어를 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격...",
-      "source": "pointdaily.co.kr",
-      "publishedAt": "2026-10-23T02:00:00.000Z",
-      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=323379",
-      "originallink": "https://www.pointdaily.co.kr/news/articleView.html?idxno=323379",
-      "keyword": "배추"
-    },
-    {
-      "id": "18794e7100fd2125",
-      "title": "제주농협 ‘제주 농업·농촌을 위한 건의사항’ 전달…10개 현안 대정부...",
-      "summary": "이상기후와 농산물값 불안, 농업경영비 상승 등 제주 농업·농촌이 직면한 각종 현안과제와 영농현장의... 인한 농산물 수급불안과 가격변동성 확대, 농가 수취값 하락이 불가피한 만큼 올해 수준의 국비지원이 유지돼야...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-10-23T01:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000106781?sid=102",
-      "originallink": "https://www.nongmin.com/article/20261022500280",
-      "keyword": "수급"
-    },
-    {
-      "id": "5ad9f788e0b5aed2",
-      "title": "aT, '2026년 AI 농산물 가격예측 온라인 해커톤' 개최",
-      "summary": "한국농수산식품유통공사(이하 aT)가 '2026년 AI(인공지능) 농산물 가격예측 온라인 해커톤'에 총 394개팀... 구체화해 배추, 무, 양파, 깐마늘, 건고추 등 5개 품목의 도매시장 가격을 예측하고, 모형의 정확도를 겨룬다. aT는...",
-      "source": "mt.co.kr",
-      "publishedAt": "2026-10-23T00:41:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/008/0005430573?sid=102",
-      "originallink": "https://www.mt.co.kr/policy/2026/10/23/2026102309341731178",
       "keyword": "배추"
     }
   ]
