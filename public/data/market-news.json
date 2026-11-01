@@ -2,11 +2,31 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-10-31T01:51:29.160Z",
+    "updatedAt": "2026-11-01T01:21:36.103Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "82d211a28d5a43de",
+      "title": "당진시, 가락도매시장 양파 박스 출하 우수사례 간담회 개최",
+      "summary": "당진시농산물유통센터(2APC)에서 '가락도매시장 당진양파 박스 출하 우수사례 간담회'를 개최했다고 30일... 아니라, 도매시장 내 하역 및 물류 효율성을 극대화해 농가 수취 가격 향상에도 기여하고 있다. 당진시 관계자는...",
+      "source": "chungnamilbo.co.kr",
+      "publishedAt": "2026-10-31T09:36:00.000Z",
+      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=917932",
+      "originallink": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=917932",
+      "keyword": "양파"
+    },
+    {
+      "id": "bcdd3c458d522d73",
+      "title": "생산비 역대 최고인데 농산물값 폭락…농업소득 보전대책 시급",
+      "summary": "생산비 상승과 원예농산물 가격 하락이라는 이중고가 심화하면서 농민들은 정부 차원의 대책을 요구하는... 다만 직불제 강화에만 집중할 경우 만성적인 수급불안에 따라 농가경영 불안정성이 높아질 수 있어 농산물...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-10-31T02:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000107379?sid=100",
+      "originallink": "https://www.nongmin.com/article/20261030500595",
+      "keyword": "수급"
+    },
     {
       "id": "420d4d50e09e1743",
       "title": "최근 5년 사이 최저가격…가을배추 풍작에도 '산지 울상'",
@@ -108,16 +128,6 @@
       "keyword": "배추"
     },
     {
-      "id": "96cba1da3e7a871e",
-      "title": "프리미엄 브랜드 '제황감귤' 첫 경매서 3kg 최고 5만8000원 기록",
-      "summary": "특히 국내 최대 농산물 도매시장인 가락시장의 서울청과 첫 경매에서 높은 가격을 기록하며 고당도 감귤의 시장 경쟁력과 프리미엄 브랜드로서의 성장 가농성을 확인했다는 점에서 의미가 크다고 볼 수 있다. 한편...",
-      "source": "jemin.com",
-      "publishedAt": "2026-10-29T08:36:00.000Z",
-      "link": "https://www.jemin.com/news/articleView.html?idxno=845718",
-      "originallink": "https://www.jemin.com/news/articleView.html?idxno=845718",
-      "keyword": "시장"
-    },
-    {
       "id": "d8487a234901ebe8",
       "title": "김장철 앞두고 재료값 '희비'…배추 내리고 새우젓 오르고",
       "summary": "부재료의 가격이 오르면서 품목에 따른 소비자 부담에도 차이가 나타나는 모습이다. 정부는 김장철 주요 농산물의 공급 불안을 막기 위한 수급 점검에 나섰다. 농림축산식품부는 지난달 제8기 농산물...",
@@ -156,16 +166,6 @@
       "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=365318",
       "originallink": "http://www.smedaily.co.kr/news/articleView.html?idxno=365318",
       "keyword": "수급"
-    },
-    {
-      "id": "1de144e38d221c5a",
-      "title": "\"이윤은 높이고 가격은 낮춘다\"···농산물 유통구조 개선방안은?",
-      "summary": "이번 김장철에 사용하실 배추, 무 등도 전반적으로 작황이 양호해 가격이 안정적인 상황입니다. 계속해서 수급상황을 면밀히 점검하겠습니다. 신경은 앵커> 농산물 가격 안정을 위해 도매시장도 달라집니다. 시장에...",
-      "source": "ktv.go.kr",
-      "publishedAt": "2026-10-28T00:50:00.000Z",
-      "link": "https://www.ktv.go.kr/content/view?content_id=763097",
-      "originallink": "https://www.ktv.go.kr/content/view?content_id=763097",
-      "keyword": "배추"
     }
   ]
 }
