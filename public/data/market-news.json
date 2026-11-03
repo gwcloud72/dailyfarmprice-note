@@ -2,20 +2,150 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-11-02T01:46:32.934Z",
+    "updatedAt": "2026-11-03T03:44:18.796Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
     {
-      "id": "7dccb075b0873400",
-      "title": "“고등어 반찬 못 먹겠네”…국산은 내렸는데, 수입산 2배 뛰었다 [푸드...",
+      "id": "058d6547e82f612a",
+      "title": "10월 소비자물가 2.8% 상승, 농산물 떨어져도 석유류·가공식품·외식 올...",
+      "summary": "3%)보다 하락폭이 커지면서 전체 물가 상승률을 0.14%포인트 낮췄다. 농산물 가격이 7.5% 하락한 가운데... 등 동절기 대비 주요 농축수산물 수급의 위험요인을 점검하고 선제적으로 대응해 나갈 것\"이라고 밝혔다.",
+      "source": "businesspost.co.kr",
+      "publishedAt": "2026-11-03T03:04:00.000Z",
+      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451018",
+      "originallink": "https://www.businesspost.co.kr/BP?command=article_view&num=451018",
+      "keyword": "수급"
+    },
+    {
+      "id": "cb80a96068d72a25",
+      "title": "10월 물가 2.8%로 둔화했지만…국고채 금리 짓누르는 '서비스 물가'",
+      "summary": "농산물 가격 하락이 전체 물가를 끌어내린 반면 석유류와 외식 등 서비스 가격은 여전히 높은 상승세를... 장기물인 10년물은 물가 전망뿐 아니라 경기 흐름과 국채 수급, 해외 금리 변화 등에 따라 단기물과 다른...",
+      "source": "ebn.co.kr",
+      "publishedAt": "2026-11-03T02:50:00.000Z",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1730259",
+      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1730259",
+      "keyword": "수급"
+    },
+    {
+      "id": "821449c7d8652928",
+      "title": "석유류 14.9% 급등…가공식품도 2.9% 상승",
+      "summary": "채소 등 농산물 가격이 하락하면서 전체 물가 상승률은 낮아졌지만 석유류 가격이 15% 가까이 뛰고... 정부는 한파 등으로 수급이 불안해질 경우 비축·계약재배 물량을 공급하고 겨울작형 조기 출하를 유도할...",
+      "source": "biz.heraldcorp.com",
+      "publishedAt": "2026-11-03T02:32:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/016/0002718143?sid=101",
+      "originallink": "https://biz.heraldcorp.com/article/10923972?ref=naver",
+      "keyword": "수급"
+    },
+    {
+      "id": "a91c4994c14d5095",
+      "title": "농산물값 하락에 10월 물가 2.8%…석유류·외식비 상승세",
+      "summary": "정부는 김장철을 앞두고 주요 농산물과 양념류의 수급 및 가격 동향을 점검하고 안정 대책을 추진할 방침이다. 지난달 배추 가격은 11.8% 하락했지만 무와 젓갈 가격은 각각 12.5%, 10.1% 상승했다. 석유제품 최고가격제...",
+      "source": "industrynews.co.kr",
+      "publishedAt": "2026-11-03T02:32:00.000Z",
+      "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=88795",
+      "originallink": "https://www.industrynews.co.kr/news/articleView.html?idxno=88795",
+      "keyword": "배추"
+    },
+    {
+      "id": "753912664845d06a",
+      "title": "국내산보다 두 배 비싼 수입 고등어",
       "summary": "최근 원·달러 환율은 하락했지만, 어획 쿼터 축소에 따른 공급 부족이 국제 가격 상승에 영향을 미친... 국내 유통 가격도 오르는 추세다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에 따르면 지난달 30일...",
       "source": "biz.heraldcorp.com",
-      "publishedAt": "2026-11-02T00:56:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/016/0002717427?sid=101",
-      "originallink": "https://biz.heraldcorp.com/article/10922301?ref=naver",
+      "publishedAt": "2026-11-03T02:27:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/016/0002718130?sid=101",
+      "originallink": "https://biz.heraldcorp.com/article/10923954?ref=naver",
       "keyword": "시장"
+    },
+    {
+      "id": "8107ce1756414ac5",
+      "title": "물가 상승률 반년째 3% 안팎…먹거리·기름값 고공행진",
+      "summary": "7% 하락하며 전체 물가 상승률을 0.14%포인트 낮췄다. 3개월 연속 하락세다. 농산물 가격이 7.5% 내린 가운데... 향후 물가 흐름은 국제유가와 원자재 가격, 식품업체의 추가 가격 조정, 농축수산물 수급 상황 등에...",
+      "source": "mediaus.co.kr",
+      "publishedAt": "2026-11-03T01:50:00.000Z",
+      "link": "https://www.mediaus.co.kr/news/articleView.html?idxno=318779",
+      "originallink": "https://www.mediaus.co.kr/news/articleView.html?idxno=318779",
+      "keyword": "수급"
+    },
+    {
+      "id": "d9e84eb1f3f9f07c",
+      "title": "10월 소비자물가 2.8% 상승... 농산물 ↓, 가공식품·외식 ↑",
+      "summary": "농산물 가격이 하락하면서 전체 물가 상승 폭은 전월보다 줄었지만 가공식품과 외식 가격 상승 폭은... 비슷한 수준을 유지하고 있다. 정부는 김장철을 앞두고 주요 재료의 수급과 가격 관리에도 나설 계획이다.",
+      "source": "hg-times.com",
+      "publishedAt": "2026-11-03T01:36:00.000Z",
+      "link": "https://www.hg-times.com/news/articleView.html?idxno=306671",
+      "originallink": "https://www.hg-times.com/news/articleView.html?idxno=306671",
+      "keyword": "수급"
+    },
+    {
+      "id": "80fb07e952d48a57",
+      "title": "10월 물가 상승률 2.8%…정부, 김장철 할인에 640억 투입",
+      "summary": "후반의 상승률을 나타냈다. 품목별로 농·축·수산물 가격은 1.7% 떨어져 석 달 연속 하락했다. 농산물이 7.5... 고병원성 조류인플루엔자와 한파·엘니뇨 등에 따른 동절기 농·축·수산물 수급 불안에도 대비한다. 권...",
+      "source": "donga.com",
+      "publishedAt": "2026-11-03T01:31:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/020/0003759662?sid=101",
+      "originallink": "https://www.donga.com/news/Economy/article/all/20261103/134955712/1",
+      "keyword": "수급"
+    },
+    {
+      "id": "52335755436f8e10",
+      "title": "농축수산물 하락에 10월 물가 2.8%…\"연말 불확실성 커\"(종합2보)",
+      "summary": "중동전쟁에 따른 국제유가뿐 아니라 물류비 상승도 물가에 영향을 미치고 있다는 설명이다. 정부는 김장철을 앞두고 주요 재료의 수급을 점검하고 가격 안정을 지원할 계획이다. 10월 배추 가격은 11.8% 내렸지만...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-03T01:30:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014297068?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20261103_0003852297",
+      "keyword": "배추"
+    },
+    {
+      "id": "0843a9588abf6de0",
+      "title": "“채소값 11% 내렸는데 밥값은 더 올랐다”… 외식·가공식품 나란히 2....",
+      "summary": "상승률은 8월 3.1%에서 9월 2.9%, 10월 2.8%로 두 달 연속 낮아졌습니다. 농축수산물 가격은 1.7% 하락했습니다. 농산물이 7.5% 내렸고, 채소류는 11.2% 떨어졌습니다. 상추(-44.3%), 오이(-39.5%), 호박(-38.4%), 시금치(-36.1%) 등 주요...",
+      "source": "jibs.co.kr",
+      "publishedAt": "2026-11-03T01:25:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/661/0000085988?sid=101",
+      "originallink": "https://www.jibs.co.kr/news/articles/articlesDetail/67187?feed=na",
+      "keyword": "수급"
+    },
+    {
+      "id": "d7c3869a9a261272",
+      "title": "김장 수요 줄고 배추값 떨어지자…정부, 640억원 규모 할인 총력전",
+      "summary": "|중앙이코노미뉴스 최경서 기자|서울 송파구 가락농수산물도매시장에서 배추를 판매하고 있다. 김장철을 앞두고 배추와 무 생산량이 늘면서 주요 김장 재료 가격이 지난해보다 낮아졌다. 김장을 직접 담그는...",
+      "source": "joongangenews.com",
+      "publishedAt": "2026-11-02T23:38:00.000Z",
+      "link": "https://www.joongangenews.com/news/articleView.html?idxno=560581",
+      "originallink": "https://www.joongangenews.com/news/articleView.html?idxno=560581",
+      "keyword": "배추"
+    },
+    {
+      "id": "ac4ae8fd74d5fa2b",
+      "title": "“송파 가락시장 땅에 아파트 짓자” 다시 커지는 목소리",
+      "summary": "결국 도매시장의 높은 물류비와 유통비 때문”이라며 “외곽의 넓은 부지로 이전하면 농산물 가격 안정 효과도 기대할 수 있다”고 말했다. 이전론이 힘을 받는 진짜 이유는 ‘가락시장 땅의 가치’라는 해석도 있다....",
+      "source": "kmib.co.kr",
+      "publishedAt": "2026-11-02T15:24:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/005/0001882524?sid=101",
+      "originallink": "https://www.kmib.co.kr/article/20261102502152",
+      "keyword": "시장"
+    },
+    {
+      "id": "2e1b00c118d22137",
+      "title": "올해산 노지감귤 가격 하락↓...사과·배↓ 전국 과일시장 침체 우려까...",
+      "summary": "게다가 최근 가락시장 등 전국 대규모 도매시장에서 사과·배 등의 가격 하락세와 맞물려 감귤 가격 하락에... 이날 회의에는 이춘협 농협중앙회 제주본부장, 강동만 제주농산물수급관리연합회장, 송창구 제주감귤농협...",
+      "source": "newsjeju.net",
+      "publishedAt": "2026-11-02T06:20:00.000Z",
+      "link": "https://www.newsjeju.net/news/articleView.html?idxno=427816",
+      "originallink": "https://www.newsjeju.net/news/articleView.html?idxno=427816",
+      "keyword": "시장"
+    },
+    {
+      "id": "4615735af5bbca8e",
+      "title": "[2026년 11월 1주] 주요 농산물 경락가 상승·하락 품목 - 쌈배추·감귤...",
+      "summary": "서울 가락동 농수산물 도매시장의 주요 농산물 거래 가격은 출하량 변동과 주산지 작황에 따라 품목별로 등락을 거듭하고 있다. 이에 본지는 10월 26일부터 이달 2일까지 한 주간 거래된 엽근채소, 양념채소...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-11-02T03:44:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330868",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330868",
+      "keyword": "배추"
     },
     {
       "id": "44a1603311665cd5",
@@ -28,16 +158,6 @@
       "keyword": "시장"
     },
     {
-      "id": "e2912d83045f2874",
-      "title": "[원자재 시황] 유가불안에 AI 회의론까지…자산시장 동반 급락",
-      "summary": "5% 하락했다. 니켈은 1.6% 내렸으며 최근 타이트한 수급 여건을 바탕으로 가격이 상승했던 아연도 0.9... 러시아가 지난 7월 이후 처음으로 케르치해협을 통한 곡물 운반선 통항을 허용하면서 흑해지역의 농산물 수출...",
-      "source": "ebn.co.kr",
-      "publishedAt": "2026-11-02T00:28:00.000Z",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1730038",
-      "originallink": "https://www.ebn.co.kr/news/articleView.html?idxno=1730038",
-      "keyword": "수급"
-    },
-    {
       "id": "52871311d21af446",
       "title": "보부상에서 쿠팡까지…600년 한국 유통의 역사, 시장의 주인은 어떻게 ...",
       "summary": "농산물 유통에서는 생산지와 소비지의 가격 차이, 저장·운송 비용, 복잡한 거래구조가 지속적인 논쟁거리였다. 1985년 개장한 서울 가락동 농수산물도매시장은 농수산물 거래를 집중시키고 유통체계를 정비한 대표적인...",
@@ -46,126 +166,6 @@
       "link": "https://www.betanews.net/article/view/beta202611020001",
       "originallink": "https://www.betanews.net/article/view/beta202611020001",
       "keyword": "시장"
-    },
-    {
-      "id": "2954f43aaab1aadd",
-      "title": "어쩌다 애물 신세… 포도 여왕의 눈물",
-      "summary": "도매가격 하락과 생산비 상승 문제를 언급하며 전문 연구체계의 필요성을 제기했다. 그는 \"기후변화 대응 재배기술과 신품종 개발, 품질 향상은 물론 생산·수급 및 소비·가격 동향까지 포도산업 전반을 체계적으로...",
-      "source": "hidomin.com",
-      "publishedAt": "2026-11-01T11:58:00.000Z",
-      "link": "https://www.hidomin.com/news/articleView.html?idxno=727501",
-      "originallink": "https://www.hidomin.com/news/articleView.html?idxno=727501",
-      "keyword": "수급"
-    },
-    {
-      "id": "da933b35d9599a1d",
-      "title": "중문농협 '제황감귤' 첫 경매 성과…프리미엄 브랜드 경쟁력 입증",
-      "summary": "철저한 당도 선별과 품질관리를 통해 균일한 상품성을 확보하고 제주감귤의 고급화와 농가 수취가격 향상을 위해 개발됐다. 국내 최대 농산물 도매시장인 가락시장의 서울청과 첫 경매에서 높은 가격을 기록하며, 고당도...",
-      "source": "samdailbo.com",
-      "publishedAt": "2026-11-01T08:46:00.000Z",
-      "link": "http://www.samdailbo.com/news/articleView.html?idxno=272137",
-      "originallink": "http://www.samdailbo.com/news/articleView.html?idxno=272137",
-      "keyword": "시장"
-    },
-    {
-      "id": "7d1f979cb40a3f54",
-      "title": "충남 당진시, 가락도매시장 양파 박스 출하 우수사례 간담회 개최",
-      "summary": "충남 당진시는 지난달 29일 당진시농산물유통센터(2APC)에서 '가락도매시장 당진양파 박스 출하 우수사례... 아니라 도매시장 내 하역 및 물류 효율성을 극대화해 농가 수취 가격 향상에도 기여하고 있다. 시 관계자는...",
-      "source": "ccdn.co.kr",
-      "publishedAt": "2026-11-01T05:22:00.000Z",
-      "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1108064",
-      "originallink": "https://www.ccdn.co.kr/news/articleView.html?idxno=1108064",
-      "keyword": "양파"
-    },
-    {
-      "id": "695ee22bb7392dfc",
-      "title": "당진시, 가락도매시장 양파 박스 출하 우수사례 간담회 개최",
-      "summary": "당진시 제공 당진시(시장 김기재)는 지난 29일 당진시농산물유통센터(2APC)에서 '가락도매시장 당진양파 박스... 아니라, 도매시장 내 하역 및 물류 효율성을 극대화해 농가 수취 가격 향상에도 기여하고 있다. 시 관계자는...",
-      "source": "ggilbo.com",
-      "publishedAt": "2026-11-01T03:15:00.000Z",
-      "link": "https://www.ggilbo.com/news/articleView.html?idxno=1190156",
-      "originallink": "https://www.ggilbo.com/news/articleView.html?idxno=1190156",
-      "keyword": "양파"
-    },
-    {
-      "id": "8d9d26a79dd445fc",
-      "title": "당진시, 양파 박스 출하 '우수사례 간담회' ⋯ 산지 유통 혁신 성과 공유",
-      "summary": "/당진시 제공 충남 당진시가 지난 29일 당진시농산물유통센터(2APC)에서 '가락도매시장 당진양파 박스 출하... 물론, 도매시장 내 하역 및 물류 효율성을 극대화해 농가 수취 가격 향상에도 크게 기여하고 있다는 평가를...",
-      "source": "cctimes.kr",
-      "publishedAt": "2026-11-01T03:02:00.000Z",
-      "link": "http://www.cctimes.kr/news/articleView.html?idxno=934756",
-      "originallink": "http://www.cctimes.kr/news/articleView.html?idxno=934756",
-      "keyword": "양파"
-    },
-    {
-      "id": "fc4d1286a0cd05d9",
-      "title": "중문농협 '제황감귤', 서울청과 첫 경매서 3㎏ 최고 5만8천원",
-      "summary": "국내 최대 농산물 도매시장인 가락시장에서 첫 경매부터 높은 가격을 기록하면서 고당도 감귤의 시장 경쟁력과 프리미엄 브랜드로서의 성장 가능성을 확인했다는 게 중문농협의 설명이다. 서울청과 관계자는 \"최근...",
-      "source": "jejunews.com",
-      "publishedAt": "2026-11-01T03:00:00.000Z",
-      "link": "http://www.jejunews.com/news/articleView.html?idxno=2228568",
-      "originallink": "http://www.jejunews.com/news/articleView.html?idxno=2228568",
-      "keyword": "시장"
-    },
-    {
-      "id": "82d211a28d5a43de",
-      "title": "당진시, 가락도매시장 양파 박스 출하 우수사례 간담회 개최",
-      "summary": "당진시농산물유통센터(2APC)에서 '가락도매시장 당진양파 박스 출하 우수사례 간담회'를 개최했다고 30일... 아니라, 도매시장 내 하역 및 물류 효율성을 극대화해 농가 수취 가격 향상에도 기여하고 있다. 당진시 관계자는...",
-      "source": "chungnamilbo.co.kr",
-      "publishedAt": "2026-10-31T09:36:00.000Z",
-      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=917932",
-      "originallink": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=917932",
-      "keyword": "양파"
-    },
-    {
-      "id": "bcdd3c458d522d73",
-      "title": "생산비 역대 최고인데 농산물값 폭락…농업소득 보전대책 시급",
-      "summary": "생산비 상승과 원예농산물 가격 하락이라는 이중고가 심화하면서 농민들은 정부 차원의 대책을 요구하는... 다만 직불제 강화에만 집중할 경우 만성적인 수급불안에 따라 농가경영 불안정성이 높아질 수 있어 농산물...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-10-31T02:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000107379?sid=100",
-      "originallink": "https://www.nongmin.com/article/20261030500595",
-      "keyword": "수급"
-    },
-    {
-      "id": "420d4d50e09e1743",
-      "title": "최근 5년 사이 최저가격…가을배추 풍작에 '산지 울상'",
-      "summary": "가락동 농수산물도매시장에서 10월 초까지 1만원 수준을 유지하던 배추 도매가격(10kg, 상품)은 10일경부터... 농산물 수급관리 가이드라인 상으로도 가을배추 도매가격 4440원은 '하락 심각' 단계에 해당하는데, 하락...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-10-30T09:00:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=408413",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=408413",
-      "keyword": "배추"
-    },
-    {
-      "id": "3013b5aef06d5360",
-      "title": "중앙청과, 흥덕농협 물류·영농기자재 지원…\"산지와 상생\"",
-      "summary": "한편 가락상생기금은 가락시장 도매시장법인과 농협가락공판장 등이 공동으로 조성해 농어촌희망재단에 출연한 공익기금이다. 산지 생산자 지원과 농산물 유통 활성화, 도매시장의 공익적 기능 강화를 위한 다양한 사업에...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-10-30T08:50:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=330723",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=330723",
-      "keyword": "시장"
-    },
-    {
-      "id": "66b7e21822e4e9d7",
-      "title": "[소비자] 대전 10월 물가 서민 장바구니물가 서민부담 여전",
-      "summary": "가격이 크게 내렸다. 다만 지난 6월과 비교하면 배추와 양배추 등 일부 채소 가격이 급등해 농산물... 일률적으로 상승하거나 하락하는 것이 아니라, 품목별 수급 상황과 국제 원자재 가격, 계절적 요인에 따라 서로...",
-      "source": "goodmorningcc.com",
-      "publishedAt": "2026-10-29T20:12:00.000Z",
-      "link": "https://www.goodmorningcc.com/news/articleView.html?idxno=454922",
-      "originallink": "https://www.goodmorningcc.com/news/articleView.html?idxno=454922",
-      "keyword": "배추"
-    },
-    {
-      "id": "d8487a234901ebe8",
-      "title": "김장철 앞두고 재료값 '희비'…배추 내리고 새우젓 오르고",
-      "summary": "부재료의 가격이 오르면서 품목에 따른 소비자 부담에도 차이가 나타나는 모습이다. 정부는 김장철 주요 농산물의 공급 불안을 막기 위한 수급 점검에 나섰다. 농림축산식품부는 지난달 제8기 농산물...",
-      "source": "namdonews.com",
-      "publishedAt": "2026-10-29T08:22:00.000Z",
-      "link": "https://www.namdonews.com/news/articleView.html?idxno=927671",
-      "originallink": "https://www.namdonews.com/news/articleView.html?idxno=927671",
-      "keyword": "배추"
     }
   ]
 }
