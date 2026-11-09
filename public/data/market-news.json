@@ -2,20 +2,130 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-11-08T01:36:19.454Z",
+    "updatedAt": "2026-11-09T01:56:54.270Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
     {
-      "id": "5cbb4a64fc069b5f",
-      "title": "밀양시, \"장바구니 부담은 낮추고, 밀양 농산물 경쟁력은 높이고!\"",
-      "summary": "특히 서울시 가락동 도매시장 중앙청과 이대형 부장은 '도매시장에서 농산물 가격을 잘 받는 방법'을 주제로 특별 강연을 진행해 경매 과정과 농산물 가격 형성에 관한 정보를 제공했다. 강릉도매시장 TF 강동환 단장은...",
-      "source": "newsfreezone.co.kr",
-      "publishedAt": "2026-11-07T21:40:00.000Z",
-      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=718190",
-      "originallink": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=718190",
-      "keyword": "시장"
+      "id": "60c22dfabbb98bca",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:07:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309737?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525521",
+      "keyword": "배추"
+    },
+    {
+      "id": "bf1dd2affa9e3bd1",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309732?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525489",
+      "keyword": "배추"
+    },
+    {
+      "id": "1282a6c04b94be6a",
+      "title": "이제 김장철인데 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309728?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525492",
+      "keyword": "배추"
+    },
+    {
+      "id": "8cf6a861e5ed19ff",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309727?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525491",
+      "keyword": "배추"
+    },
+    {
+      "id": "1ac6501ebb9f5715",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309733?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525507",
+      "keyword": "배추"
+    },
+    {
+      "id": "52ca56a86059f576",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309729?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525493",
+      "keyword": "배추"
+    },
+    {
+      "id": "673cccb51b74a821",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309734?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525490",
+      "keyword": "배추"
+    },
+    {
+      "id": "f40bce77243ceb98",
+      "title": "이제 김장철인데 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309731?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525506",
+      "keyword": "배추"
+    },
+    {
+      "id": "97a957c8e57e9094",
+      "title": "김장철 앞두고 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:06:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309735?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525488",
+      "keyword": "배추"
+    },
+    {
+      "id": "62f34e758fe2993c",
+      "title": "이제 김장철인데 배추값 하락, 왜",
+      "summary": "김장철을 앞두고 농산물 업계, 지역 농민 단체 등에 따르면 서울 가락시장 배추 10kg 평균 도매가가... 전국 수급은 5% 가량 증가했는데, 수요가 대략 9% 감소한 것과 소매가격마저 하락한 사정 등이 이유로...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-09T00:05:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014309717?sid=101",
+      "originallink": "https://www.newsis.com/view/NISI20261109_0021525513",
+      "keyword": "배추"
+    },
+    {
+      "id": "6e002f33b42b4c80",
+      "title": "세계 식량값 내렸지만…곡물 생산 감소에 식량안보 불안 여전",
+      "summary": "반면 유지류는 0.3%, 설탕은 6.6% 상승했다. 곡물가격 하락에는 주요 생산국의 공급 여건 개선이 영향을... 수준까지 상승했다. 식용과 에너지용으로 함께 사용되는 농산물의 수요 구조가 가격 형성에 영향을 미치고...",
+      "source": "mt.co.kr",
+      "publishedAt": "2026-11-08T12:36:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/008/0005438153?sid=101",
+      "originallink": "https://www.mt.co.kr/economy/2026/11/08/2026110821315692752",
+      "keyword": "수급"
+    },
+    {
+      "id": "250b8ef1c955379f",
+      "title": "10월 세계식량가격지수 4개월 만에 하락⋯ 설탕은 6.6% 급등",
+      "summary": "지수 하락을 이끌었으나, 설탕 가격은 기후 악화로 대폭 상승한 것으로 나타났다. 농림축산식품부는 유엔... 점이 가격 상승의 결정적 원인으로 분석된다 한편, 글로벌 농산물 및 식량 시장은 품목별 가격 편차가...",
+      "source": "viva100.com",
+      "publishedAt": "2026-11-08T02:00:00.000Z",
+      "link": "https://www.viva100.com/article/20261108500296",
+      "originallink": "https://www.viva100.com/article/20261108500296",
+      "keyword": "수급"
     },
     {
       "id": "b9075ae39c6ccf10",
@@ -25,26 +135,6 @@
       "publishedAt": "2026-11-07T21:02:00.000Z",
       "link": "https://www.businesspost.co.kr/BP?command=article_view&num=451424",
       "originallink": "https://www.businesspost.co.kr/BP?command=article_view&num=451424",
-      "keyword": "배추"
-    },
-    {
-      "id": "d283c71f8d0fe8ae",
-      "title": "정부, 출하비용보전제 호평…\"홍보하고 싶은 제도\"",
-      "summary": "출하비용보전제는 경락가격이 낮아 출하자가 포장재비와 운송비조차 회수하기 어려울 때 비용 일부를 보전하는 제도다. 박 과장은 가락시장 5개 도매법인이 자체 재원으로 제도를 운영하고 있으며, 올해 500농가 이상이...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-11-07T02:50:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102887",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102887",
-      "keyword": "시장"
-    },
-    {
-      "id": "e36a7920d11934c7",
-      "title": "[현장] 반토막 난 배춧값… 김장철 출하 앞둔 농민들 ‘한숨’",
-      "summary": "농산물유통정보시스템(KAMIS)에 따르면 5일 기준 배추 10㎏ 특등급 평균 도매가격(가락시장 경락가격)은 5천584원, 상등급은 4천792원에 불과하다. 지난해 같은 날 특등급 평균 가격은 1만1천619원, 상등급은 9천271원으로, 1년...",
-      "source": "kyeongin.com",
-      "publishedAt": "2026-11-06T23:24:00.000Z",
-      "link": "https://www.kyeongin.com/article/1774257",
-      "originallink": "https://www.kyeongin.com/article/1774257",
       "keyword": "배추"
     },
     {
@@ -76,96 +166,6 @@
       "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102884",
       "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=102884",
       "keyword": "수급"
-    },
-    {
-      "id": "00fc3d6c58c8fc4f",
-      "title": "해남 절임배추, 강서시장 우선 출하한다",
-      "summary": "김장철을 맞아 강서농산물도매시장 시장도매인들이 농가들과의 상생협약을 바탕으로 전남 해남군의... 강서시장은 절임배추 품목거래가 가락시장의 약2배에 달하는 절임배추 최대 거래시장이다\"면서 \"이에...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-11-06T08:14:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=408656",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=408656",
-      "keyword": "배추"
-    },
-    {
-      "id": "d1b9de0e24081892",
-      "title": "진보당 충북도당 \"배추값 폭락…최저생산비 보장해야\"",
-      "summary": "청주시에 농산물 최저생산비 보장 대책을 촉구했다. 도당은 논평을 내고 \"지난 4일 서울 가락시장에서 배추 10㎏ 한 망(3포기)은 4792원에 거래됐다\"며 \"지난해 11월 평균 1만1353원보다 57.8%, 평년보다 42.4% 낮은 가격\"이라고...",
-      "source": "ccreview.co.kr",
-      "publishedAt": "2026-11-06T06:58:00.000Z",
-      "link": "https://www.ccreview.co.kr/news/articleView.html?idxno=362036",
-      "originallink": "https://www.ccreview.co.kr/news/articleView.html?idxno=362036",
-      "keyword": "배추"
-    },
-    {
-      "id": "36e2b675580c6686",
-      "title": "밀양 농산물, 전국 도매시장 경매사들과 손잡다",
-      "summary": "서울시 가락동 도매시장 중앙청과 이대형 부장은 ‘도매시장에서 농산물 가격을 잘 받는 방법’을 주제로 특별 강연을 진행하며 경매 과정과 농산물 가격 형성에 관한 정보를 제공했다. 강릉도매시장 TF 강동환 단장은...",
-      "source": "viva100.com",
-      "publishedAt": "2026-11-06T05:40:00.000Z",
-      "link": "https://www.viva100.com/article/20261106500472",
-      "originallink": "https://www.viva100.com/article/20261106500472",
-      "keyword": "시장"
-    },
-    {
-      "id": "9eb3affac31dddce",
-      "title": "[2026 행감 | 전남광주시] \"별정직 29명 중 농수산 보좌관 '0명'... 농업 ...",
-      "summary": "파종 단계부터 재배면적과 생산량을 파악하고 선제적인 수급조절이 이뤄질 수 있도록 해야 한다. 지난해에... 생산비 상승과 농산물 가격 변동에 따른 농가의 경영 부담 완화를 위해 지원 품목을 확대하고 가격 보장 수준을...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-11-06T04:24:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=408633",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=408633",
-      "keyword": "수급"
-    },
-    {
-      "id": "a727dca0535f745c",
-      "title": "[현장] 한·일 농산물 유통 비교…\"도매시장 집하·분산 강화하고 산지...",
-      "summary": "특히 온라인 도매시장 확대 목표(2025년 6%에서 2030년 50%)와 2027년 가락시장 전자송품장 작성 의무화, 예약형... 아울러 도매시장 유통구조 개선만으로 농산물 가격 변동성과 생산자의 소득 불안을 해결하기 어렵다는 지적도...",
-      "source": "news2day.co.kr",
-      "publishedAt": "2026-11-06T00:22:00.000Z",
-      "link": "https://www.news2day.co.kr/article/20261106500034",
-      "originallink": "https://www.news2day.co.kr/article/20261106500034",
-      "keyword": "시장"
-    },
-    {
-      "id": "6bf637dd81888e26",
-      "title": "김장철 앞두고 배추·쪽파값 반토막…밭 갈아엎는 전남산지",
-      "summary": "김장 대목을 불과 며칠 앞두고 전남 해남과 장흥 등 남도 주요 산지가 사상 초유의 농산물 가격 폭락... aT 11월 4일 기준 가락시장 배추 10㎏(상품) 평균 도매가격은 4,792원으로, 지난해 같은 날(8,808원)보다 45.6...",
-      "source": "seoul.co.kr",
-      "publishedAt": "2026-11-05T23:11:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/081/0003696412?sid=102",
-      "originallink": "https://www.seoul.co.kr/news/society/2026/11/06/20261106500020?wlog_tag3=naver",
-      "keyword": "배추"
-    },
-    {
-      "id": "3a0ccbb2383291a6",
-      "title": "\"경기도 농정조직 통합안 철회하라\"... 농민단체 삭발투쟁",
-      "summary": "사료비 상승으로 농가의 생산비 부담은 커졌지만 농산물 가격은 제자리걸음이거나 오히려 하락하고 있다\"며... 이어 농정조직 통폐합에 대해서는 \"농산물 수급과 농업재해, 해양수산, 가축전염병 방역과 동물복지까지...",
-      "source": "agrinet.co.kr",
-      "publishedAt": "2026-11-05T08:48:00.000Z",
-      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=408617",
-      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=408617",
-      "keyword": "수급"
-    },
-    {
-      "id": "71367dca2f3c41aa",
-      "title": "80% 폭등에 난리 났는데…'나홀로 하락' 한국 쌀값의 역설",
-      "summary": "인도와 미얀마는 9월 소매가격이 전년 동기보다 각각 8.25%, 27.9% 상승했다. 다만 국내 쌀값은 하락세를 보이고 있다. 한국농수산식품유통공사 농산물유통정보(KAMIS)에 따르면 5일 기준 쌀 20㎏ 소매가격은 평균...",
-      "source": "hankyung.com",
-      "publishedAt": "2026-11-05T08:22:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/015/0005350791?sid=101",
-      "originallink": "https://www.hankyung.com/article/2026110590521",
-      "keyword": "시장"
-    },
-    {
-      "id": "965ba056dd3394ba",
-      "title": "(현장+)배추는 풍년, 새우젓은 금값…엇갈린 김장 물가",
-      "summary": "소비자 부담을 고려하면 가격을 더 인상하기 어렵다는 겁니다. 그는 \"작년보다 시세는 올랐는데 파는... 농산물유통정보(KAMIS)에 따르면 지난 4일 기준 새우젓 소매가격은 ㎏당 1만9137원으로 전년 동기보다 33.8...",
-      "source": "newstomato.com",
-      "publishedAt": "2026-11-05T07:22:00.000Z",
-      "link": "http://www.newstomato.com/ReadNews.aspx?no=1319432&inflow=N",
-      "originallink": "http://www.newstomato.com/ReadNews.aspx?no=1319432&inflow=N",
-      "keyword": "배추"
     }
   ]
 }
