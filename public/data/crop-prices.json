@@ -1,9 +1,9 @@
 {
   "status": "partial",
   "source": "KAMIS Open API",
-  "generatedAt": "2026-11-14T11:26:49.665+09:00",
+  "generatedAt": "2026-11-15T10:56:40.422+09:00",
   "aggregation": "daily-average",
-  "notice": "일부 지역 수집 실패: 배추: 2개 지역 수집 실패(경기, 경남) / 무: 2개 지역 수집 실패(경기, 경남) / 양파: 2개 지역 수집 실패(경기, 경남) / 감자: 3개 지역 수집 실패(경기, 충북, 경남) / 대파: 2개 지역 수집 실패(경기, 경남) / 오이: 2개 지역 수집 실패(경기, 경남) / 사과: 2개 지역 수집 실패(경기, 경남) / 배: 2개 지역 수집 실패(경기, 경남) / 고구마: 2개 지역 수집 실패(경기, 경남) / 당근: 2개 지역 수집 실패(경기, 경남) / 토마토: 2개 지역 수집 실패(경기, 경남) / 양배추: 3개 지역 수집 실패(경기, 경북, 경남) / 시금치: 2개 지역 수집 실패(경기, 경남) / 상추: 2개 지역 수집 실패(경기, 경남) / 호박: 2개 지역 수집 실패(경기, 경남) / 풋고추: 4개 지역 수집 실패(울산, 경기, 강원, 경남) / 감귤: 2개 지역 수집 실패(경기, 경남) · 응답 없는 품목 제외: 마늘: 전국 조회 결과 없음",
+  "notice": "일부 지역 수집 실패: 배추: 2개 지역 수집 실패(경기, 경남) / 무: 2개 지역 수집 실패(경기, 경남) / 양파: 2개 지역 수집 실패(경기, 경남) / 감자: 2개 지역 수집 실패(경기, 경남) / 대파: 2개 지역 수집 실패(경기, 경남) / 오이: 2개 지역 수집 실패(경기, 경남) / 사과: 2개 지역 수집 실패(경기, 경남) / 배: 2개 지역 수집 실패(경기, 경남) / 고구마: 2개 지역 수집 실패(경기, 경남) / 당근: 3개 지역 수집 실패(경기, 경남, 제주) / 토마토: 2개 지역 수집 실패(경기, 경남) / 양배추: 3개 지역 수집 실패(경기, 경북, 경남) / 시금치: 2개 지역 수집 실패(경기, 경남) / 상추: 2개 지역 수집 실패(경기, 경남) / 호박: 2개 지역 수집 실패(경기, 경남) / 풋고추: 4개 지역 수집 실패(울산, 경기, 강원, 경남) / 감귤: 2개 지역 수집 실패(경기, 경남) · 응답 없는 품목 제외: 마늘: 전국 조회 결과 없음",
   "items": [
     {
       "id": "cabbage-all",
@@ -4053,14 +4053,14 @@
         "productclscode": "01",
         "itemcategorycode": "200",
         "itemcode": "211",
-        "kindcode": "",
+        "kindcode": "02",
         "productrankcode": "04",
         "countrycode": "3111",
         "regionName": "경기",
         "aggregation": "daily-average",
-        "rawRowCount": 241,
-        "dailyRowCount": 60,
-        "totalObservations": 241
+        "rawRowCount": 203,
+        "dailyRowCount": 51,
+        "totalObservations": 203
       },
       "series": [
         {
@@ -4401,87 +4401,24 @@
         },
         {
           "date": "2026-10-29",
-          "price": 4495,
-          "observationCount": 5,
-          "minPrice": 2610,
+          "price": 5188,
+          "observationCount": 4,
+          "minPrice": 4880,
           "maxPrice": 5660
         },
         {
           "date": "2026-10-30",
-          "price": 4226,
-          "observationCount": 5,
-          "minPrice": 2610,
+          "price": 4814,
+          "observationCount": 4,
+          "minPrice": 3990,
           "maxPrice": 5660
         },
         {
           "date": "2026-11-02",
-          "price": 4172,
-          "observationCount": 4,
-          "minPrice": 2610,
-          "maxPrice": 5660
-        },
-        {
-          "date": "2026-11-03",
-          "price": 3152,
+          "price": 5114,
           "observationCount": 3,
-          "minPrice": 2610,
-          "maxPrice": 4237
-        },
-        {
-          "date": "2026-11-04",
-          "price": 3901,
-          "observationCount": 4,
-          "minPrice": 2610,
-          "maxPrice": 5000
-        },
-        {
-          "date": "2026-11-05",
-          "price": 3937,
-          "observationCount": 4,
-          "minPrice": 2640,
-          "maxPrice": 5000
-        },
-        {
-          "date": "2026-11-06",
-          "price": 3811,
-          "observationCount": 4,
-          "minPrice": 2640,
-          "maxPrice": 4660
-        },
-        {
-          "date": "2026-11-09",
-          "price": 3697,
-          "observationCount": 4,
-          "minPrice": 2640,
-          "maxPrice": 4660
-        },
-        {
-          "date": "2026-11-10",
-          "price": 3692,
-          "observationCount": 4,
-          "minPrice": 2640,
-          "maxPrice": 4660
-        },
-        {
-          "date": "2026-11-11",
-          "price": 3740,
-          "observationCount": 4,
-          "minPrice": 2640,
-          "maxPrice": 4660
-        },
-        {
-          "date": "2026-11-12",
-          "price": 3633,
-          "observationCount": 4,
-          "minPrice": 2320,
-          "maxPrice": 4660
-        },
-        {
-          "date": "2026-11-13",
-          "price": 3565,
-          "observationCount": 4,
-          "minPrice": 2320,
-          "maxPrice": 4660
+          "minPrice": 4022,
+          "maxPrice": 5660
         }
       ]
     },
@@ -31360,7 +31297,7 @@
         "productclscode": "01",
         "itemcategorycode": "100",
         "itemcode": "152",
-        "kindcode": "01",
+        "kindcode": "",
         "productrankcode": "04",
         "countrycode": "1101",
         "regionName": "서울",
@@ -37613,6 +37550,454 @@
           "observationCount": 3,
           "minPrice": 370,
           "maxPrice": 398
+        }
+      ]
+    },
+    {
+      "id": "potato-3311",
+      "baseId": "potato",
+      "name": "감자",
+      "category": "식량작물",
+      "region": "충북",
+      "regionCode": "3311",
+      "market": "소매",
+      "unit": "100g",
+      "kindName": [],
+      "sourceMeta": {
+        "priceType": "retail",
+        "action": "periodProductList",
+        "productclscode": "01",
+        "itemcategorycode": "100",
+        "itemcode": "152",
+        "kindcode": "01",
+        "productrankcode": "04",
+        "countrycode": "3311",
+        "regionName": "충북",
+        "aggregation": "daily-average",
+        "rawRowCount": 240,
+        "dailyRowCount": 60,
+        "totalObservations": 240
+      },
+      "series": [
+        {
+          "date": "2026-08-18",
+          "price": 264,
+          "observationCount": 4,
+          "minPrice": 196,
+          "maxPrice": 310
+        },
+        {
+          "date": "2026-08-19",
+          "price": 264,
+          "observationCount": 4,
+          "minPrice": 196,
+          "maxPrice": 310
+        },
+        {
+          "date": "2026-08-20",
+          "price": 290,
+          "observationCount": 4,
+          "minPrice": 264,
+          "maxPrice": 310
+        },
+        {
+          "date": "2026-08-21",
+          "price": 290,
+          "observationCount": 4,
+          "minPrice": 264,
+          "maxPrice": 310
+        },
+        {
+          "date": "2026-08-24",
+          "price": 286,
+          "observationCount": 4,
+          "minPrice": 264,
+          "maxPrice": 300
+        },
+        {
+          "date": "2026-08-25",
+          "price": 286,
+          "observationCount": 4,
+          "minPrice": 264,
+          "maxPrice": 300
+        },
+        {
+          "date": "2026-08-26",
+          "price": 289,
+          "observationCount": 4,
+          "minPrice": 264,
+          "maxPrice": 310
+        },
+        {
+          "date": "2026-08-27",
+          "price": 282,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-08-28",
+          "price": 282,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-08-31",
+          "price": 308,
+          "observationCount": 4,
+          "minPrice": 290,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-01",
+          "price": 308,
+          "observationCount": 4,
+          "minPrice": 290,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-02",
+          "price": 309,
+          "observationCount": 4,
+          "minPrice": 290,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-03",
+          "price": 297,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-04",
+          "price": 297,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-07",
+          "price": 298,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-08",
+          "price": 298,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-09",
+          "price": 298,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-10",
+          "price": 298,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-11",
+          "price": 298,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-14",
+          "price": 297,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-15",
+          "price": 305,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-09-16",
+          "price": 305,
+          "observationCount": 4,
+          "minPrice": 256,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-09-17",
+          "price": 286,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-18",
+          "price": 286,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-21",
+          "price": 288,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-22",
+          "price": 289,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-23",
+          "price": 288,
+          "observationCount": 4,
+          "minPrice": 224,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-28",
+          "price": 276,
+          "observationCount": 4,
+          "minPrice": 198,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-29",
+          "price": 276,
+          "observationCount": 4,
+          "minPrice": 198,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-09-30",
+          "price": 276,
+          "observationCount": 4,
+          "minPrice": 198,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-01",
+          "price": 276,
+          "observationCount": 4,
+          "minPrice": 198,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-02",
+          "price": 284,
+          "observationCount": 4,
+          "minPrice": 198,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-06",
+          "price": 333,
+          "observationCount": 4,
+          "minPrice": 314,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-07",
+          "price": 333,
+          "observationCount": 4,
+          "minPrice": 314,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-08",
+          "price": 333,
+          "observationCount": 4,
+          "minPrice": 315,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-12",
+          "price": 334,
+          "observationCount": 4,
+          "minPrice": 319,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-13",
+          "price": 334,
+          "observationCount": 4,
+          "minPrice": 319,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-10-14",
+          "price": 327,
+          "observationCount": 4,
+          "minPrice": 321,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-15",
+          "price": 327,
+          "observationCount": 4,
+          "minPrice": 322,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-16",
+          "price": 327,
+          "observationCount": 4,
+          "minPrice": 322,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-19",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 323,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-20",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 326,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-21",
+          "price": 329,
+          "observationCount": 4,
+          "minPrice": 327,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-22",
+          "price": 329,
+          "observationCount": 4,
+          "minPrice": 328,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-23",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 326,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-26",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 325,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-27",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 325,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-28",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 325,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-29",
+          "price": 328,
+          "observationCount": 4,
+          "minPrice": 325,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-10-30",
+          "price": 327,
+          "observationCount": 4,
+          "minPrice": 322,
+          "maxPrice": 330
+        },
+        {
+          "date": "2026-11-02",
+          "price": 333,
+          "observationCount": 4,
+          "minPrice": 313,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-11-03",
+          "price": 333,
+          "observationCount": 4,
+          "minPrice": 315,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-11-04",
+          "price": 334,
+          "observationCount": 4,
+          "minPrice": 319,
+          "maxPrice": 350
+        },
+        {
+          "date": "2026-11-05",
+          "price": 337,
+          "observationCount": 4,
+          "minPrice": 316,
+          "maxPrice": 360
+        },
+        {
+          "date": "2026-11-06",
+          "price": 337,
+          "observationCount": 4,
+          "minPrice": 315,
+          "maxPrice": 360
+        },
+        {
+          "date": "2026-11-09",
+          "price": 337,
+          "observationCount": 4,
+          "minPrice": 315,
+          "maxPrice": 360
+        },
+        {
+          "date": "2026-11-10",
+          "price": 337,
+          "observationCount": 4,
+          "minPrice": 315,
+          "maxPrice": 360
+        },
+        {
+          "date": "2026-11-11",
+          "price": 337,
+          "observationCount": 4,
+          "minPrice": 317,
+          "maxPrice": 360
+        },
+        {
+          "date": "2026-11-12",
+          "price": 345,
+          "observationCount": 4,
+          "minPrice": 319,
+          "maxPrice": 380
+        },
+        {
+          "date": "2026-11-13",
+          "price": 347,
+          "observationCount": 4,
+          "minPrice": 324,
+          "maxPrice": 380
         }
       ]
     },
@@ -71946,7 +72331,7 @@
         "productclscode": "01",
         "itemcategorycode": "400",
         "itemcode": "412",
-        "kindcode": "01",
+        "kindcode": "",
         "productrankcode": "04",
         "countrycode": "3714",
         "regionName": "경북",
@@ -73437,7 +73822,7 @@
         "productclscode": "01",
         "itemcategorycode": "100",
         "itemcode": "151",
-        "kindcode": "00",
+        "kindcode": "",
         "productrankcode": "04",
         "countrycode": "1101",
         "regionName": "서울",
@@ -93134,454 +93519,6 @@
       ]
     },
     {
-      "id": "carrot-3911",
-      "baseId": "carrot",
-      "name": "당근",
-      "category": "채소류",
-      "region": "제주",
-      "regionCode": "3911",
-      "market": "소매",
-      "unit": "1kg",
-      "kindName": [],
-      "sourceMeta": {
-        "priceType": "retail",
-        "action": "periodProductList",
-        "productclscode": "01",
-        "itemcategorycode": "200",
-        "itemcode": "232",
-        "kindcode": "",
-        "productrankcode": "04",
-        "countrycode": "3911",
-        "regionName": "제주",
-        "aggregation": "daily-average",
-        "rawRowCount": 240,
-        "dailyRowCount": 60,
-        "totalObservations": 240
-      },
-      "series": [
-        {
-          "date": "2026-08-18",
-          "price": 4993,
-          "observationCount": 4,
-          "minPrice": 4160,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-08-19",
-          "price": 4943,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-08-20",
-          "price": 4765,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-21",
-          "price": 4773,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-24",
-          "price": 4811,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-25",
-          "price": 4821,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-26",
-          "price": 4832,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-27",
-          "price": 4840,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-28",
-          "price": 4846,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-08-31",
-          "price": 4885,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-01",
-          "price": 4891,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-02",
-          "price": 4895,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-03",
-          "price": 4887,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-04",
-          "price": 4883,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-07",
-          "price": 4886,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-08",
-          "price": 4965,
-          "observationCount": 4,
-          "minPrice": 4160,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-09",
-          "price": 4978,
-          "observationCount": 4,
-          "minPrice": 4160,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-10",
-          "price": 4993,
-          "observationCount": 4,
-          "minPrice": 4160,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-11",
-          "price": 5009,
-          "observationCount": 4,
-          "minPrice": 4160,
-          "maxPrice": 5547
-        },
-        {
-          "date": "2026-09-14",
-          "price": 4168,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5645
-        },
-        {
-          "date": "2026-09-15",
-          "price": 4106,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5637
-        },
-        {
-          "date": "2026-09-16",
-          "price": 4091,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5580
-        },
-        {
-          "date": "2026-09-17",
-          "price": 5134,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-09-18",
-          "price": 5122,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-09-21",
-          "price": 4073,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5507
-        },
-        {
-          "date": "2026-09-22",
-          "price": 4081,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5540
-        },
-        {
-          "date": "2026-09-23",
-          "price": 4090,
-          "observationCount": 4,
-          "minPrice": 3190,
-          "maxPrice": 5573
-        },
-        {
-          "date": "2026-09-28",
-          "price": 4362,
-          "observationCount": 4,
-          "minPrice": 3990,
-          "maxPrice": 5462
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4928,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-09-30",
-          "price": 4925,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 5500
-        },
-        {
-          "date": "2026-10-01",
-          "price": 5123,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-02",
-          "price": 5133,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-06",
-          "price": 5112,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-07",
-          "price": 5110,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-08",
-          "price": 5107,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-12",
-          "price": 5075,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-13",
-          "price": 5064,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-14",
-          "price": 5060,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-15",
-          "price": 5057,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-16",
-          "price": 5057,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-19",
-          "price": 5045,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-20",
-          "price": 4979,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-21",
-          "price": 4962,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-22",
-          "price": 4948,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-23",
-          "price": 4932,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-26",
-          "price": 4909,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-27",
-          "price": 4910,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-28",
-          "price": 4923,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-29",
-          "price": 4934,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-10-30",
-          "price": 4946,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-11-02",
-          "price": 4974,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-11-03",
-          "price": 4970,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-11-04",
-          "price": 4951,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6000
-        },
-        {
-          "date": "2026-11-05",
-          "price": 5117,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-06",
-          "price": 5097,
-          "observationCount": 4,
-          "minPrice": 3830,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-09",
-          "price": 5136,
-          "observationCount": 4,
-          "minPrice": 4000,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-10",
-          "price": 5265,
-          "observationCount": 4,
-          "minPrice": 4330,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-11",
-          "price": 5283,
-          "observationCount": 4,
-          "minPrice": 4330,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-12",
-          "price": 5295,
-          "observationCount": 4,
-          "minPrice": 4330,
-          "maxPrice": 6500
-        },
-        {
-          "date": "2026-11-13",
-          "price": 5309,
-          "observationCount": 4,
-          "minPrice": 4330,
-          "maxPrice": 6500
-        }
-      ]
-    },
-    {
       "id": "tomato-all",
       "baseId": "tomato",
       "name": "토마토",
@@ -99421,7 +99358,7 @@
         "productclscode": "01",
         "itemcategorycode": "200",
         "itemcode": "225",
-        "kindcode": "00",
+        "kindcode": "",
         "productrankcode": "04",
         "countrycode": "3211",
         "regionName": "강원",
@@ -104342,7 +104279,7 @@
         "productclscode": "01",
         "itemcategorycode": "200",
         "itemcode": "212",
-        "kindcode": "",
+        "kindcode": "00",
         "productrankcode": "04",
         "countrycode": "1101",
         "regionName": "서울",
