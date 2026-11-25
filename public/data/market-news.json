@@ -2,11 +2,91 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-11-24T06:10:40.778Z",
+    "updatedAt": "2026-11-25T05:04:54.298Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "aaefb28e4d61ae45",
+      "title": "‘햇볕 가뭄’에 물가 비상… 상추 값 121%·깻잎 88% 뛰었다",
+      "summary": "서울 가락시장 상품 기준 청상추 4㎏의 평균 도매가격은 10월 중순 9317원에서 11월 상순 2만606원으로 121.2... 소비자가 지불하는 가격도 오름세를 보이고 있다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에...",
+      "source": "munhwa.com",
+      "publishedAt": "2026-11-25T03:04:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/021/0002835460?sid=101",
+      "originallink": "https://www.munhwa.com/article/11634053?ref=naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "94c536c8f8d9bdb3",
+      "title": "풍년의 역설···날씨 좋으면 뭐하나 농민은 울상인데[경제밥도둑]",
+      "summary": "이대로는 못살겠다!’ 농민대회를 열고 농산물 가격 하락과 생산비 상승으로 생계가 위협받고 있다며 대책... 배추 수급안정을 위해 이달 초부터 할인행사, 계약재배 물량 확대, 선제 출하 정지를 실시해 수요를...",
+      "source": "khan.co.kr",
+      "publishedAt": "2026-11-24T21:00:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/032/0003484864?sid=101",
+      "originallink": "https://www.khan.co.kr/article/202611250600061",
+      "keyword": "배추"
+    },
+    {
+      "id": "12b974b51d862e1b",
+      "title": "[사설] 농가 경영악화 심각…국회가 예산으로 답해야",
+      "summary": "더군다나 생산비 상승과 농산물 가격 하락으로 농가 경영여건 악화가 심각한 상황으로 치닫고 있어... 위한 농산물가격안정제 예산 확대는 농가의 체감도를 크게 높일 수 있다. 수급조절용 벼 재배농가의 직불금 지급단가...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-11-24T20:02:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000109242?sid=110",
+      "originallink": "https://www.nongmin.com/article/20261123500496",
+      "keyword": "수급"
+    },
+    {
+      "id": "c84b6ac7d29f1d6f",
+      "title": "가락시장지회, 7개 소비자단체와 농산물 유통구조 소통의 장 마련",
+      "summary": "가락시장지회는 공영도매시장이 전국 산지의 농산물을 모아 공개 경매 등을 통해 공정하게 가격을 형성하고, 수급 상황에 따라 물량을 분산해 가격 안정에 기여하는 공익적 기능을 수행하고 있다고 설명했다. 이와 함께...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-11-24T11:32:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17264",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17264",
+      "keyword": "시장"
+    },
+    {
+      "id": "df9da892cfbaa837",
+      "title": "동화청과, 엽채류 유통전략 핀셋 강의",
+      "summary": "동화청과는 지난 18일 가락시장 동화청과 대회의실에서 '청년농 도매유통역량 강화를 위한 현장 교육'을... 참석자들은 엽채류 경매장을 찾아 농산물 반입부터 경매를 통한 가격 결정까지 거래 과정을 지켜봤다. 정승민...",
+      "source": "newsfarm.co.kr",
+      "publishedAt": "2026-11-24T08:48:00.000Z",
+      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=103068",
+      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=103068",
+      "keyword": "시장"
+    },
+    {
+      "id": "9916e3c9a17748de",
+      "title": "[품목포커스 | 시금치] 남부지방 집중호우에 '습해'…출하량 줄어 당분...",
+      "summary": "명절 이후 전반적인 농산물 시세가 떨어지는 만큼 대다수 농가가 재파종을 진행하지 않았다\"면서 \"이에... 11월 2~23일 가락시장의 시금치 평균 도매가격(4kg, 상품)은 평년에 비해 45%가량 높은 1만9357원을 기록했다. 이...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-11-24T08:40:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=409124",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=409124",
+      "keyword": "시장"
+    },
+    {
+      "id": "1c8660d55ae26034",
+      "title": "가락시장지회, 7개 소비자단체와 농산물 유통구조 소통의 장 마련",
+      "summary": "마련됐다 농산물 가격 형성 과정과 도매시장 역할 설명 이재흥 가락시장지회 사무총장은 ‘농산물 유통구조 및 도매시장의 역할’을 주제로 발표하고, 농산물이 생산·유통·소비 단계를 거치며 가격이 형성되는 과정과...",
+      "source": "newsam.co.kr",
+      "publishedAt": "2026-11-24T08:34:00.000Z",
+      "link": "https://www.newsam.co.kr/news/article.html?no=44552",
+      "originallink": "https://www.newsam.co.kr/news/article.html?no=44552",
+      "keyword": "시장"
+    },
+    {
+      "id": "b6e13cbc0b2e799d",
+      "title": "가락시장지회, 7개 소비자단체와 농산물 유통구조 소통",
+      "summary": "이재흥 가락시장지회 사무총장은 농산물의 생산부터 유통과 소비까지 가격이 형성되는 과정과 도매시장법인의 역할을 설명했습니다. 이어진 토론에서는 농산물 가격 상승의 원인과 산지가격과 소비자가격의 차이 등을...",
+      "source": "news.bbsi.co.kr",
+      "publishedAt": "2026-11-24T08:22:00.000Z",
+      "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4120682",
+      "originallink": "https://news.bbsi.co.kr/news/articleView.html?idxno=4120682",
+      "keyword": "시장"
+    },
     {
       "id": "4059a886b272a31d",
       "title": "농산물 산지·매장 가격 왜 다를까…소비자단체, '유통비용 공개' 논의",
@@ -86,86 +166,6 @@
       "link": "http://www.bizwnews.com/news/articleView.html?idxno=152515",
       "originallink": "http://www.bizwnews.com/news/articleView.html?idxno=152515",
       "keyword": "시장"
-    },
-    {
-      "id": "494964dafead4d12",
-      "title": "10월 생산자물가 0.1%↓…농축산물 급락 속 공산품 상승",
-      "summary": "포쓰저널 박소연 기자 2026년 11월 16일 오전 서울 송파구 가락농수산물종합도매시장 모습./사진=연합뉴스 농산물과 축산물 가격이 큰 폭으로 떨어지면서 두 달 연속 상승했던 생산자물가가 10월 들어 하락세로...",
-      "source": "4th.kr",
-      "publishedAt": "2026-11-20T00:56:00.000Z",
-      "link": "http://www.4th.kr/news/articleView.html?idxno=2122300",
-      "originallink": "http://www.4th.kr/news/articleView.html?idxno=2122300",
-      "keyword": "시장"
-    },
-    {
-      "id": "d285930a414cd92a",
-      "title": "aT, '김장 한 포기 더하기' 캠페인 동참…농산물 소비 촉진",
-      "summary": "이재욱 aT 수급이사는 \"배추와 무 등 채소류 출하량 증가로 가격 하락에 따른 농가 어려움이 커지고 있다\"며 \"지역 농산물로 담근 김장김치가 농가에 실질적인 도움이 되고 지역사회에는 따뜻한 나눔이 되길 바란다...",
-      "source": "newsis.com",
-      "publishedAt": "2026-11-20T00:51:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/003/0014334949?sid=102",
-      "originallink": "https://www.newsis.com/view/NISX20261120_0003876317",
-      "keyword": "배추"
-    },
-    {
-      "id": "ecadfd6a3ad882bb",
-      "title": "[라이프 포커스] 절임배추부터 김치 보관까지…‘김치의 날’ 앞두고 알...",
-      "summary": "농림축산식품부가 지난 3일 발표한 '2026 김장재료 수급안정대책'에 따르면 가을배추 생산량은 지난해보다 18.5%, 가을무는 11.1% 증가할 것으로 예상된다. 공급이 늘면서 배추 가격이 하락했고, 김장비용도 지난해보다 낮은...",
-      "source": "theopiniontimes.news",
-      "publishedAt": "2026-11-19T23:55:00.000Z",
-      "link": "https://theopiniontimes.news/%eb%9d%bc%ec%9d%b4%ed%94%84-%ed%8f%ac%ec%bb%a4%ec%8a%a4-%ec%a0%88%ec%9e%84%eb%b0%b0%ec%b6%94%eb%b6%80%ed%84%b0-%ea%b9%80%ec%b9%98-%eb%b3%b4%ea%b4%80%ea%b9%8c%ec%a7%80%ea%b9%80/",
-      "originallink": "https://theopiniontimes.news/%eb%9d%bc%ec%9d%b4%ed%94%84-%ed%8f%ac%ec%bb%a4%ec%8a%a4-%ec%a0%88%ec%9e%84%eb%b0%b0%ec%b6%94%eb%b6%80%ed%84%b0-%ea%b9%80%ec%b9%98-%eb%b3%b4%ea%b4%80%ea%b9%8c%ec%a7%80%ea%b9%80/",
-      "keyword": "배추"
-    },
-    {
-      "id": "41947c442250b111",
-      "title": "장바구니 물가 김장철 앞두고 엇갈려…배추·무 채소값↓, 멸치·대구 냉...",
-      "summary": "가을철 농산물 출하가 늘면서 주요 생활물가가 품목별로 엇갈렸다. 김장철을 맞아 전통시장에는 관련 재료를... 일반미와 찹쌀 등 주요 곡물 가격은 하락했고 잡곡류도 원활한 수급을 바탕으로 큰 변동 없이 안정세를...",
-      "source": "thepublic.kr",
-      "publishedAt": "2026-11-19T23:48:00.000Z",
-      "link": "https://www.thepublic.kr/news/articleView.html?idxno=327596",
-      "originallink": "https://www.thepublic.kr/news/articleView.html?idxno=327596",
-      "keyword": "배추"
-    },
-    {
-      "id": "a86d92207b4bb370",
-      "title": "[불안한 김장채소시장] 부재료도 약세…묵은 건고추 방출에 산지 ‘불만...",
-      "summary": "그럼에도 시세는 전년 수준을 한참 밑돈다. 18일 경북 서안동농협 농산물공판장에서 꼭지·꽃받침 제거... 깐마늘은 aT 농산물유통정보(KAMIS) 중도매인 판매가격(1㎏ 상품) 기준 9080원이다. 전년 11월 평균보다 14.5...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-11-19T20:03:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000108914?sid=101",
-      "originallink": "https://www.nongmin.com/article/20261118500602",
-      "keyword": "시장"
-    },
-    {
-      "id": "cb2b318032e042aa",
-      "title": "한국물가정보 \"김장채소값 내렸지만 수산물은 상승···높은 해수온 영...",
-      "summary": "가격이 상승했다. 한국물가정보는 '2026년 11월 KPI 물가동향 보고서'에서 농산물과 일부 축산물 가격이 전월 대비 하락했다고 19일 밝혔다. 곡물류는 햇곡물 출하가 이어지면서 안정적인 가격 흐름을 보였다. 11월...",
-      "source": "ziksir.com",
-      "publishedAt": "2026-11-19T08:48:00.000Z",
-      "link": "https://www.ziksir.com/news/articleView.html?idxno=154055",
-      "originallink": "https://www.ziksir.com/news/articleView.html?idxno=154055",
-      "keyword": "수급"
-    },
-    {
-      "id": "c8d391c0f14b813a",
-      "title": "김장 채소값 내렸지만…겨울 생선값은 '들썩'",
-      "summary": "무 가격은 내렸지만 겨울철 먹거리인 대구와 생태 가격은 오른 것으로 나타났다. 농산물은 가을철 출하가... 일반미와 찹쌀 가격이 하락했고 잡곡류도 원활한 수급을 바탕으로 안정세를 유지했다. 축산물 가운데 닭고기와...",
-      "source": "jbnews.com",
-      "publishedAt": "2026-11-19T06:26:00.000Z",
-      "link": "https://www.jbnews.com/news/articleView.html?idxno=1516430",
-      "originallink": "https://www.jbnews.com/news/articleView.html?idxno=1516430",
-      "keyword": "무"
-    },
-    {
-      "id": "ce3495eb7c982d57",
-      "title": "[셀럽의 한 수] 외국인 팔만큼 팔았다? 코스피 바닥은 '여기'",
-      "summary": "중국에 농산물 구매·희토류 통제완화 요구 - 中, 미국에 관세 철회·반도체 규제 완화 촉구 - 미중갈등 완화... 기대와 수급 우려 교차 - 국제유가 급락, 빅스텝 우려 완화 요인 - 코스닥도 상승 출발 후 1%대 하락 전환 Q....",
-      "source": "biz.sbs.co.kr",
-      "publishedAt": "2026-11-19T06:12:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/374/0000544728?sid=101",
-      "originallink": "https://biz.sbs.co.kr/article_hub/20000347555?division=NAVER",
-      "keyword": "수급"
     }
   ]
 }
