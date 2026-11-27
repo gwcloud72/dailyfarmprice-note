@@ -2,11 +2,111 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-11-26T04:16:12.766Z",
+    "updatedAt": "2026-11-27T04:22:30.176Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "52421cf82030c1aa",
+      "title": "김장꾸러미 170세트 기부…“자율모금액 전액 취약계층에”",
+      "summary": "서울 가락시장 도매시장법인 대아청과(대표 이상용)는 26일 경기 수원시 영통구 아브뉴프랑 광교에서 ‘전북... 이 대표는 “올해 배추를 비롯한 김장 농산물의 가격 하락으로 농가들이 많은 어려움을 겪고 있다”며...",
+      "source": "nongmin.com",
+      "publishedAt": "2026-11-27T04:21:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/662/0000109463?sid=101",
+      "originallink": "https://www.nongmin.com/article/20261126500353",
+      "keyword": "배추"
+    },
+    {
+      "id": "0811e70726418050",
+      "title": "농가·소비자 시름하는데…SAFFC, 2년새 영업익 2배↑",
+      "summary": "이 부담이 커지면 농산물 유통비용을 높여 소비자가격에도 상승 압력으로 작용한다. 공사 이익이 늘어난 가운데 가락시장 5대 청과 도매법인의 지난해 합산 영업이익은 전년보다 23.7% 감소했다. 도매법인의 경우 농가...",
+      "source": "munhwa.com",
+      "publishedAt": "2026-11-27T04:20:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/021/0002836082?sid=101",
+      "originallink": "https://www.munhwa.com/article/11634685?ref=naver",
+      "keyword": "시장"
+    },
+    {
+      "id": "26043efe63ee2836",
+      "title": "비료값 36% 뛰었는데 내년 보조예산 0원…\"304억 반영해야\"",
+      "summary": "같은 기간 영농광열비는 25.9%, 영농자재비는 10.2% 상승했다. 농가 판매가격을 농업투입재 가격으로 나눠 산출하는 농가경영조건지수는 84.6으로 전년 동기 대비 8.6% 하락했다. 무기질비료 가격보조 및 수급안정 사업은...",
+      "source": "newsis.com",
+      "publishedAt": "2026-11-27T02:08:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/003/0014349013?sid=101",
+      "originallink": "https://www.newsis.com/view/NISX20261127_0003885464",
+      "keyword": "수급"
+    },
+    {
+      "id": "1d02a0f63bd9219f",
+      "title": "대아청과, 고창 김장 농산물 소비촉진 위한 나눔행사 개최",
+      "summary": "서울 가락동농수산물도매시장 도매시장법인 대아청과(대표이사 이상용)가 26일 경기 수원시 아브뉴프랑... 이상용 대아청과 대표이사는 \"올해 배추를 비롯한 김장 농산물의 가격 하락으로 산지 농가들이 큰 어려움을 겪고...",
+      "source": "farminsight.net",
+      "publishedAt": "2026-11-27T01:34:00.000Z",
+      "link": "https://www.farminsight.net/news/articleView.html?idxno=17273",
+      "originallink": "https://www.farminsight.net/news/articleView.html?idxno=17273",
+      "keyword": "배추"
+    },
+    {
+      "id": "1c7fc716f0294e2d",
+      "title": "충남도 '농산물 가격안정제'로 농가 시름 던다.",
+      "summary": "충남도가 김장철을 앞두고 쪽파·배추·무 등 원예농산물 가격이 하락세를 면하지 못하고 있는 가운데... 대상은 △통합마케팅조직과 지역농협 등을 통해 계통출하 △도매시장 또는 공판장 등에 개별출하 △6차산업 등...",
+      "source": "ccdn.co.kr",
+      "publishedAt": "2026-11-26T09:44:00.000Z",
+      "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1113943",
+      "originallink": "https://www.ccdn.co.kr/news/articleView.html?idxno=1113943",
+      "keyword": "배추"
+    },
+    {
+      "id": "ffc7a3376f35c6f3",
+      "title": "충남도, 농산물 가격안정제 가동",
+      "summary": "대상은 ▲통합마케팅조직과 지역농협 등을 통해 계통출하 ▲도매시장 또는 공판장 등에 개별출하... 보전하는 '농산물 가격안정제'는 마늘과 양파에 대해 추진하고 있다. 농업수입안정보험은 가을배추와 가을무, 포도...",
+      "source": "chungnamilbo.co.kr",
+      "publishedAt": "2026-11-26T07:32:00.000Z",
+      "link": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=923332",
+      "originallink": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=923332",
+      "keyword": "배추"
+    },
+    {
+      "id": "ccaa77a0d24a2560",
+      "title": "충남도, 농산물 가격안정제 가동해 농가 소득 보전",
+      "summary": "주요 농산물의 도매가격은 전년 같은 기간보다 쪽파 61.6%, 토마토 47.4%, 배추 43.2%, 대추방울토마토 40.7%, 무 40.... 지원 대상은 통합마케팅조직이나 지역농협 등을 통한 계통출하 농업인과 도매시장·공판장 개별출하...",
+      "source": "jeonmae.co.kr",
+      "publishedAt": "2026-11-26T07:30:00.000Z",
+      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316256",
+      "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1316256",
+      "keyword": "배추"
+    },
+    {
+      "id": "c17f6e13eb771bff",
+      "title": "충남도, 자체 '농산물 가격안정제' 가동…농가 시름 던다",
+      "summary": "김장철을 앞두고 쪽파·배추·무 등 원예농산물 가격이 하락세를 면치 못하고 있는 가운데 도는 가격안정제... 대상은 △통합마케팅조직과 지역농협 등을 통해 계통출하 △도매시장 또는 공판장 등에 개별출하 △6차산업...",
+      "source": "asiatoday.co.kr",
+      "publishedAt": "2026-11-26T07:18:00.000Z",
+      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261126010010407",
+      "originallink": "https://www.asiatoday.co.kr/kn/view.php?key=20261126010010407",
+      "keyword": "배추"
+    },
+    {
+      "id": "7d68737dca4ac782",
+      "title": "쪽파 도매가 61.6% 급락…충남도, 가격안정제 가동",
+      "summary": "쪽파·배추·무 도매가격이 1년 전보다 40% 넘게 떨어진 가운데 충남도가 자체 농산물 가격안정제를 가동해... 도 가격안정제는 주 출하기 시장가격이 최근 5년간 전국 도매시장 평균 가격보다 20% 이상 떨어지면...",
+      "source": "ekn.kr",
+      "publishedAt": "2026-11-26T05:32:00.000Z",
+      "link": "https://www.ekn.kr/web/view.php?key=20261126022545149",
+      "originallink": "https://www.ekn.kr/web/view.php?key=20261126022545149",
+      "keyword": "배추"
+    },
+    {
+      "id": "1a49425446118b56",
+      "title": "충남도, 농산물 가격 하락 피해 농가에 보전금 지원",
+      "summary": "주요 농산물 도매가격은 지난해 같은 기간보다 쪽파 61.6%, 토마토 47.4%, 배추 43.2%, 대추방울토마토 40.7%, 무... 기준 가격은 최근 5년간 전국 도매시장 가격 중 최고·최저 연도를 제외한 3년간의 평균 가격이다. 올해...",
+      "source": "news.tf.co.kr",
+      "publishedAt": "2026-11-26T05:12:00.000Z",
+      "link": "https://n.news.naver.com/mnews/article/629/0000555861?sid=102",
+      "originallink": "https://news.tf.co.kr/read/national/2393787.htm",
+      "keyword": "배추"
+    },
     {
       "id": "5363007e539f218f",
       "title": "충남도, 농산물 가격 급락에 '가격안정제' 가동…12월 보전금 지급",
@@ -66,106 +166,6 @@
       "link": "https://www.ajunews.com/view/20261126113606000",
       "originallink": "https://www.ajunews.com/view/20261126113606000",
       "keyword": "배추"
-    },
-    {
-      "id": "0967e128d0ebe256",
-      "title": "충남도, 김장철 농산물 가격 하락에 자체 '가격안정제' 가동",
-      "summary": "정부가 현재 가격조정 등으로 시장에 개입하는 '쌀'을 제외한 농산물 도매가격은 대부분 하락세를 나타내는... 4%, 배추 43.2%, 대추방울토마토 40.7%, 무 40.6% 등으로 나타났다. 올해 작물 재배에 적합한 기상 여건이...",
-      "source": "news1.kr",
-      "publishedAt": "2026-11-26T02:28:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009311494?sid=102",
-      "originallink": "https://www.news1.kr/local/daejeon-chungnam/6366889",
-      "keyword": "배추"
-    },
-    {
-      "id": "3c09451b75068a4c",
-      "title": "충남도, 농산물 가격안정제 본격 가동… \"농가당 지원 한도 상향 검토\"",
-      "summary": "6% 폭락…풍작에도 농가 경영난 도에 따르면 지난 11~17일 주요 농산물의 전년 동기 대비 가락동 도매가격... 지원 대상은 통합마케팅조직과 지역농협 등을 통해 계통출하하거나 도매시장 및 공판장 등에 개별 출하한...",
-      "source": "newscj.com",
-      "publishedAt": "2026-11-26T02:06:00.000Z",
-      "link": "https://www.newscj.com/news/articleView.html?idxno=3452236",
-      "originallink": "https://www.newscj.com/news/articleView.html?idxno=3452236",
-      "keyword": "시장"
-    },
-    {
-      "id": "6b2e3a3396fedfd1",
-      "title": "김장비 2만원 내렸다지만…배추 빼면 1161원 줄어",
-      "summary": "김장 성수기에 접어든 11월 하순에도 배추 도매가격은 평년을 밑돌았다. 25일 서울 가락시장에서 배추... 뒤에도 가격 약세가 이어질 경우 12월 하순부터 겨울배추를 추가로 수매해 비축할 계획이다. 농산물...",
-      "source": "newsis.com",
-      "publishedAt": "2026-11-26T01:12:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/003/0014346228?sid=101",
-      "originallink": "https://www.newsis.com/view/NISX20261126_0003883709",
-      "keyword": "배추"
-    },
-    {
-      "id": "15c42705e73af606",
-      "title": "[제철 농산물 산지를 가다] ‘가을배추’ 계약재배 늘려 수급조절 매진",
-      "summary": "농산물 가격이 조금이라도 오르면 정부가 외국산 수입 등으로 신속히 대응하면서, 가격이 내릴 때는 상대적으로 더디 움직인다는 산지 비판 여론이 높다”며 “올해같이 주요 채소 시세가 폭락하면 자동으로 시장격리...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-11-25T20:01:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000109339?sid=101",
-      "originallink": "https://www.nongmin.com/article/20261125500399",
-      "keyword": "배추"
-    },
-    {
-      "id": "ee179dbe88d9908e",
-      "title": "\"농산물 가격폭락, 이대로는 못 살겠다\"…국회 앞 모인 농민들",
-      "summary": "전국마늘생산자협회도 생산비 상승과 산지 농산물 가격 하락으로 농가의 경영 부담이 커지고 있다며 농자재... 아울러 검역 완화에 따른 해외 병해충 유입 문제를 해결하고 수급 안정을 위한 지정 출하와 공공비축물량...",
-      "source": "newsfarm.co.kr",
-      "publishedAt": "2026-11-25T13:24:00.000Z",
-      "link": "http://www.newsfarm.co.kr/news/articleView.html?idxno=103092",
-      "originallink": "http://www.newsfarm.co.kr/news/articleView.html?idxno=103092",
-      "keyword": "수급"
-    },
-    {
-      "id": "18a707df44012071",
-      "title": "가락시장지회·소비자단체, 농산물 가격 형성·유통비용 논의",
-      "summary": "한국농어촌희망재단이 한국농수산물도매시장법인협회 가락시장지회와 7개 소비자단체가 참여하는 좌담회를 열고 농산물 가격 형성 과정과 도매시장 운영 구조를 논의했다. 가락시장지회는 주요 농산물의 수급·시세...",
-      "source": "youngnong.co.kr",
-      "publishedAt": "2026-11-25T12:52:00.000Z",
-      "link": "https://www.youngnong.co.kr/news/articleView.html?idxno=72165",
-      "originallink": "https://www.youngnong.co.kr/news/articleView.html?idxno=72165",
-      "keyword": "시장"
-    },
-    {
-      "id": "88c56629784349a2",
-      "title": "쌀 소비 줄어드는데 소매가격은 평년보다 14%↑…산지보다 더 올랐다",
-      "summary": "상승률도 높게 나타났다. 소비 감소와 생산량 감소에도 수급 불균형이 이어지는 상황에서 정부의 대응에 관심이 쏠린다. 소비 감소에도 산지·소매 쌀값 전년보다 높아 25일 한국농수산식품유통공사(aT) 농산물유통정...",
-      "source": "news1.kr",
-      "publishedAt": "2026-11-25T05:57:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/421/0009309562?sid=102",
-      "originallink": "https://www.news1.kr/economy/agri-food/6364792",
-      "keyword": "수급"
-    },
-    {
-      "id": "aaefb28e4d61ae45",
-      "title": "‘햇볕 가뭄’에 물가 비상… 상추 값 121%·깻잎 88% 뛰었다",
-      "summary": "서울 가락시장 상품 기준 청상추 4㎏의 평균 도매가격은 10월 중순 9317원에서 11월 상순 2만606원으로 121.2... 소비자가 지불하는 가격도 오름세를 보이고 있다. 한국농수산식품유통공사(aT) 농산물유통정보(KAMIS)에...",
-      "source": "munhwa.com",
-      "publishedAt": "2026-11-25T03:04:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/021/0002835460?sid=101",
-      "originallink": "https://www.munhwa.com/article/11634053?ref=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "94c536c8f8d9bdb3",
-      "title": "풍년의 역설···날씨 좋으면 뭐하나 농민은 울상인데[경제밥도둑]",
-      "summary": "이대로는 못살겠다!’ 농민대회를 열고 농산물 가격 하락과 생산비 상승으로 생계가 위협받고 있다며 대책... 배추 수급안정을 위해 이달 초부터 할인행사, 계약재배 물량 확대, 선제 출하 정지를 실시해 수요를...",
-      "source": "khan.co.kr",
-      "publishedAt": "2026-11-24T21:00:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/032/0003484864?sid=101",
-      "originallink": "https://www.khan.co.kr/article/202611250600061",
-      "keyword": "배추"
-    },
-    {
-      "id": "12b974b51d862e1b",
-      "title": "[사설] 농가 경영악화 심각…국회가 예산으로 답해야",
-      "summary": "더군다나 생산비 상승과 농산물 가격 하락으로 농가 경영여건 악화가 심각한 상황으로 치닫고 있어... 위한 농산물가격안정제 예산 확대는 농가의 체감도를 크게 높일 수 있다. 수급조절용 벼 재배농가의 직불금 지급단가...",
-      "source": "nongmin.com",
-      "publishedAt": "2026-11-24T20:02:00.000Z",
-      "link": "https://n.news.naver.com/mnews/article/662/0000109242?sid=110",
-      "originallink": "https://www.nongmin.com/article/20261123500496",
-      "keyword": "수급"
     }
   ]
 }
