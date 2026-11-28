@@ -2,11 +2,51 @@
   "metadata": {
     "source": "naver-search-news",
     "target": "farm",
-    "updatedAt": "2026-11-27T04:22:30.176Z",
+    "updatedAt": "2026-11-28T04:01:07.042Z",
     "queryCount": 4,
     "itemCount": 16
   },
   "items": [
+    {
+      "id": "5ebd62218f15b9e4",
+      "title": "'데이터 경매장' 구축한 대전중앙청과, 우수도매시장 농식품부 장관상",
+      "summary": "대전중앙청과는 지난 19~20일 서울 포포인츠 바이 쉐라톤 구로호텔에서 열린 '2026년 농산물도매시장... 이상 가격 품목을 화면에 자동 표시하는 기능을 구현했으며, 지난 10월부터는 배추·무·양파·마늘·건고추 등 주요...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-11-27T10:56:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=332664",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=332664",
+      "keyword": "배추"
+    },
+    {
+      "id": "7a3e5cb78497a637",
+      "title": "농산물 유통구조 둘러싼 오해, 소비자 눈높이서 해법 찾는다",
+      "summary": "이재흥 한국농수산물도매시장법인협회 가락시장지회 사무총장은 농산물 유통구조와 도매시장의 기능, 도매시장법인의 역할, 가격 형성과정과 유통비용 구조 등을 설명했다. 특히 공영도매시장이 전국 산지의 농산물을...",
+      "source": "aflnews.co.kr",
+      "publishedAt": "2026-11-27T09:24:00.000Z",
+      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=332673",
+      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=332673",
+      "keyword": "시장"
+    },
+    {
+      "id": "8322900e2dbdff2e",
+      "title": "12월 감자 도매가 20㎏에 3만1000원 전망…장바구니 가격은 별개",
+      "summary": "0% 증가 전망 12월 서울 가락시장의 감자 상품 도매가격이 20㎏당 3만1000원 안팎으로 전망됐다. 지난해... 당 가격을 살피고, 보관할 공간과 사용할 양을 함께 따져볼 만하다. 농촌진흥청은 지난 9월 가정용 농산물...",
+      "source": "vegannews.co.kr",
+      "publishedAt": "2026-11-27T09:08:00.000Z",
+      "link": "https://www.vegannews.co.kr/news/article.html?no=412232",
+      "originallink": "https://www.vegannews.co.kr/news/article.html?no=412232",
+      "keyword": "감자"
+    },
+    {
+      "id": "b89a8c80b594ea1b",
+      "title": "농산물 유통구조 인식 개선, 가격 형성 과정부터 제대로 알려야",
+      "summary": "소비자공익네트워크에 따르면 좌담회에는 이재흥 한국농수산물도매시장법인협회 가락시장지회 사무총장이 참석해 농산물 유통구조와 도매시장의 기능, 도매시장법인의 역할, 가격 형성과정 및 유통비용 구조 등에 대해...",
+      "source": "agrinet.co.kr",
+      "publishedAt": "2026-11-27T08:58:00.000Z",
+      "link": "https://www.agrinet.co.kr/news/articleView.html?idxno=409276",
+      "originallink": "https://www.agrinet.co.kr/news/articleView.html?idxno=409276",
+      "keyword": "시장"
+    },
     {
       "id": "52421cf82030c1aa",
       "title": "김장꾸러미 170세트 기부…“자율모금액 전액 취약계층에”",
@@ -125,46 +165,6 @@
       "publishedAt": "2026-11-26T04:04:00.000Z",
       "link": "https://www.gukjenews.com/news/articleView.html?idxno=3763863",
       "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3763863",
-      "keyword": "배추"
-    },
-    {
-      "id": "4291ca01a9fd62ce",
-      "title": "중도매인단체도 가락시장 이전·신축 건의",
-      "summary": "가락시장 상인들의 입장이 처음으로 나오면서 이전 논의가 급물살을 탈 것으로 보인다. 26일 한국농산물중도매인조합연합회에 따르면 연합회 서울지회는 국회 송옥주 의원(더불어민주당)에게 이전·신축에 협조해...",
-      "source": "naeil.com",
-      "publishedAt": "2026-11-26T04:02:00.000Z",
-      "link": "https://www.naeil.com/news/read/610139?ref=naver",
-      "originallink": "https://www.naeil.com/news/read/610139?ref=naver",
-      "keyword": "시장"
-    },
-    {
-      "id": "2e12b08a326b7f9d",
-      "title": "'풍년의 역설, 농가 보호망도 구멍'…충남 3축 소득안정망 실효성 높여...",
-      "summary": "도에 따르면 지난 11~17일 주요 농산물 23개 품목 가운데 11개 품목의 도매가격이 지난해 같은 기간보다 하락했으며 8개 품목은 보합세, 4개 품목은 상승세를 보였다. 쪽파 10㎏의 평균 도매가격은 지난해 7만5543원에서...",
-      "source": "greened.kr",
-      "publishedAt": "2026-11-26T03:17:00.000Z",
-      "link": "https://www.greened.kr/news/articleView.html?idxno=355623",
-      "originallink": "https://www.greened.kr/news/articleView.html?idxno=355623",
-      "keyword": "수급"
-    },
-    {
-      "id": "fc56de2514944a94",
-      "title": "충남도, 농산물 가격안정제 내실화…농가 소득보장 기반 강화",
-      "summary": "도에 따르면 지난 11~17일 주요 농산물 23개 품목 가운데 11개 품목의 도매가격이 전년 동기 대비 하락했다. 쪽파가 61.6%로 가장 큰 하락 폭을 보였으며 토마토 47.4%, 배추 43.2%, 대추방울토마토 40.7%, 무 40.6%, 구기자 30%, 감자...",
-      "source": "aflnews.co.kr",
-      "publishedAt": "2026-11-26T02:54:00.000Z",
-      "link": "https://www.aflnews.co.kr/news/articleView.html?idxno=332518",
-      "originallink": "https://www.aflnews.co.kr/news/articleView.html?idxno=332518",
-      "keyword": "배추"
-    },
-    {
-      "id": "96b0cf8805f9efa5",
-      "title": "충남도 농산물값 폭락…가격안정제 보전금 3억 5000만 원 부족",
-      "summary": "주요 농산물의 전년 대비 도매가격 하락률은 쪽파 67.6%, 배추 40.2%, 대추방울토마토 37.9%, 토마토 32.4% 등이다.... ◆ 가격 하락분 80% 보전…농가당 최대 300만 원 충남도 자체 농산물 가격안정제는 주 출하기 시장가격이...",
-      "source": "ajunews.com",
-      "publishedAt": "2026-11-26T02:44:00.000Z",
-      "link": "https://www.ajunews.com/view/20261126113606000",
-      "originallink": "https://www.ajunews.com/view/20261126113606000",
       "keyword": "배추"
     }
   ]
